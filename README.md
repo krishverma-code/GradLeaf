@@ -4,7 +4,18 @@
 
 ---
 
-## 👥 Team Setup Guide (For 4 Collaborators)
+## 👥 Project Team Roster
+
+| Member | Role | GitHub |
+| :--- | :--- | :--- |
+| **Krish Verma** | Project Lead & Fullstack Architecture | [@krishverma-code](https://github.com/krishverma-code) |
+| **Veer** | Core Contributor & Matching Algorithm | [@Veer-0201](https://github.com/Veer-0201) |
+| **Madhavi Chugh** | Core Contributor & UI/UX Design System | [@madhavichugh](https://github.com/madhavichugh) |
+| **Mudit Chaudhary** | Core Contributor & Workspace Features | [@muditchaudhary29](https://github.com/muditchaudhary29) |
+
+---
+
+## 🚀 Quickstart Guide
 
 Follow these quick steps to get GradLeaf running locally on your machine:
 
@@ -15,8 +26,8 @@ Follow these quick steps to get GradLeaf running locally on your machine:
 
 ### 2. Clone the Repository
 ```bash
-git clone <YOUR_GITHUB_REPO_URL>
-cd hackinSummer
+git clone https://github.com/krishverma-code/GradLeaf.git
+cd GradLeaf
 ```
 
 ### 3. Install Dependencies
