@@ -84,135 +84,76 @@ body::after {
   transform: translateY(-2px);
 }
 
-/* Minimalist Outline & Frosted Buttons (Matching GradLeaf Signature Aesthetic) */
+/* High-Confidence Collegiate Button System — inspired by Handshake, Linear, Luma */
+
+/* PRIMARY: flat confident forest green — clean, zero shimmer distractions */
 .btn-gradleaf-primary {
-  position: relative;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.98);
-  color: #274d36 !important;
-  border: 2px solid #274d36;
-  box-shadow: 0 2px 8px -2px rgba(39, 77, 54, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.9);
-  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
-  text-shadow: none;
-}
-
-.btn-gradleaf-primary svg {
-  color: currentColor;
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.btn-gradleaf-primary::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -130%;
-  width: 60%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent 0%, rgba(39, 77, 54, 0.06) 30%, rgba(255, 255, 255, 0.8) 50%, rgba(39, 77, 54, 0.06) 70%, transparent 100%);
-  transform: skewX(-20deg);
-  transition: left 0.65s cubic-bezier(0.16, 1, 0.3, 1);
-  pointer-events: none;
+  background-color: #274d36;
+  color: #ffffff;
+  border: 1px solid #1a3826;
+  box-shadow: 0 1px 3px rgba(20, 45, 31, 0.25), 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 .btn-gradleaf-primary:hover {
-  background: #edf4ec;
-  border-color: #1b3d2b;
-  color: #142d1f !important;
-  box-shadow: 0 6px 20px -3px rgba(39, 77, 54, 0.22), 0 0 0 1px rgba(39, 77, 54, 0.25), inset 0 1px 0 rgba(255, 255, 255, 1);
-  transform: translateY(-2px);
-}
-
-.btn-gradleaf-primary:hover svg {
-  transform: scale(1.08);
-}
-
-.btn-gradleaf-primary:hover::after {
-  left: 140%;
+  background-color: #2d5a3f;
+  box-shadow: 0 4px 12px rgba(20, 45, 31, 0.3), 0 2px 4px rgba(0, 0, 0, 0.12);
+  transform: translateY(-1px);
 }
 
 .btn-gradleaf-primary:active {
-  background: #e2ede1;
-  box-shadow: 0 1px 4px rgba(39, 77, 54, 0.15), inset 0 1px 3px rgba(39, 77, 54, 0.1);
-  transform: translateY(1px) scale(0.98);
+  background-color: #1a3826;
+  box-shadow: 0 1px 2px rgba(20, 45, 31, 0.2);
+  transform: translateY(0) scale(0.99);
 }
 
+/* SECONDARY: clean ghost outline — Notion/Linear style */
 .btn-gradleaf-secondary {
-  position: relative;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  color: #334155 !important;
-  border: 1.5px solid rgba(203, 213, 225, 0.9);
-  box-shadow: 0 2px 8px -2px rgba(15, 23, 42, 0.04), inset 0 1px 0 0 rgba(255, 255, 255, 1);
-  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.btn-gradleaf-secondary svg {
-  color: currentColor;
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  background-color: #ffffff;
+  color: #1e293b;
+  border: 1px solid #d1d5db;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: all 0.15s ease;
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 .btn-gradleaf-secondary:hover {
-  background: #ffffff;
-  color: #274d36 !important;
-  border-color: #274d36;
-  box-shadow: 0 6px 20px -4px rgba(39, 77, 54, 0.14), 0 0 0 1px rgba(39, 77, 54, 0.18), inset 0 1px 0 0 rgba(255, 255, 255, 1);
-  transform: translateY(-2px);
-}
-
-.btn-gradleaf-secondary:hover svg {
-  transform: scale(1.08);
+  background-color: #f8fafc;
+  color: #274d36;
+  border-color: rgba(39, 77, 54, 0.4);
+  box-shadow: 0 2px 8px rgba(39, 77, 54, 0.08);
+  transform: translateY(-1px);
 }
 
 .btn-gradleaf-secondary:active {
-  background: #f8fafc;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
-  transform: translateY(1px) scale(0.98);
+  background-color: #f1f5f9;
+  transform: translateY(0) scale(0.99);
 }
 
+/* DARK: deep slate — Handshake "Log in" button style */
 .btn-gradleaf-dark {
-  position: relative;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.95);
-  color: #0f172a !important;
-  border: 2px solid #0f172a;
-  box-shadow: 0 2px 8px -2px rgba(15, 23, 42, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.btn-gradleaf-dark svg {
-  color: currentColor;
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.btn-gradleaf-dark::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -130%;
-  width: 60%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent 0%, rgba(15, 23, 42, 0.06) 30%, rgba(255, 255, 255, 0.8) 50%, rgba(15, 23, 42, 0.06) 70%, transparent 100%);
-  transform: skewX(-20deg);
-  transition: left 0.65s cubic-bezier(0.16, 1, 0.3, 1);
-  pointer-events: none;
+  background-color: #0f172a;
+  color: #ffffff;
+  border: 1px solid #1e293b;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 .btn-gradleaf-dark:hover {
-  background: #0f172a;
-  color: #ffffff !important;
-  box-shadow: 0 6px 20px -3px rgba(15, 23, 42, 0.3);
-  transform: translateY(-2px);
-}
-
-.btn-gradleaf-dark:hover::after {
-  left: 140%;
+  background-color: #1e293b;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-1px);
 }
 
 .btn-gradleaf-dark:active {
-  background: #020617;
-  transform: translateY(1px) scale(0.98);
+  background-color: #020617;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  transform: translateY(0) scale(0.99);
 }
 
 /* Enamel Academic Badges */
