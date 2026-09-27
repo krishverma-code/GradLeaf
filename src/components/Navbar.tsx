@@ -99,28 +99,28 @@ export default function Navbar() {
               const isActive = item.exact ? pathname === item.href : pathname.startsWith(item.href);
 
               if (item.highlight) {
-                // High-aesthetic AI Smart Match tab
+                // AI Smart Match tab — clean flat style matching button system
                 return (
                   <Link
                     key={item.href}
                     href={item.href}
-                    className={`group relative flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold transition-all duration-200 cursor-pointer ${
+                    className={`group flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all duration-150 cursor-pointer ${
                       isActive
-                        ? 'bg-white text-slate-900 shadow-[0_2px_10px_rgba(39,77,54,0.14),inset_0_1px_0_#ffffff] border border-[#274d36]/30 ring-2 ring-[#274d36]/10'
+                        ? 'bg-[#274d36] text-white border border-[#1a3826] shadow-[0_1px_3px_rgba(20,45,31,0.3)]'
                         : 'text-slate-600 hover:text-slate-900 hover:bg-white/80 border border-transparent hover:border-slate-200/60'
                     }`}
                   >
                     <Icon
-                      className={`w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-45 ${
-                        isActive ? 'text-[#274d36]' : 'text-slate-500 group-hover:text-[#274d36]'
+                      className={`w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-45 ${
+                        isActive ? 'text-white/80' : 'text-slate-500 group-hover:text-[#274d36]'
                       }`}
                     />
                     <span>{item.label}</span>
                     <span
-                      className={`text-[9px] uppercase font-black px-1.5 py-0.5 rounded-full tracking-wider transition-all duration-200 ${
+                      className={`text-[9px] uppercase font-bold px-1.5 py-0.5 rounded-full tracking-wider transition-all duration-150 ${
                         isActive
-                          ? 'bg-[#274d36] text-white shadow-2xs'
-                          : 'bg-[#edf4ec] text-[#274d36] border border-[#274d36]/20 group-hover:bg-[#274d36] group-hover:text-white'
+                          ? 'bg-white/15 text-white/90'
+                          : 'bg-[#edf4ec] text-[#274d36] group-hover:bg-[#274d36] group-hover:text-white'
                       }`}
                     >
                       AI
