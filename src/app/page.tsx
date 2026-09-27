@@ -143,27 +143,7 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* ─── 2. LIVE CAMPUS PLATFORM STATS BAR ─── */}
-        <section className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto pt-2">
-          <div className="glass-card p-4 sm:p-5 rounded-2xl border border-[#c2d8cc]/80 text-center space-y-1">
-            <div className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">2,400+</div>
-            <div className="text-xs text-slate-500 font-semibold">Active Student Creators</div>
-          </div>
-          <div className="glass-card p-4 sm:p-5 rounded-2xl border border-[#c2d8cc]/80 text-center space-y-1">
-            <div className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">98.4%</div>
-            <div className="text-xs text-slate-500 font-semibold">AI Match Accuracy</div>
-          </div>
-          <div className="glass-card p-4 sm:p-5 rounded-2xl border border-[#c2d8cc]/80 text-center space-y-1">
-            <div className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">18+</div>
-            <div className="text-xs text-slate-500 font-semibold">University Hubs</div>
-          </div>
-          <div className="glass-card p-4 sm:p-5 rounded-2xl border border-[#c2d8cc]/80 text-center space-y-1">
-            <div className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">450+</div>
-            <div className="text-xs text-slate-500 font-semibold">Projects Shipped</div>
-          </div>
-        </section>
-
-        {/* ─── 3. RE-ARRANGED BENTO FEATURE GRID ─── */}
+        {/* ─── 2. RE-ARRANGED BENTO FEATURE GRID ─── */}
         <section className="max-w-5xl mx-auto space-y-6">
           <div className="text-center space-y-2 max-w-xl mx-auto">
             <div className="text-xs font-bold uppercase tracking-wider text-[#274d36] bg-[#edf4ec] inline-block px-3 py-1 rounded-full border border-[#c2d8cc]">
