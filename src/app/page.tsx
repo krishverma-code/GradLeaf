@@ -52,17 +52,17 @@ export default function LandingPage() {
         <div className="flex flex-wrap items-center justify-center gap-3.5 pt-2">
           <Link
             href="/feed"
-            className="flex items-center gap-2 px-6 py-3.5 rounded-2xl btn-gradleaf-primary font-bold text-sm"
+            className="group flex items-center gap-2.5 px-6 py-3.5 rounded-2xl btn-gradleaf-primary font-bold text-sm tracking-tight cursor-pointer"
           >
-            <Compass className="w-4 h-4" />
-            Enter Campus Feed
+            <Compass className="w-4 h-4 transition-transform duration-300 group-hover:rotate-45" />
+            <span>Enter Campus Feed</span>
           </Link>
           <Link
             href="/matching"
-            className="flex items-center gap-2 px-6 py-3.5 rounded-2xl btn-gradleaf-secondary font-bold text-sm"
+            className="group flex items-center gap-2.5 px-6 py-3.5 rounded-2xl btn-gradleaf-secondary font-bold text-sm tracking-tight cursor-pointer"
           >
-            <Orbit className="w-4 h-4 text-[#274d36]" />
-            Try Smart Teammate Matching
+            <Orbit className="w-4 h-4 text-emerald-600 transition-transform duration-500 group-hover:rotate-180" />
+            <span>Try Smart Teammate Matching</span>
           </Link>
         </div>
 
