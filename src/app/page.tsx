@@ -85,54 +85,75 @@ export default function LandingPage() {
 
       {/* Feature Grid */}
       <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="glass-card p-7 rounded-3xl flex flex-col justify-between space-y-4 group">
-          <div className="space-y-4">
-            <div className="w-13 h-13 rounded-2xl bg-gradient-to-b from-[#edf4ec] to-[#e1ece1] border border-[#274d36]/20 text-[#1e3c2b] flex items-center justify-center shadow-xs group-hover:scale-105 transition-transform">
-              <GraduationCap className="w-6 h-6" />
+        <div className="glass-card p-6 sm:p-7 rounded-3xl flex flex-col justify-between space-y-5 group">
+          <div className="space-y-3">
+            <div className="flex items-center gap-3.5">
+              <div className="w-10 h-10 rounded-xl bg-[#edf4ec] border border-[#274d36]/20 text-[#274d36] flex items-center justify-center shrink-0 shadow-2xs group-hover:bg-[#274d36] group-hover:text-white transition-all duration-200">
+                <GraduationCap className="w-5 h-5" />
+              </div>
+              <h3 className="text-base sm:text-lg font-bold text-slate-900 tracking-tight">
+                Student Identity & Skills
+              </h3>
             </div>
-            <h3 className="text-lg font-extrabold text-slate-900 tracking-tight">Student Identity & Skills</h3>
-            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed pt-1">
               Showcase coursework, self-reported skills categorized by learning status (Learning, Practicing, Project Experience, Comfortable), and verified academic background.
             </p>
           </div>
-          <div className="pt-2">
-            <span className="text-[11px] font-bold text-[#1e3c2b] uppercase tracking-wider">
-              Profile & Portfolio Engine →
-            </span>
+          <div className="pt-2 border-t border-slate-100">
+            <Link
+              href="/explore"
+              className="text-[11px] font-bold text-[#1e3c2b] uppercase tracking-wider inline-flex items-center gap-1 group-hover:gap-1.5 transition-all"
+            >
+              Profile & Portfolio Engine <span>→</span>
+            </Link>
           </div>
         </div>
 
-        <div className="glass-card p-7 rounded-3xl flex flex-col justify-between space-y-4 group">
-          <div className="space-y-4">
-            <div className="w-13 h-13 rounded-2xl bg-gradient-to-b from-[#edf4ec] to-[#e1ece1] border border-[#274d36]/20 text-[#1e3c2b] flex items-center justify-center shadow-xs group-hover:scale-105 transition-transform">
-              <Sparkles className="w-6 h-6" />
+        <div className="glass-card p-6 sm:p-7 rounded-3xl flex flex-col justify-between space-y-5 group">
+          <div className="space-y-3">
+            <div className="flex items-center gap-3.5">
+              <div className="w-10 h-10 rounded-xl bg-[#edf4ec] border border-[#274d36]/20 text-[#274d36] flex items-center justify-center shrink-0 shadow-2xs group-hover:bg-[#274d36] group-hover:text-white transition-all duration-200">
+                <Sparkles className="w-5 h-5" />
+              </div>
+              <h3 className="text-base sm:text-lg font-bold text-slate-900 tracking-tight">
+                Explainable AI Matching
+              </h3>
             </div>
-            <h3 className="text-lg font-extrabold text-slate-900 tracking-tight">Explainable AI Matching</h3>
-            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed pt-1">
               Transparent 5-factor mathematical rubric evaluating skills (40%), domain interest (20%), availability (20%), experience (10%), and team balance (10%) without black-box guesswork.
             </p>
           </div>
-          <div className="pt-2">
-            <span className="text-[11px] font-bold text-[#1e3c2b] uppercase tracking-wider">
-              Transparent Algorithm →
-            </span>
+          <div className="pt-2 border-t border-slate-100">
+            <Link
+              href="/matching"
+              className="text-[11px] font-bold text-[#1e3c2b] uppercase tracking-wider inline-flex items-center gap-1 group-hover:gap-1.5 transition-all"
+            >
+              Transparent Algorithm <span>→</span>
+            </Link>
           </div>
         </div>
 
-        <div className="glass-card p-7 rounded-3xl flex flex-col justify-between space-y-4 group">
-          <div className="space-y-4">
-            <div className="w-13 h-13 rounded-2xl bg-gradient-to-b from-slate-100 to-slate-200/70 border border-slate-300/70 text-slate-800 flex items-center justify-center shadow-xs group-hover:scale-105 transition-transform">
-              <Briefcase className="w-6 h-6" />
+        <div className="glass-card p-6 sm:p-7 rounded-3xl flex flex-col justify-between space-y-5 group">
+          <div className="space-y-3">
+            <div className="flex items-center gap-3.5">
+              <div className="w-10 h-10 rounded-xl bg-[#edf4ec] border border-[#274d36]/20 text-[#274d36] flex items-center justify-center shrink-0 shadow-2xs group-hover:bg-[#274d36] group-hover:text-white transition-all duration-200">
+                <Briefcase className="w-5 h-5" />
+              </div>
+              <h3 className="text-base sm:text-lg font-bold text-slate-900 tracking-tight">
+                Interactive Workspaces
+              </h3>
             </div>
-            <h3 className="text-lg font-extrabold text-slate-900 tracking-tight">Interactive Workspaces</h3>
-            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed pt-1">
               Full private project execution spaces with member management, Kanban task tracking, single task and batch deletion, and direct sprint coordination.
             </p>
           </div>
-          <div className="pt-2">
-            <span className="text-[11px] font-bold text-[#1e3c2b] uppercase tracking-wider">
-              Team Kanban Workspace →
-            </span>
+          <div className="pt-2 border-t border-slate-100">
+            <Link
+              href="/projects"
+              className="text-[11px] font-bold text-[#1e3c2b] uppercase tracking-wider inline-flex items-center gap-1 group-hover:gap-1.5 transition-all"
+            >
+              Team Kanban Workspace <span>→</span>
+            </Link>
           </div>
         </div>
       </section>
