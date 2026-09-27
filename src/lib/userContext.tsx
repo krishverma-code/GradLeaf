@@ -86,6 +86,9 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({ children
           const savedId = typeof window !== 'undefined' ? (localStorage.getItem('gradleaf_active_user') || localStorage.getItem('skillsync_active_user')) : null;
           const found = users.find((u: StudentUser) => u.id === savedId) || users[0];
           setCurrentUser(found);
+          if (typeof window !== 'undefined' && (!savedId || !users.some((u: any) => u.id === savedId))) {
+            localStorage.setItem('gradleaf_active_user', found.id);
+          }
         }
       }
     } catch (e) {

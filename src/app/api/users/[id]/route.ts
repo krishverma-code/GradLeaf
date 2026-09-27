@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
 import { calculatePairMatchScore } from '@/lib/matchingAlgorithm';
+import { FALLBACK_USERS } from '@/lib/fallbackData';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -68,10 +69,10 @@ export async function GET(req: Request, { params }: { params: { id: string } }) 
     });
 
     if (!user) {
-      const { FALLBACK_USERS } = await import('@/lib/fallbackData');
+      const searchId = (params?.id || '').toLowerCase();
       const found =
         FALLBACK_USERS.find(
-          (u) => u.id === params.id || u.name.toLowerCase().includes(params.id.toLowerCase())
+          (u) => u.id === params?.id || (searchId && u.name.toLowerCase().includes(searchId))
         ) || FALLBACK_USERS[0];
       return NextResponse.json(found);
     }
@@ -110,16 +111,12 @@ export async function GET(req: Request, { params }: { params: { id: string } }) 
     });
   } catch (error) {
     console.error('Error fetching user', error);
-    try {
-      const { FALLBACK_USERS } = await import('@/lib/fallbackData');
-      const found =
-        FALLBACK_USERS.find(
-          (u) => u.id === params.id || u.name.toLowerCase().includes(params.id.toLowerCase())
-        ) || FALLBACK_USERS[0];
-      return NextResponse.json(found);
-    } catch {
-      return NextResponse.json({ error: 'Failed to fetch user' }, { status: 500 });
-    }
+    const searchId = (params?.id || '').toLowerCase();
+    const found =
+      FALLBACK_USERS.find(
+        (u) => u.id === params?.id || (searchId && u.name.toLowerCase().includes(searchId))
+      ) || FALLBACK_USERS[0];
+    return NextResponse.json(found);
   }
 }
 

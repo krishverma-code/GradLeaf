@@ -95,10 +95,12 @@ export default function ProfilePage() {
   const params = useParams();
   const userId = params?.id as string;
   const { currentUser, refreshUsers } = useUser();
+  const searchId = (userId || '').toLowerCase();
   const initialStudent =
-    (userId ? FALLBACK_USERS.find((u) => u.id === userId || u.name.toLowerCase().includes(userId.toLowerCase())) : null) ||
+    (searchId ? FALLBACK_USERS.find((u) => u.id === userId || u.name.toLowerCase().includes(searchId)) : null) ||
     FALLBACK_USERS[0];
-  const [profile, setProfile] = useState<UserProfileData | null>(initialStudent as any);
+  const [_profile, setProfile] = useState<UserProfileData | null>(initialStudent as any);
+  const profile: UserProfileData = (_profile && _profile.name ? _profile : (initialStudent || FALLBACK_USERS[0])) as any;
   const [loading, setLoading] = useState(false);
 
   // Edit Modal State
@@ -128,51 +130,42 @@ export default function ProfilePage() {
       const res = await fetch(`/api/users/${userId}`);
       if (res.ok) {
         const data = await res.json();
-        setProfile(data);
-        setName(data.name || '');
-        setCollege(data.college || '');
-        setCourse(data.course || '');
-        setYear(data.year || 3);
-        setInterests(data.interests || '');
-        setHeadline(data.headline || '');
-        setBio(data.bio || '');
-        setAvailability(data.availability || '');
-        setAvatarUrl(data.avatarUrl || '');
-      } else {
-        const { FALLBACK_USERS } = await import('@/lib/fallbackData');
-        const fallback =
-          FALLBACK_USERS.find((u) => u.id === userId || u.name.toLowerCase().includes(userId.toLowerCase())) ||
-          FALLBACK_USERS[0];
-        setProfile(fallback as any);
-        setName(fallback.name || '');
-        setCollege(fallback.college || '');
-        setCourse(fallback.course || '');
-        setYear(fallback.year || 3);
-        setInterests(fallback.interests || '');
-        setHeadline(fallback.headline || '');
-        setBio(fallback.bio || '');
-        setAvailability(fallback.availability || '');
-        setAvatarUrl(fallback.avatarUrl || '');
+        if (data && data.name && !data.error) {
+          setProfile(data);
+          setName(data.name || '');
+          setCollege(data.college || '');
+          setCourse(data.course || '');
+          setYear(data.year || 3);
+          setInterests(data.interests || '');
+          setHeadline(data.headline || '');
+          setBio(data.bio || '');
+          setAvailability(data.availability || '');
+          setAvatarUrl(data.avatarUrl || '');
+          return;
+        }
       }
     } catch (e) {
-      console.error('Failed to fetch profile, using fallback:', e);
-      const { FALLBACK_USERS } = await import('@/lib/fallbackData');
-      const fallback =
-        FALLBACK_USERS.find((u) => u.id === userId || u.name.toLowerCase().includes(userId.toLowerCase())) ||
-        FALLBACK_USERS[0];
-      setProfile(fallback as any);
-      setName(fallback.name || '');
-      setCollege(fallback.college || '');
-      setCourse(fallback.course || '');
-      setYear(fallback.year || 3);
-      setInterests(fallback.interests || '');
-      setHeadline(fallback.headline || '');
-      setBio(fallback.bio || '');
-      setAvailability(fallback.availability || '');
-      setAvatarUrl(fallback.avatarUrl || '');
+      console.error('Failed to fetch profile:', e);
     } finally {
       setLoading(false);
     }
+
+    // Always fall back to valid student if API returns non-profile or errors
+    const safeSearch = (userId || '').toLowerCase();
+    const fallback =
+      FALLBACK_USERS.find(
+        (u) => u.id === userId || (safeSearch && u.name.toLowerCase().includes(safeSearch))
+      ) || FALLBACK_USERS[0];
+    setProfile(fallback as any);
+    setName(fallback.name || '');
+    setCollege(fallback.college || '');
+    setCourse(fallback.course || '');
+    setYear(fallback.year || 3);
+    setInterests(fallback.interests || '');
+    setHeadline(fallback.headline || '');
+    setBio(fallback.bio || '');
+    setAvailability(fallback.availability || '');
+    setAvatarUrl(fallback.avatarUrl || '');
   };
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -382,14 +375,6 @@ export default function ProfilePage() {
       setSendingMatch(false);
     }
   };
-
-  if (loading) {
-    return <div className="p-8 text-center text-slate-500 animate-pulse">Loading Profile...</div>;
-  }
-
-  if (!profile) {
-    return <div className="p-8 text-center text-rose-500">Student Profile not found.</div>;
-  }
 
   const isOwner = currentUser?.id === profile.id;
 
