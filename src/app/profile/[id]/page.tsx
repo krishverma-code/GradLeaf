@@ -370,50 +370,42 @@ export default function ProfilePage() {
   return (
     <div className="space-y-6 py-2">
       
-      {/* Profile Header Banner */}
-      <div className="glass-card rounded-3xl border border-slate-200/80 shadow-glass-card overflow-hidden">
-        {/* Banner with Rich 3D Fluid Emerald Canvas & Frosted Glass Highlights */}
-        <div className="h-44 sm:h-52 relative overflow-hidden bg-gradient-to-r from-[#0b3b2c] via-[#165a44] to-[#0e4334] border-b border-emerald-500/20">
-          {/* High-res fluid 3D abstract wave canvas */}
+      {/* Profile Header Card */}
+      <div className="glass-card rounded-3xl border border-slate-200/90 shadow-glass-card p-3.5 sm:p-4 bg-white/90 space-y-4">
+        {/* Inset Modern Architectural Cover Canvas */}
+        <div className="relative rounded-2xl overflow-hidden h-44 sm:h-56 border border-slate-200/70 shadow-sm bg-slate-100">
+          {/* Pristine Modern Architecture Canvas with Natural Light */}
           <img
-            src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1600&q=80"
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80"
             alt="Profile cover"
-            className="w-full h-full object-cover object-center opacity-85 mix-blend-luminosity filter brightness-110 contrast-125"
+            className="w-full h-full object-cover object-center"
           />
 
-          {/* Luminous Emerald & Jade gradient glow overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0e3b2e]/90 via-transparent to-[#0a2e24]/40" />
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-900/60 via-transparent to-teal-900/50" />
-
-          {/* Ambient Glowing Orbs */}
-          <div className="absolute -top-12 -left-12 w-72 h-72 bg-emerald-400/25 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute -bottom-10 right-1/4 w-80 h-80 bg-teal-400/20 rounded-full blur-3xl pointer-events-none" />
-
-          {/* Micro-dot grid texture */}
-          <div className="absolute inset-0 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:20px_20px] opacity-[0.08] pointer-events-none" />
+          {/* Subtle Natural Vignette for Legibility */}
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-950/15 to-transparent" />
 
           {/* Top Left: Verified Academic Status Pill */}
-          <div className="absolute top-5 left-5 hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900/50 backdrop-blur-md border border-white/25 text-white text-xs font-bold shadow-lg">
+          <div className="absolute top-4 left-4 hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900/60 backdrop-blur-md border border-white/20 text-white text-xs font-bold shadow-md">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
             </span>
-            Verified Academic Profile
+            Campus Tech Portfolio
           </div>
 
           {/* Top Right: Actions */}
-          <div className="absolute top-5 right-5 flex items-center gap-2.5 z-10">
+          <div className="absolute top-4 right-4 flex items-center gap-2.5 z-10">
             {isOwner ? (
               <button
                 onClick={() => setShowEditModal(true)}
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/95 hover:bg-white text-slate-800 font-bold text-xs border border-white/40 shadow-tactile-subtle hover:shadow-md active:scale-95 transition-all backdrop-blur-md cursor-pointer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/95 hover:bg-white text-slate-800 font-bold text-xs shadow-md border border-white/40 active:scale-95 transition-all backdrop-blur-md cursor-pointer"
               >
                 <Edit3 className="w-3.5 h-3.5 text-emerald-700" /> Edit Profile
               </button>
             ) : (
               <button
                 onClick={handleOpenMatchModal}
-                className="btn-gradleaf-primary text-xs font-bold px-4.5 py-2.5 rounded-xl shadow-tactile flex items-center gap-2 cursor-pointer active:scale-95 transition-all"
+                className="btn-gradleaf-primary text-xs font-bold px-4.5 py-2 rounded-xl shadow-tactile flex items-center gap-2 cursor-pointer active:scale-95 transition-all"
               >
                 <Orbit className="w-3.5 h-3.5 text-emerald-200" /> Match with {profile.name.split(' ')[0]}
               </button>
@@ -422,15 +414,15 @@ export default function ProfilePage() {
         </div>
 
         {/* Profile Info Area */}
-        <div className="px-6 sm:px-8 pb-8 pt-0 relative bg-white/80">
+        <div className="px-2 sm:px-3 pt-0 pb-2">
           {/* Avatar and Top Actions row */}
           <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
             
-            {/* Left: Avatar overlapping banner partially + Details in white area */}
+            {/* Left: Avatar overlapping banner + Details */}
             <div className="flex flex-col sm:flex-row sm:items-start gap-5">
               <div
                 onClick={() => setShowEnlargedAvatar(true)}
-                className="relative shrink-0 -mt-16 sm:-mt-16 z-10 cursor-pointer transition-transform hover:scale-105"
+                className="relative shrink-0 -mt-16 sm:-mt-20 ml-2 sm:ml-4 z-10 cursor-pointer transition-transform hover:scale-105"
               >
                 <img
                   src={profile.avatarUrl || 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=160&h=160&fit=crop'}
