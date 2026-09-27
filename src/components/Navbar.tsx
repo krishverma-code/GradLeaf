@@ -104,19 +104,23 @@ export default function Navbar() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className={`relative flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold transition-all duration-200 ${
+                    className={`group relative flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold transition-all duration-200 cursor-pointer ${
                       isActive
-                        ? 'bg-gradient-to-b from-[#274d36] to-[#173523] text-white shadow-[0_3px_12px_rgba(26,56,38,0.3),inset_0_1px_0_rgba(255,255,255,0.25)] border border-[#142d1f]'
-                        : 'text-[#1e3c2b] bg-white/80 hover:bg-white border border-[#274d36]/20 shadow-2xs hover:shadow-xs'
+                        ? 'bg-white text-slate-900 shadow-[0_2px_10px_rgba(39,77,54,0.14),inset_0_1px_0_#ffffff] border border-[#274d36]/30 ring-2 ring-[#274d36]/10'
+                        : 'text-slate-600 hover:text-slate-900 hover:bg-white/80 border border-transparent hover:border-slate-200/60'
                     }`}
                   >
-                    <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-[#86c09b]' : 'text-[#274d36]'}`} />
+                    <Icon
+                      className={`w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-45 ${
+                        isActive ? 'text-[#274d36]' : 'text-slate-500 group-hover:text-[#274d36]'
+                      }`}
+                    />
                     <span>{item.label}</span>
                     <span
-                      className={`text-[9px] uppercase font-black px-1.5 py-0.5 rounded-full tracking-wider transition-colors ${
+                      className={`text-[9px] uppercase font-black px-1.5 py-0.5 rounded-full tracking-wider transition-all duration-200 ${
                         isActive
-                          ? 'bg-white/20 text-white border border-white/25'
-                          : 'bg-[#274d36]/10 text-[#274d36] border border-[#274d36]/20'
+                          ? 'bg-[#274d36] text-white shadow-2xs'
+                          : 'bg-[#edf4ec] text-[#274d36] border border-[#274d36]/20 group-hover:bg-[#274d36] group-hover:text-white'
                       }`}
                     >
                       AI
