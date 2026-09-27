@@ -84,76 +84,71 @@ body::after {
   transform: translateY(-2px);
 }
 
-/* High-Confidence Collegiate Button System — inspired by Handshake, Linear, Luma */
+/* Muted Sage Green Button System — matched to "Publish Post" reference */
 
-/* PRIMARY: flat confident forest green — clean, zero shimmer distractions */
+/* PRIMARY: muted sage green, flat and clean */
 .btn-gradleaf-primary {
-  background-color: #274d36;
+  background-color: #8aab98;
   color: #ffffff;
-  border: 1px solid #1a3826;
-  box-shadow: 0 1px 3px rgba(20, 45, 31, 0.25), 0 1px 2px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+  border: none;
+  box-shadow: none;
+  transition: background-color 0.15s ease, transform 0.12s ease;
   font-weight: 600;
   letter-spacing: -0.01em;
 }
 
 .btn-gradleaf-primary:hover {
-  background-color: #2d5a3f;
-  box-shadow: 0 4px 12px rgba(20, 45, 31, 0.3), 0 2px 4px rgba(0, 0, 0, 0.12);
+  background-color: #7a9e8a;
   transform: translateY(-1px);
 }
 
 .btn-gradleaf-primary:active {
-  background-color: #1a3826;
-  box-shadow: 0 1px 2px rgba(20, 45, 31, 0.2);
-  transform: translateY(0) scale(0.99);
+  background-color: #6e9280;
+  transform: translateY(0) scale(0.98);
 }
 
-/* SECONDARY: clean ghost outline — Notion/Linear style */
+/* SECONDARY: soft sage-tinted white, clean outline */
 .btn-gradleaf-secondary {
-  background-color: #ffffff;
-  color: #1e293b;
-  border: 1px solid #d1d5db;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-  transition: all 0.15s ease;
+  background-color: #f4f8f5;
+  color: #3d6652;
+  border: 1.5px solid #c2d8cc;
+  box-shadow: none;
+  transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.12s ease;
   font-weight: 600;
   letter-spacing: -0.01em;
 }
 
 .btn-gradleaf-secondary:hover {
-  background-color: #f8fafc;
-  color: #274d36;
-  border-color: rgba(39, 77, 54, 0.4);
-  box-shadow: 0 2px 8px rgba(39, 77, 54, 0.08);
+  background-color: #e8f2ed;
+  border-color: #8aab98;
+  color: #2d5a42;
   transform: translateY(-1px);
 }
 
 .btn-gradleaf-secondary:active {
-  background-color: #f1f5f9;
-  transform: translateY(0) scale(0.99);
+  background-color: #ddeee6;
+  transform: translateY(0) scale(0.98);
 }
 
-/* DARK: deep slate — Handshake "Log in" button style */
+/* DARK: slate — for archive/delete/destructive actions */
 .btn-gradleaf-dark {
-  background-color: #0f172a;
+  background-color: #334155;
   color: #ffffff;
-  border: 1px solid #1e293b;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.15);
-  transition: background-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+  border: none;
+  box-shadow: none;
+  transition: background-color 0.15s ease, transform 0.12s ease;
   font-weight: 600;
   letter-spacing: -0.01em;
 }
 
 .btn-gradleaf-dark:hover {
-  background-color: #1e293b;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  background-color: #475569;
   transform: translateY(-1px);
 }
 
 .btn-gradleaf-dark:active {
-  background-color: #020617;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-  transform: translateY(0) scale(0.99);
+  background-color: #1e293b;
+  transform: translateY(0) scale(0.98);
 }
 
 /* Enamel Academic Badges */

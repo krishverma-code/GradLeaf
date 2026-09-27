@@ -99,28 +99,28 @@ export default function Navbar() {
               const isActive = item.exact ? pathname === item.href : pathname.startsWith(item.href);
 
               if (item.highlight) {
-                // AI Smart Match tab — clean flat style matching button system
+                // AI Smart Match tab — sage green matching button system
                 return (
                   <Link
                     key={item.href}
                     href={item.href}
                     className={`group flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all duration-150 cursor-pointer ${
                       isActive
-                        ? 'bg-[#274d36] text-white border border-[#1a3826] shadow-[0_1px_3px_rgba(20,45,31,0.3)]'
+                        ? 'bg-[#8aab98] text-white'
                         : 'text-slate-600 hover:text-slate-900 hover:bg-white/80 border border-transparent hover:border-slate-200/60'
                     }`}
                   >
                     <Icon
                       className={`w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-45 ${
-                        isActive ? 'text-white/80' : 'text-slate-500 group-hover:text-[#274d36]'
+                        isActive ? 'text-white/80' : 'text-slate-500 group-hover:text-[#8aab98]'
                       }`}
                     />
                     <span>{item.label}</span>
                     <span
                       className={`text-[9px] uppercase font-bold px-1.5 py-0.5 rounded-full tracking-wider transition-all duration-150 ${
                         isActive
-                          ? 'bg-white/15 text-white/90'
-                          : 'bg-[#edf4ec] text-[#274d36] group-hover:bg-[#274d36] group-hover:text-white'
+                          ? 'bg-white/20 text-white/90'
+                          : 'bg-[#edf4ec] text-[#3d6652] group-hover:bg-[#8aab98] group-hover:text-white'
                       }`}
                     >
                       AI
