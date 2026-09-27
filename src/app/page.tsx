@@ -20,12 +20,14 @@ import GradLeafLogo from '@/components/GradLeafLogo';
 function CollegiateBackground({ scrollY }: { scrollY: number }) {
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden" style={{ zIndex: 0 }}>
-      {/* 1. Real Campus Quad Atmosphere Canvas — Vivid & Prominently Visible */}
+      {/* 1. Real Campus Quad Atmosphere Canvas — Bleed-extended & Hardware-accelerated */}
       <div
-        className="absolute inset-0 will-change-transform bg-cover bg-center transition-transform duration-100 ease-out"
+        className="absolute inset-x-0 will-change-transform bg-cover bg-center"
         style={{
+          top: '-15%',
+          height: '130%',
           backgroundImage: `url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=2400&q=80')`,
-          transform: `translateY(${scrollY * 0.15}px) scale(${1 + Math.min(scrollY * 0.0003, 0.06)})`,
+          transform: `translate3d(0, ${-scrollY * 0.12}px, 0)`,
           opacity: 0.65,
           filter: 'saturate(1.15) contrast(1.05)',
         }}
@@ -46,7 +48,7 @@ function CollegiateBackground({ scrollY }: { scrollY: number }) {
         style={{
           background: 'radial-gradient(circle, rgba(138,171,152,0.25) 0%, rgba(39,77,54,0.08) 50%, transparent 75%)',
           filter: 'blur(75px)',
-          transform: `translateY(${scrollY * 0.08}px)`,
+          transform: `translate3d(0, ${-scrollY * 0.05}px, 0)`,
         }}
       />
 
@@ -56,7 +58,7 @@ function CollegiateBackground({ scrollY }: { scrollY: number }) {
         style={{
           backgroundImage: 'radial-gradient(rgba(39,77,54,0.25) 1.5px, transparent 1.5px)',
           backgroundSize: '34px 34px',
-          transform: `translateY(${scrollY * 0.04}px)`,
+          transform: `translate3d(0, ${-scrollY * 0.03}px, 0)`,
         }}
       />
     </div>
@@ -68,7 +70,16 @@ export default function LandingPage() {
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
-    const onScroll = () => setScrollY(window.scrollY);
+    let ticking = false;
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setScrollY(window.scrollY);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
