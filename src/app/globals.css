@@ -106,7 +106,7 @@ body::after {
   background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.32) 50%, transparent 100%);
   transform: skewX(-20deg);
   transition: left 0.65s cubic-bezier(0.16, 1, 0.3, 1);
-  pointer-events-none;
+  pointer-events: none;
 }
 
 .btn-gradleaf-primary:hover {
@@ -171,7 +171,7 @@ body::after {
   background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.16) 50%, transparent 100%);
   transform: skewX(-20deg);
   transition: left 0.65s cubic-bezier(0.16, 1, 0.3, 1);
-  pointer-events-none;
+  pointer-events: none;
 }
 
 .btn-gradleaf-dark:hover {
