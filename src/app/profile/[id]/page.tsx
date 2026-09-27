@@ -372,20 +372,35 @@ export default function ProfilePage() {
       
       {/* Profile Header Card */}
       <div className="glass-card rounded-3xl border border-slate-200/90 shadow-glass-card p-3.5 sm:p-4 bg-white/90 space-y-4">
-        {/* Inset Modern Architectural Cover Canvas */}
-        <div className="relative rounded-2xl overflow-hidden h-44 sm:h-56 border border-slate-200/70 shadow-sm bg-slate-100">
-          {/* Pristine Modern Architecture Canvas with Natural Light */}
-          <img
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80"
-            alt="Profile cover"
-            className="w-full h-full object-cover object-center"
-          />
+        {/* Inset Procedural Aurora Mesh & Vector Grid Canvas (No External Image) */}
+        <div className="relative rounded-2xl overflow-hidden h-44 sm:h-56 border border-slate-800/80 shadow-inner bg-slate-950">
+          {/* Luminous Multi-layered Aurora Glow Orbs */}
+          <div className="absolute -top-14 -left-14 w-80 h-80 bg-gradient-to-br from-emerald-500/35 to-teal-400/25 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute -bottom-16 right-8 w-96 h-96 bg-gradient-to-tr from-teal-500/30 via-emerald-600/25 to-cyan-500/20 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute top-1/2 left-1/3 -translate-y-1/2 w-64 h-64 bg-emerald-400/20 rounded-full blur-2xl pointer-events-none" />
 
-          {/* Subtle Natural Vignette for Legibility */}
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-950/15 to-transparent" />
+          {/* Isometric / Tech Vector Grid Overlay */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_70%_60%_at_50%_50%,#000_60%,transparent_100%)] pointer-events-none" />
+
+          {/* Micro-dot Star/Particle Matrix */}
+          <div className="absolute inset-0 bg-[radial-gradient(#34d399_1px,transparent_1px)] [background-size:28px_28px] opacity-15 pointer-events-none" />
+
+          {/* Generative Flowing Vector Wave Curves */}
+          <svg className="absolute inset-0 w-full h-full opacity-45 pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="aurora-wire" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#34d399" stopOpacity="0.45" />
+                <stop offset="50%" stopColor="#2dd4bf" stopOpacity="0.35" />
+                <stop offset="100%" stopColor="#38bdf8" stopOpacity="0.15" />
+              </linearGradient>
+            </defs>
+            <path d="M-100,50 C160,170 360,20 620,90 C860,160 1060,40 1350,100" fill="none" stroke="url(#aurora-wire)" strokeWidth="1.5" />
+            <path d="M-50,90 C210,30 410,150 710,60 C960,140 1160,30 1450,80" fill="none" stroke="url(#aurora-wire)" strokeWidth="1.5" />
+            <path d="M0,130 C260,190 510,70 810,130 C1060,60 1260,140 1550,110" fill="none" stroke="url(#aurora-wire)" strokeWidth="1.5" />
+          </svg>
 
           {/* Top Left: Verified Academic Status Pill */}
-          <div className="absolute top-4 left-4 hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900/60 backdrop-blur-md border border-white/20 text-white text-xs font-bold shadow-md">
+          <div className="absolute top-4 left-4 hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900/60 backdrop-blur-md border border-white/15 text-white text-xs font-bold shadow-md">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
