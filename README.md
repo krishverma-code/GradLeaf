@@ -96,3 +96,17 @@ hackinSummer/
   ```
 - **Pull Requests**: Open a PR into `main` and get a teammate review before merging.
 - **Database Schema Changes**: If you modify `prisma/schema.prisma`, run `npx prisma db push` and commit the updated schema.
+
+---
+
+## ⚡ Core API Endpoints
+| Route | Method | Description |
+| :--- | :--- | :--- |
+| `/api/users` | `GET`, `POST` | List and create student profiles |
+| `/api/users/[id]` | `GET`, `PUT` | Read and update individual student profile |
+| `/api/projects` | `GET`, `POST` | Explore active projects & create initiatives |
+| `/api/tasks` | `GET`, `POST` | Manage Kanban tasks inside project workspaces |
+| `/api/tasks/[id]` | `PUT`, `DELETE` | Update task status or delete sprint items |
+| `/api/matching` | `GET` | Calculate explainable 5-factor teammate match scores |
+| `/api/collab` | `GET`, `POST` | Send and manage teammate collaboration requests |
+| `/api/notifications` | `GET`, `POST` | Retrieve and mark student match notifications |
