@@ -1006,7 +1006,7 @@ export default function ProfilePage() {
 
             <div className="p-3 rounded-xl bg-slate-50/80 border border-slate-200/80 flex items-center justify-between hover:bg-slate-50 transition-colors">
               <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-lg bg-indigo-50 border border-indigo-100 flex items-center justify-center text-indigo-600 shrink-0">
+                <div className="w-8 h-8 rounded-lg bg-emerald-50 border border-emerald-200/80 flex items-center justify-center text-emerald-700 shrink-0">
                   <Award className="w-4 h-4" />
                 </div>
                 <div>
@@ -1049,13 +1049,13 @@ export default function ProfilePage() {
                     <img
                       src={avatarUrl || profile.avatarUrl || 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=120&h=120&fit=crop'}
                       alt="Avatar preview"
-                      className="w-16 h-16 rounded-2xl object-cover border-2 border-white ring-2 ring-indigo-100 shadow-xs bg-white"
+                      className="w-16 h-16 rounded-2xl object-cover border-2 border-white ring-2 ring-emerald-100 shadow-xs bg-white"
                     />
                   </div>
 
                   <div className="flex-1 w-full space-y-2">
                     <div className="flex items-center gap-2">
-                      <label className="px-3 py-1.5 rounded-xl border border-slate-300 hover:border-indigo-400 bg-white hover:bg-indigo-50/40 text-slate-700 hover:text-indigo-700 text-xs font-semibold cursor-pointer transition-colors flex items-center gap-1.5 shadow-2xs shrink-0">
+                      <label className="px-3 py-1.5 rounded-xl border border-slate-300 hover:border-emerald-400 bg-white hover:bg-emerald-50/40 text-slate-700 hover:text-emerald-700 text-xs font-semibold cursor-pointer transition-colors flex items-center gap-1.5 shadow-2xs shrink-0">
                         <Upload className="w-3.5 h-3.5" />
                         <span>Upload File</span>
                         <input
@@ -1073,7 +1073,7 @@ export default function ProfilePage() {
                           setAvatarUrl(e.target.value);
                           setUploadError('');
                         }}
-                        className="flex-1 text-xs p-1.5 px-2.5 rounded-xl border border-slate-200 bg-white focus:outline-none focus:border-indigo-500"
+                        className="flex-1 text-xs p-1.5 px-2.5 rounded-xl border border-slate-200 bg-white focus:outline-none focus:border-emerald-600"
                       />
                     </div>
 
@@ -1090,7 +1090,7 @@ export default function ProfilePage() {
                               setUploadError('');
                             }}
                             className={`w-6 h-6 rounded-lg overflow-hidden border transition-all hover:scale-110 ${
-                              avatarUrl === preset ? 'border-indigo-600 ring-2 ring-indigo-500/30' : 'border-slate-200'
+                              avatarUrl === preset ? 'border-emerald-600 ring-2 ring-emerald-500/30' : 'border-slate-200'
                             }`}
                             title={`Select preset ${idx + 1}`}
                           >
@@ -1113,7 +1113,7 @@ export default function ProfilePage() {
                   required
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="w-full text-xs p-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-indigo-500"
+                  className="w-full text-xs p-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-emerald-600"
                 />
               </div>
 
@@ -1129,7 +1129,7 @@ export default function ProfilePage() {
                     value={college}
                     onChange={(e) => setCollege(e.target.value)}
                     placeholder="e.g. BITS Pilani"
-                    className="w-full text-xs p-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-indigo-500"
+                    className="w-full text-xs p-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-emerald-600"
                   />
                 </div>
                 <div>
@@ -1142,7 +1142,7 @@ export default function ProfilePage() {
                     value={course}
                     onChange={(e) => setCourse(e.target.value)}
                     placeholder="e.g. B.E. Computer Science"
-                    className="w-full text-xs p-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-indigo-500"
+                    className="w-full text-xs p-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-emerald-600"
                   />
                 </div>
               </div>
@@ -1156,7 +1156,7 @@ export default function ProfilePage() {
                   <select
                     value={year}
                     onChange={(e) => setYear(Number(e.target.value))}
-                    className="w-full text-xs p-2.5 rounded-xl border border-slate-200 bg-white focus:outline-none focus:border-indigo-500"
+                    className="w-full text-xs p-2.5 rounded-xl border border-slate-200 bg-white focus:outline-none focus:border-emerald-600"
                   >
                     <option value={1}>Year 1 Student</option>
                     <option value={2}>Year 2 Student</option>
@@ -1173,7 +1173,7 @@ export default function ProfilePage() {
                     value={interests}
                     onChange={(e) => setInterests(e.target.value)}
                     placeholder="e.g. Mobile Apps, Web Development, Cloud"
-                    className="w-full text-xs p-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-indigo-500"
+                    className="w-full text-xs p-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-emerald-600"
                   />
                 </div>
               </div>
@@ -1188,7 +1188,7 @@ export default function ProfilePage() {
                   value={headline}
                   onChange={(e) => setHeadline(e.target.value)}
                   placeholder="e.g. Mobile & Cloud Builder • Flutter & Node.js"
-                  className="w-full text-xs p-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-indigo-500"
+                  className="w-full text-xs p-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-emerald-600"
                 />
               </div>
 
@@ -1405,7 +1405,7 @@ export default function ProfilePage() {
             {/* Profile Caption Info */}
             <div className="w-full pt-3 pb-1 px-2 text-center text-white">
               <h3 className="font-bold text-lg tracking-tight">{profile.name}</h3>
-              <p className="text-xs text-indigo-200 font-medium mt-0.5">
+              <p className="text-xs text-emerald-200 font-medium mt-0.5">
                 {profile.course} &bull; {profile.college}
               </p>
             </div>
