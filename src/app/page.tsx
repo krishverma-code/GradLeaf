@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useUser } from '@/lib/userContext';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import {
   Orbit,
   FolderGit2,
@@ -12,107 +12,51 @@ import {
   Zap,
   ShieldCheck,
   CheckCircle2,
-  ChevronLeft,
-  ChevronRight,
   Sparkles,
-  Layers,
-  ArrowUpRight,
 } from 'lucide-react';
 import GradLeafLogo from '@/components/GradLeafLogo';
-
-/* ─── 4 Curated Collegiate Portals for the Morphing Portal Gateway ─── */
-const PORTALS = [
-  {
-    id: 1,
-    tag: 'PORTAL 01 • PROVEN TALENT',
-    title: 'Showcase Verified Identity',
-    subtitle: 'From Coursework to Real Competency',
-    desc: 'Ditch unverified resumes. Showcase verified university coursework, GitHub repositories, and competencies structured by active mastery stage.',
-    cta: 'Explore Student Directory',
-    href: '/explore',
-    image: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1800&q=80', // Collegiate Campus Quad
-    badge: '18+ Partner Universities',
-    metric: '94% Verified Profiles',
-  },
-  {
-    id: 2,
-    tag: 'PORTAL 02 • EXPLAINABLE AI',
-    title: 'Discover Ideal Teammates',
-    subtitle: 'Transparent 5-Factor Algorithmic Matching',
-    desc: 'No black-box guesswork. Match across complementary skills (40%), domain interest (20%), availability (20%), experience (10%), and team balance (10%).',
-    cta: 'Launch AI Matchmaker',
-    href: '/matching',
-    image: 'https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=1800&q=80', // High-Tech AI Neural Lab
-    badge: 'Autonomous Teammate Match',
-    metric: '98.4% Match Accuracy',
-  },
-  {
-    id: 3,
-    tag: 'PORTAL 03 • TEAM EXECUTION',
-    title: 'Ship in Sprint Workspaces',
-    subtitle: 'Private Collaborative Kanban Command Centers',
-    desc: 'Organize team members, assign sprint tasks, track real-time progress across Kanban columns, and coordinate milestones with zero friction.',
-    cta: 'Open Project Workspaces',
-    href: '/projects',
-    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1800&q=80', // Student Tech Team Working Together
-    badge: 'Sprint Kanban Active',
-    metric: '12 / 14 Tasks Shipped',
-  },
-  {
-    id: 4,
-    tag: 'PORTAL 04 • STANDOUT PORTFOLIO',
-    title: 'Launch Recruiter-Ready Work',
-    subtitle: 'Turn Projects Into Career Breakthroughs',
-    desc: 'Transform academic hackathons and campus initiatives into shipped public repositories, peer endorsements, and proof-of-work that gets you hired.',
-    cta: 'Explore Campus Feed',
-    href: '/feed',
-    image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1800&q=80', // Students Pitching & Shipping Projects
-    badge: 'Verified Portfolio Engine',
-    metric: '450+ Projects Shipped',
-  },
-];
 
 /* ─── Ambient Collegiate Atmospheric Background ─── */
 function CollegiateBackground({ scrollY }: { scrollY: number }) {
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden" style={{ zIndex: 0 }}>
-      {/* 1. Subtle Campus Landscape Parallax Canvas */}
+      {/* 1. Subtle Campus Quad Atmosphere Canvas */}
       <div
         className="absolute inset-0 will-change-transform bg-cover bg-center transition-transform duration-100 ease-out"
         style={{
           backgroundImage: `url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=2400&q=80')`,
-          transform: `translateY(${scrollY * 0.14}px) scale(${1 + Math.min(scrollY * 0.0002, 0.06)})`,
-          opacity: 0.28,
-          filter: 'saturate(1.1) contrast(1.05)',
+          transform: `translateY(${scrollY * 0.12}px) scale(${1 + Math.min(scrollY * 0.0002, 0.05)})`,
+          opacity: 0.22,
+          filter: 'saturate(1.05) contrast(1.02)',
         }}
       />
 
-      {/* 2. Frosted Gradient Overlay for Pristine Typography Contrast */}
+      {/* 2. Frosted Gradient Overlay for Pristine Legibility */}
       <div
         className="absolute inset-0"
         style={{
           background:
-            'radial-gradient(ellipse 95% 75% at 50% 20%, rgba(247,250,248,0.72) 0%, rgba(247,250,248,0.92) 55%, #f7faf8 100%)',
+            'radial-gradient(ellipse 95% 75% at 50% 20%, rgba(247,250,248,0.75) 0%, rgba(247,250,248,0.94) 55%, #f7faf8 100%)',
         }}
       />
 
       {/* 3. Ambient Sage/Forest Luminous Aura */}
       <div
-        className="absolute -top-36 left-1/2 -translate-x-1/2 w-[850px] h-[520px] rounded-full pointer-events-none will-change-transform"
+        className="absolute -top-36 left-1/2 -translate-x-1/2 w-[850px] h-[500px] rounded-full pointer-events-none will-change-transform"
         style={{
-          background: 'radial-gradient(circle, rgba(138,171,152,0.35) 0%, rgba(39,77,54,0.12) 50%, transparent 75%)',
+          background: 'radial-gradient(circle, rgba(138,171,152,0.30) 0%, rgba(39,77,54,0.10) 50%, transparent 75%)',
           filter: 'blur(75px)',
           transform: `translateY(${scrollY * 0.08}px)`,
         }}
       />
 
-      {/* 4. Technical Blueprint Grid Pattern */}
+      {/* 4. Technical Blueprint Dot Pattern */}
       <div
-        className="absolute inset-0 will-change-transform opacity-30"
+        className="absolute inset-0 will-change-transform opacity-25"
         style={{
           backgroundImage: 'radial-gradient(rgba(39,77,54,0.22) 1.5px, transparent 1.5px)',
           backgroundSize: '34px 34px',
-          transform: `translateY(${scrollY * 0.05}px)`,
+          transform: `translateY(${scrollY * 0.04}px)`,
         }}
       />
     </div>
@@ -122,8 +66,6 @@ function CollegiateBackground({ scrollY }: { scrollY: number }) {
 export default function LandingPage() {
   const { allUsers } = useUser();
   const [scrollY, setScrollY] = useState(0);
-  const [activePortal, setActivePortal] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrollY(window.scrollY);
@@ -131,23 +73,12 @@ export default function LandingPage() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  // Auto-advance portals unless hovered
-  useEffect(() => {
-    if (isPaused) return;
-    const timer = setInterval(() => {
-      setActivePortal((prev) => (prev + 1) % PORTALS.length);
-    }, 6000);
-    return () => clearInterval(timer);
-  }, [isPaused]);
-
-  const current = PORTALS[activePortal];
-
   return (
     <>
       {/* ─── Fixed Parallax Collegiate Backdrop ─── */}
       <CollegiateBackground scrollY={scrollY} />
 
-      <div className="relative space-y-20 py-6 sm:py-10" style={{ zIndex: 1 }}>
+      <div className="relative space-y-16 py-4 sm:py-8" style={{ zIndex: 1 }}>
         {/* ─── 1. HERO SECTION ─── */}
         <section className="relative text-center max-w-4xl mx-auto space-y-6 pt-2">
           {/* Top Collegiate Pill Badge */}
@@ -177,7 +108,7 @@ export default function LandingPage() {
             The collegiate network designed to showcase verified student competencies, discover real campus initiatives, match with ideal peers through explainable AI, and ship portfolio projects in shared workspaces.
           </p>
 
-          {/* Action Buttons */}
+          {/* Action Buttons (in muted sage aesthetic) */}
           <div className="flex flex-wrap items-center justify-center gap-3.5 pt-2">
             <Link
               href="/feed"
@@ -212,171 +143,8 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* ─── 2. THE MORPHING PORTAL GATEWAY (Inspired by Slider Revolution Reference) ─── */}
-        <section
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
-          className="relative max-w-5xl mx-auto rounded-3xl p-6 sm:p-10 border border-[#c2d8cc] bg-gradient-to-br from-white/90 via-[#f4f8f5]/80 to-slate-50/90 backdrop-blur-2xl shadow-[0_30px_70px_-20px_rgba(20,45,31,0.12),inset_0_1px_0_rgba(255,255,255,1)]"
-        >
-          {/* Top Stage Header */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-[#c2d8cc]/60">
-            <div>
-              <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#274d36]">
-                <Sparkles className="w-3.5 h-3.5 text-[#8aab98]" />
-                Interactive Gateway • Teleport Through Campus Innovation
-              </div>
-              <h2 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight mt-0.5">
-                The Collegiate Portals
-              </h2>
-            </div>
-
-            {/* Portal Tab Navigation Controls */}
-            <div className="flex items-center gap-2">
-              {PORTALS.map((portal, idx) => (
-                <button
-                  key={portal.id}
-                  onClick={() => setActivePortal(idx)}
-                  className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
-                    activePortal === idx
-                      ? 'bg-[#274d36] text-white shadow-xs'
-                      : 'bg-white/80 hover:bg-white text-slate-600 border border-[#c2d8cc]/80'
-                  }`}
-                >
-                  0{portal.id}
-                </button>
-              ))}
-              <div className="h-4 w-px bg-slate-200 mx-1 hidden sm:block"></div>
-              <button
-                onClick={() => setActivePortal((prev) => (prev === 0 ? PORTALS.length - 1 : prev - 1))}
-                className="w-8 h-8 rounded-xl bg-white border border-[#c2d8cc] flex items-center justify-center text-slate-600 hover:text-slate-900 hover:bg-slate-50 shadow-2xs transition-all cursor-pointer"
-                title="Previous Portal"
-              >
-                <ChevronLeft className="w-4 h-4" />
-              </button>
-              <button
-                onClick={() => setActivePortal((prev) => (prev + 1) % PORTALS.length)}
-                className="w-8 h-8 rounded-xl bg-white border border-[#c2d8cc] flex items-center justify-center text-slate-600 hover:text-slate-900 hover:bg-slate-50 shadow-2xs transition-all cursor-pointer"
-                title="Next Portal"
-              >
-                <ChevronRight className="w-4 h-4" />
-              </button>
-            </div>
-          </div>
-
-          {/* Core Portal Stage: Left Info • Center Morphing Archway • Right Action */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-8">
-            {/* Left Column: Index & Primary Teleport Title */}
-            <div className="lg:col-span-4 space-y-4 text-center lg:text-left">
-              <div className="inline-block text-xs font-mono font-black text-[#274d36] bg-[#edf4ec] border border-[#c2d8cc] px-3 py-1 rounded-full">
-                0{current.id} / 0{PORTALS.length}
-              </div>
-
-              <div className="text-[11px] font-bold uppercase tracking-wider text-[#8aab98]">
-                {current.tag}
-              </div>
-
-              <h3 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight leading-snug">
-                {current.title}
-              </h3>
-
-              <div className="text-xs font-semibold text-[#274d36]">
-                {current.subtitle}
-              </div>
-
-              <div className="pt-2 hidden lg:block">
-                <span className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-700 bg-white/80 border border-[#c2d8cc] px-3 py-1.5 rounded-xl shadow-2xs">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#8aab98]" />
-                  {current.badge}
-                </span>
-              </div>
-            </div>
-
-            {/* Center Column: The Iconic Morphing Stone Archway Portal */}
-            <div className="lg:col-span-4 flex items-center justify-center">
-              <div className="relative group cursor-pointer" onClick={() => setActivePortal((prev) => (prev + 1) % PORTALS.length)}>
-                {/* Outer Glow Halo Ring */}
-                <div className="absolute -inset-4 rounded-[120px] bg-gradient-to-b from-[#8aab98]/40 to-[#274d36]/20 blur-2xl group-hover:scale-105 transition-transform duration-500"></div>
-
-                {/* The Morphing Archway Mask Container */}
-                <div className="portal-arch relative w-[240px] sm:w-[270px] h-[340px] sm:h-[380px] overflow-hidden border-4 border-white/90 shadow-2xl bg-slate-900">
-                  {/* Active Portal Image with Smooth Scale Zoom */}
-                  <div
-                    key={current.id}
-                    className="absolute inset-0 bg-cover bg-center transition-all duration-700 ease-out transform group-hover:scale-110"
-                    style={{
-                      backgroundImage: `url('${current.image}')`,
-                    }}
-                  />
-
-                  {/* Portal Vignette Scrim */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-black/20 pointer-events-none" />
-
-                  {/* Morphing Portal Arch Decorative Frame Lines */}
-                  <div className="absolute inset-3 border border-white/40 rounded-[inherit] pointer-events-none" />
-
-                  {/* Portal Bottom HUD Tag */}
-                  <div className="absolute bottom-5 inset-x-3 text-center pointer-events-none">
-                    <span className="text-[10px] font-bold text-white uppercase tracking-wider bg-black/50 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">
-                      Click to Teleport ↗
-                    </span>
-                  </div>
-                </div>
-
-                {/* Floating Orbit Beacon */}
-                <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-white px-3 py-1 rounded-full border border-[#c2d8cc] shadow-md flex items-center gap-1.5 text-[10px] font-bold text-[#274d36]">
-                  <Orbit className="w-3 h-3 text-[#8aab98] animate-spin-slow" />
-                  <span>{current.metric}</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Column: Portal Description & Direct Action CTA */}
-            <div className="lg:col-span-4 space-y-5 text-center lg:text-left">
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
-                {current.desc}
-              </p>
-
-              <div className="pt-2 flex flex-col sm:flex-row lg:flex-col items-center lg:items-start gap-3">
-                <Link
-                  href={current.href}
-                  className="btn-gradleaf-primary inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl font-bold text-xs shadow-sm hover:shadow-md active:scale-95 transition-all w-full sm:w-auto"
-                >
-                  <span>{current.cta}</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
-
-                <div className="text-[11px] text-slate-500 font-medium">
-                  Auto-teleporting every 6s • Hover to pause
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Bottom Portal Indicator Progress Bar */}
-          <div className="pt-8 grid grid-cols-4 gap-2">
-            {PORTALS.map((portal, idx) => (
-              <button
-                key={portal.id}
-                onClick={() => setActivePortal(idx)}
-                className="group text-left space-y-1.5 focus:outline-none cursor-pointer"
-              >
-                <div className="h-1.5 w-full rounded-full bg-slate-200/80 overflow-hidden">
-                  <div
-                    className={`h-full transition-all duration-500 ${
-                      activePortal === idx ? 'bg-[#274d36] w-full' : 'bg-transparent group-hover:bg-slate-300 w-full'
-                    }`}
-                  />
-                </div>
-                <div className="text-[10px] font-bold text-slate-600 truncate hidden sm:block">
-                  0{portal.id}. {portal.title.split(' ')[0]}
-                </div>
-              </button>
-            ))}
-          </div>
-        </section>
-
-        {/* ─── 3. LIVE CAMPUS PLATFORM STATS BAR ─── */}
-        <section className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+        {/* ─── 2. LIVE CAMPUS PLATFORM STATS BAR ─── */}
+        <section className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto pt-2">
           <div className="glass-card p-4 sm:p-5 rounded-2xl border border-[#c2d8cc]/80 text-center space-y-1">
             <div className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">2,400+</div>
             <div className="text-xs text-slate-500 font-semibold">Active Student Creators</div>
@@ -395,7 +163,7 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* ─── 4. RE-ARRANGED BENTO FEATURE GRID ─── */}
+        {/* ─── 3. RE-ARRANGED BENTO FEATURE GRID ─── */}
         <section className="max-w-5xl mx-auto space-y-6">
           <div className="text-center space-y-2 max-w-xl mx-auto">
             <div className="text-xs font-bold uppercase tracking-wider text-[#274d36] bg-[#edf4ec] inline-block px-3 py-1 rounded-full border border-[#c2d8cc]">
@@ -549,7 +317,7 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* ─── 5. "HOW IT WORKS" 3-STEP JOURNEY ─── */}
+        {/* ─── 4. "HOW IT WORKS" 3-STEP JOURNEY ─── */}
         <section className="max-w-5xl mx-auto rounded-3xl p-8 sm:p-10 border border-[#c2d8cc]/80 bg-white/75 backdrop-blur-xl shadow-xs space-y-8">
           <div className="text-center space-y-1">
             <div className="text-xs font-bold uppercase tracking-wider text-[#274d36]">Simple 3-Step Flow</div>
@@ -591,7 +359,7 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* ─── 6. PRODUCTION CTA BANNER (FROSTED AURORA BENTO) ─── */}
+        {/* ─── 5. PRODUCTION CTA BANNER (FROSTED AURORA BENTO) ─── */}
         <section className="relative overflow-hidden rounded-3xl p-8 sm:p-12 border border-[#c2d8cc] bg-white/80 backdrop-blur-xl shadow-[0_20px_50px_-20px_rgba(20,45,31,0.08),inset_0_1px_0_rgba(255,255,255,1)]">
           <div className="absolute inset-0 bg-[radial-gradient(rgba(39,77,54,0.06)_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none" />
 
