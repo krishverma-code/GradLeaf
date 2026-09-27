@@ -77,45 +77,69 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-200/80 shadow-[0_1px_3px_0_rgba(0,0,0,0.02),inset_0_-1px_0_0_rgba(255,255,255,0.8)]">
+    <header className="sticky top-0 z-50 bg-white/75 backdrop-blur-2xl border-b border-slate-200/60 shadow-[0_4px_24px_-4px_rgba(20,45,31,0.04),inset_0_-1px_0_0_rgba(255,255,255,0.9)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         
         {/* Brand */}
-        <div className="flex items-center gap-8">
+        <div className="flex items-center gap-6 lg:gap-8">
           <Link href="/" className="flex items-center gap-2.5 group">
-            <GradLeafLogo size={38} className="rounded-xl shadow-xs group-hover:scale-105 transition-transform" />
+            <GradLeafLogo size={36} className="rounded-xl shadow-xs group-hover:scale-105 transition-transform" />
             <div>
               <span className="text-xl font-extrabold text-slate-900 tracking-tight flex items-center gap-0.5">
-                Grad<span className="text-emerald-600">Leaf</span>
+                Grad<span className="text-[#274d36]">Leaf</span>
               </span>
-              <span className="block text-[10px] text-emerald-800/80 font-bold tracking-wider uppercase">
+              <span className="block text-[10px] text-[#274d36]/80 font-bold tracking-wider uppercase">
                 Student Network
               </span>
             </div>
           </Link>
 
-          {/* Navigation links */}
-          <nav className="hidden md:flex items-center gap-1.5">
+          {/* Segmented Island Glass Nav */}
+          <nav className="hidden md:flex items-center gap-1 p-1 rounded-full bg-slate-100/80 border border-slate-200/70 backdrop-blur-md shadow-[inset_0_1px_2px_rgba(0,0,0,0.03)]">
             {navItems.map((item) => {
               const Icon = item.icon;
               const isActive = item.exact ? pathname === item.href : pathname.startsWith(item.href);
+
+              if (item.highlight) {
+                // High-aesthetic AI Smart Match tab
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={`relative flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold transition-all duration-200 ${
+                      isActive
+                        ? 'bg-gradient-to-b from-[#274d36] to-[#173523] text-white shadow-[0_3px_12px_rgba(26,56,38,0.3),inset_0_1px_0_rgba(255,255,255,0.25)] border border-[#142d1f]'
+                        : 'text-[#1e3c2b] bg-white/80 hover:bg-white border border-[#274d36]/20 shadow-2xs hover:shadow-xs'
+                    }`}
+                  >
+                    <Sparkles className={`w-3.5 h-3.5 ${isActive ? 'text-[#86c09b]' : 'text-[#274d36]'}`} />
+                    <span>{item.label}</span>
+                    <span
+                      className={`text-[9px] uppercase font-black px-1.5 py-0.5 rounded-full tracking-wider transition-colors ${
+                        isActive
+                          ? 'bg-white/20 text-white border border-white/25'
+                          : 'bg-[#274d36]/10 text-[#274d36] border border-[#274d36]/20'
+                      }`}
+                    >
+                      AI
+                    </span>
+                  </Link>
+                );
+              }
+
+              // Standard nav tab
               return (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-semibold transition-all ${
+                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs transition-all duration-150 ${
                     isActive
-                      ? 'bg-emerald-50 text-emerald-900 border border-emerald-200/80 shadow-[0_1px_2px_rgba(6,78,59,0.06),inset_0_1px_0_rgba(255,255,255,0.9)]'
-                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100/80'
+                      ? 'bg-white text-slate-900 font-bold shadow-[0_2px_8px_rgba(0,0,0,0.07),inset_0_1px_0_rgba(255,255,255,1)] border border-slate-200/50'
+                      : 'text-slate-600 hover:text-slate-900 hover:bg-white/60 font-medium'
                   }`}
                 >
-                  <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-emerald-600' : 'text-slate-400'}`} />
-                  {item.label}
-                  {item.highlight && (
-                    <span className="text-[9px] uppercase font-extrabold px-1.5 py-0.5 rounded-md bg-gradient-to-r from-emerald-600 to-teal-600 text-white shadow-xs tracking-wider">
-                      AI
-                    </span>
-                  )}
+                  <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-[#274d36]' : 'text-slate-400'}`} />
+                  <span>{item.label}</span>
                 </Link>
               );
             })}
@@ -135,13 +159,13 @@ export default function Navbar() {
               className="flex items-center gap-2 text-xs bg-white/90 hover:bg-white border border-slate-200 text-slate-700 font-semibold px-3 py-1.5 rounded-full transition-all shadow-[0_1px_2px_rgba(0,0,0,0.04),inset_0_1px_0_#ffffff] hover:border-slate-300"
               title="Switch active account"
             >
-              <span className="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.6)] animate-pulse"></span>
+              <span className="w-2 h-2 rounded-full bg-[#274d36] shadow-[0_0_6px_rgba(39,77,54,0.4)] animate-pulse"></span>
               <span className="font-bold text-slate-800">{currentUser?.name?.split(' ')[0] || 'Account'}</span>
               <ChevronDown className="w-3.5 h-3.5 text-slate-400" />
             </button>
 
             {showUserMenu && (
-              <div className="absolute right-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-slate-200 py-2 z-50 animate-in fade-in slide-in-from-top-2 duration-150">
+              <div className="absolute right-0 mt-2 w-64 bg-white/95 backdrop-blur-xl rounded-2xl shadow-xl border border-slate-200/90 py-2 z-50 animate-in fade-in slide-in-from-top-2 duration-150">
                 <div className="px-3 py-1.5 border-b border-slate-100">
                   <p className="text-[11px] font-semibold uppercase tracking-wider text-slate-400">
                     Switch Student Account
@@ -158,8 +182,8 @@ export default function Navbar() {
                           router.push(`/profile/${u.id}`);
                         }
                       }}
-                      className={`w-full text-left px-3 py-2 text-xs flex items-center justify-between hover:bg-emerald-50/70 transition-colors ${
-                        u.id === currentUser?.id ? 'bg-emerald-50 font-bold text-emerald-950' : 'text-slate-700'
+                      className={`w-full text-left px-3 py-2 text-xs flex items-center justify-between hover:bg-[#edf4ec]/70 transition-colors ${
+                        u.id === currentUser?.id ? 'bg-[#edf4ec] font-bold text-[#142d1f]' : 'text-slate-700'
                       }`}
                     >
                       <div className="flex items-center gap-2.5">
@@ -173,7 +197,7 @@ export default function Navbar() {
                           <div className="text-[10px] text-slate-500 truncate max-w-[130px]">{u.course}</div>
                         </div>
                       </div>
-                      {u.id === currentUser?.id && <CheckCircle className="w-4 h-4 text-emerald-600" />}
+                      {u.id === currentUser?.id && <CheckCircle className="w-4 h-4 text-[#274d36]" />}
                     </button>
                   ))}
                 </div>
@@ -193,7 +217,7 @@ export default function Navbar() {
             >
               <Bell className="w-4.5 h-4.5" />
               {unreadCount > 0 && (
-                <span className="absolute top-1 right-1 w-4 h-4 rounded-full bg-emerald-600 text-white text-[10px] font-bold flex items-center justify-center shadow-xs">
+                <span className="absolute top-1 right-1 w-4 h-4 rounded-full bg-[#274d36] text-white text-[10px] font-bold flex items-center justify-center shadow-xs">
                   {unreadCount}
                 </span>
               )}
@@ -206,7 +230,7 @@ export default function Navbar() {
                   {unreadCount > 0 ? (
                     <button
                       onClick={markAllNotificationsRead}
-                      className="text-xs text-emerald-700 hover:text-emerald-900 font-bold cursor-pointer hover:underline transition-colors"
+                      className="text-xs text-[#274d36] hover:text-[#173523] font-bold cursor-pointer hover:underline transition-colors"
                     >
                       Mark all read
                     </button>
@@ -221,22 +245,22 @@ export default function Navbar() {
                         key={n.id}
                         onClick={() => markNotificationRead(n.id)}
                         className={`p-3 hover:bg-slate-50 transition-colors text-xs cursor-pointer ${
-                          !n.read ? 'bg-emerald-50/40' : ''
+                          !n.read ? 'bg-[#edf4ec]/40' : ''
                         }`}
                       >
                         <div className="flex items-center justify-between">
                           <div className="font-semibold text-slate-900 flex items-center gap-1.5">
-                            {!n.read && <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 shrink-0"></span>}
+                            {!n.read && <span className="w-1.5 h-1.5 rounded-full bg-[#274d36] shrink-0"></span>}
                             <span>{n.title}</span>
                           </div>
                           <div className="flex items-center gap-1">
                             {(n.type === 'invitation' || n.title.toLowerCase().includes('match')) && (
-                              <span className="text-[9px] font-bold text-emerald-800 bg-emerald-50 border border-emerald-200 px-1.5 py-0.5 rounded-full">
+                              <span className="text-[9px] font-bold text-[#142d1f] bg-[#edf4ec] border border-[#274d36]/20 px-1.5 py-0.5 rounded-full">
                                 Match Request
                               </span>
                             )}
                             {!n.read && (
-                              <span className="text-[10px] text-emerald-700 font-bold bg-emerald-100/70 border border-emerald-200 px-1.5 py-0.5 rounded-md">
+                              <span className="text-[10px] text-[#142d1f] font-bold bg-[#edf4ec] border border-[#274d36]/20 px-1.5 py-0.5 rounded-md">
                                 New
                               </span>
                             )}
@@ -251,7 +275,7 @@ export default function Navbar() {
                               markNotificationRead(n.id);
                               setShowNotifications(false);
                             }}
-                            className="inline-flex items-center gap-1 mt-2 text-emerald-700 font-semibold hover:underline text-[11px]"
+                            className="inline-flex items-center gap-1 mt-2 text-[#274d36] font-semibold hover:underline text-[11px]"
                           >
                             {n.type === 'invitation' || n.title.toLowerCase().includes('match')
                               ? 'Review match request in profile'
@@ -278,7 +302,7 @@ export default function Navbar() {
               <img
                 src={currentUser.avatarUrl || 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=80&h=80&fit=crop'}
                 alt={currentUser.name}
-                className="w-8 h-8 rounded-full object-cover ring-2 ring-emerald-500/30 hover:ring-emerald-500/60 shadow-xs transition-all"
+                className="w-8 h-8 rounded-full object-cover ring-2 ring-[#274d36]/20 hover:ring-[#274d36]/50 shadow-xs transition-all"
               />
               <span className="hidden lg:block text-xs font-bold text-slate-800">
                 {currentUser.name}
