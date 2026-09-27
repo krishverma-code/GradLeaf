@@ -667,7 +667,7 @@ export default function ProfilePage() {
                           <span className="text-slate-500">Project:</span>
                           <Link
                             href={`/workspace/${req.projectId}`}
-                            className="font-bold text-indigo-600 hover:underline truncate max-w-[200px]"
+                            className="font-bold text-emerald-700 hover:underline truncate max-w-[200px]"
                           >
                             {req.project?.title}
                           </Link>
@@ -689,7 +689,7 @@ export default function ProfilePage() {
                           <button
                             onClick={() => handleRespondCollab(req.id, 'accepted')}
                             disabled={respondingCollabId === req.id}
-                            className="flex-1 py-1.5 px-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-xs flex items-center justify-center gap-1.5 shadow-xs transition-all active:scale-[0.98]"
+                            className="flex-1 py-1.5 px-3 rounded-xl btn-gradleaf-primary font-bold text-xs flex items-center justify-center gap-1.5 shadow-tactile transition-all active:scale-[0.98]"
                           >
                             <Check className="w-3.5 h-3.5" /> Accept Match
                           </button>
@@ -787,7 +787,7 @@ export default function ProfilePage() {
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 pb-3">
           <div>
             <h3 className="font-bold text-slate-900 text-lg flex items-center gap-2">
-              <Briefcase className="w-4.5 h-4.5 text-indigo-600" />
+              <Briefcase className="w-4.5 h-4.5 text-emerald-700" />
               Project Portfolio
             </h3>
             <p className="text-xs text-slate-500 mt-0.5">Active hackathon and student ventures</p>
@@ -813,12 +813,12 @@ export default function ProfilePage() {
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 pb-2">
                   <div>
                     <h4 className="font-bold text-slate-900 text-sm flex items-center gap-2">
-                      <Briefcase className="w-4 h-4 text-indigo-600" />
+                      <Briefcase className="w-4 h-4 text-emerald-700" />
                       Projects Led & Created
                     </h4>
                     <p className="text-[11px] text-slate-500">Initiatives and hackathon ventures founded by {profile.name.split(' ')[0]}</p>
                   </div>
-                  <span className="text-xs font-semibold text-indigo-700 bg-indigo-50 border border-indigo-200/80 px-2.5 py-0.5 rounded-full w-fit">
+                  <span className="text-xs font-semibold text-emerald-800 bg-emerald-50 border border-emerald-200/80 px-2.5 py-0.5 rounded-full w-fit">
                     {ownedProjects.length} {ownedProjects.length === 1 ? 'Project' : 'Projects'}
                   </span>
                 </div>
@@ -828,15 +828,15 @@ export default function ProfilePage() {
                     {ownedProjects.map((proj) => (
                       <div
                         key={proj.id}
-                        className="p-4 rounded-2xl border border-slate-200/80 bg-slate-50/40 hover:bg-white hover:border-indigo-300 hover:shadow-md transition-all flex flex-col justify-between space-y-3 group"
+                        className="p-4 rounded-2xl border border-slate-200/80 bg-slate-50/40 hover:bg-white hover:border-emerald-300 hover:shadow-md transition-all flex flex-col justify-between space-y-3 group"
                       >
                         <div className="space-y-2">
                           <div className="flex items-start justify-between gap-2">
-                            <h4 className="font-bold text-slate-900 text-sm group-hover:text-indigo-600 transition-colors">
+                            <h4 className="font-bold text-slate-900 text-sm group-hover:text-emerald-800 transition-colors">
                               {proj.title}
                             </h4>
-                            <span className="inline-flex items-center gap-1 text-[10px] font-bold text-indigo-700 bg-indigo-50 border border-indigo-200/70 px-2 py-0.5 rounded-full shrink-0">
-                              <span className="w-1.5 h-1.5 rounded-full bg-indigo-600"></span>
+                            <span className="inline-flex items-center gap-1 text-[10px] font-bold text-emerald-800 bg-emerald-50 border border-emerald-200/70 px-2 py-0.5 rounded-full shrink-0">
+                              <span className="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
                               Lead
                             </span>
                           </div>
@@ -873,7 +873,7 @@ export default function ProfilePage() {
                         <div className="pt-2.5 border-t border-slate-100 flex items-center justify-between">
                           <Link
                             href={`/workspace/${proj.id}`}
-                            className="inline-flex items-center gap-1.5 text-xs font-bold text-indigo-600 hover:text-indigo-800 transition-colors"
+                            className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 hover:text-emerald-900 transition-colors"
                           >
                             Open Workspace <ExternalLink className="w-3.5 h-3.5" />
                           </Link>
@@ -915,7 +915,7 @@ export default function ProfilePage() {
                       >
                         <div className="space-y-2">
                           <div className="flex items-start justify-between gap-2">
-                            <h4 className="font-bold text-slate-900 text-sm group-hover:text-indigo-600 transition-colors">
+                            <h4 className="font-bold text-slate-900 text-sm group-hover:text-emerald-800 transition-colors">
                               {pm.project.title}
                             </h4>
                             <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/80 px-2 py-0.5 rounded-full shrink-0">
@@ -957,7 +957,7 @@ export default function ProfilePage() {
                         <div className="pt-2.5 border-t border-slate-100 flex items-center justify-between">
                           <Link
                             href={`/workspace/${pm.project.id}`}
-                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs shadow-xs transition-all active:scale-[0.98]"
+                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl btn-gradleaf-primary font-bold text-xs shadow-tactile transition-all active:scale-[0.98]"
                           >
                             Open Workspace <ExternalLink className="w-3.5 h-3.5" />
                           </Link>
