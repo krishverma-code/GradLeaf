@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { UserProvider } from '@/lib/userContext';
 import Navbar from '@/components/Navbar';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
   title: 'GradLeaf | Student-Focused Professional Social Network',
@@ -27,6 +29,8 @@ export default function RootLayout({
             {children}
           </main>
         </UserProvider>
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
