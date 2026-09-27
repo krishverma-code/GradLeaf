@@ -84,67 +84,110 @@ body::after {
   transform: translateY(-2px);
 }
 
-/* Skeuomorphic & Tactile Buttons */
+/* Modern Radiant & Frosted Buttons */
 .btn-gradleaf-primary {
-  background: linear-gradient(180deg, #274d36 0%, #1a3826 100%);
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #10b981 0%, #059669 45%, #047857 100%);
   color: #ffffff;
-  border: 1px solid #142d1f;
-  box-shadow: 0 4px 14px 0 rgba(26, 56, 38, 0.26), inset 0 1px 0 0 rgba(255, 255, 255, 0.22);
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 4px 18px -2px rgba(16, 185, 129, 0.38), 0 2px 6px -1px rgba(5, 150, 105, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.btn-gradleaf-primary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -130%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.32) 50%, transparent 100%);
+  transform: skewX(-20deg);
+  transition: left 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events-none;
 }
 
 .btn-gradleaf-primary:hover {
-  background: linear-gradient(180deg, #325e43 0%, #21442f 100%);
-  box-shadow: 0 6px 18px 0 rgba(26, 56, 38, 0.35), inset 0 1px 0 0 rgba(255, 255, 255, 0.28);
-  transform: translateY(-1px);
+  background: linear-gradient(135deg, #34d399 0%, #059669 40%, #047857 100%);
+  box-shadow: 0 8px 26px -3px rgba(16, 185, 129, 0.52), 0 4px 12px -2px rgba(5, 150, 105, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-gradleaf-primary:hover::after {
+  left: 140%;
 }
 
 .btn-gradleaf-primary:active {
-  background: linear-gradient(180deg, #183323 0%, #12261a 100%);
-  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.3);
-  transform: translateY(1px);
+  background: linear-gradient(135deg, #059669 0%, #047857 50%, #064e3b 100%);
+  box-shadow: 0 2px 8px -1px rgba(16, 185, 129, 0.3), inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: translateY(1px) scale(0.98);
 }
 
 .btn-gradleaf-secondary {
-  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   color: #1e293b;
-  border: 1px solid rgba(203, 213, 225, 0.85);
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04), inset 0 1px 0 0 #ffffff;
-  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 2px 8px -2px rgba(15, 23, 42, 0.05), inset 0 1px 0 0 rgba(255, 255, 255, 1);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .btn-gradleaf-secondary:hover {
   background: #ffffff;
-  border-color: #94a3b8;
-  color: #0f172a;
-  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.06), inset 0 1px 0 0 #ffffff;
-  transform: translateY(-1px);
+  color: #065f46;
+  border-color: rgba(16, 185, 129, 0.5);
+  box-shadow: 0 8px 22px -4px rgba(16, 185, 129, 0.16), 0 0 0 1px rgba(16, 185, 129, 0.25), inset 0 1px 0 0 rgba(255, 255, 255, 1);
+  transform: translateY(-2px);
 }
 
 .btn-gradleaf-secondary:active {
-  background: #f1f5f9;
-  box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.08);
-  transform: translateY(1px);
+  background: #f8fafc;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+  transform: translateY(1px) scale(0.98);
 }
 
 .btn-gradleaf-dark {
-  background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
   color: #ffffff;
-  border: 1px solid #020617;
-  box-shadow: 0 4px 14px 0 rgba(15, 23, 42, 0.25), inset 0 1px 0 0 rgba(255, 255, 255, 0.18);
-  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 4px 18px -2px rgba(15, 23, 42, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-gradleaf-dark::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -130%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.16) 50%, transparent 100%);
+  transform: skewX(-20deg);
+  transition: left 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events-none;
 }
 
 .btn-gradleaf-dark:hover {
-  background: linear-gradient(180deg, #334155 0%, #0f172a 100%);
-  transform: translateY(-1px);
+  background: linear-gradient(135deg, #334155 0%, #1e293b 100%);
+  box-shadow: 0 8px 24px -3px rgba(15, 23, 42, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.btn-gradleaf-dark:hover::after {
+  left: 140%;
 }
 
 .btn-gradleaf-dark:active {
   background: #020617;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
-  transform: translateY(1px);
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5);
+  transform: translateY(1px) scale(0.98);
 }
 
 /* Enamel Academic Badges */
