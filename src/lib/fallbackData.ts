@@ -1,90 +1,110 @@
 // Auto-generated fallback dataset for production & presentation demo
 export const FALLBACK_SKILLS = [
   {
-    "id": "cmujnaho10000mxr5iogb684h",
+    "id": "cmujo6di80000rk9be4ql2tgn",
     "name": "React",
     "category": "Frontend"
   },
   {
-    "id": "cmujnaho30001mxr59nr9c2g1",
+    "id": "cmujo6di80001rk9b6w2pi8jc",
     "name": "Next.js",
     "category": "Frontend"
   },
   {
-    "id": "cmujnaho30002mxr543kxwvyd",
+    "id": "cmujo6di90002rk9bhdmce7wt",
     "name": "TypeScript",
     "category": "Frontend"
   },
   {
-    "id": "cmujnaho40003mxr5sjvgsk4u",
+    "id": "cmujo6di90003rk9bkqvcr67r",
     "name": "Tailwind CSS",
     "category": "Frontend"
   },
   {
-    "id": "cmujnaho50004mxr51s5cnlhg",
+    "id": "cmujo6dia0004rk9bbfyfzs3r",
     "name": "UI/UX Design",
     "category": "Design"
   },
   {
-    "id": "cmujnaho50005mxr5d9zxxi8x",
+    "id": "cmujo6dib0005rk9bgpl1ivl6",
     "name": "Python",
     "category": "AI / ML"
   },
   {
-    "id": "cmujnaho60006mxr5dc9c0ye9",
+    "id": "cmujo6dib0006rk9bggs4cmbo",
     "name": "PyTorch",
     "category": "AI / ML"
   },
   {
-    "id": "cmujnaho60007mxr5wbax40zy",
+    "id": "cmujo6dic0007rk9bwdgqt10k",
     "name": "LangChain",
     "category": "AI / ML"
   },
   {
-    "id": "cmujnaho70008mxr5xxjzsekq",
+    "id": "cmujo6dic0008rk9bh8f2tcau",
     "name": "FastAPI",
     "category": "Backend"
   },
   {
-    "id": "cmujnaho70009mxr5e99eygse",
+    "id": "cmujo6did0009rk9b1i08judd",
     "name": "Node.js",
     "category": "Backend"
   },
   {
-    "id": "cmujnaho8000amxr5vexefn91",
+    "id": "cmujo6did000ark9bhfptoj9b",
     "name": "PostgreSQL",
     "category": "Database"
   },
   {
-    "id": "cmujnaho8000bmxr5temxd5tl",
+    "id": "cmujo6die000brk9bt7lm1xw5",
     "name": "Docker",
     "category": "DevOps"
   },
   {
-    "id": "cmujnaho9000cmxr5mg2lrj6q",
+    "id": "cmujo6die000crk9b42gtoj2b",
+    "name": "Kubernetes",
+    "category": "DevOps"
+  },
+  {
+    "id": "cmujo6dif000drk9b1o6u5gr9",
     "name": "Go",
     "category": "Backend"
   },
   {
-    "id": "cmujnaho9000dmxr5ky4oxsi8",
+    "id": "cmujo6dif000erk9b0cr6i88g",
+    "name": "Rust",
+    "category": "Systems"
+  },
+  {
+    "id": "cmujo6dig000frk9bwcp7vq4r",
     "name": "Flutter",
     "category": "Mobile"
   },
   {
-    "id": "cmujnahoa000emxr5jew3c64s",
+    "id": "cmujo6dig000grk9b8xf7l9ac",
     "name": "GraphQL",
     "category": "Backend"
   },
   {
-    "id": "cmujnahob000fmxr5xyanxdh4",
+    "id": "cmujo6dih000hrk9bn9zx5h2h",
     "name": "Redis",
     "category": "Database"
+  },
+  {
+    "id": "cmujo6dih000irk9b6rcqqer7",
+    "name": "Solidity",
+    "category": "Blockchain"
+  },
+  {
+    "id": "cmujo6dii000jrk9bbnjkkyq8",
+    "name": "Computer Vision",
+    "category": "AI / ML"
   }
 ];
 
 export const FALLBACK_USERS = [
   {
-    "id": "cmujnahob000gmxr5sjwt0992",
+    "id": "cmujo6dii000krk9bacss81nj",
     "name": "Alex Chen",
     "email": "alex.chen@campus.edu",
     "avatarUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&h=200&q=80",
@@ -92,59 +112,71 @@ export const FALLBACK_USERS = [
     "course": "B.S. Computer Science",
     "department": "EECS",
     "year": 3,
-    "headline": "Full-stack builder passionate about autonomous agents & campus tech",
-    "bio": "Junior CS student building AI tools for student productivity. Organizer at HackMIT 2026. Looking for passionate teammates for hackathons!",
-    "interests": "AI, Web Development, Cloud Systems",
-    "availability": "15-20 hrs/week (Evenings & Weekends)",
+    "headline": "Full-Stack Lead & AI Systems Builder • Next.js, LangChain, PyTorch",
+    "bio": "Junior CS student building autonomous tools for university student productivity. HackMIT 2025 Winner. Passionate about LLM agents, distributed systems, and collaborative development.",
+    "interests": "AI & Machine Learning, Web Development, Cloud Infrastructure",
+    "availability": "18 hrs/week (Flexible Evenings & Weekends)",
     "githubUrl": "https://github.com/alexchen",
     "portfolioUrl": "https://alexchen.dev",
     "linkedinUrl": "https://linkedin.com/in/alexchen-demo",
-    "createdAt": "2026-09-27T09:57:38.172Z",
+    "createdAt": "2026-09-27T10:22:25.771Z",
     "skills": [
       {
-        "id": "cmujnahog000mmxr5aoj05dbo",
-        "userId": "cmujnahob000gmxr5sjwt0992",
-        "skillId": "cmujnaho30001mxr59nr9c2g1",
+        "id": "cmujo6diq000vrk9b7w72vz4q",
+        "userId": "cmujo6dii000krk9bacss81nj",
+        "skillId": "cmujo6di80001rk9b6w2pi8jc",
         "status": "Comfortable",
         "proficiency": 5,
         "skill": {
-          "id": "cmujnaho30001mxr59nr9c2g1",
+          "id": "cmujo6di80001rk9b6w2pi8jc",
           "name": "Next.js",
           "category": "Frontend"
         }
       },
       {
-        "id": "cmujnahoh000omxr5t3n3m33n",
-        "userId": "cmujnahob000gmxr5sjwt0992",
-        "skillId": "cmujnaho30002mxr543kxwvyd",
+        "id": "cmujo6diq000xrk9bdu80g9fl",
+        "userId": "cmujo6dii000krk9bacss81nj",
+        "skillId": "cmujo6di90002rk9bhdmce7wt",
         "status": "Comfortable",
-        "proficiency": 4,
+        "proficiency": 5,
         "skill": {
-          "id": "cmujnaho30002mxr543kxwvyd",
+          "id": "cmujo6di90002rk9bhdmce7wt",
           "name": "TypeScript",
           "category": "Frontend"
         }
       },
       {
-        "id": "cmujnahoh000qmxr5jqbyi106",
-        "userId": "cmujnahob000gmxr5sjwt0992",
-        "skillId": "cmujnaho50005mxr5d9zxxi8x",
+        "id": "cmujo6dir000zrk9bstkuqiyp",
+        "userId": "cmujo6dii000krk9bacss81nj",
+        "skillId": "cmujo6dib0005rk9bgpl1ivl6",
         "status": "Project Experience",
         "proficiency": 4,
         "skill": {
-          "id": "cmujnaho50005mxr5d9zxxi8x",
+          "id": "cmujo6dib0005rk9bgpl1ivl6",
           "name": "Python",
           "category": "AI / ML"
         }
       },
       {
-        "id": "cmujnahoi000smxr5vwjisave",
-        "userId": "cmujnahob000gmxr5sjwt0992",
-        "skillId": "cmujnaho8000amxr5vexefn91",
+        "id": "cmujo6dis0013rk9bzor395qs",
+        "userId": "cmujo6dii000krk9bacss81nj",
+        "skillId": "cmujo6dic0007rk9bwdgqt10k",
         "status": "Project Experience",
-        "proficiency": 3,
+        "proficiency": 4,
         "skill": {
-          "id": "cmujnaho8000amxr5vexefn91",
+          "id": "cmujo6dic0007rk9bwdgqt10k",
+          "name": "LangChain",
+          "category": "AI / ML"
+        }
+      },
+      {
+        "id": "cmujo6dir0011rk9b44azwi0l",
+        "userId": "cmujo6dii000krk9bacss81nj",
+        "skillId": "cmujo6did000ark9bhfptoj9b",
+        "status": "Project Experience",
+        "proficiency": 4,
+        "skill": {
+          "id": "cmujo6did000ark9bhfptoj9b",
           "name": "PostgreSQL",
           "category": "Database"
         }
@@ -152,141 +184,151 @@ export const FALLBACK_USERS = [
     ],
     "notifications": [
       {
-        "id": "cmujnahpg0044mxr5gur6zgpn",
-        "userId": "cmujnahob000gmxr5sjwt0992",
+        "id": "cmujo6dk40068rk9bpo9fessv",
+        "userId": "cmujo6dii000krk9bacss81nj",
         "title": "New Comment on your post",
         "message": "Priya Sharma commented on your post: \"This sounds amazing Alex!\"",
         "link": "/feed",
         "type": "like",
         "read": false,
-        "createdAt": "2026-09-27T09:57:38.213Z"
+        "createdAt": "2026-09-27T10:22:25.829Z"
+      },
+      {
+        "id": "cmujo6dk40069rk9bib905ilf",
+        "userId": "cmujo6dii000krk9bacss81nj",
+        "title": "New Peer Endorsement",
+        "message": "Elena Rostova endorsed your \"LangChain\" competency.",
+        "link": "/profile/cmujo6dii000krk9bacss81nj",
+        "type": "endorsement",
+        "read": false,
+        "createdAt": "2026-09-27T10:22:25.829Z"
       }
     ],
     "receivedCollab": [],
     "projectMembers": [
       {
-        "id": "cmujnahov0024mxr5zdvqebqd",
-        "projectId": "cmujnahot001umxr5nixvrjwd",
-        "userId": "cmujnahob000gmxr5sjwt0992",
+        "id": "cmujo6djd0038rk9b01sgjc4u",
+        "projectId": "cmujo6djc0033rk9bsux8y8x4",
+        "userId": "cmujo6dii000krk9bacss81nj",
         "role": "Project Lead & Architect",
-        "joinedAt": "2026-09-27T09:57:38.192Z",
+        "joinedAt": "2026-09-27T10:22:25.802Z",
         "project": {
-          "id": "cmujnahot001umxr5nixvrjwd",
-          "ownerId": "cmujnahob000gmxr5sjwt0992",
+          "id": "cmujo6djc0033rk9bsux8y8x4",
+          "ownerId": "cmujo6dii000krk9bacss81nj",
           "title": "AI-Powered Campus Assistant",
-          "tagline": null,
+          "tagline": "Multi-modal academic assistant for syllabi, FAQs, and assignment management",
           "description": "An intelligent multi-modal campus assistant that parses university syllabi, schedules assignment deadlines, answers course FAQs using RAG, and recommends study groups for students.",
           "domain": "AI & Machine Learning",
-          "imageUrl": null,
-          "demoUrl": null,
+          "imageUrl": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80",
+          "demoUrl": "https://campus-ai-assistant.vercel.app",
           "deadline": "2026-10-15",
           "status": "recruiting",
           "repoUrl": "https://github.com/gradleaf-demo/campus-ai-assistant",
-          "createdAt": "2026-09-27T09:57:38.189Z"
+          "createdAt": "2026-09-27T10:22:25.800Z"
         }
       },
       {
-        "id": "cmujnahp0002kmxr5tb5h6bga",
-        "projectId": "cmujnahoy002emxr5mv1tt8g2",
-        "userId": "cmujnahob000gmxr5sjwt0992",
-        "role": "Project Lead & Architect",
-        "joinedAt": "2026-09-27T09:57:38.196Z",
+        "id": "cmujo6djg003lrk9by5btx82r",
+        "projectId": "cmujo6djf003frk9bi39abedt",
+        "userId": "cmujo6dii000krk9bacss81nj",
+        "role": "Lead Architect",
+        "joinedAt": "2026-09-27T10:22:25.804Z",
         "project": {
-          "id": "cmujnahoy002emxr5mv1tt8g2",
-          "ownerId": "cmujnahob000gmxr5sjwt0992",
+          "id": "cmujo6djf003frk9bi39abedt",
+          "ownerId": "cmujo6dii000krk9bacss81nj",
           "title": "DevPulse - Peer Review & Git Analytics",
-          "tagline": null,
-          "description": "Real-time developer productivity analytics and automated peer code review dashboard for collegiate engineering teams and hackathons.",
+          "tagline": "Developer productivity analytics and automated peer code reviews",
+          "description": "Real-time developer productivity analytics and automated peer code review dashboard for collegiate engineering teams, hackathons, and capstone projects.",
           "domain": "Web Development",
-          "imageUrl": null,
+          "imageUrl": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80",
           "demoUrl": null,
           "deadline": "2026-11-20",
           "status": "active",
           "repoUrl": "https://github.com/gradleaf-demo/devpulse-analytics",
-          "createdAt": "2026-09-27T09:57:38.195Z"
+          "createdAt": "2026-09-27T10:22:25.803Z"
         }
       },
       {
-        "id": "cmujnahp1002smxr54h0dikt0",
-        "projectId": "cmujnahp0002mmxr52ppqpdla",
-        "userId": "cmujnahob000gmxr5sjwt0992",
+        "id": "cmujo6dji003urk9bsps1jloi",
+        "projectId": "cmujo6djh003prk9buwye03dl",
+        "userId": "cmujo6dii000krk9bacss81nj",
         "role": "Lead AI Engineer",
-        "joinedAt": "2026-09-27T09:57:38.198Z",
+        "joinedAt": "2026-09-27T10:22:25.807Z",
         "project": {
-          "id": "cmujnahp0002mmxr52ppqpdla",
-          "ownerId": "cmujnahob000gmxr5sjwt0992",
+          "id": "cmujo6djh003prk9buwye03dl",
+          "ownerId": "cmujo6dii000krk9bacss81nj",
           "title": "NeuralNotes - Lecture AI Digest",
-          "tagline": null,
-          "description": "Automated speech-to-text lecture digest that parses college recorded classes into structured study notes, concept graphs, and interactive quizzes.",
+          "tagline": "Speech-to-text lecture digest, concept graphs, and automated revision quizzes",
+          "description": "Automated speech-to-text lecture digest that parses college recorded classes into structured study notes, concept graphs, and interactive flashcards.",
           "domain": "AI & Machine Learning",
-          "imageUrl": null,
+          "imageUrl": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
           "demoUrl": null,
           "deadline": "2026-12-05",
           "status": "active",
           "repoUrl": "https://github.com/gradleaf-demo/neural-notes-ai",
-          "createdAt": "2026-09-27T09:57:38.197Z"
+          "createdAt": "2026-09-27T10:22:25.806Z"
         }
       }
     ],
     "ownedProjects": [
       {
-        "id": "cmujnahot001umxr5nixvrjwd",
-        "ownerId": "cmujnahob000gmxr5sjwt0992",
+        "id": "cmujo6djc0033rk9bsux8y8x4",
+        "ownerId": "cmujo6dii000krk9bacss81nj",
         "title": "AI-Powered Campus Assistant",
-        "tagline": null,
+        "tagline": "Multi-modal academic assistant for syllabi, FAQs, and assignment management",
         "description": "An intelligent multi-modal campus assistant that parses university syllabi, schedules assignment deadlines, answers course FAQs using RAG, and recommends study groups for students.",
         "domain": "AI & Machine Learning",
-        "imageUrl": null,
-        "demoUrl": null,
+        "imageUrl": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80",
+        "demoUrl": "https://campus-ai-assistant.vercel.app",
         "deadline": "2026-10-15",
         "status": "recruiting",
         "repoUrl": "https://github.com/gradleaf-demo/campus-ai-assistant",
-        "createdAt": "2026-09-27T09:57:38.189Z",
+        "createdAt": "2026-09-27T10:22:25.800Z",
         "skills": [
           {
-            "id": "cmujnahot001wmxr5zjawos8l",
-            "projectId": "cmujnahot001umxr5nixvrjwd",
-            "skillId": "cmujnaho10000mxr5iogb684h",
-            "role": "React Developer",
+            "id": "cmujo6djd0034rk9brg9w3tnp",
+            "projectId": "cmujo6djc0033rk9bsux8y8x4",
+            "skillId": "cmujo6di80000rk9be4ql2tgn",
+            "role": "Frontend Developer",
             "priority": "required",
             "skill": {
-              "id": "cmujnaho10000mxr5iogb684h",
+              "id": "cmujo6di80000rk9be4ql2tgn",
               "name": "React",
               "category": "Frontend"
             }
           },
           {
-            "id": "cmujnahou001ymxr51y1dxauh",
-            "projectId": "cmujnahot001umxr5nixvrjwd",
-            "skillId": "cmujnaho70008mxr5xxjzsekq",
+            "id": "cmujo6djd0035rk9bch7bunl6",
+            "projectId": "cmujo6djc0033rk9bsux8y8x4",
+            "skillId": "cmujo6dic0008rk9bh8f2tcau",
             "role": "Backend Developer",
             "priority": "required",
             "skill": {
-              "id": "cmujnaho70008mxr5xxjzsekq",
+              "id": "cmujo6dic0008rk9bh8f2tcau",
               "name": "FastAPI",
               "category": "Backend"
             }
           },
           {
-            "id": "cmujnahou0020mxr50xggmkv9",
-            "projectId": "cmujnahot001umxr5nixvrjwd",
-            "skillId": "cmujnaho8000amxr5vexefn91",
-            "role": "Database Developer",
+            "id": "cmujo6djd0036rk9bw1cgbrst",
+            "projectId": "cmujo6djc0033rk9bsux8y8x4",
+            "skillId": "cmujo6did000ark9bhfptoj9b",
+            "role": "Database Engineer",
             "priority": "required",
             "skill": {
-              "id": "cmujnaho8000amxr5vexefn91",
+              "id": "cmujo6did000ark9bhfptoj9b",
               "name": "PostgreSQL",
               "category": "Database"
             }
           },
           {
-            "id": "cmujnahov0022mxr5l4k1ob44",
-            "projectId": "cmujnahot001umxr5nixvrjwd",
-            "skillId": "cmujnaho60007mxr5wbax40zy",
-            "role": "AI Integration Member",
+            "id": "cmujo6djd0037rk9bntxdfc6h",
+            "projectId": "cmujo6djc0033rk9bsux8y8x4",
+            "skillId": "cmujo6dic0007rk9bwdgqt10k",
+            "role": "AI Integration Lead",
             "priority": "required",
             "skill": {
-              "id": "cmujnaho60007mxr5wbax40zy",
+              "id": "cmujo6dic0007rk9bwdgqt10k",
               "name": "LangChain",
               "category": "AI / ML"
             }
@@ -294,72 +336,79 @@ export const FALLBACK_USERS = [
         ],
         "members": [
           {
-            "id": "cmujnahov0024mxr5zdvqebqd",
-            "projectId": "cmujnahot001umxr5nixvrjwd",
-            "userId": "cmujnahob000gmxr5sjwt0992",
+            "id": "cmujo6djd0038rk9b01sgjc4u",
+            "projectId": "cmujo6djc0033rk9bsux8y8x4",
+            "userId": "cmujo6dii000krk9bacss81nj",
             "role": "Project Lead & Architect",
-            "joinedAt": "2026-09-27T09:57:38.192Z"
+            "joinedAt": "2026-09-27T10:22:25.802Z"
+          },
+          {
+            "id": "cmujo6djd0039rk9bnd1ec7ip",
+            "projectId": "cmujo6djc0033rk9bsux8y8x4",
+            "userId": "cmujo6dik000lrk9b2530ugh1",
+            "role": "Frontend UI/UX Specialist",
+            "joinedAt": "2026-09-27T10:22:25.802Z"
           }
         ]
       },
       {
-        "id": "cmujnahoy002emxr5mv1tt8g2",
-        "ownerId": "cmujnahob000gmxr5sjwt0992",
+        "id": "cmujo6djf003frk9bi39abedt",
+        "ownerId": "cmujo6dii000krk9bacss81nj",
         "title": "DevPulse - Peer Review & Git Analytics",
-        "tagline": null,
-        "description": "Real-time developer productivity analytics and automated peer code review dashboard for collegiate engineering teams and hackathons.",
+        "tagline": "Developer productivity analytics and automated peer code reviews",
+        "description": "Real-time developer productivity analytics and automated peer code review dashboard for collegiate engineering teams, hackathons, and capstone projects.",
         "domain": "Web Development",
-        "imageUrl": null,
+        "imageUrl": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80",
         "demoUrl": null,
         "deadline": "2026-11-20",
         "status": "active",
         "repoUrl": "https://github.com/gradleaf-demo/devpulse-analytics",
-        "createdAt": "2026-09-27T09:57:38.195Z",
+        "createdAt": "2026-09-27T10:22:25.803Z",
         "skills": [
           {
-            "id": "cmujnahoz002fmxr57bci2aoy",
-            "projectId": "cmujnahoy002emxr5mv1tt8g2",
-            "skillId": "cmujnaho30001mxr59nr9c2g1",
+            "id": "cmujo6djf003grk9bmdmku2mg",
+            "projectId": "cmujo6djf003frk9bi39abedt",
+            "skillId": "cmujo6di80001rk9b6w2pi8jc",
             "role": "Frontend Lead",
             "priority": "required",
             "skill": {
-              "id": "cmujnaho30001mxr59nr9c2g1",
+              "id": "cmujo6di80001rk9b6w2pi8jc",
               "name": "Next.js",
               "category": "Frontend"
             }
           },
           {
-            "id": "cmujnahoz002gmxr53jk7ald9",
-            "projectId": "cmujnahoy002emxr5mv1tt8g2",
-            "skillId": "cmujnaho30002mxr543kxwvyd",
+            "id": "cmujo6djf003hrk9bopdqkve8",
+            "projectId": "cmujo6djf003frk9bi39abedt",
+            "skillId": "cmujo6di90002rk9bhdmce7wt",
             "role": "Fullstack Dev",
             "priority": "required",
             "skill": {
-              "id": "cmujnaho30002mxr543kxwvyd",
+              "id": "cmujo6di90002rk9bhdmce7wt",
               "name": "TypeScript",
               "category": "Frontend"
             }
           },
           {
-            "id": "cmujnahoz002hmxr5cyycdipn",
-            "projectId": "cmujnahoy002emxr5mv1tt8g2",
-            "skillId": "cmujnaho8000amxr5vexefn91",
+            "id": "cmujo6djf003irk9br4qmhe3n",
+            "projectId": "cmujo6djf003frk9bi39abedt",
+            "skillId": "cmujo6did000ark9bhfptoj9b",
             "role": "Database Architect",
             "priority": "required",
             "skill": {
-              "id": "cmujnaho8000amxr5vexefn91",
+              "id": "cmujo6did000ark9bhfptoj9b",
               "name": "PostgreSQL",
               "category": "Database"
             }
           },
           {
-            "id": "cmujnahoz002imxr5f71gbmmh",
-            "projectId": "cmujnahoy002emxr5mv1tt8g2",
-            "skillId": "cmujnaho8000bmxr5temxd5tl",
+            "id": "cmujo6djf003jrk9bxkoxrhxy",
+            "projectId": "cmujo6djf003frk9bi39abedt",
+            "skillId": "cmujo6die000brk9bt7lm1xw5",
             "role": "DevOps Engineer",
             "priority": "preferred",
             "skill": {
-              "id": "cmujnaho8000bmxr5temxd5tl",
+              "id": "cmujo6die000brk9bt7lm1xw5",
               "name": "Docker",
               "category": "DevOps"
             }
@@ -367,72 +416,60 @@ export const FALLBACK_USERS = [
         ],
         "members": [
           {
-            "id": "cmujnahp0002kmxr5tb5h6bga",
-            "projectId": "cmujnahoy002emxr5mv1tt8g2",
-            "userId": "cmujnahob000gmxr5sjwt0992",
-            "role": "Project Lead & Architect",
-            "joinedAt": "2026-09-27T09:57:38.196Z"
+            "id": "cmujo6djg003lrk9by5btx82r",
+            "projectId": "cmujo6djf003frk9bi39abedt",
+            "userId": "cmujo6dii000krk9bacss81nj",
+            "role": "Lead Architect",
+            "joinedAt": "2026-09-27T10:22:25.804Z"
           }
         ]
       },
       {
-        "id": "cmujnahp0002mmxr52ppqpdla",
-        "ownerId": "cmujnahob000gmxr5sjwt0992",
+        "id": "cmujo6djh003prk9buwye03dl",
+        "ownerId": "cmujo6dii000krk9bacss81nj",
         "title": "NeuralNotes - Lecture AI Digest",
-        "tagline": null,
-        "description": "Automated speech-to-text lecture digest that parses college recorded classes into structured study notes, concept graphs, and interactive quizzes.",
+        "tagline": "Speech-to-text lecture digest, concept graphs, and automated revision quizzes",
+        "description": "Automated speech-to-text lecture digest that parses college recorded classes into structured study notes, concept graphs, and interactive flashcards.",
         "domain": "AI & Machine Learning",
-        "imageUrl": null,
+        "imageUrl": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
         "demoUrl": null,
         "deadline": "2026-12-05",
         "status": "active",
         "repoUrl": "https://github.com/gradleaf-demo/neural-notes-ai",
-        "createdAt": "2026-09-27T09:57:38.197Z",
+        "createdAt": "2026-09-27T10:22:25.806Z",
         "skills": [
           {
-            "id": "cmujnahp1002nmxr52t3laa6q",
-            "projectId": "cmujnahp0002mmxr52ppqpdla",
-            "skillId": "cmujnaho50005mxr5d9zxxi8x",
+            "id": "cmujo6dji003qrk9bi3obpvd6",
+            "projectId": "cmujo6djh003prk9buwye03dl",
+            "skillId": "cmujo6dib0005rk9bgpl1ivl6",
             "role": "AI / ML Engineer",
             "priority": "required",
             "skill": {
-              "id": "cmujnaho50005mxr5d9zxxi8x",
+              "id": "cmujo6dib0005rk9bgpl1ivl6",
               "name": "Python",
               "category": "AI / ML"
             }
           },
           {
-            "id": "cmujnahp1002omxr5lq184wu7",
-            "projectId": "cmujnahp0002mmxr52ppqpdla",
-            "skillId": "cmujnaho70008mxr5xxjzsekq",
+            "id": "cmujo6dji003rrk9b58d47srn",
+            "projectId": "cmujo6djh003prk9buwye03dl",
+            "skillId": "cmujo6dic0008rk9bh8f2tcau",
             "role": "Backend Developer",
             "priority": "required",
             "skill": {
-              "id": "cmujnaho70008mxr5xxjzsekq",
+              "id": "cmujo6dic0008rk9bh8f2tcau",
               "name": "FastAPI",
               "category": "Backend"
             }
           },
           {
-            "id": "cmujnahp1002pmxr57ifhpsk3",
-            "projectId": "cmujnahp0002mmxr52ppqpdla",
-            "skillId": "cmujnaho60006mxr5dc9c0ye9",
-            "role": "Model Tuning",
-            "priority": "preferred",
-            "skill": {
-              "id": "cmujnaho60006mxr5dc9c0ye9",
-              "name": "PyTorch",
-              "category": "AI / ML"
-            }
-          },
-          {
-            "id": "cmujnahp1002qmxr52ug65na7",
-            "projectId": "cmujnahp0002mmxr52ppqpdla",
-            "skillId": "cmujnahob000fmxr5xyanxdh4",
-            "role": "Cache & Queue",
+            "id": "cmujo6dji003srk9b5zvtfnnm",
+            "projectId": "cmujo6djh003prk9buwye03dl",
+            "skillId": "cmujo6dih000hrk9bn9zx5h2h",
+            "role": "Queue Manager",
             "priority": "required",
             "skill": {
-              "id": "cmujnahob000fmxr5xyanxdh4",
+              "id": "cmujo6dih000hrk9bn9zx5h2h",
               "name": "Redis",
               "category": "Database"
             }
@@ -440,58 +477,64 @@ export const FALLBACK_USERS = [
         ],
         "members": [
           {
-            "id": "cmujnahp1002smxr54h0dikt0",
-            "projectId": "cmujnahp0002mmxr52ppqpdla",
-            "userId": "cmujnahob000gmxr5sjwt0992",
+            "id": "cmujo6dji003urk9bsps1jloi",
+            "projectId": "cmujo6djh003prk9buwye03dl",
+            "userId": "cmujo6dii000krk9bacss81nj",
             "role": "Lead AI Engineer",
-            "joinedAt": "2026-09-27T09:57:38.198Z"
+            "joinedAt": "2026-09-27T10:22:25.807Z"
           }
         ]
       }
     ],
     "posts": [
       {
-        "id": "cmujnahpa003kmxr5gzbgteq7",
-        "userId": "cmujnahob000gmxr5sjwt0992",
-        "content": "Excited to announce our project: \"AI-Powered Campus Assistant\"! We are building an agentic assistant for university students. Currently looking for a React frontend wizard and a Python/LangChain developer for the upcoming Hackathon. Check out our project page or drop a comment!",
+        "id": "cmujo6djz005grk9blt7x6s7s",
+        "userId": "cmujo6dii000krk9bacss81nj",
+        "content": "🚀 Excited to announce our project: \"AI-Powered Campus Assistant\"! We are building an agentic assistant for university students that parses syllabi, tracks deadlines, and provides RAG course tutoring. Currently looking for a React frontend wizard and a Python/LangChain developer for the upcoming Hackathon. Check out our project page or drop a comment!",
         "tag": "Teammate Search",
         "mediaUrl": null,
-        "createdAt": "2026-09-27T09:57:38.206Z",
+        "createdAt": "2026-09-27T10:22:25.824Z",
         "comments": [
           {
-            "id": "cmujnahpc003qmxr5on44bgv8",
-            "postId": "cmujnahpa003kmxr5gzbgteq7",
-            "userId": "cmujnahod000hmxr5n7iffmh2",
+            "id": "cmujo6dk2005rrk9bf6kv5rxk",
+            "postId": "cmujo6djz005grk9blt7x6s7s",
+            "userId": "cmujo6dik000lrk9b2530ugh1",
             "content": "This sounds amazing Alex! I have extensive experience with React & Tailwind and would love to collaborate on the frontend UI.",
-            "createdAt": "2026-09-27T09:57:38.208Z"
+            "createdAt": "2026-09-27T10:22:25.827Z"
           },
           {
-            "id": "cmujnahpd003smxr57ai7hr6v",
-            "postId": "cmujnahpa003kmxr5gzbgteq7",
-            "userId": "cmujnahof000jmxr5r1huciu4",
+            "id": "cmujo6dk2005srk9bfgi3501h",
+            "postId": "cmujo6djz005grk9blt7x6s7s",
+            "userId": "cmujo6dil000nrk9bit72pzfa",
             "content": "I worked on syllabus parsing algorithms last semester. Count me in for the LangChain pipeline!",
-            "createdAt": "2026-09-27T09:57:38.209Z"
+            "createdAt": "2026-09-27T10:22:25.827Z"
           }
         ],
         "likes": [
           {
-            "id": "cmujnahpd003umxr5zjznii4y",
-            "postId": "cmujnahpa003kmxr5gzbgteq7",
-            "userId": "cmujnahod000hmxr5n7iffmh2",
-            "createdAt": "2026-09-27T09:57:38.210Z"
+            "id": "cmujo6dk3005wrk9bx4ju6fa2",
+            "postId": "cmujo6djz005grk9blt7x6s7s",
+            "userId": "cmujo6dik000lrk9b2530ugh1",
+            "createdAt": "2026-09-27T10:22:25.827Z"
           },
           {
-            "id": "cmujnahpe003wmxr55y7w8d9q",
-            "postId": "cmujnahpa003kmxr5gzbgteq7",
-            "userId": "cmujnahoe000imxr5yzqkpinw",
-            "createdAt": "2026-09-27T09:57:38.210Z"
+            "id": "cmujo6dk3005xrk9brtzro9do",
+            "postId": "cmujo6djz005grk9blt7x6s7s",
+            "userId": "cmujo6dil000mrk9bbw1daulp",
+            "createdAt": "2026-09-27T10:22:25.827Z"
+          },
+          {
+            "id": "cmujo6dk3005yrk9bimy2nufa",
+            "postId": "cmujo6djz005grk9blt7x6s7s",
+            "userId": "cmujo6dil000nrk9bit72pzfa",
+            "createdAt": "2026-09-27T10:22:25.827Z"
           }
         ]
       }
     ]
   },
   {
-    "id": "cmujnahod000hmxr5n7iffmh2",
+    "id": "cmujo6dik000lrk9b2530ugh1",
     "name": "Priya Sharma",
     "email": "priya.sharma@campus.edu",
     "avatarUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200&q=80",
@@ -499,71 +542,71 @@ export const FALLBACK_USERS = [
     "course": "B.Tech Information Technology",
     "department": "IT",
     "year": 3,
-    "headline": "Frontend Craftsman & UI/UX enthusiast • React, Tailwind, Next.js",
-    "bio": "Crafting pixel-perfect interactive web apps. 2x hackathon winner (Best Design). Available for upcoming summer hackathons!",
+    "headline": "Frontend Architect & UI/UX Craftsman • React, Tailwind, Micro-interactions",
+    "bio": "Passionate about human-centered interfaces, accessibility, and high-performance design systems. 2x hackathon winner (Best UI/UX). Open to collaborating on innovative student products!",
     "interests": "Frontend Architecture, UI/UX Design, Design Systems",
     "availability": "15 hrs/week (Flexible)",
     "githubUrl": "https://github.com/priyasharma",
     "portfolioUrl": "https://priyasharma.design",
     "linkedinUrl": "https://linkedin.com/in/priyasharma-demo",
-    "createdAt": "2026-09-27T09:57:38.174Z",
+    "createdAt": "2026-09-27T10:22:25.773Z",
     "skills": [
       {
-        "id": "cmujnahoj000umxr5c8sqryoc",
-        "userId": "cmujnahod000hmxr5n7iffmh2",
-        "skillId": "cmujnaho10000mxr5iogb684h",
+        "id": "cmujo6dit0015rk9b9lfb7gky",
+        "userId": "cmujo6dik000lrk9b2530ugh1",
+        "skillId": "cmujo6di80000rk9be4ql2tgn",
         "status": "Comfortable",
         "proficiency": 5,
         "skill": {
-          "id": "cmujnaho10000mxr5iogb684h",
+          "id": "cmujo6di80000rk9be4ql2tgn",
           "name": "React",
           "category": "Frontend"
         }
       },
       {
-        "id": "cmujnahol0012mxr59n396t6h",
-        "userId": "cmujnahod000hmxr5n7iffmh2",
-        "skillId": "cmujnaho30001mxr59nr9c2g1",
+        "id": "cmujo6div001drk9bn2t3ko14",
+        "userId": "cmujo6dik000lrk9b2530ugh1",
+        "skillId": "cmujo6di80001rk9b6w2pi8jc",
         "status": "Practicing",
         "proficiency": 3,
         "skill": {
-          "id": "cmujnaho30001mxr59nr9c2g1",
+          "id": "cmujo6di80001rk9b6w2pi8jc",
           "name": "Next.js",
           "category": "Frontend"
         }
       },
       {
-        "id": "cmujnahok000ymxr5vz377qb6",
-        "userId": "cmujnahod000hmxr5n7iffmh2",
-        "skillId": "cmujnaho30002mxr543kxwvyd",
+        "id": "cmujo6div001brk9bgevbvr4w",
+        "userId": "cmujo6dik000lrk9b2530ugh1",
+        "skillId": "cmujo6di90002rk9bhdmce7wt",
         "status": "Project Experience",
         "proficiency": 4,
         "skill": {
-          "id": "cmujnaho30002mxr543kxwvyd",
+          "id": "cmujo6di90002rk9bhdmce7wt",
           "name": "TypeScript",
           "category": "Frontend"
         }
       },
       {
-        "id": "cmujnahoj000wmxr5200gqoou",
-        "userId": "cmujnahod000hmxr5n7iffmh2",
-        "skillId": "cmujnaho40003mxr5sjvgsk4u",
+        "id": "cmujo6dit0017rk9bmjz501im",
+        "userId": "cmujo6dik000lrk9b2530ugh1",
+        "skillId": "cmujo6di90003rk9bkqvcr67r",
         "status": "Comfortable",
         "proficiency": 5,
         "skill": {
-          "id": "cmujnaho40003mxr5sjvgsk4u",
+          "id": "cmujo6di90003rk9bkqvcr67r",
           "name": "Tailwind CSS",
           "category": "Frontend"
         }
       },
       {
-        "id": "cmujnahok0010mxr59yaq324d",
-        "userId": "cmujnahod000hmxr5n7iffmh2",
-        "skillId": "cmujnaho50004mxr51s5cnlhg",
+        "id": "cmujo6diu0019rk9b3d4axp8o",
+        "userId": "cmujo6dik000lrk9b2530ugh1",
+        "skillId": "cmujo6dia0004rk9bbfyfzs3r",
         "status": "Comfortable",
         "proficiency": 5,
         "skill": {
-          "id": "cmujnaho50004mxr51s5cnlhg",
+          "id": "cmujo6dia0004rk9bbfyfzs3r",
           "name": "UI/UX Design",
           "category": "Design"
         }
@@ -571,42 +614,42 @@ export const FALLBACK_USERS = [
     ],
     "notifications": [
       {
-        "id": "cmujnahpg0042mxr5mye9gtfc",
-        "userId": "cmujnahod000hmxr5n7iffmh2",
+        "id": "cmujo6dk40067rk9b4nc9un0q",
+        "userId": "cmujo6dik000lrk9b2530ugh1",
         "title": "New Team Invitation",
         "message": "Alex Chen invited you to join \"AI-Powered Campus Assistant\" as Frontend Lead.",
-        "link": "/workspace/cmujnahot001umxr5nixvrjwd",
+        "link": "/workspace/cmujo6djc0033rk9bsux8y8x4",
         "type": "invitation",
         "read": false,
-        "createdAt": "2026-09-27T09:57:38.212Z"
+        "createdAt": "2026-09-27T10:22:25.829Z"
       }
     ],
     "receivedCollab": [
       {
-        "id": "cmujnahpf0040mxr5j3g2lglu",
-        "projectId": "cmujnahot001umxr5nixvrjwd",
-        "senderId": "cmujnahob000gmxr5sjwt0992",
-        "receiverId": "cmujnahod000hmxr5n7iffmh2",
+        "id": "cmujo6dk40066rk9b7xkwexiz",
+        "projectId": "cmujo6djc0033rk9bsux8y8x4",
+        "senderId": "cmujo6dii000krk9bacss81nj",
+        "receiverId": "cmujo6dik000lrk9b2530ugh1",
         "role": "Frontend Lead (React)",
         "message": "Hi Priya! Your React and Tailwind experience is a perfect fit for our Campus Assistant project. Would love to have you on the team!",
         "status": "pending",
-        "createdAt": "2026-09-27T09:57:38.212Z",
+        "createdAt": "2026-09-27T10:22:25.828Z",
         "project": {
-          "id": "cmujnahot001umxr5nixvrjwd",
-          "ownerId": "cmujnahob000gmxr5sjwt0992",
+          "id": "cmujo6djc0033rk9bsux8y8x4",
+          "ownerId": "cmujo6dii000krk9bacss81nj",
           "title": "AI-Powered Campus Assistant",
-          "tagline": null,
+          "tagline": "Multi-modal academic assistant for syllabi, FAQs, and assignment management",
           "description": "An intelligent multi-modal campus assistant that parses university syllabi, schedules assignment deadlines, answers course FAQs using RAG, and recommends study groups for students.",
           "domain": "AI & Machine Learning",
-          "imageUrl": null,
-          "demoUrl": null,
+          "imageUrl": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80",
+          "demoUrl": "https://campus-ai-assistant.vercel.app",
           "deadline": "2026-10-15",
           "status": "recruiting",
           "repoUrl": "https://github.com/gradleaf-demo/campus-ai-assistant",
-          "createdAt": "2026-09-27T09:57:38.189Z"
+          "createdAt": "2026-09-27T10:22:25.800Z"
         },
         "sender": {
-          "id": "cmujnahob000gmxr5sjwt0992",
+          "id": "cmujo6dii000krk9bacss81nj",
           "name": "Alex Chen",
           "email": "alex.chen@campus.edu",
           "avatarUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&h=200&q=80",
@@ -614,113 +657,160 @@ export const FALLBACK_USERS = [
           "course": "B.S. Computer Science",
           "department": "EECS",
           "year": 3,
-          "headline": "Full-stack builder passionate about autonomous agents & campus tech",
-          "bio": "Junior CS student building AI tools for student productivity. Organizer at HackMIT 2026. Looking for passionate teammates for hackathons!",
-          "interests": "AI, Web Development, Cloud Systems",
-          "availability": "15-20 hrs/week (Evenings & Weekends)",
+          "headline": "Full-Stack Lead & AI Systems Builder • Next.js, LangChain, PyTorch",
+          "bio": "Junior CS student building autonomous tools for university student productivity. HackMIT 2025 Winner. Passionate about LLM agents, distributed systems, and collaborative development.",
+          "interests": "AI & Machine Learning, Web Development, Cloud Infrastructure",
+          "availability": "18 hrs/week (Flexible Evenings & Weekends)",
           "githubUrl": "https://github.com/alexchen",
           "portfolioUrl": "https://alexchen.dev",
           "linkedinUrl": "https://linkedin.com/in/alexchen-demo",
-          "createdAt": "2026-09-27T09:57:38.172Z"
+          "createdAt": "2026-09-27T10:22:25.771Z"
         }
       }
     ],
     "projectMembers": [
       {
-        "id": "cmujnahp40030mxr5gaj0qk2x",
-        "projectId": "cmujnahp2002umxr5zg9vzcqs",
-        "userId": "cmujnahod000hmxr5n7iffmh2",
-        "role": "Lead Designer & Organizer",
-        "joinedAt": "2026-09-27T09:57:38.200Z",
+        "id": "cmujo6djd0039rk9bnd1ec7ip",
+        "projectId": "cmujo6djc0033rk9bsux8y8x4",
+        "userId": "cmujo6dik000lrk9b2530ugh1",
+        "role": "Frontend UI/UX Specialist",
+        "joinedAt": "2026-09-27T10:22:25.802Z",
         "project": {
-          "id": "cmujnahp2002umxr5zg9vzcqs",
-          "ownerId": "cmujnahod000hmxr5n7iffmh2",
+          "id": "cmujo6djc0033rk9bsux8y8x4",
+          "ownerId": "cmujo6dii000krk9bacss81nj",
+          "title": "AI-Powered Campus Assistant",
+          "tagline": "Multi-modal academic assistant for syllabi, FAQs, and assignment management",
+          "description": "An intelligent multi-modal campus assistant that parses university syllabi, schedules assignment deadlines, answers course FAQs using RAG, and recommends study groups for students.",
+          "domain": "AI & Machine Learning",
+          "imageUrl": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80",
+          "demoUrl": "https://campus-ai-assistant.vercel.app",
+          "deadline": "2026-10-15",
+          "status": "recruiting",
+          "repoUrl": "https://github.com/gradleaf-demo/campus-ai-assistant",
+          "createdAt": "2026-09-27T10:22:25.800Z"
+        }
+      },
+      {
+        "id": "cmujo6djl0041rk9bav77x090",
+        "projectId": "cmujo6djj003wrk9bp97zxe9u",
+        "userId": "cmujo6dik000lrk9b2530ugh1",
+        "role": "Lead Organizer",
+        "joinedAt": "2026-09-27T10:22:25.809Z",
+        "project": {
+          "id": "cmujo6djj003wrk9bp97zxe9u",
+          "ownerId": "cmujo6dik000lrk9b2530ugh1",
           "title": "EcoCampus - Carbon Footprint Gamification",
-          "tagline": null,
-          "description": "Gamified mobile and web dashboard encouraging college students to adopt sustainable campus habits with peer challenges and rewards.",
+          "tagline": "Gamified sustainability tracker and inter-hostel green challenges",
+          "description": "Gamified mobile and web dashboard encouraging college students to adopt sustainable campus habits with peer challenges, meal emission counters, and dining discounts.",
           "domain": "Web Development",
-          "imageUrl": null,
+          "imageUrl": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80",
           "demoUrl": null,
           "deadline": "2026-11-01",
           "status": "recruiting",
           "repoUrl": null,
-          "createdAt": "2026-09-27T09:57:38.199Z"
+          "createdAt": "2026-09-27T10:22:25.808Z"
         }
       }
     ],
     "ownedProjects": [
       {
-        "id": "cmujnahp2002umxr5zg9vzcqs",
-        "ownerId": "cmujnahod000hmxr5n7iffmh2",
+        "id": "cmujo6djj003wrk9bp97zxe9u",
+        "ownerId": "cmujo6dik000lrk9b2530ugh1",
         "title": "EcoCampus - Carbon Footprint Gamification",
-        "tagline": null,
-        "description": "Gamified mobile and web dashboard encouraging college students to adopt sustainable campus habits with peer challenges and rewards.",
+        "tagline": "Gamified sustainability tracker and inter-hostel green challenges",
+        "description": "Gamified mobile and web dashboard encouraging college students to adopt sustainable campus habits with peer challenges, meal emission counters, and dining discounts.",
         "domain": "Web Development",
-        "imageUrl": null,
+        "imageUrl": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80",
         "demoUrl": null,
         "deadline": "2026-11-01",
         "status": "recruiting",
         "repoUrl": null,
-        "createdAt": "2026-09-27T09:57:38.199Z",
+        "createdAt": "2026-09-27T10:22:25.808Z",
         "skills": [
           {
-            "id": "cmujnahp3002wmxr5h1sp7b5j",
-            "projectId": "cmujnahp2002umxr5zg9vzcqs",
-            "skillId": "cmujnaho40003mxr5sjvgsk4u",
+            "id": "cmujo6djk003xrk9bms2wgofw",
+            "projectId": "cmujo6djj003wrk9bp97zxe9u",
+            "skillId": "cmujo6di90003rk9bkqvcr67r",
             "role": "UI/UX Designer",
             "priority": "required",
             "skill": {
-              "id": "cmujnaho40003mxr5sjvgsk4u",
+              "id": "cmujo6di90003rk9bkqvcr67r",
               "name": "Tailwind CSS",
               "category": "Frontend"
             }
           },
           {
-            "id": "cmujnahp3002ymxr53bithxir",
-            "projectId": "cmujnahp2002umxr5zg9vzcqs",
-            "skillId": "cmujnaho70009mxr5e99eygse",
+            "id": "cmujo6djk003yrk9bicy014tn",
+            "projectId": "cmujo6djj003wrk9bp97zxe9u",
+            "skillId": "cmujo6did0009rk9b1i08judd",
             "role": "Backend Engineer",
             "priority": "required",
             "skill": {
-              "id": "cmujnaho70009mxr5e99eygse",
+              "id": "cmujo6did0009rk9b1i08judd",
               "name": "Node.js",
               "category": "Backend"
+            }
+          },
+          {
+            "id": "cmujo6djk003zrk9btdiz467n",
+            "projectId": "cmujo6djj003wrk9bp97zxe9u",
+            "skillId": "cmujo6di80000rk9be4ql2tgn",
+            "role": "Frontend Engineer",
+            "priority": "required",
+            "skill": {
+              "id": "cmujo6di80000rk9be4ql2tgn",
+              "name": "React",
+              "category": "Frontend"
             }
           }
         ],
         "members": [
           {
-            "id": "cmujnahp40030mxr5gaj0qk2x",
-            "projectId": "cmujnahp2002umxr5zg9vzcqs",
-            "userId": "cmujnahod000hmxr5n7iffmh2",
-            "role": "Lead Designer & Organizer",
-            "joinedAt": "2026-09-27T09:57:38.200Z"
+            "id": "cmujo6djl0041rk9bav77x090",
+            "projectId": "cmujo6djj003wrk9bp97zxe9u",
+            "userId": "cmujo6dik000lrk9b2530ugh1",
+            "role": "Lead Organizer",
+            "joinedAt": "2026-09-27T10:22:25.809Z"
           }
         ]
       }
     ],
     "posts": [
       {
-        "id": "cmujnahpb003mmxr5ujqiqa7x",
-        "userId": "cmujnahod000hmxr5n7iffmh2",
-        "content": "Just finished publishing the complete design system for student portfolios on GradLeaf. Focused on accessible contrast, micro-interactions, and fluid typography. Let me know your thoughts on the dark mode preview!",
+        "id": "cmujo6dk0005irk9bcq69elxr",
+        "userId": "cmujo6dik000lrk9b2530ugh1",
+        "content": "🎨 Just finished publishing the complete design system for student portfolios on GradLeaf. Focused on accessible contrast, micro-interactions, and fluid typography. Let me know your thoughts on the dark mode preview in the comments!",
         "tag": "Project Milestone",
         "mediaUrl": null,
-        "createdAt": "2026-09-27T09:57:38.207Z",
-        "comments": [],
+        "createdAt": "2026-09-27T10:22:25.824Z",
+        "comments": [
+          {
+            "id": "cmujo6dk2005trk9bjj4z8h98",
+            "postId": "cmujo6dk0005irk9bcq69elxr",
+            "userId": "cmujo6dii000krk9bacss81nj",
+            "content": "The typography hierarchy and sage green palettes look so clean Priya! Great work.",
+            "createdAt": "2026-09-27T10:22:25.827Z"
+          }
+        ],
         "likes": [
           {
-            "id": "cmujnahpe003ymxr5aoklrae6",
-            "postId": "cmujnahpb003mmxr5ujqiqa7x",
-            "userId": "cmujnahob000gmxr5sjwt0992",
-            "createdAt": "2026-09-27T09:57:38.211Z"
+            "id": "cmujo6dk3005zrk9bun1yvnqn",
+            "postId": "cmujo6dk0005irk9bcq69elxr",
+            "userId": "cmujo6dii000krk9bacss81nj",
+            "createdAt": "2026-09-27T10:22:25.827Z"
+          },
+          {
+            "id": "cmujo6dk30060rk9b9xhhj5cs",
+            "postId": "cmujo6dk0005irk9bcq69elxr",
+            "userId": "cmujo6dip000trk9b1jn3nl3a",
+            "createdAt": "2026-09-27T10:22:25.827Z"
           }
         ]
       }
     ]
   },
   {
-    "id": "cmujnahoe000imxr5yzqkpinw",
+    "id": "cmujo6dil000mrk9bbw1daulp",
     "name": "Marcus Johnson",
     "email": "marcus.j@campus.edu",
     "avatarUrl": "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=200&h=200&q=80",
@@ -728,71 +818,71 @@ export const FALLBACK_USERS = [
     "course": "B.S. EECS",
     "department": "Computer Science",
     "year": 4,
-    "headline": "Backend Engineer • Scalable Systems, PostgreSQL & Go",
-    "bio": "Senior student interested in distributed databases, microservices, and backend performance tuning.",
+    "headline": "Distributed Systems & Backend Engineer • Go, Raft, High-Throughput APIs",
+    "bio": "Senior CS student researching consensus algorithms, distributed fault-tolerance, and high-scale database caching. Enjoys systems programming, profiling, and open-source contributions.",
     "interests": "Distributed Systems, Backend APIs, Cloud Infrastructure",
-    "availability": "10-12 hrs/week",
+    "availability": "12 hrs/week",
     "githubUrl": "https://github.com/marcusj",
     "portfolioUrl": "https://marcus.io",
     "linkedinUrl": "https://linkedin.com/in/marcusj-demo",
-    "createdAt": "2026-09-27T09:57:38.175Z",
+    "createdAt": "2026-09-27T10:22:25.773Z",
     "skills": [
       {
-        "id": "cmujnahon001amxr5a546rf6o",
-        "userId": "cmujnahoe000imxr5yzqkpinw",
-        "skillId": "cmujnaho70009mxr5e99eygse",
-        "status": "Project Experience",
-        "proficiency": 4,
-        "skill": {
-          "id": "cmujnaho70009mxr5e99eygse",
-          "name": "Node.js",
-          "category": "Backend"
-        }
-      },
-      {
-        "id": "cmujnahom0016mxr5g45y7fpk",
-        "userId": "cmujnahoe000imxr5yzqkpinw",
-        "skillId": "cmujnaho8000amxr5vexefn91",
+        "id": "cmujo6diw001hrk9b5pfw5z25",
+        "userId": "cmujo6dil000mrk9bbw1daulp",
+        "skillId": "cmujo6did000ark9bhfptoj9b",
         "status": "Comfortable",
         "proficiency": 5,
         "skill": {
-          "id": "cmujnaho8000amxr5vexefn91",
+          "id": "cmujo6did000ark9bhfptoj9b",
           "name": "PostgreSQL",
           "category": "Database"
         }
       },
       {
-        "id": "cmujnahom0018mxr56r285kxf",
-        "userId": "cmujnahoe000imxr5yzqkpinw",
-        "skillId": "cmujnaho8000bmxr5temxd5tl",
+        "id": "cmujo6dix001jrk9bh5lo5g7a",
+        "userId": "cmujo6dil000mrk9bbw1daulp",
+        "skillId": "cmujo6die000brk9bt7lm1xw5",
         "status": "Comfortable",
         "proficiency": 4,
         "skill": {
-          "id": "cmujnaho8000bmxr5temxd5tl",
+          "id": "cmujo6die000brk9bt7lm1xw5",
           "name": "Docker",
           "category": "DevOps"
         }
       },
       {
-        "id": "cmujnahol0014mxr527d0ltrp",
-        "userId": "cmujnahoe000imxr5yzqkpinw",
-        "skillId": "cmujnaho9000cmxr5mg2lrj6q",
+        "id": "cmujo6diw001frk9bh40uuq0r",
+        "userId": "cmujo6dil000mrk9bbw1daulp",
+        "skillId": "cmujo6dif000drk9b1o6u5gr9",
         "status": "Comfortable",
         "proficiency": 5,
         "skill": {
-          "id": "cmujnaho9000cmxr5mg2lrj6q",
+          "id": "cmujo6dif000drk9b1o6u5gr9",
           "name": "Go",
           "category": "Backend"
         }
       },
       {
-        "id": "cmujnahon001cmxr550vs47e1",
-        "userId": "cmujnahoe000imxr5yzqkpinw",
-        "skillId": "cmujnahob000fmxr5xyanxdh4",
+        "id": "cmujo6diy001nrk9bydy03qfh",
+        "userId": "cmujo6dil000mrk9bbw1daulp",
+        "skillId": "cmujo6dif000erk9b0cr6i88g",
         "status": "Practicing",
         "proficiency": 3,
         "skill": {
-          "id": "cmujnahob000fmxr5xyanxdh4",
+          "id": "cmujo6dif000erk9b0cr6i88g",
+          "name": "Rust",
+          "category": "Systems"
+        }
+      },
+      {
+        "id": "cmujo6dix001lrk9b8nu0ojcn",
+        "userId": "cmujo6dil000mrk9bbw1daulp",
+        "skillId": "cmujo6dih000hrk9bn9zx5h2h",
+        "status": "Project Experience",
+        "proficiency": 4,
+        "skill": {
+          "id": "cmujo6dih000hrk9bn9zx5h2h",
           "name": "Redis",
           "category": "Database"
         }
@@ -802,82 +892,120 @@ export const FALLBACK_USERS = [
     "receivedCollab": [],
     "projectMembers": [
       {
-        "id": "cmujnahp60036mxr5k8ecnn6r",
-        "projectId": "cmujnahp40032mxr5kbmqj8ka",
-        "userId": "cmujnahoe000imxr5yzqkpinw",
-        "role": "Lead Architect",
-        "joinedAt": "2026-09-27T09:57:38.202Z",
+        "id": "cmujo6djm0048rk9bfuilshou",
+        "projectId": "cmujo6djl0043rk9bfmx0di4i",
+        "userId": "cmujo6dil000mrk9bbw1daulp",
+        "role": "Systems Architect",
+        "joinedAt": "2026-09-27T10:22:25.811Z",
         "project": {
-          "id": "cmujnahp40032mxr5kbmqj8ka",
-          "ownerId": "cmujnahoe000imxr5yzqkpinw",
+          "id": "cmujo6djl0043rk9bfmx0di4i",
+          "ownerId": "cmujo6dil000mrk9bbw1daulp",
           "title": "DistributedKV - Raft Consensus Store",
-          "tagline": null,
-          "description": "Fault-tolerant distributed key-value store implementing the Raft consensus algorithm with write-ahead logging and leader election.",
+          "tagline": "Fault-tolerant distributed key-value store with leader election",
+          "description": "Fault-tolerant distributed key-value store implementing the Raft consensus algorithm with write-ahead logging, snapshotting, and linearizable reads.",
           "domain": "Distributed Systems",
-          "imageUrl": null,
+          "imageUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
           "demoUrl": null,
           "deadline": "2026-11-15",
           "status": "active",
           "repoUrl": "https://github.com/gradleaf-demo/distributed-kv",
-          "createdAt": "2026-09-27T09:57:38.201Z"
+          "createdAt": "2026-09-27T10:22:25.810Z"
         }
       }
     ],
     "ownedProjects": [
       {
-        "id": "cmujnahp40032mxr5kbmqj8ka",
-        "ownerId": "cmujnahoe000imxr5yzqkpinw",
+        "id": "cmujo6djl0043rk9bfmx0di4i",
+        "ownerId": "cmujo6dil000mrk9bbw1daulp",
         "title": "DistributedKV - Raft Consensus Store",
-        "tagline": null,
-        "description": "Fault-tolerant distributed key-value store implementing the Raft consensus algorithm with write-ahead logging and leader election.",
+        "tagline": "Fault-tolerant distributed key-value store with leader election",
+        "description": "Fault-tolerant distributed key-value store implementing the Raft consensus algorithm with write-ahead logging, snapshotting, and linearizable reads.",
         "domain": "Distributed Systems",
-        "imageUrl": null,
+        "imageUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
         "demoUrl": null,
         "deadline": "2026-11-15",
         "status": "active",
         "repoUrl": "https://github.com/gradleaf-demo/distributed-kv",
-        "createdAt": "2026-09-27T09:57:38.201Z",
+        "createdAt": "2026-09-27T10:22:25.810Z",
         "skills": [
           {
-            "id": "cmujnahp50033mxr5568d5zmp",
-            "projectId": "cmujnahp40032mxr5kbmqj8ka",
-            "skillId": "cmujnaho9000cmxr5mg2lrj6q",
+            "id": "cmujo6djm0044rk9bz0rlq4fy",
+            "projectId": "cmujo6djl0043rk9bfmx0di4i",
+            "skillId": "cmujo6dif000drk9b1o6u5gr9",
             "role": "Distributed Systems Lead",
             "priority": "required",
             "skill": {
-              "id": "cmujnaho9000cmxr5mg2lrj6q",
+              "id": "cmujo6dif000drk9b1o6u5gr9",
               "name": "Go",
               "category": "Backend"
             }
           },
           {
-            "id": "cmujnahp50034mxr5lcvfp6xs",
-            "projectId": "cmujnahp40032mxr5kbmqj8ka",
-            "skillId": "cmujnahob000fmxr5xyanxdh4",
-            "role": "Storage Engineer",
+            "id": "cmujo6djm0045rk9b9jub1h9x",
+            "projectId": "cmujo6djl0043rk9bfmx0di4i",
+            "skillId": "cmujo6dih000hrk9bn9zx5h2h",
+            "role": "Cache Architect",
             "priority": "required",
             "skill": {
-              "id": "cmujnahob000fmxr5xyanxdh4",
+              "id": "cmujo6dih000hrk9bn9zx5h2h",
               "name": "Redis",
               "category": "Database"
+            }
+          },
+          {
+            "id": "cmujo6djm0046rk9b1v3ktg3t",
+            "projectId": "cmujo6djl0043rk9bfmx0di4i",
+            "skillId": "cmujo6die000brk9bt7lm1xw5",
+            "role": "Container Orchestrator",
+            "priority": "preferred",
+            "skill": {
+              "id": "cmujo6die000brk9bt7lm1xw5",
+              "name": "Docker",
+              "category": "DevOps"
             }
           }
         ],
         "members": [
           {
-            "id": "cmujnahp60036mxr5k8ecnn6r",
-            "projectId": "cmujnahp40032mxr5kbmqj8ka",
-            "userId": "cmujnahoe000imxr5yzqkpinw",
-            "role": "Lead Architect",
-            "joinedAt": "2026-09-27T09:57:38.202Z"
+            "id": "cmujo6djm0048rk9bfuilshou",
+            "projectId": "cmujo6djl0043rk9bfmx0di4i",
+            "userId": "cmujo6dil000mrk9bbw1daulp",
+            "role": "Systems Architect",
+            "joinedAt": "2026-09-27T10:22:25.811Z"
           }
         ]
       }
     ],
-    "posts": []
+    "posts": [
+      {
+        "id": "cmujo6dk1005mrk9bg9wttta1",
+        "userId": "cmujo6dil000mrk9bbw1daulp",
+        "content": "📊 Benchmarked our Go Raft consensus store against 100,000 write ops/second under 3-node cluster partitioning. Zero split-brain states and automatic leader re-election completed in under 180ms! Open-sourced on GitHub.",
+        "tag": "Tech Resource",
+        "mediaUrl": null,
+        "createdAt": "2026-09-27T10:22:25.825Z",
+        "comments": [
+          {
+            "id": "cmujo6dk2005urk9bejholl2v",
+            "postId": "cmujo6dk1005mrk9bg9wttta1",
+            "userId": "cmujo6din000prk9btlqnh0bj",
+            "content": "180ms leader election under partition is incredible Marcus! Are you using gRPC for heartbeats?",
+            "createdAt": "2026-09-27T10:22:25.827Z"
+          }
+        ],
+        "likes": [
+          {
+            "id": "cmujo6dk30062rk9bzo1sx6dn",
+            "postId": "cmujo6dk1005mrk9bg9wttta1",
+            "userId": "cmujo6din000prk9btlqnh0bj",
+            "createdAt": "2026-09-27T10:22:25.827Z"
+          }
+        ]
+      }
+    ]
   },
   {
-    "id": "cmujnahof000jmxr5r1huciu4",
+    "id": "cmujo6dil000nrk9bit72pzfa",
     "name": "Elena Rostova",
     "email": "elena.r@campus.edu",
     "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&h=200&q=80",
@@ -885,59 +1013,59 @@ export const FALLBACK_USERS = [
     "course": "M.S. Artificial Intelligence",
     "department": "AI Lab",
     "year": 1,
-    "headline": "AI/ML Researcher • LLM Tool Use, LangChain & PyTorch",
-    "bio": "Graduate researcher focusing on retrieval-augmented generation and reasoning models. Looking to build AI applications with solid engineering teams.",
+    "headline": "AI/ML Researcher • Autonomous Agents, RAG Pipelines & PyTorch",
+    "bio": "Graduate researcher focusing on hybrid neural retrieval, tool use, and multi-agent coordination. Looking to build real-world AI applications with strong collaborative student teams.",
     "interests": "AI, Natural Language Processing, Machine Learning",
     "availability": "20 hrs/week (Hackathon sprint ready)",
     "githubUrl": "https://github.com/elenarostova",
     "portfolioUrl": "https://elena-ai.org",
     "linkedinUrl": "https://linkedin.com/in/elena-rostova",
-    "createdAt": "2026-09-27T09:57:38.175Z",
+    "createdAt": "2026-09-27T10:22:25.774Z",
     "skills": [
       {
-        "id": "cmujnahoo001emxr5vi1uzy40",
-        "userId": "cmujnahof000jmxr5r1huciu4",
-        "skillId": "cmujnaho50005mxr5d9zxxi8x",
+        "id": "cmujo6diy001prk9bq9pe0tns",
+        "userId": "cmujo6dil000nrk9bit72pzfa",
+        "skillId": "cmujo6dib0005rk9bgpl1ivl6",
         "status": "Comfortable",
         "proficiency": 5,
         "skill": {
-          "id": "cmujnaho50005mxr5d9zxxi8x",
+          "id": "cmujo6dib0005rk9bgpl1ivl6",
           "name": "Python",
           "category": "AI / ML"
         }
       },
       {
-        "id": "cmujnahoo001gmxr5vxgq597p",
-        "userId": "cmujnahof000jmxr5r1huciu4",
-        "skillId": "cmujnaho60006mxr5dc9c0ye9",
+        "id": "cmujo6diz001rrk9bgx8249y0",
+        "userId": "cmujo6dil000nrk9bit72pzfa",
+        "skillId": "cmujo6dib0006rk9bggs4cmbo",
         "status": "Comfortable",
         "proficiency": 5,
         "skill": {
-          "id": "cmujnaho60006mxr5dc9c0ye9",
+          "id": "cmujo6dib0006rk9bggs4cmbo",
           "name": "PyTorch",
           "category": "AI / ML"
         }
       },
       {
-        "id": "cmujnahop001imxr58meg9ipc",
-        "userId": "cmujnahof000jmxr5r1huciu4",
-        "skillId": "cmujnaho60007mxr5wbax40zy",
+        "id": "cmujo6diz001trk9bkn2n64zv",
+        "userId": "cmujo6dil000nrk9bit72pzfa",
+        "skillId": "cmujo6dic0007rk9bwdgqt10k",
         "status": "Comfortable",
         "proficiency": 5,
         "skill": {
-          "id": "cmujnaho60007mxr5wbax40zy",
+          "id": "cmujo6dic0007rk9bwdgqt10k",
           "name": "LangChain",
           "category": "AI / ML"
         }
       },
       {
-        "id": "cmujnahop001kmxr5ecp9ykw6",
-        "userId": "cmujnahof000jmxr5r1huciu4",
-        "skillId": "cmujnaho70008mxr5xxjzsekq",
+        "id": "cmujo6dj0001vrk9bsppxa12l",
+        "userId": "cmujo6dil000nrk9bit72pzfa",
+        "skillId": "cmujo6dic0008rk9bh8f2tcau",
         "status": "Project Experience",
         "proficiency": 4,
         "skill": {
-          "id": "cmujnaho70008mxr5xxjzsekq",
+          "id": "cmujo6dic0008rk9bh8f2tcau",
           "name": "FastAPI",
           "category": "Backend"
         }
@@ -947,62 +1075,62 @@ export const FALLBACK_USERS = [
     "receivedCollab": [],
     "projectMembers": [
       {
-        "id": "cmujnahp7003cmxr5yydscpcw",
-        "projectId": "cmujnahp60038mxr5f18siflz",
-        "userId": "cmujnahof000jmxr5r1huciu4",
+        "id": "cmujo6djq004krk9b94zo1abw",
+        "projectId": "cmujo6djp004grk9bzbl83wgc",
+        "userId": "cmujo6dil000nrk9bit72pzfa",
         "role": "Research Lead",
-        "joinedAt": "2026-09-27T09:57:38.204Z",
+        "joinedAt": "2026-09-27T10:22:25.814Z",
         "project": {
-          "id": "cmujnahp60038mxr5f18siflz",
-          "ownerId": "cmujnahof000jmxr5r1huciu4",
+          "id": "cmujo6djp004grk9bzbl83wgc",
+          "ownerId": "cmujo6dil000nrk9bit72pzfa",
           "title": "ArxivRag - Research Paper Synthesis Agent",
-          "tagline": null,
-          "description": "Autonomous retrieval agent that synthesizes academic literature into structured comparative tables and citation graphs.",
+          "tagline": "Autonomous AI literature survey and comparative matrix synthesizer",
+          "description": "Autonomous retrieval agent that ingests academic papers from Arxiv, generates comparative benchmark tables, and discovers conflicting empirical claims automatically.",
           "domain": "AI & Machine Learning",
-          "imageUrl": null,
+          "imageUrl": "https://images.unsplash.com/photo-1507668077129-56e32842fceb?auto=format&fit=crop&w=800&q=80",
           "demoUrl": null,
           "deadline": "2026-11-30",
           "status": "active",
           "repoUrl": "https://github.com/gradleaf-demo/arxiv-rag-agent",
-          "createdAt": "2026-09-27T09:57:38.203Z"
+          "createdAt": "2026-09-27T10:22:25.813Z"
         }
       }
     ],
     "ownedProjects": [
       {
-        "id": "cmujnahp60038mxr5f18siflz",
-        "ownerId": "cmujnahof000jmxr5r1huciu4",
+        "id": "cmujo6djp004grk9bzbl83wgc",
+        "ownerId": "cmujo6dil000nrk9bit72pzfa",
         "title": "ArxivRag - Research Paper Synthesis Agent",
-        "tagline": null,
-        "description": "Autonomous retrieval agent that synthesizes academic literature into structured comparative tables and citation graphs.",
+        "tagline": "Autonomous AI literature survey and comparative matrix synthesizer",
+        "description": "Autonomous retrieval agent that ingests academic papers from Arxiv, generates comparative benchmark tables, and discovers conflicting empirical claims automatically.",
         "domain": "AI & Machine Learning",
-        "imageUrl": null,
+        "imageUrl": "https://images.unsplash.com/photo-1507668077129-56e32842fceb?auto=format&fit=crop&w=800&q=80",
         "demoUrl": null,
         "deadline": "2026-11-30",
         "status": "active",
         "repoUrl": "https://github.com/gradleaf-demo/arxiv-rag-agent",
-        "createdAt": "2026-09-27T09:57:38.203Z",
+        "createdAt": "2026-09-27T10:22:25.813Z",
         "skills": [
           {
-            "id": "cmujnahp70039mxr5zz4uvo3h",
-            "projectId": "cmujnahp60038mxr5f18siflz",
-            "skillId": "cmujnaho50005mxr5d9zxxi8x",
+            "id": "cmujo6djp004hrk9b245crngp",
+            "projectId": "cmujo6djp004grk9bzbl83wgc",
+            "skillId": "cmujo6dib0005rk9bgpl1ivl6",
             "role": "AI Researcher",
             "priority": "required",
             "skill": {
-              "id": "cmujnaho50005mxr5d9zxxi8x",
+              "id": "cmujo6dib0005rk9bgpl1ivl6",
               "name": "Python",
               "category": "AI / ML"
             }
           },
           {
-            "id": "cmujnahp7003amxr5cv25omjk",
-            "projectId": "cmujnahp60038mxr5f18siflz",
-            "skillId": "cmujnaho60007mxr5wbax40zy",
+            "id": "cmujo6djp004irk9bryupgw58",
+            "projectId": "cmujo6djp004grk9bzbl83wgc",
+            "skillId": "cmujo6dic0007rk9bwdgqt10k",
             "role": "RAG Pipeline Engineer",
             "priority": "required",
             "skill": {
-              "id": "cmujnaho60007mxr5wbax40zy",
+              "id": "cmujo6dic0007rk9bwdgqt10k",
               "name": "LangChain",
               "category": "AI / ML"
             }
@@ -1010,30 +1138,37 @@ export const FALLBACK_USERS = [
         ],
         "members": [
           {
-            "id": "cmujnahp7003cmxr5yydscpcw",
-            "projectId": "cmujnahp60038mxr5f18siflz",
-            "userId": "cmujnahof000jmxr5r1huciu4",
+            "id": "cmujo6djq004krk9b94zo1abw",
+            "projectId": "cmujo6djp004grk9bzbl83wgc",
+            "userId": "cmujo6dil000nrk9bit72pzfa",
             "role": "Research Lead",
-            "joinedAt": "2026-09-27T09:57:38.204Z"
+            "joinedAt": "2026-09-27T10:22:25.814Z"
           }
         ]
       }
     ],
     "posts": [
       {
-        "id": "cmujnahpb003omxr54o1kkcz9",
-        "userId": "cmujnahof000jmxr5r1huciu4",
-        "content": "Quick tip for students working with LangChain & Local LLMs: Always use semantic chunking over fixed-size character splits for academic papers. We saw retrieval precision jump from 64% to 89% on our benchmark dataset!",
+        "id": "cmujo6dk0005krk9b6y4cwekn",
+        "userId": "cmujo6dil000nrk9bit72pzfa",
+        "content": "⚡ Quick tip for students working with LangChain & Local LLMs: Always use semantic chunking over fixed-size character splits for academic papers. We saw retrieval precision jump from 64% to 89% on our benchmark dataset!",
         "tag": "Tech Resource",
         "mediaUrl": null,
-        "createdAt": "2026-09-27T09:57:38.208Z",
+        "createdAt": "2026-09-27T10:22:25.825Z",
         "comments": [],
-        "likes": []
+        "likes": [
+          {
+            "id": "cmujo6dk30061rk9b1umubhih",
+            "postId": "cmujo6dk0005krk9b6y4cwekn",
+            "userId": "cmujo6dii000krk9bacss81nj",
+            "createdAt": "2026-09-27T10:22:25.827Z"
+          }
+        ]
       }
     ]
   },
   {
-    "id": "cmujnahog000kmxr54l8f8dxh",
+    "id": "cmujo6dim000ork9bh2onrt3d",
     "name": "Rahul Verma",
     "email": "rahul.v@campus.edu",
     "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200&q=80",
@@ -1041,59 +1176,59 @@ export const FALLBACK_USERS = [
     "course": "B.E. Computer Science",
     "department": "Computer Science",
     "year": 2,
-    "headline": "Mobile & Cloud Builder • Flutter & Node.js",
-    "bio": "Sophomore building cross-platform student apps. Enjoys rapid prototyping, API integrations, and product development.",
-    "interests": "Mobile Apps, Web Development, Cloud",
+    "headline": "Mobile & Full-Stack Prototyper • Flutter, Node.js, Cloud Run",
+    "bio": "Sophomore building fluid cross-platform mobile apps for college students. Enjoys rapid UI prototyping, WebSockets, and real-time community experiences.",
+    "interests": "Mobile Apps, Web Development, Cloud Systems",
     "availability": "15 hrs/week",
     "githubUrl": "https://github.com/rahulverma",
     "portfolioUrl": "https://rahulv.me",
     "linkedinUrl": "https://linkedin.com/in/rahulv-demo",
-    "createdAt": "2026-09-27T09:57:38.176Z",
+    "createdAt": "2026-09-27T10:22:25.774Z",
     "skills": [
       {
-        "id": "cmujnahor001qmxr5emabw0km",
-        "userId": "cmujnahog000kmxr54l8f8dxh",
-        "skillId": "cmujnaho10000mxr5iogb684h",
+        "id": "cmujo6dj20021rk9b2txd77wu",
+        "userId": "cmujo6dim000ork9bh2onrt3d",
+        "skillId": "cmujo6di80000rk9be4ql2tgn",
         "status": "Practicing",
         "proficiency": 3,
         "skill": {
-          "id": "cmujnaho10000mxr5iogb684h",
+          "id": "cmujo6di80000rk9be4ql2tgn",
           "name": "React",
           "category": "Frontend"
         }
       },
       {
-        "id": "cmujnahor001omxr5sidz2woo",
-        "userId": "cmujnahog000kmxr54l8f8dxh",
-        "skillId": "cmujnaho70009mxr5e99eygse",
+        "id": "cmujo6dj1001zrk9bvc7ngei3",
+        "userId": "cmujo6dim000ork9bh2onrt3d",
+        "skillId": "cmujo6did0009rk9b1i08judd",
         "status": "Project Experience",
         "proficiency": 4,
         "skill": {
-          "id": "cmujnaho70009mxr5e99eygse",
+          "id": "cmujo6did0009rk9b1i08judd",
           "name": "Node.js",
           "category": "Backend"
         }
       },
       {
-        "id": "cmujnahos001smxr5mufkq6ox",
-        "userId": "cmujnahog000kmxr54l8f8dxh",
-        "skillId": "cmujnaho8000amxr5vexefn91",
+        "id": "cmujo6dj20023rk9b1ng1eubl",
+        "userId": "cmujo6dim000ork9bh2onrt3d",
+        "skillId": "cmujo6did000ark9bhfptoj9b",
         "status": "Learning",
         "proficiency": 2,
         "skill": {
-          "id": "cmujnaho8000amxr5vexefn91",
+          "id": "cmujo6did000ark9bhfptoj9b",
           "name": "PostgreSQL",
           "category": "Database"
         }
       },
       {
-        "id": "cmujnahoq001mmxr5au6e99q9",
-        "userId": "cmujnahog000kmxr54l8f8dxh",
-        "skillId": "cmujnaho9000dmxr5ky4oxsi8",
+        "id": "cmujo6dj0001xrk9bx7og8i7u",
+        "userId": "cmujo6dim000ork9bh2onrt3d",
+        "skillId": "cmujo6dig000frk9bwcp7vq4r",
         "status": "Comfortable",
-        "proficiency": 4,
+        "proficiency": 5,
         "skill": {
-          "id": "cmujnaho9000dmxr5ky4oxsi8",
+          "id": "cmujo6dig000frk9bwcp7vq4r",
           "name": "Flutter",
           "category": "Mobile"
         }
@@ -1103,62 +1238,62 @@ export const FALLBACK_USERS = [
     "receivedCollab": [],
     "projectMembers": [
       {
-        "id": "cmujnahp9003imxr54zbh5im6",
-        "projectId": "cmujnahp8003emxr59dmps024",
-        "userId": "cmujnahog000kmxr54l8f8dxh",
+        "id": "cmujo6djt004wrk9bvv1ph26b",
+        "projectId": "cmujo6djs004srk9b79dxyzln",
+        "userId": "cmujo6dim000ork9bh2onrt3d",
         "role": "Product Lead",
-        "joinedAt": "2026-09-27T09:57:38.206Z",
+        "joinedAt": "2026-09-27T10:22:25.818Z",
         "project": {
-          "id": "cmujnahp8003emxr59dmps024",
-          "ownerId": "cmujnahog000kmxr54l8f8dxh",
+          "id": "cmujo6djs004srk9b79dxyzln",
+          "ownerId": "cmujo6dim000ork9bh2onrt3d",
           "title": "CampusRide - Peer Commute & Carpool",
-          "tagline": null,
-          "description": "Cross-platform mobile carpooling network connecting verified university students heading in the same direction for daily campus commutes.",
+          "tagline": "Verified collegiate carpool and peer ride-sharing network",
+          "description": "Cross-platform mobile carpooling network connecting verified university students heading in the same direction for daily campus commutes and weekend trips.",
           "domain": "Mobile Apps",
-          "imageUrl": null,
+          "imageUrl": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80",
           "demoUrl": null,
           "deadline": "2026-11-25",
           "status": "active",
           "repoUrl": "https://github.com/gradleaf-demo/campus-ride",
-          "createdAt": "2026-09-27T09:57:38.204Z"
+          "createdAt": "2026-09-27T10:22:25.817Z"
         }
       }
     ],
     "ownedProjects": [
       {
-        "id": "cmujnahp8003emxr59dmps024",
-        "ownerId": "cmujnahog000kmxr54l8f8dxh",
+        "id": "cmujo6djs004srk9b79dxyzln",
+        "ownerId": "cmujo6dim000ork9bh2onrt3d",
         "title": "CampusRide - Peer Commute & Carpool",
-        "tagline": null,
-        "description": "Cross-platform mobile carpooling network connecting verified university students heading in the same direction for daily campus commutes.",
+        "tagline": "Verified collegiate carpool and peer ride-sharing network",
+        "description": "Cross-platform mobile carpooling network connecting verified university students heading in the same direction for daily campus commutes and weekend trips.",
         "domain": "Mobile Apps",
-        "imageUrl": null,
+        "imageUrl": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80",
         "demoUrl": null,
         "deadline": "2026-11-25",
         "status": "active",
         "repoUrl": "https://github.com/gradleaf-demo/campus-ride",
-        "createdAt": "2026-09-27T09:57:38.204Z",
+        "createdAt": "2026-09-27T10:22:25.817Z",
         "skills": [
           {
-            "id": "cmujnahp9003fmxr57xa9hg9y",
-            "projectId": "cmujnahp8003emxr59dmps024",
-            "skillId": "cmujnaho9000dmxr5ky4oxsi8",
-            "role": "Mobile Engineer",
+            "id": "cmujo6djt004trk9b51ws08l1",
+            "projectId": "cmujo6djs004srk9b79dxyzln",
+            "skillId": "cmujo6dig000frk9bwcp7vq4r",
+            "role": "Mobile Lead",
             "priority": "required",
             "skill": {
-              "id": "cmujnaho9000dmxr5ky4oxsi8",
+              "id": "cmujo6dig000frk9bwcp7vq4r",
               "name": "Flutter",
               "category": "Mobile"
             }
           },
           {
-            "id": "cmujnahp9003gmxr56v7qpwox",
-            "projectId": "cmujnahp8003emxr59dmps024",
-            "skillId": "cmujnaho70009mxr5e99eygse",
+            "id": "cmujo6djt004urk9bm5q0ift9",
+            "projectId": "cmujo6djs004srk9b79dxyzln",
+            "skillId": "cmujo6did0009rk9b1i08judd",
             "role": "Backend Lead",
             "priority": "required",
             "skill": {
-              "id": "cmujnaho70009mxr5e99eygse",
+              "id": "cmujo6did0009rk9b1i08judd",
               "name": "Node.js",
               "category": "Backend"
             }
@@ -1166,35 +1301,1025 @@ export const FALLBACK_USERS = [
         ],
         "members": [
           {
-            "id": "cmujnahp9003imxr54zbh5im6",
-            "projectId": "cmujnahp8003emxr59dmps024",
-            "userId": "cmujnahog000kmxr54l8f8dxh",
+            "id": "cmujo6djt004wrk9bvv1ph26b",
+            "projectId": "cmujo6djs004srk9b79dxyzln",
+            "userId": "cmujo6dim000ork9bh2onrt3d",
             "role": "Product Lead",
-            "joinedAt": "2026-09-27T09:57:38.206Z"
+            "joinedAt": "2026-09-27T10:22:25.818Z"
           }
         ]
       }
     ],
     "posts": []
+  },
+  {
+    "id": "cmujo6din000prk9btlqnh0bj",
+    "name": "Sarah Lin",
+    "email": "sarah.lin@campus.edu",
+    "avatarUrl": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&h=200&q=80",
+    "college": "Carnegie Mellon University",
+    "course": "B.S. Software Engineering",
+    "department": "Institute for Software Research",
+    "year": 3,
+    "headline": "Cloud Architect & DevOps Engineer • Kubernetes, Docker, CI/CD",
+    "bio": "Junior software engineering major building automated deployment pipelines and zero-downtime microservices. AWS Certified Solutions Architect Associate.",
+    "interests": "Cloud Infrastructure, DevOps, Distributed Systems",
+    "availability": "15 hrs/week",
+    "githubUrl": "https://github.com/sarahlin",
+    "portfolioUrl": "https://sarahlin.cloud",
+    "linkedinUrl": "https://linkedin.com/in/sarahlin-demo",
+    "createdAt": "2026-09-27T10:22:25.775Z",
+    "skills": [
+      {
+        "id": "cmujo6dj4002brk9btsyorl4g",
+        "userId": "cmujo6din000prk9btlqnh0bj",
+        "skillId": "cmujo6di90002rk9bhdmce7wt",
+        "status": "Practicing",
+        "proficiency": 3,
+        "skill": {
+          "id": "cmujo6di90002rk9bhdmce7wt",
+          "name": "TypeScript",
+          "category": "Frontend"
+        }
+      },
+      {
+        "id": "cmujo6dj30025rk9btjhcvd5v",
+        "userId": "cmujo6din000prk9btlqnh0bj",
+        "skillId": "cmujo6die000brk9bt7lm1xw5",
+        "status": "Comfortable",
+        "proficiency": 5,
+        "skill": {
+          "id": "cmujo6die000brk9bt7lm1xw5",
+          "name": "Docker",
+          "category": "DevOps"
+        }
+      },
+      {
+        "id": "cmujo6dj30027rk9b1hbwkhmx",
+        "userId": "cmujo6din000prk9btlqnh0bj",
+        "skillId": "cmujo6die000crk9b42gtoj2b",
+        "status": "Comfortable",
+        "proficiency": 5,
+        "skill": {
+          "id": "cmujo6die000crk9b42gtoj2b",
+          "name": "Kubernetes",
+          "category": "DevOps"
+        }
+      },
+      {
+        "id": "cmujo6dj40029rk9bul2xia5g",
+        "userId": "cmujo6din000prk9btlqnh0bj",
+        "skillId": "cmujo6dif000drk9b1o6u5gr9",
+        "status": "Project Experience",
+        "proficiency": 4,
+        "skill": {
+          "id": "cmujo6dif000drk9b1o6u5gr9",
+          "name": "Go",
+          "category": "Backend"
+        }
+      }
+    ],
+    "notifications": [],
+    "receivedCollab": [],
+    "projectMembers": [
+      {
+        "id": "cmujo6djo004erk9bcyscs6t1",
+        "projectId": "cmujo6djn004ark9bau2ft2jv",
+        "userId": "cmujo6din000prk9btlqnh0bj",
+        "role": "Cloud Lead",
+        "joinedAt": "2026-09-27T10:22:25.812Z",
+        "project": {
+          "id": "cmujo6djn004ark9bau2ft2jv",
+          "ownerId": "cmujo6din000prk9btlqnh0bj",
+          "title": "CloudMesh - Microservice Service Mesh for Hackathons",
+          "tagline": "Lightweight service discovery, mTLS security, and traffic routing for collegiate teams",
+          "description": "A developer-friendly service mesh built for student hackathon projects requiring instant zero-trust internal networking and distributed tracing across hybrid cloud providers.",
+          "domain": "Distributed Systems",
+          "imageUrl": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80",
+          "demoUrl": null,
+          "deadline": "2026-12-10",
+          "status": "recruiting",
+          "repoUrl": null,
+          "createdAt": "2026-09-27T10:22:25.811Z"
+        }
+      }
+    ],
+    "ownedProjects": [
+      {
+        "id": "cmujo6djn004ark9bau2ft2jv",
+        "ownerId": "cmujo6din000prk9btlqnh0bj",
+        "title": "CloudMesh - Microservice Service Mesh for Hackathons",
+        "tagline": "Lightweight service discovery, mTLS security, and traffic routing for collegiate teams",
+        "description": "A developer-friendly service mesh built for student hackathon projects requiring instant zero-trust internal networking and distributed tracing across hybrid cloud providers.",
+        "domain": "Distributed Systems",
+        "imageUrl": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80",
+        "demoUrl": null,
+        "deadline": "2026-12-10",
+        "status": "recruiting",
+        "repoUrl": null,
+        "createdAt": "2026-09-27T10:22:25.811Z",
+        "skills": [
+          {
+            "id": "cmujo6djn004brk9bcs5mcy2r",
+            "projectId": "cmujo6djn004ark9bau2ft2jv",
+            "skillId": "cmujo6die000crk9b42gtoj2b",
+            "role": "K8s Specialist",
+            "priority": "required",
+            "skill": {
+              "id": "cmujo6die000crk9b42gtoj2b",
+              "name": "Kubernetes",
+              "category": "DevOps"
+            }
+          },
+          {
+            "id": "cmujo6djn004crk9b85ygg07j",
+            "projectId": "cmujo6djn004ark9bau2ft2jv",
+            "skillId": "cmujo6dif000drk9b1o6u5gr9",
+            "role": "Proxy Core Developer",
+            "priority": "required",
+            "skill": {
+              "id": "cmujo6dif000drk9b1o6u5gr9",
+              "name": "Go",
+              "category": "Backend"
+            }
+          }
+        ],
+        "members": [
+          {
+            "id": "cmujo6djo004erk9bcyscs6t1",
+            "projectId": "cmujo6djn004ark9bau2ft2jv",
+            "userId": "cmujo6din000prk9btlqnh0bj",
+            "role": "Cloud Lead",
+            "joinedAt": "2026-09-27T10:22:25.812Z"
+          }
+        ]
+      }
+    ],
+    "posts": []
+  },
+  {
+    "id": "cmujo6din000qrk9bdn400yyu",
+    "name": "David Kim",
+    "email": "david.kim@campus.edu",
+    "avatarUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200&q=80",
+    "college": "Georgia Tech",
+    "course": "B.S. Robotics & Computer Science",
+    "department": "Interactive Computing",
+    "year": 4,
+    "headline": "Computer Vision & Robotics Engineer • PyTorch, OpenCV, ROS",
+    "bio": "Senior building autonomous navigation drones and edge AI vision models. Seeking collaborative peers to integrate cloud robotics dashboards.",
+    "interests": "Robotics, Computer Vision, Embedded Systems",
+    "availability": "12-15 hrs/week",
+    "githubUrl": "https://github.com/davidkim",
+    "portfolioUrl": "https://davidkim-robotics.com",
+    "linkedinUrl": "https://linkedin.com/in/davidkim-demo",
+    "createdAt": "2026-09-27T10:22:25.776Z",
+    "skills": [
+      {
+        "id": "cmujo6dj5002frk9bpml1gkjb",
+        "userId": "cmujo6din000qrk9bdn400yyu",
+        "skillId": "cmujo6dib0005rk9bgpl1ivl6",
+        "status": "Comfortable",
+        "proficiency": 5,
+        "skill": {
+          "id": "cmujo6dib0005rk9bgpl1ivl6",
+          "name": "Python",
+          "category": "AI / ML"
+        }
+      },
+      {
+        "id": "cmujo6dj6002hrk9b8l4ybgna",
+        "userId": "cmujo6din000qrk9bdn400yyu",
+        "skillId": "cmujo6dib0006rk9bggs4cmbo",
+        "status": "Project Experience",
+        "proficiency": 4,
+        "skill": {
+          "id": "cmujo6dib0006rk9bggs4cmbo",
+          "name": "PyTorch",
+          "category": "AI / ML"
+        }
+      },
+      {
+        "id": "cmujo6dj5002drk9bdfaq0i37",
+        "userId": "cmujo6din000qrk9bdn400yyu",
+        "skillId": "cmujo6dii000jrk9bbnjkkyq8",
+        "status": "Comfortable",
+        "proficiency": 5,
+        "skill": {
+          "id": "cmujo6dii000jrk9bbnjkkyq8",
+          "name": "Computer Vision",
+          "category": "AI / ML"
+        }
+      }
+    ],
+    "notifications": [],
+    "receivedCollab": [],
+    "projectMembers": [
+      {
+        "id": "cmujo6djs004qrk9b1dfsbs9j",
+        "projectId": "cmujo6djr004mrk9bk8xmzr0f",
+        "userId": "cmujo6din000qrk9bdn400yyu",
+        "role": "Robotics Lead",
+        "joinedAt": "2026-09-27T10:22:25.816Z",
+        "project": {
+          "id": "cmujo6djr004mrk9bk8xmzr0f",
+          "ownerId": "cmujo6din000qrk9bdn400yyu",
+          "title": "VisionNav - Autonomous Campus Quad Drone",
+          "tagline": "Edge AI computer vision obstacle avoidance for university quad delivery",
+          "description": "Real-time monocular depth estimation and semantic segmentation running on Jetson Orin Nano for GPS-denied indoor and quad navigation.",
+          "domain": "Robotics & Hardware",
+          "imageUrl": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80",
+          "demoUrl": null,
+          "deadline": "2026-12-20",
+          "status": "recruiting",
+          "repoUrl": null,
+          "createdAt": "2026-09-27T10:22:25.815Z"
+        }
+      }
+    ],
+    "ownedProjects": [
+      {
+        "id": "cmujo6djr004mrk9bk8xmzr0f",
+        "ownerId": "cmujo6din000qrk9bdn400yyu",
+        "title": "VisionNav - Autonomous Campus Quad Drone",
+        "tagline": "Edge AI computer vision obstacle avoidance for university quad delivery",
+        "description": "Real-time monocular depth estimation and semantic segmentation running on Jetson Orin Nano for GPS-denied indoor and quad navigation.",
+        "domain": "Robotics & Hardware",
+        "imageUrl": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80",
+        "demoUrl": null,
+        "deadline": "2026-12-20",
+        "status": "recruiting",
+        "repoUrl": null,
+        "createdAt": "2026-09-27T10:22:25.815Z",
+        "skills": [
+          {
+            "id": "cmujo6djr004nrk9b0ybhb97r",
+            "projectId": "cmujo6djr004mrk9bk8xmzr0f",
+            "skillId": "cmujo6dii000jrk9bbnjkkyq8",
+            "role": "Perception Lead",
+            "priority": "required",
+            "skill": {
+              "id": "cmujo6dii000jrk9bbnjkkyq8",
+              "name": "Computer Vision",
+              "category": "AI / ML"
+            }
+          },
+          {
+            "id": "cmujo6djr004ork9b6x7ifut7",
+            "projectId": "cmujo6djr004mrk9bk8xmzr0f",
+            "skillId": "cmujo6dib0006rk9bggs4cmbo",
+            "role": "Model Optimization",
+            "priority": "required",
+            "skill": {
+              "id": "cmujo6dib0006rk9bggs4cmbo",
+              "name": "PyTorch",
+              "category": "AI / ML"
+            }
+          }
+        ],
+        "members": [
+          {
+            "id": "cmujo6djs004qrk9b1dfsbs9j",
+            "projectId": "cmujo6djr004mrk9bk8xmzr0f",
+            "userId": "cmujo6din000qrk9bdn400yyu",
+            "role": "Robotics Lead",
+            "joinedAt": "2026-09-27T10:22:25.816Z"
+          }
+        ]
+      }
+    ],
+    "posts": [
+      {
+        "id": "cmujo6dk2005qrk9bhw3qt3t6",
+        "userId": "cmujo6din000qrk9bdn400yyu",
+        "content": "🚁 First successful outdoor quad test of our autonomous obstacle avoidance model! The drone mapped 4 buildings on campus in real-time with zero collisions. Looking for computer vision collaborators!",
+        "tag": "Showcase",
+        "mediaUrl": null,
+        "createdAt": "2026-09-27T10:22:25.826Z",
+        "comments": [],
+        "likes": []
+      }
+    ]
+  },
+  {
+    "id": "cmujo6dio000rrk9bvu7dxvhn",
+    "name": "Aisha Patel",
+    "email": "aisha.patel@campus.edu",
+    "avatarUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&h=200&q=80",
+    "college": "IIT Delhi",
+    "course": "B.Tech Mathematics & Computing",
+    "department": "Mathematics",
+    "year": 3,
+    "headline": "FinTech & Cryptography Builder • Quantitative Analysis & Solidity",
+    "bio": "Building peer micro-lending smart contracts and decentralized student grant disbursals. Strong foundation in cryptography and computational statistics.",
+    "interests": "FinTech, Blockchain, Data Science",
+    "availability": "14 hrs/week",
+    "githubUrl": "https://github.com/aishapatel",
+    "portfolioUrl": "https://aisha-fintech.org",
+    "linkedinUrl": "https://linkedin.com/in/aishapatel-demo",
+    "createdAt": "2026-09-27T10:22:25.776Z",
+    "skills": [
+      {
+        "id": "cmujo6dj7002lrk9bew22iaa8",
+        "userId": "cmujo6dio000rrk9bvu7dxvhn",
+        "skillId": "cmujo6dib0005rk9bgpl1ivl6",
+        "status": "Comfortable",
+        "proficiency": 5,
+        "skill": {
+          "id": "cmujo6dib0005rk9bgpl1ivl6",
+          "name": "Python",
+          "category": "AI / ML"
+        }
+      },
+      {
+        "id": "cmujo6dj7002nrk9bnswrzsa1",
+        "userId": "cmujo6dio000rrk9bvu7dxvhn",
+        "skillId": "cmujo6did000ark9bhfptoj9b",
+        "status": "Project Experience",
+        "proficiency": 4,
+        "skill": {
+          "id": "cmujo6did000ark9bhfptoj9b",
+          "name": "PostgreSQL",
+          "category": "Database"
+        }
+      },
+      {
+        "id": "cmujo6dj6002jrk9b6k6w6z7n",
+        "userId": "cmujo6dio000rrk9bvu7dxvhn",
+        "skillId": "cmujo6dih000irk9b6rcqqer7",
+        "status": "Comfortable",
+        "proficiency": 4,
+        "skill": {
+          "id": "cmujo6dih000irk9b6rcqqer7",
+          "name": "Solidity",
+          "category": "Blockchain"
+        }
+      }
+    ],
+    "notifications": [],
+    "receivedCollab": [],
+    "projectMembers": [
+      {
+        "id": "cmujo6djv0052rk9b7ksow0r5",
+        "projectId": "cmujo6dju004yrk9by8d6pttc",
+        "userId": "cmujo6dio000rrk9bvu7dxvhn",
+        "role": "FinTech Lead",
+        "joinedAt": "2026-09-27T10:22:25.820Z",
+        "project": {
+          "id": "cmujo6dju004yrk9by8d6pttc",
+          "ownerId": "cmujo6dio000rrk9bvu7dxvhn",
+          "title": "CampusPay - Student Micro-Scholarship DAO",
+          "tagline": "Transparent student grant disbursal with automated peer review milestones",
+          "description": "Decentralized micro-grant allocation protocol where student engineering clubs submit milestones and receive instant automated funding upon verified GitHub pull request merges.",
+          "domain": "FinTech & Analytics",
+          "imageUrl": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80",
+          "demoUrl": null,
+          "deadline": "2026-12-15",
+          "status": "recruiting",
+          "repoUrl": null,
+          "createdAt": "2026-09-27T10:22:25.818Z"
+        }
+      }
+    ],
+    "ownedProjects": [
+      {
+        "id": "cmujo6dju004yrk9by8d6pttc",
+        "ownerId": "cmujo6dio000rrk9bvu7dxvhn",
+        "title": "CampusPay - Student Micro-Scholarship DAO",
+        "tagline": "Transparent student grant disbursal with automated peer review milestones",
+        "description": "Decentralized micro-grant allocation protocol where student engineering clubs submit milestones and receive instant automated funding upon verified GitHub pull request merges.",
+        "domain": "FinTech & Analytics",
+        "imageUrl": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80",
+        "demoUrl": null,
+        "deadline": "2026-12-15",
+        "status": "recruiting",
+        "repoUrl": null,
+        "createdAt": "2026-09-27T10:22:25.818Z",
+        "skills": [
+          {
+            "id": "cmujo6djv004zrk9bu9kvbh6d",
+            "projectId": "cmujo6dju004yrk9by8d6pttc",
+            "skillId": "cmujo6dih000irk9b6rcqqer7",
+            "role": "Smart Contract Dev",
+            "priority": "required",
+            "skill": {
+              "id": "cmujo6dih000irk9b6rcqqer7",
+              "name": "Solidity",
+              "category": "Blockchain"
+            }
+          },
+          {
+            "id": "cmujo6djv0050rk9ba5w6wbta",
+            "projectId": "cmujo6dju004yrk9by8d6pttc",
+            "skillId": "cmujo6di80000rk9be4ql2tgn",
+            "role": "Web3 Frontend",
+            "priority": "required",
+            "skill": {
+              "id": "cmujo6di80000rk9be4ql2tgn",
+              "name": "React",
+              "category": "Frontend"
+            }
+          }
+        ],
+        "members": [
+          {
+            "id": "cmujo6djv0052rk9b7ksow0r5",
+            "projectId": "cmujo6dju004yrk9by8d6pttc",
+            "userId": "cmujo6dio000rrk9bvu7dxvhn",
+            "role": "FinTech Lead",
+            "joinedAt": "2026-09-27T10:22:25.820Z"
+          }
+        ]
+      }
+    ],
+    "posts": []
+  },
+  {
+    "id": "cmujo6dio000srk9brremojvg",
+    "name": "Carlos Mendez",
+    "email": "carlos.m@campus.edu",
+    "avatarUrl": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=200&h=200&q=80",
+    "college": "UT Austin",
+    "course": "B.S. Electrical & Computer Engineering",
+    "department": "ECE",
+    "year": 2,
+    "headline": "IoT & Hardware Hacker • Rust, Embedded C, Smart Energy",
+    "bio": "Passionate about smart campus sensor grids and embedded IoT telemetry. Enjoys bridging physical sensor hardware with modern web dashboards.",
+    "interests": "IoT, Hardware, Embedded Systems",
+    "availability": "16 hrs/week",
+    "githubUrl": "https://github.com/carlosmendez",
+    "portfolioUrl": "https://carlos-iot.me",
+    "linkedinUrl": "https://linkedin.com/in/carlosm-demo",
+    "createdAt": "2026-09-27T10:22:25.777Z",
+    "skills": [
+      {
+        "id": "cmujo6dj8002rrk9bn4ytz5jz",
+        "userId": "cmujo6dio000srk9brremojvg",
+        "skillId": "cmujo6dib0005rk9bgpl1ivl6",
+        "status": "Comfortable",
+        "proficiency": 4,
+        "skill": {
+          "id": "cmujo6dib0005rk9bgpl1ivl6",
+          "name": "Python",
+          "category": "AI / ML"
+        }
+      },
+      {
+        "id": "cmujo6dj9002trk9b5stsmzxa",
+        "userId": "cmujo6dio000srk9brremojvg",
+        "skillId": "cmujo6did0009rk9b1i08judd",
+        "status": "Practicing",
+        "proficiency": 3,
+        "skill": {
+          "id": "cmujo6did0009rk9b1i08judd",
+          "name": "Node.js",
+          "category": "Backend"
+        }
+      },
+      {
+        "id": "cmujo6dj8002prk9brr9fkete",
+        "userId": "cmujo6dio000srk9brremojvg",
+        "skillId": "cmujo6dif000erk9b0cr6i88g",
+        "status": "Project Experience",
+        "proficiency": 4,
+        "skill": {
+          "id": "cmujo6dif000erk9b0cr6i88g",
+          "name": "Rust",
+          "category": "Systems"
+        }
+      }
+    ],
+    "notifications": [],
+    "receivedCollab": [],
+    "projectMembers": [
+      {
+        "id": "cmujo6djx0058rk9bplzmdg3y",
+        "projectId": "cmujo6djw0054rk9bik64zxrp",
+        "userId": "cmujo6dio000srk9brremojvg",
+        "role": "Hardware Lead",
+        "joinedAt": "2026-09-27T10:22:25.821Z",
+        "project": {
+          "id": "cmujo6djw0054rk9bik64zxrp",
+          "ownerId": "cmujo6dio000srk9brremojvg",
+          "title": "SmartDorm - IoT Energy Optimization",
+          "tagline": "Telemetry sensor mesh monitoring hostel energy and water conservation",
+          "description": "Open-hardware environmental monitoring system built with ESP32 microcontrollers that surfaces actionable electricity and water savings data for university residence halls.",
+          "domain": "Robotics & Hardware",
+          "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+          "demoUrl": null,
+          "deadline": "2026-12-01",
+          "status": "active",
+          "repoUrl": null,
+          "createdAt": "2026-09-27T10:22:25.820Z"
+        }
+      }
+    ],
+    "ownedProjects": [
+      {
+        "id": "cmujo6djw0054rk9bik64zxrp",
+        "ownerId": "cmujo6dio000srk9brremojvg",
+        "title": "SmartDorm - IoT Energy Optimization",
+        "tagline": "Telemetry sensor mesh monitoring hostel energy and water conservation",
+        "description": "Open-hardware environmental monitoring system built with ESP32 microcontrollers that surfaces actionable electricity and water savings data for university residence halls.",
+        "domain": "Robotics & Hardware",
+        "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+        "demoUrl": null,
+        "deadline": "2026-12-01",
+        "status": "active",
+        "repoUrl": null,
+        "createdAt": "2026-09-27T10:22:25.820Z",
+        "skills": [
+          {
+            "id": "cmujo6djw0055rk9bd1bmnx35",
+            "projectId": "cmujo6djw0054rk9bik64zxrp",
+            "skillId": "cmujo6dif000erk9b0cr6i88g",
+            "role": "Embedded Firmware",
+            "priority": "required",
+            "skill": {
+              "id": "cmujo6dif000erk9b0cr6i88g",
+              "name": "Rust",
+              "category": "Systems"
+            }
+          },
+          {
+            "id": "cmujo6djw0056rk9bi47nlqq8",
+            "projectId": "cmujo6djw0054rk9bik64zxrp",
+            "skillId": "cmujo6dib0005rk9bgpl1ivl6",
+            "role": "Data Analysis",
+            "priority": "required",
+            "skill": {
+              "id": "cmujo6dib0005rk9bgpl1ivl6",
+              "name": "Python",
+              "category": "AI / ML"
+            }
+          }
+        ],
+        "members": [
+          {
+            "id": "cmujo6djx0058rk9bplzmdg3y",
+            "projectId": "cmujo6djw0054rk9bik64zxrp",
+            "userId": "cmujo6dio000srk9brremojvg",
+            "role": "Hardware Lead",
+            "joinedAt": "2026-09-27T10:22:25.821Z"
+          }
+        ]
+      }
+    ],
+    "posts": []
+  },
+  {
+    "id": "cmujo6dip000trk9b1jn3nl3a",
+    "name": "Ananya Iyer",
+    "email": "ananya.i@campus.edu",
+    "avatarUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&h=200&q=80",
+    "college": "Jaypee Institute of Information Tech (JIIT)",
+    "course": "B.Tech Computer Science & Engineering",
+    "department": "CSE",
+    "year": 3,
+    "headline": "Full-Stack Next.js Developer & Product Strategist • GraphQL, Prisma",
+    "bio": "Junior building social-first collegiate tools. Led winning team at Hack-In-Summer 2026. Skilled in Next.js 15, PostgreSQL, and scalable API architecture.",
+    "interests": "Web Development, Product Design, AI Applications",
+    "availability": "20 hrs/week (Hackathon ready)",
+    "githubUrl": "https://github.com/ananyaiyer",
+    "portfolioUrl": "https://ananya-dev.in",
+    "linkedinUrl": "https://linkedin.com/in/ananyaiyer-demo",
+    "createdAt": "2026-09-27T10:22:25.778Z",
+    "skills": [
+      {
+        "id": "cmujo6dja002xrk9bdonc1cwu",
+        "userId": "cmujo6dip000trk9b1jn3nl3a",
+        "skillId": "cmujo6di80000rk9be4ql2tgn",
+        "status": "Comfortable",
+        "proficiency": 5,
+        "skill": {
+          "id": "cmujo6di80000rk9be4ql2tgn",
+          "name": "React",
+          "category": "Frontend"
+        }
+      },
+      {
+        "id": "cmujo6dja002vrk9b9m9w86sw",
+        "userId": "cmujo6dip000trk9b1jn3nl3a",
+        "skillId": "cmujo6di80001rk9b6w2pi8jc",
+        "status": "Comfortable",
+        "proficiency": 5,
+        "skill": {
+          "id": "cmujo6di80001rk9b6w2pi8jc",
+          "name": "Next.js",
+          "category": "Frontend"
+        }
+      },
+      {
+        "id": "cmujo6djb0031rk9bjvsss0y6",
+        "userId": "cmujo6dip000trk9b1jn3nl3a",
+        "skillId": "cmujo6di90003rk9bkqvcr67r",
+        "status": "Comfortable",
+        "proficiency": 5,
+        "skill": {
+          "id": "cmujo6di90003rk9bkqvcr67r",
+          "name": "Tailwind CSS",
+          "category": "Frontend"
+        }
+      },
+      {
+        "id": "cmujo6djb002zrk9b9mf5kfpr",
+        "userId": "cmujo6dip000trk9b1jn3nl3a",
+        "skillId": "cmujo6dig000grk9b8xf7l9ac",
+        "status": "Comfortable",
+        "proficiency": 4,
+        "skill": {
+          "id": "cmujo6dig000grk9b8xf7l9ac",
+          "name": "GraphQL",
+          "category": "Backend"
+        }
+      }
+    ],
+    "notifications": [],
+    "receivedCollab": [],
+    "projectMembers": [
+      {
+        "id": "cmujo6djy005erk9b9h9ctfj7",
+        "projectId": "cmujo6djx005ark9b9i1qjpm9",
+        "userId": "cmujo6dip000trk9b1jn3nl3a",
+        "role": "Lead Architect",
+        "joinedAt": "2026-09-27T10:22:25.823Z",
+        "project": {
+          "id": "cmujo6djx005ark9b9i1qjpm9",
+          "ownerId": "cmujo6dip000trk9b1jn3nl3a",
+          "title": "SkillGraph - Verified Collegiate Competency Network",
+          "tagline": "Interactive 3D dependency graph of campus coursework and verified skills",
+          "description": "Interactive knowledge graph visualizing college engineering curricula, prerequisites, and peer-to-peer tutoring relationships using force-directed graphs and GraphQL.",
+          "domain": "Web Development",
+          "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
+          "demoUrl": null,
+          "deadline": "2026-11-18",
+          "status": "recruiting",
+          "repoUrl": null,
+          "createdAt": "2026-09-27T10:22:25.822Z"
+        }
+      }
+    ],
+    "ownedProjects": [
+      {
+        "id": "cmujo6djx005ark9b9i1qjpm9",
+        "ownerId": "cmujo6dip000trk9b1jn3nl3a",
+        "title": "SkillGraph - Verified Collegiate Competency Network",
+        "tagline": "Interactive 3D dependency graph of campus coursework and verified skills",
+        "description": "Interactive knowledge graph visualizing college engineering curricula, prerequisites, and peer-to-peer tutoring relationships using force-directed graphs and GraphQL.",
+        "domain": "Web Development",
+        "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
+        "demoUrl": null,
+        "deadline": "2026-11-18",
+        "status": "recruiting",
+        "repoUrl": null,
+        "createdAt": "2026-09-27T10:22:25.822Z",
+        "skills": [
+          {
+            "id": "cmujo6djy005brk9bm0uwnsgn",
+            "projectId": "cmujo6djx005ark9b9i1qjpm9",
+            "skillId": "cmujo6di80001rk9b6w2pi8jc",
+            "role": "Fullstack Lead",
+            "priority": "required",
+            "skill": {
+              "id": "cmujo6di80001rk9b6w2pi8jc",
+              "name": "Next.js",
+              "category": "Frontend"
+            }
+          },
+          {
+            "id": "cmujo6djy005crk9b3tuaa7pi",
+            "projectId": "cmujo6djx005ark9b9i1qjpm9",
+            "skillId": "cmujo6dig000grk9b8xf7l9ac",
+            "role": "API Architect",
+            "priority": "required",
+            "skill": {
+              "id": "cmujo6dig000grk9b8xf7l9ac",
+              "name": "GraphQL",
+              "category": "Backend"
+            }
+          }
+        ],
+        "members": [
+          {
+            "id": "cmujo6djy005erk9b9h9ctfj7",
+            "projectId": "cmujo6djx005ark9b9i1qjpm9",
+            "userId": "cmujo6dip000trk9b1jn3nl3a",
+            "role": "Lead Architect",
+            "joinedAt": "2026-09-27T10:22:25.823Z"
+          }
+        ]
+      }
+    ],
+    "posts": [
+      {
+        "id": "cmujo6dk1005ork9bt218lwmt",
+        "userId": "cmujo6dip000trk9b1jn3nl3a",
+        "content": "🏆 Looking for 2 engineers (1 Fullstack + 1 ML) to join our squad for the upcoming National Collegiate Hackathon! We are building an autonomous campus skill exchange. DM me or apply on our project page!",
+        "tag": "Hackathon Alert",
+        "mediaUrl": null,
+        "createdAt": "2026-09-27T10:22:25.826Z",
+        "comments": [
+          {
+            "id": "cmujo6dk2005vrk9bq5wb9iqd",
+            "postId": "cmujo6dk1005ork9bt218lwmt",
+            "userId": "cmujo6dim000ork9bh2onrt3d",
+            "content": "I would love to handle the mobile Flutter interface for this Ananya!",
+            "createdAt": "2026-09-27T10:22:25.827Z"
+          }
+        ],
+        "likes": [
+          {
+            "id": "cmujo6dk30064rk9bdptgw092",
+            "postId": "cmujo6dk1005ork9bt218lwmt",
+            "userId": "cmujo6dik000lrk9b2530ugh1",
+            "createdAt": "2026-09-27T10:22:25.827Z"
+          },
+          {
+            "id": "cmujo6dk30063rk9boal5b0ob",
+            "postId": "cmujo6dk1005ork9bt218lwmt",
+            "userId": "cmujo6dim000ork9bh2onrt3d",
+            "createdAt": "2026-09-27T10:22:25.827Z"
+          }
+        ]
+      }
+    ]
   }
 ];
 
 export const FALLBACK_PROJECTS = [
   {
-    "id": "cmujnahp8003emxr59dmps024",
-    "ownerId": "cmujnahog000kmxr54l8f8dxh",
+    "id": "cmujo6djx005ark9b9i1qjpm9",
+    "ownerId": "cmujo6dip000trk9b1jn3nl3a",
+    "title": "SkillGraph - Verified Collegiate Competency Network",
+    "tagline": "Interactive 3D dependency graph of campus coursework and verified skills",
+    "description": "Interactive knowledge graph visualizing college engineering curricula, prerequisites, and peer-to-peer tutoring relationships using force-directed graphs and GraphQL.",
+    "domain": "Web Development",
+    "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
+    "demoUrl": null,
+    "deadline": "2026-11-18",
+    "status": "recruiting",
+    "repoUrl": null,
+    "createdAt": "2026-09-27T10:22:25.822Z",
+    "owner": {
+      "id": "cmujo6dip000trk9b1jn3nl3a",
+      "name": "Ananya Iyer",
+      "email": "ananya.i@campus.edu",
+      "avatarUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&h=200&q=80",
+      "college": "Jaypee Institute of Information Tech (JIIT)",
+      "course": "B.Tech Computer Science & Engineering",
+      "department": "CSE",
+      "year": 3,
+      "headline": "Full-Stack Next.js Developer & Product Strategist • GraphQL, Prisma",
+      "bio": "Junior building social-first collegiate tools. Led winning team at Hack-In-Summer 2026. Skilled in Next.js 15, PostgreSQL, and scalable API architecture.",
+      "interests": "Web Development, Product Design, AI Applications",
+      "availability": "20 hrs/week (Hackathon ready)",
+      "githubUrl": "https://github.com/ananyaiyer",
+      "portfolioUrl": "https://ananya-dev.in",
+      "linkedinUrl": "https://linkedin.com/in/ananyaiyer-demo",
+      "createdAt": "2026-09-27T10:22:25.778Z"
+    },
+    "skills": [
+      {
+        "id": "cmujo6djy005brk9bm0uwnsgn",
+        "projectId": "cmujo6djx005ark9b9i1qjpm9",
+        "skillId": "cmujo6di80001rk9b6w2pi8jc",
+        "role": "Fullstack Lead",
+        "priority": "required",
+        "skill": {
+          "id": "cmujo6di80001rk9b6w2pi8jc",
+          "name": "Next.js",
+          "category": "Frontend"
+        }
+      },
+      {
+        "id": "cmujo6djy005crk9b3tuaa7pi",
+        "projectId": "cmujo6djx005ark9b9i1qjpm9",
+        "skillId": "cmujo6dig000grk9b8xf7l9ac",
+        "role": "API Architect",
+        "priority": "required",
+        "skill": {
+          "id": "cmujo6dig000grk9b8xf7l9ac",
+          "name": "GraphQL",
+          "category": "Backend"
+        }
+      }
+    ],
+    "members": [
+      {
+        "id": "cmujo6djy005erk9b9h9ctfj7",
+        "projectId": "cmujo6djx005ark9b9i1qjpm9",
+        "userId": "cmujo6dip000trk9b1jn3nl3a",
+        "role": "Lead Architect",
+        "joinedAt": "2026-09-27T10:22:25.823Z",
+        "user": {
+          "id": "cmujo6dip000trk9b1jn3nl3a",
+          "name": "Ananya Iyer",
+          "email": "ananya.i@campus.edu",
+          "avatarUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&h=200&q=80",
+          "college": "Jaypee Institute of Information Tech (JIIT)",
+          "course": "B.Tech Computer Science & Engineering",
+          "department": "CSE",
+          "year": 3,
+          "headline": "Full-Stack Next.js Developer & Product Strategist • GraphQL, Prisma",
+          "bio": "Junior building social-first collegiate tools. Led winning team at Hack-In-Summer 2026. Skilled in Next.js 15, PostgreSQL, and scalable API architecture.",
+          "interests": "Web Development, Product Design, AI Applications",
+          "availability": "20 hrs/week (Hackathon ready)",
+          "githubUrl": "https://github.com/ananyaiyer",
+          "portfolioUrl": "https://ananya-dev.in",
+          "linkedinUrl": "https://linkedin.com/in/ananyaiyer-demo",
+          "createdAt": "2026-09-27T10:22:25.778Z"
+        }
+      }
+    ],
+    "tasks": []
+  },
+  {
+    "id": "cmujo6djw0054rk9bik64zxrp",
+    "ownerId": "cmujo6dio000srk9brremojvg",
+    "title": "SmartDorm - IoT Energy Optimization",
+    "tagline": "Telemetry sensor mesh monitoring hostel energy and water conservation",
+    "description": "Open-hardware environmental monitoring system built with ESP32 microcontrollers that surfaces actionable electricity and water savings data for university residence halls.",
+    "domain": "Robotics & Hardware",
+    "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+    "demoUrl": null,
+    "deadline": "2026-12-01",
+    "status": "active",
+    "repoUrl": null,
+    "createdAt": "2026-09-27T10:22:25.820Z",
+    "owner": {
+      "id": "cmujo6dio000srk9brremojvg",
+      "name": "Carlos Mendez",
+      "email": "carlos.m@campus.edu",
+      "avatarUrl": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=200&h=200&q=80",
+      "college": "UT Austin",
+      "course": "B.S. Electrical & Computer Engineering",
+      "department": "ECE",
+      "year": 2,
+      "headline": "IoT & Hardware Hacker • Rust, Embedded C, Smart Energy",
+      "bio": "Passionate about smart campus sensor grids and embedded IoT telemetry. Enjoys bridging physical sensor hardware with modern web dashboards.",
+      "interests": "IoT, Hardware, Embedded Systems",
+      "availability": "16 hrs/week",
+      "githubUrl": "https://github.com/carlosmendez",
+      "portfolioUrl": "https://carlos-iot.me",
+      "linkedinUrl": "https://linkedin.com/in/carlosm-demo",
+      "createdAt": "2026-09-27T10:22:25.777Z"
+    },
+    "skills": [
+      {
+        "id": "cmujo6djw0055rk9bd1bmnx35",
+        "projectId": "cmujo6djw0054rk9bik64zxrp",
+        "skillId": "cmujo6dif000erk9b0cr6i88g",
+        "role": "Embedded Firmware",
+        "priority": "required",
+        "skill": {
+          "id": "cmujo6dif000erk9b0cr6i88g",
+          "name": "Rust",
+          "category": "Systems"
+        }
+      },
+      {
+        "id": "cmujo6djw0056rk9bi47nlqq8",
+        "projectId": "cmujo6djw0054rk9bik64zxrp",
+        "skillId": "cmujo6dib0005rk9bgpl1ivl6",
+        "role": "Data Analysis",
+        "priority": "required",
+        "skill": {
+          "id": "cmujo6dib0005rk9bgpl1ivl6",
+          "name": "Python",
+          "category": "AI / ML"
+        }
+      }
+    ],
+    "members": [
+      {
+        "id": "cmujo6djx0058rk9bplzmdg3y",
+        "projectId": "cmujo6djw0054rk9bik64zxrp",
+        "userId": "cmujo6dio000srk9brremojvg",
+        "role": "Hardware Lead",
+        "joinedAt": "2026-09-27T10:22:25.821Z",
+        "user": {
+          "id": "cmujo6dio000srk9brremojvg",
+          "name": "Carlos Mendez",
+          "email": "carlos.m@campus.edu",
+          "avatarUrl": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=200&h=200&q=80",
+          "college": "UT Austin",
+          "course": "B.S. Electrical & Computer Engineering",
+          "department": "ECE",
+          "year": 2,
+          "headline": "IoT & Hardware Hacker • Rust, Embedded C, Smart Energy",
+          "bio": "Passionate about smart campus sensor grids and embedded IoT telemetry. Enjoys bridging physical sensor hardware with modern web dashboards.",
+          "interests": "IoT, Hardware, Embedded Systems",
+          "availability": "16 hrs/week",
+          "githubUrl": "https://github.com/carlosmendez",
+          "portfolioUrl": "https://carlos-iot.me",
+          "linkedinUrl": "https://linkedin.com/in/carlosm-demo",
+          "createdAt": "2026-09-27T10:22:25.777Z"
+        }
+      }
+    ],
+    "tasks": []
+  },
+  {
+    "id": "cmujo6dju004yrk9by8d6pttc",
+    "ownerId": "cmujo6dio000rrk9bvu7dxvhn",
+    "title": "CampusPay - Student Micro-Scholarship DAO",
+    "tagline": "Transparent student grant disbursal with automated peer review milestones",
+    "description": "Decentralized micro-grant allocation protocol where student engineering clubs submit milestones and receive instant automated funding upon verified GitHub pull request merges.",
+    "domain": "FinTech & Analytics",
+    "imageUrl": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80",
+    "demoUrl": null,
+    "deadline": "2026-12-15",
+    "status": "recruiting",
+    "repoUrl": null,
+    "createdAt": "2026-09-27T10:22:25.818Z",
+    "owner": {
+      "id": "cmujo6dio000rrk9bvu7dxvhn",
+      "name": "Aisha Patel",
+      "email": "aisha.patel@campus.edu",
+      "avatarUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&h=200&q=80",
+      "college": "IIT Delhi",
+      "course": "B.Tech Mathematics & Computing",
+      "department": "Mathematics",
+      "year": 3,
+      "headline": "FinTech & Cryptography Builder • Quantitative Analysis & Solidity",
+      "bio": "Building peer micro-lending smart contracts and decentralized student grant disbursals. Strong foundation in cryptography and computational statistics.",
+      "interests": "FinTech, Blockchain, Data Science",
+      "availability": "14 hrs/week",
+      "githubUrl": "https://github.com/aishapatel",
+      "portfolioUrl": "https://aisha-fintech.org",
+      "linkedinUrl": "https://linkedin.com/in/aishapatel-demo",
+      "createdAt": "2026-09-27T10:22:25.776Z"
+    },
+    "skills": [
+      {
+        "id": "cmujo6djv004zrk9bu9kvbh6d",
+        "projectId": "cmujo6dju004yrk9by8d6pttc",
+        "skillId": "cmujo6dih000irk9b6rcqqer7",
+        "role": "Smart Contract Dev",
+        "priority": "required",
+        "skill": {
+          "id": "cmujo6dih000irk9b6rcqqer7",
+          "name": "Solidity",
+          "category": "Blockchain"
+        }
+      },
+      {
+        "id": "cmujo6djv0050rk9ba5w6wbta",
+        "projectId": "cmujo6dju004yrk9by8d6pttc",
+        "skillId": "cmujo6di80000rk9be4ql2tgn",
+        "role": "Web3 Frontend",
+        "priority": "required",
+        "skill": {
+          "id": "cmujo6di80000rk9be4ql2tgn",
+          "name": "React",
+          "category": "Frontend"
+        }
+      }
+    ],
+    "members": [
+      {
+        "id": "cmujo6djv0052rk9b7ksow0r5",
+        "projectId": "cmujo6dju004yrk9by8d6pttc",
+        "userId": "cmujo6dio000rrk9bvu7dxvhn",
+        "role": "FinTech Lead",
+        "joinedAt": "2026-09-27T10:22:25.820Z",
+        "user": {
+          "id": "cmujo6dio000rrk9bvu7dxvhn",
+          "name": "Aisha Patel",
+          "email": "aisha.patel@campus.edu",
+          "avatarUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&h=200&q=80",
+          "college": "IIT Delhi",
+          "course": "B.Tech Mathematics & Computing",
+          "department": "Mathematics",
+          "year": 3,
+          "headline": "FinTech & Cryptography Builder • Quantitative Analysis & Solidity",
+          "bio": "Building peer micro-lending smart contracts and decentralized student grant disbursals. Strong foundation in cryptography and computational statistics.",
+          "interests": "FinTech, Blockchain, Data Science",
+          "availability": "14 hrs/week",
+          "githubUrl": "https://github.com/aishapatel",
+          "portfolioUrl": "https://aisha-fintech.org",
+          "linkedinUrl": "https://linkedin.com/in/aishapatel-demo",
+          "createdAt": "2026-09-27T10:22:25.776Z"
+        }
+      }
+    ],
+    "tasks": []
+  },
+  {
+    "id": "cmujo6djs004srk9b79dxyzln",
+    "ownerId": "cmujo6dim000ork9bh2onrt3d",
     "title": "CampusRide - Peer Commute & Carpool",
-    "tagline": null,
-    "description": "Cross-platform mobile carpooling network connecting verified university students heading in the same direction for daily campus commutes.",
+    "tagline": "Verified collegiate carpool and peer ride-sharing network",
+    "description": "Cross-platform mobile carpooling network connecting verified university students heading in the same direction for daily campus commutes and weekend trips.",
     "domain": "Mobile Apps",
-    "imageUrl": null,
+    "imageUrl": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80",
     "demoUrl": null,
     "deadline": "2026-11-25",
     "status": "active",
     "repoUrl": "https://github.com/gradleaf-demo/campus-ride",
-    "createdAt": "2026-09-27T09:57:38.204Z",
+    "createdAt": "2026-09-27T10:22:25.817Z",
     "owner": {
-      "id": "cmujnahog000kmxr54l8f8dxh",
+      "id": "cmujo6dim000ork9bh2onrt3d",
       "name": "Rahul Verma",
       "email": "rahul.v@campus.edu",
       "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200&q=80",
@@ -1202,36 +2327,36 @@ export const FALLBACK_PROJECTS = [
       "course": "B.E. Computer Science",
       "department": "Computer Science",
       "year": 2,
-      "headline": "Mobile & Cloud Builder • Flutter & Node.js",
-      "bio": "Sophomore building cross-platform student apps. Enjoys rapid prototyping, API integrations, and product development.",
-      "interests": "Mobile Apps, Web Development, Cloud",
+      "headline": "Mobile & Full-Stack Prototyper • Flutter, Node.js, Cloud Run",
+      "bio": "Sophomore building fluid cross-platform mobile apps for college students. Enjoys rapid UI prototyping, WebSockets, and real-time community experiences.",
+      "interests": "Mobile Apps, Web Development, Cloud Systems",
       "availability": "15 hrs/week",
       "githubUrl": "https://github.com/rahulverma",
       "portfolioUrl": "https://rahulv.me",
       "linkedinUrl": "https://linkedin.com/in/rahulv-demo",
-      "createdAt": "2026-09-27T09:57:38.176Z"
+      "createdAt": "2026-09-27T10:22:25.774Z"
     },
     "skills": [
       {
-        "id": "cmujnahp9003fmxr57xa9hg9y",
-        "projectId": "cmujnahp8003emxr59dmps024",
-        "skillId": "cmujnaho9000dmxr5ky4oxsi8",
-        "role": "Mobile Engineer",
+        "id": "cmujo6djt004trk9b51ws08l1",
+        "projectId": "cmujo6djs004srk9b79dxyzln",
+        "skillId": "cmujo6dig000frk9bwcp7vq4r",
+        "role": "Mobile Lead",
         "priority": "required",
         "skill": {
-          "id": "cmujnaho9000dmxr5ky4oxsi8",
+          "id": "cmujo6dig000frk9bwcp7vq4r",
           "name": "Flutter",
           "category": "Mobile"
         }
       },
       {
-        "id": "cmujnahp9003gmxr56v7qpwox",
-        "projectId": "cmujnahp8003emxr59dmps024",
-        "skillId": "cmujnaho70009mxr5e99eygse",
+        "id": "cmujo6djt004urk9bm5q0ift9",
+        "projectId": "cmujo6djs004srk9b79dxyzln",
+        "skillId": "cmujo6did0009rk9b1i08judd",
         "role": "Backend Lead",
         "priority": "required",
         "skill": {
-          "id": "cmujnaho70009mxr5e99eygse",
+          "id": "cmujo6did0009rk9b1i08judd",
           "name": "Node.js",
           "category": "Backend"
         }
@@ -1239,13 +2364,13 @@ export const FALLBACK_PROJECTS = [
     ],
     "members": [
       {
-        "id": "cmujnahp9003imxr54zbh5im6",
-        "projectId": "cmujnahp8003emxr59dmps024",
-        "userId": "cmujnahog000kmxr54l8f8dxh",
+        "id": "cmujo6djt004wrk9bvv1ph26b",
+        "projectId": "cmujo6djs004srk9b79dxyzln",
+        "userId": "cmujo6dim000ork9bh2onrt3d",
         "role": "Product Lead",
-        "joinedAt": "2026-09-27T09:57:38.206Z",
+        "joinedAt": "2026-09-27T10:22:25.818Z",
         "user": {
-          "id": "cmujnahog000kmxr54l8f8dxh",
+          "id": "cmujo6dim000ork9bh2onrt3d",
           "name": "Rahul Verma",
           "email": "rahul.v@campus.edu",
           "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200&q=80",
@@ -1253,34 +2378,120 @@ export const FALLBACK_PROJECTS = [
           "course": "B.E. Computer Science",
           "department": "Computer Science",
           "year": 2,
-          "headline": "Mobile & Cloud Builder • Flutter & Node.js",
-          "bio": "Sophomore building cross-platform student apps. Enjoys rapid prototyping, API integrations, and product development.",
-          "interests": "Mobile Apps, Web Development, Cloud",
+          "headline": "Mobile & Full-Stack Prototyper • Flutter, Node.js, Cloud Run",
+          "bio": "Sophomore building fluid cross-platform mobile apps for college students. Enjoys rapid UI prototyping, WebSockets, and real-time community experiences.",
+          "interests": "Mobile Apps, Web Development, Cloud Systems",
           "availability": "15 hrs/week",
           "githubUrl": "https://github.com/rahulverma",
           "portfolioUrl": "https://rahulv.me",
           "linkedinUrl": "https://linkedin.com/in/rahulv-demo",
-          "createdAt": "2026-09-27T09:57:38.176Z"
+          "createdAt": "2026-09-27T10:22:25.774Z"
         }
       }
     ],
     "tasks": []
   },
   {
-    "id": "cmujnahp60038mxr5f18siflz",
-    "ownerId": "cmujnahof000jmxr5r1huciu4",
+    "id": "cmujo6djr004mrk9bk8xmzr0f",
+    "ownerId": "cmujo6din000qrk9bdn400yyu",
+    "title": "VisionNav - Autonomous Campus Quad Drone",
+    "tagline": "Edge AI computer vision obstacle avoidance for university quad delivery",
+    "description": "Real-time monocular depth estimation and semantic segmentation running on Jetson Orin Nano for GPS-denied indoor and quad navigation.",
+    "domain": "Robotics & Hardware",
+    "imageUrl": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80",
+    "demoUrl": null,
+    "deadline": "2026-12-20",
+    "status": "recruiting",
+    "repoUrl": null,
+    "createdAt": "2026-09-27T10:22:25.815Z",
+    "owner": {
+      "id": "cmujo6din000qrk9bdn400yyu",
+      "name": "David Kim",
+      "email": "david.kim@campus.edu",
+      "avatarUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200&q=80",
+      "college": "Georgia Tech",
+      "course": "B.S. Robotics & Computer Science",
+      "department": "Interactive Computing",
+      "year": 4,
+      "headline": "Computer Vision & Robotics Engineer • PyTorch, OpenCV, ROS",
+      "bio": "Senior building autonomous navigation drones and edge AI vision models. Seeking collaborative peers to integrate cloud robotics dashboards.",
+      "interests": "Robotics, Computer Vision, Embedded Systems",
+      "availability": "12-15 hrs/week",
+      "githubUrl": "https://github.com/davidkim",
+      "portfolioUrl": "https://davidkim-robotics.com",
+      "linkedinUrl": "https://linkedin.com/in/davidkim-demo",
+      "createdAt": "2026-09-27T10:22:25.776Z"
+    },
+    "skills": [
+      {
+        "id": "cmujo6djr004nrk9b0ybhb97r",
+        "projectId": "cmujo6djr004mrk9bk8xmzr0f",
+        "skillId": "cmujo6dii000jrk9bbnjkkyq8",
+        "role": "Perception Lead",
+        "priority": "required",
+        "skill": {
+          "id": "cmujo6dii000jrk9bbnjkkyq8",
+          "name": "Computer Vision",
+          "category": "AI / ML"
+        }
+      },
+      {
+        "id": "cmujo6djr004ork9b6x7ifut7",
+        "projectId": "cmujo6djr004mrk9bk8xmzr0f",
+        "skillId": "cmujo6dib0006rk9bggs4cmbo",
+        "role": "Model Optimization",
+        "priority": "required",
+        "skill": {
+          "id": "cmujo6dib0006rk9bggs4cmbo",
+          "name": "PyTorch",
+          "category": "AI / ML"
+        }
+      }
+    ],
+    "members": [
+      {
+        "id": "cmujo6djs004qrk9b1dfsbs9j",
+        "projectId": "cmujo6djr004mrk9bk8xmzr0f",
+        "userId": "cmujo6din000qrk9bdn400yyu",
+        "role": "Robotics Lead",
+        "joinedAt": "2026-09-27T10:22:25.816Z",
+        "user": {
+          "id": "cmujo6din000qrk9bdn400yyu",
+          "name": "David Kim",
+          "email": "david.kim@campus.edu",
+          "avatarUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200&q=80",
+          "college": "Georgia Tech",
+          "course": "B.S. Robotics & Computer Science",
+          "department": "Interactive Computing",
+          "year": 4,
+          "headline": "Computer Vision & Robotics Engineer • PyTorch, OpenCV, ROS",
+          "bio": "Senior building autonomous navigation drones and edge AI vision models. Seeking collaborative peers to integrate cloud robotics dashboards.",
+          "interests": "Robotics, Computer Vision, Embedded Systems",
+          "availability": "12-15 hrs/week",
+          "githubUrl": "https://github.com/davidkim",
+          "portfolioUrl": "https://davidkim-robotics.com",
+          "linkedinUrl": "https://linkedin.com/in/davidkim-demo",
+          "createdAt": "2026-09-27T10:22:25.776Z"
+        }
+      }
+    ],
+    "tasks": []
+  },
+  {
+    "id": "cmujo6djp004grk9bzbl83wgc",
+    "ownerId": "cmujo6dil000nrk9bit72pzfa",
     "title": "ArxivRag - Research Paper Synthesis Agent",
-    "tagline": null,
-    "description": "Autonomous retrieval agent that synthesizes academic literature into structured comparative tables and citation graphs.",
+    "tagline": "Autonomous AI literature survey and comparative matrix synthesizer",
+    "description": "Autonomous retrieval agent that ingests academic papers from Arxiv, generates comparative benchmark tables, and discovers conflicting empirical claims automatically.",
     "domain": "AI & Machine Learning",
-    "imageUrl": null,
+    "imageUrl": "https://images.unsplash.com/photo-1507668077129-56e32842fceb?auto=format&fit=crop&w=800&q=80",
     "demoUrl": null,
     "deadline": "2026-11-30",
     "status": "active",
     "repoUrl": "https://github.com/gradleaf-demo/arxiv-rag-agent",
-    "createdAt": "2026-09-27T09:57:38.203Z",
+    "createdAt": "2026-09-27T10:22:25.813Z",
     "owner": {
-      "id": "cmujnahof000jmxr5r1huciu4",
+      "id": "cmujo6dil000nrk9bit72pzfa",
       "name": "Elena Rostova",
       "email": "elena.r@campus.edu",
       "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&h=200&q=80",
@@ -1288,36 +2499,36 @@ export const FALLBACK_PROJECTS = [
       "course": "M.S. Artificial Intelligence",
       "department": "AI Lab",
       "year": 1,
-      "headline": "AI/ML Researcher • LLM Tool Use, LangChain & PyTorch",
-      "bio": "Graduate researcher focusing on retrieval-augmented generation and reasoning models. Looking to build AI applications with solid engineering teams.",
+      "headline": "AI/ML Researcher • Autonomous Agents, RAG Pipelines & PyTorch",
+      "bio": "Graduate researcher focusing on hybrid neural retrieval, tool use, and multi-agent coordination. Looking to build real-world AI applications with strong collaborative student teams.",
       "interests": "AI, Natural Language Processing, Machine Learning",
       "availability": "20 hrs/week (Hackathon sprint ready)",
       "githubUrl": "https://github.com/elenarostova",
       "portfolioUrl": "https://elena-ai.org",
       "linkedinUrl": "https://linkedin.com/in/elena-rostova",
-      "createdAt": "2026-09-27T09:57:38.175Z"
+      "createdAt": "2026-09-27T10:22:25.774Z"
     },
     "skills": [
       {
-        "id": "cmujnahp70039mxr5zz4uvo3h",
-        "projectId": "cmujnahp60038mxr5f18siflz",
-        "skillId": "cmujnaho50005mxr5d9zxxi8x",
+        "id": "cmujo6djp004hrk9b245crngp",
+        "projectId": "cmujo6djp004grk9bzbl83wgc",
+        "skillId": "cmujo6dib0005rk9bgpl1ivl6",
         "role": "AI Researcher",
         "priority": "required",
         "skill": {
-          "id": "cmujnaho50005mxr5d9zxxi8x",
+          "id": "cmujo6dib0005rk9bgpl1ivl6",
           "name": "Python",
           "category": "AI / ML"
         }
       },
       {
-        "id": "cmujnahp7003amxr5cv25omjk",
-        "projectId": "cmujnahp60038mxr5f18siflz",
-        "skillId": "cmujnaho60007mxr5wbax40zy",
+        "id": "cmujo6djp004irk9bryupgw58",
+        "projectId": "cmujo6djp004grk9bzbl83wgc",
+        "skillId": "cmujo6dic0007rk9bwdgqt10k",
         "role": "RAG Pipeline Engineer",
         "priority": "required",
         "skill": {
-          "id": "cmujnaho60007mxr5wbax40zy",
+          "id": "cmujo6dic0007rk9bwdgqt10k",
           "name": "LangChain",
           "category": "AI / ML"
         }
@@ -1325,13 +2536,13 @@ export const FALLBACK_PROJECTS = [
     ],
     "members": [
       {
-        "id": "cmujnahp7003cmxr5yydscpcw",
-        "projectId": "cmujnahp60038mxr5f18siflz",
-        "userId": "cmujnahof000jmxr5r1huciu4",
+        "id": "cmujo6djq004krk9b94zo1abw",
+        "projectId": "cmujo6djp004grk9bzbl83wgc",
+        "userId": "cmujo6dil000nrk9bit72pzfa",
         "role": "Research Lead",
-        "joinedAt": "2026-09-27T09:57:38.204Z",
+        "joinedAt": "2026-09-27T10:22:25.814Z",
         "user": {
-          "id": "cmujnahof000jmxr5r1huciu4",
+          "id": "cmujo6dil000nrk9bit72pzfa",
           "name": "Elena Rostova",
           "email": "elena.r@campus.edu",
           "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&h=200&q=80",
@@ -1339,34 +2550,120 @@ export const FALLBACK_PROJECTS = [
           "course": "M.S. Artificial Intelligence",
           "department": "AI Lab",
           "year": 1,
-          "headline": "AI/ML Researcher • LLM Tool Use, LangChain & PyTorch",
-          "bio": "Graduate researcher focusing on retrieval-augmented generation and reasoning models. Looking to build AI applications with solid engineering teams.",
+          "headline": "AI/ML Researcher • Autonomous Agents, RAG Pipelines & PyTorch",
+          "bio": "Graduate researcher focusing on hybrid neural retrieval, tool use, and multi-agent coordination. Looking to build real-world AI applications with strong collaborative student teams.",
           "interests": "AI, Natural Language Processing, Machine Learning",
           "availability": "20 hrs/week (Hackathon sprint ready)",
           "githubUrl": "https://github.com/elenarostova",
           "portfolioUrl": "https://elena-ai.org",
           "linkedinUrl": "https://linkedin.com/in/elena-rostova",
-          "createdAt": "2026-09-27T09:57:38.175Z"
+          "createdAt": "2026-09-27T10:22:25.774Z"
         }
       }
     ],
     "tasks": []
   },
   {
-    "id": "cmujnahp40032mxr5kbmqj8ka",
-    "ownerId": "cmujnahoe000imxr5yzqkpinw",
-    "title": "DistributedKV - Raft Consensus Store",
-    "tagline": null,
-    "description": "Fault-tolerant distributed key-value store implementing the Raft consensus algorithm with write-ahead logging and leader election.",
+    "id": "cmujo6djn004ark9bau2ft2jv",
+    "ownerId": "cmujo6din000prk9btlqnh0bj",
+    "title": "CloudMesh - Microservice Service Mesh for Hackathons",
+    "tagline": "Lightweight service discovery, mTLS security, and traffic routing for collegiate teams",
+    "description": "A developer-friendly service mesh built for student hackathon projects requiring instant zero-trust internal networking and distributed tracing across hybrid cloud providers.",
     "domain": "Distributed Systems",
-    "imageUrl": null,
+    "imageUrl": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80",
+    "demoUrl": null,
+    "deadline": "2026-12-10",
+    "status": "recruiting",
+    "repoUrl": null,
+    "createdAt": "2026-09-27T10:22:25.811Z",
+    "owner": {
+      "id": "cmujo6din000prk9btlqnh0bj",
+      "name": "Sarah Lin",
+      "email": "sarah.lin@campus.edu",
+      "avatarUrl": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&h=200&q=80",
+      "college": "Carnegie Mellon University",
+      "course": "B.S. Software Engineering",
+      "department": "Institute for Software Research",
+      "year": 3,
+      "headline": "Cloud Architect & DevOps Engineer • Kubernetes, Docker, CI/CD",
+      "bio": "Junior software engineering major building automated deployment pipelines and zero-downtime microservices. AWS Certified Solutions Architect Associate.",
+      "interests": "Cloud Infrastructure, DevOps, Distributed Systems",
+      "availability": "15 hrs/week",
+      "githubUrl": "https://github.com/sarahlin",
+      "portfolioUrl": "https://sarahlin.cloud",
+      "linkedinUrl": "https://linkedin.com/in/sarahlin-demo",
+      "createdAt": "2026-09-27T10:22:25.775Z"
+    },
+    "skills": [
+      {
+        "id": "cmujo6djn004brk9bcs5mcy2r",
+        "projectId": "cmujo6djn004ark9bau2ft2jv",
+        "skillId": "cmujo6die000crk9b42gtoj2b",
+        "role": "K8s Specialist",
+        "priority": "required",
+        "skill": {
+          "id": "cmujo6die000crk9b42gtoj2b",
+          "name": "Kubernetes",
+          "category": "DevOps"
+        }
+      },
+      {
+        "id": "cmujo6djn004crk9b85ygg07j",
+        "projectId": "cmujo6djn004ark9bau2ft2jv",
+        "skillId": "cmujo6dif000drk9b1o6u5gr9",
+        "role": "Proxy Core Developer",
+        "priority": "required",
+        "skill": {
+          "id": "cmujo6dif000drk9b1o6u5gr9",
+          "name": "Go",
+          "category": "Backend"
+        }
+      }
+    ],
+    "members": [
+      {
+        "id": "cmujo6djo004erk9bcyscs6t1",
+        "projectId": "cmujo6djn004ark9bau2ft2jv",
+        "userId": "cmujo6din000prk9btlqnh0bj",
+        "role": "Cloud Lead",
+        "joinedAt": "2026-09-27T10:22:25.812Z",
+        "user": {
+          "id": "cmujo6din000prk9btlqnh0bj",
+          "name": "Sarah Lin",
+          "email": "sarah.lin@campus.edu",
+          "avatarUrl": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&h=200&q=80",
+          "college": "Carnegie Mellon University",
+          "course": "B.S. Software Engineering",
+          "department": "Institute for Software Research",
+          "year": 3,
+          "headline": "Cloud Architect & DevOps Engineer • Kubernetes, Docker, CI/CD",
+          "bio": "Junior software engineering major building automated deployment pipelines and zero-downtime microservices. AWS Certified Solutions Architect Associate.",
+          "interests": "Cloud Infrastructure, DevOps, Distributed Systems",
+          "availability": "15 hrs/week",
+          "githubUrl": "https://github.com/sarahlin",
+          "portfolioUrl": "https://sarahlin.cloud",
+          "linkedinUrl": "https://linkedin.com/in/sarahlin-demo",
+          "createdAt": "2026-09-27T10:22:25.775Z"
+        }
+      }
+    ],
+    "tasks": []
+  },
+  {
+    "id": "cmujo6djl0043rk9bfmx0di4i",
+    "ownerId": "cmujo6dil000mrk9bbw1daulp",
+    "title": "DistributedKV - Raft Consensus Store",
+    "tagline": "Fault-tolerant distributed key-value store with leader election",
+    "description": "Fault-tolerant distributed key-value store implementing the Raft consensus algorithm with write-ahead logging, snapshotting, and linearizable reads.",
+    "domain": "Distributed Systems",
+    "imageUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
     "demoUrl": null,
     "deadline": "2026-11-15",
     "status": "active",
     "repoUrl": "https://github.com/gradleaf-demo/distributed-kv",
-    "createdAt": "2026-09-27T09:57:38.201Z",
+    "createdAt": "2026-09-27T10:22:25.810Z",
     "owner": {
-      "id": "cmujnahoe000imxr5yzqkpinw",
+      "id": "cmujo6dil000mrk9bbw1daulp",
       "name": "Marcus Johnson",
       "email": "marcus.j@campus.edu",
       "avatarUrl": "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=200&h=200&q=80",
@@ -1374,342 +2671,48 @@ export const FALLBACK_PROJECTS = [
       "course": "B.S. EECS",
       "department": "Computer Science",
       "year": 4,
-      "headline": "Backend Engineer • Scalable Systems, PostgreSQL & Go",
-      "bio": "Senior student interested in distributed databases, microservices, and backend performance tuning.",
+      "headline": "Distributed Systems & Backend Engineer • Go, Raft, High-Throughput APIs",
+      "bio": "Senior CS student researching consensus algorithms, distributed fault-tolerance, and high-scale database caching. Enjoys systems programming, profiling, and open-source contributions.",
       "interests": "Distributed Systems, Backend APIs, Cloud Infrastructure",
-      "availability": "10-12 hrs/week",
+      "availability": "12 hrs/week",
       "githubUrl": "https://github.com/marcusj",
       "portfolioUrl": "https://marcus.io",
       "linkedinUrl": "https://linkedin.com/in/marcusj-demo",
-      "createdAt": "2026-09-27T09:57:38.175Z"
+      "createdAt": "2026-09-27T10:22:25.773Z"
     },
     "skills": [
       {
-        "id": "cmujnahp50033mxr5568d5zmp",
-        "projectId": "cmujnahp40032mxr5kbmqj8ka",
-        "skillId": "cmujnaho9000cmxr5mg2lrj6q",
+        "id": "cmujo6djm0044rk9bz0rlq4fy",
+        "projectId": "cmujo6djl0043rk9bfmx0di4i",
+        "skillId": "cmujo6dif000drk9b1o6u5gr9",
         "role": "Distributed Systems Lead",
         "priority": "required",
         "skill": {
-          "id": "cmujnaho9000cmxr5mg2lrj6q",
+          "id": "cmujo6dif000drk9b1o6u5gr9",
           "name": "Go",
           "category": "Backend"
         }
       },
       {
-        "id": "cmujnahp50034mxr5lcvfp6xs",
-        "projectId": "cmujnahp40032mxr5kbmqj8ka",
-        "skillId": "cmujnahob000fmxr5xyanxdh4",
-        "role": "Storage Engineer",
+        "id": "cmujo6djm0045rk9b9jub1h9x",
+        "projectId": "cmujo6djl0043rk9bfmx0di4i",
+        "skillId": "cmujo6dih000hrk9bn9zx5h2h",
+        "role": "Cache Architect",
         "priority": "required",
         "skill": {
-          "id": "cmujnahob000fmxr5xyanxdh4",
+          "id": "cmujo6dih000hrk9bn9zx5h2h",
           "name": "Redis",
           "category": "Database"
         }
-      }
-    ],
-    "members": [
-      {
-        "id": "cmujnahp60036mxr5k8ecnn6r",
-        "projectId": "cmujnahp40032mxr5kbmqj8ka",
-        "userId": "cmujnahoe000imxr5yzqkpinw",
-        "role": "Lead Architect",
-        "joinedAt": "2026-09-27T09:57:38.202Z",
-        "user": {
-          "id": "cmujnahoe000imxr5yzqkpinw",
-          "name": "Marcus Johnson",
-          "email": "marcus.j@campus.edu",
-          "avatarUrl": "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=200&h=200&q=80",
-          "college": "UC Berkeley",
-          "course": "B.S. EECS",
-          "department": "Computer Science",
-          "year": 4,
-          "headline": "Backend Engineer • Scalable Systems, PostgreSQL & Go",
-          "bio": "Senior student interested in distributed databases, microservices, and backend performance tuning.",
-          "interests": "Distributed Systems, Backend APIs, Cloud Infrastructure",
-          "availability": "10-12 hrs/week",
-          "githubUrl": "https://github.com/marcusj",
-          "portfolioUrl": "https://marcus.io",
-          "linkedinUrl": "https://linkedin.com/in/marcusj-demo",
-          "createdAt": "2026-09-27T09:57:38.175Z"
-        }
-      }
-    ],
-    "tasks": []
-  },
-  {
-    "id": "cmujnahp2002umxr5zg9vzcqs",
-    "ownerId": "cmujnahod000hmxr5n7iffmh2",
-    "title": "EcoCampus - Carbon Footprint Gamification",
-    "tagline": null,
-    "description": "Gamified mobile and web dashboard encouraging college students to adopt sustainable campus habits with peer challenges and rewards.",
-    "domain": "Web Development",
-    "imageUrl": null,
-    "demoUrl": null,
-    "deadline": "2026-11-01",
-    "status": "recruiting",
-    "repoUrl": null,
-    "createdAt": "2026-09-27T09:57:38.199Z",
-    "owner": {
-      "id": "cmujnahod000hmxr5n7iffmh2",
-      "name": "Priya Sharma",
-      "email": "priya.sharma@campus.edu",
-      "avatarUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200&q=80",
-      "college": "National Institute of Tech",
-      "course": "B.Tech Information Technology",
-      "department": "IT",
-      "year": 3,
-      "headline": "Frontend Craftsman & UI/UX enthusiast • React, Tailwind, Next.js",
-      "bio": "Crafting pixel-perfect interactive web apps. 2x hackathon winner (Best Design). Available for upcoming summer hackathons!",
-      "interests": "Frontend Architecture, UI/UX Design, Design Systems",
-      "availability": "15 hrs/week (Flexible)",
-      "githubUrl": "https://github.com/priyasharma",
-      "portfolioUrl": "https://priyasharma.design",
-      "linkedinUrl": "https://linkedin.com/in/priyasharma-demo",
-      "createdAt": "2026-09-27T09:57:38.174Z"
-    },
-    "skills": [
-      {
-        "id": "cmujnahp3002wmxr5h1sp7b5j",
-        "projectId": "cmujnahp2002umxr5zg9vzcqs",
-        "skillId": "cmujnaho40003mxr5sjvgsk4u",
-        "role": "UI/UX Designer",
-        "priority": "required",
-        "skill": {
-          "id": "cmujnaho40003mxr5sjvgsk4u",
-          "name": "Tailwind CSS",
-          "category": "Frontend"
-        }
       },
       {
-        "id": "cmujnahp3002ymxr53bithxir",
-        "projectId": "cmujnahp2002umxr5zg9vzcqs",
-        "skillId": "cmujnaho70009mxr5e99eygse",
-        "role": "Backend Engineer",
-        "priority": "required",
-        "skill": {
-          "id": "cmujnaho70009mxr5e99eygse",
-          "name": "Node.js",
-          "category": "Backend"
-        }
-      }
-    ],
-    "members": [
-      {
-        "id": "cmujnahp40030mxr5gaj0qk2x",
-        "projectId": "cmujnahp2002umxr5zg9vzcqs",
-        "userId": "cmujnahod000hmxr5n7iffmh2",
-        "role": "Lead Designer & Organizer",
-        "joinedAt": "2026-09-27T09:57:38.200Z",
-        "user": {
-          "id": "cmujnahod000hmxr5n7iffmh2",
-          "name": "Priya Sharma",
-          "email": "priya.sharma@campus.edu",
-          "avatarUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200&q=80",
-          "college": "National Institute of Tech",
-          "course": "B.Tech Information Technology",
-          "department": "IT",
-          "year": 3,
-          "headline": "Frontend Craftsman & UI/UX enthusiast • React, Tailwind, Next.js",
-          "bio": "Crafting pixel-perfect interactive web apps. 2x hackathon winner (Best Design). Available for upcoming summer hackathons!",
-          "interests": "Frontend Architecture, UI/UX Design, Design Systems",
-          "availability": "15 hrs/week (Flexible)",
-          "githubUrl": "https://github.com/priyasharma",
-          "portfolioUrl": "https://priyasharma.design",
-          "linkedinUrl": "https://linkedin.com/in/priyasharma-demo",
-          "createdAt": "2026-09-27T09:57:38.174Z"
-        }
-      }
-    ],
-    "tasks": []
-  },
-  {
-    "id": "cmujnahp0002mmxr52ppqpdla",
-    "ownerId": "cmujnahob000gmxr5sjwt0992",
-    "title": "NeuralNotes - Lecture AI Digest",
-    "tagline": null,
-    "description": "Automated speech-to-text lecture digest that parses college recorded classes into structured study notes, concept graphs, and interactive quizzes.",
-    "domain": "AI & Machine Learning",
-    "imageUrl": null,
-    "demoUrl": null,
-    "deadline": "2026-12-05",
-    "status": "active",
-    "repoUrl": "https://github.com/gradleaf-demo/neural-notes-ai",
-    "createdAt": "2026-09-27T09:57:38.197Z",
-    "owner": {
-      "id": "cmujnahob000gmxr5sjwt0992",
-      "name": "Alex Chen",
-      "email": "alex.chen@campus.edu",
-      "avatarUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&h=200&q=80",
-      "college": "MIT College of Engineering",
-      "course": "B.S. Computer Science",
-      "department": "EECS",
-      "year": 3,
-      "headline": "Full-stack builder passionate about autonomous agents & campus tech",
-      "bio": "Junior CS student building AI tools for student productivity. Organizer at HackMIT 2026. Looking for passionate teammates for hackathons!",
-      "interests": "AI, Web Development, Cloud Systems",
-      "availability": "15-20 hrs/week (Evenings & Weekends)",
-      "githubUrl": "https://github.com/alexchen",
-      "portfolioUrl": "https://alexchen.dev",
-      "linkedinUrl": "https://linkedin.com/in/alexchen-demo",
-      "createdAt": "2026-09-27T09:57:38.172Z"
-    },
-    "skills": [
-      {
-        "id": "cmujnahp1002nmxr52t3laa6q",
-        "projectId": "cmujnahp0002mmxr52ppqpdla",
-        "skillId": "cmujnaho50005mxr5d9zxxi8x",
-        "role": "AI / ML Engineer",
-        "priority": "required",
-        "skill": {
-          "id": "cmujnaho50005mxr5d9zxxi8x",
-          "name": "Python",
-          "category": "AI / ML"
-        }
-      },
-      {
-        "id": "cmujnahp1002omxr5lq184wu7",
-        "projectId": "cmujnahp0002mmxr52ppqpdla",
-        "skillId": "cmujnaho70008mxr5xxjzsekq",
-        "role": "Backend Developer",
-        "priority": "required",
-        "skill": {
-          "id": "cmujnaho70008mxr5xxjzsekq",
-          "name": "FastAPI",
-          "category": "Backend"
-        }
-      },
-      {
-        "id": "cmujnahp1002pmxr57ifhpsk3",
-        "projectId": "cmujnahp0002mmxr52ppqpdla",
-        "skillId": "cmujnaho60006mxr5dc9c0ye9",
-        "role": "Model Tuning",
+        "id": "cmujo6djm0046rk9b1v3ktg3t",
+        "projectId": "cmujo6djl0043rk9bfmx0di4i",
+        "skillId": "cmujo6die000brk9bt7lm1xw5",
+        "role": "Container Orchestrator",
         "priority": "preferred",
         "skill": {
-          "id": "cmujnaho60006mxr5dc9c0ye9",
-          "name": "PyTorch",
-          "category": "AI / ML"
-        }
-      },
-      {
-        "id": "cmujnahp1002qmxr52ug65na7",
-        "projectId": "cmujnahp0002mmxr52ppqpdla",
-        "skillId": "cmujnahob000fmxr5xyanxdh4",
-        "role": "Cache & Queue",
-        "priority": "required",
-        "skill": {
-          "id": "cmujnahob000fmxr5xyanxdh4",
-          "name": "Redis",
-          "category": "Database"
-        }
-      }
-    ],
-    "members": [
-      {
-        "id": "cmujnahp1002smxr54h0dikt0",
-        "projectId": "cmujnahp0002mmxr52ppqpdla",
-        "userId": "cmujnahob000gmxr5sjwt0992",
-        "role": "Lead AI Engineer",
-        "joinedAt": "2026-09-27T09:57:38.198Z",
-        "user": {
-          "id": "cmujnahob000gmxr5sjwt0992",
-          "name": "Alex Chen",
-          "email": "alex.chen@campus.edu",
-          "avatarUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&h=200&q=80",
-          "college": "MIT College of Engineering",
-          "course": "B.S. Computer Science",
-          "department": "EECS",
-          "year": 3,
-          "headline": "Full-stack builder passionate about autonomous agents & campus tech",
-          "bio": "Junior CS student building AI tools for student productivity. Organizer at HackMIT 2026. Looking for passionate teammates for hackathons!",
-          "interests": "AI, Web Development, Cloud Systems",
-          "availability": "15-20 hrs/week (Evenings & Weekends)",
-          "githubUrl": "https://github.com/alexchen",
-          "portfolioUrl": "https://alexchen.dev",
-          "linkedinUrl": "https://linkedin.com/in/alexchen-demo",
-          "createdAt": "2026-09-27T09:57:38.172Z"
-        }
-      }
-    ],
-    "tasks": []
-  },
-  {
-    "id": "cmujnahoy002emxr5mv1tt8g2",
-    "ownerId": "cmujnahob000gmxr5sjwt0992",
-    "title": "DevPulse - Peer Review & Git Analytics",
-    "tagline": null,
-    "description": "Real-time developer productivity analytics and automated peer code review dashboard for collegiate engineering teams and hackathons.",
-    "domain": "Web Development",
-    "imageUrl": null,
-    "demoUrl": null,
-    "deadline": "2026-11-20",
-    "status": "active",
-    "repoUrl": "https://github.com/gradleaf-demo/devpulse-analytics",
-    "createdAt": "2026-09-27T09:57:38.195Z",
-    "owner": {
-      "id": "cmujnahob000gmxr5sjwt0992",
-      "name": "Alex Chen",
-      "email": "alex.chen@campus.edu",
-      "avatarUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&h=200&q=80",
-      "college": "MIT College of Engineering",
-      "course": "B.S. Computer Science",
-      "department": "EECS",
-      "year": 3,
-      "headline": "Full-stack builder passionate about autonomous agents & campus tech",
-      "bio": "Junior CS student building AI tools for student productivity. Organizer at HackMIT 2026. Looking for passionate teammates for hackathons!",
-      "interests": "AI, Web Development, Cloud Systems",
-      "availability": "15-20 hrs/week (Evenings & Weekends)",
-      "githubUrl": "https://github.com/alexchen",
-      "portfolioUrl": "https://alexchen.dev",
-      "linkedinUrl": "https://linkedin.com/in/alexchen-demo",
-      "createdAt": "2026-09-27T09:57:38.172Z"
-    },
-    "skills": [
-      {
-        "id": "cmujnahoz002fmxr57bci2aoy",
-        "projectId": "cmujnahoy002emxr5mv1tt8g2",
-        "skillId": "cmujnaho30001mxr59nr9c2g1",
-        "role": "Frontend Lead",
-        "priority": "required",
-        "skill": {
-          "id": "cmujnaho30001mxr59nr9c2g1",
-          "name": "Next.js",
-          "category": "Frontend"
-        }
-      },
-      {
-        "id": "cmujnahoz002gmxr53jk7ald9",
-        "projectId": "cmujnahoy002emxr5mv1tt8g2",
-        "skillId": "cmujnaho30002mxr543kxwvyd",
-        "role": "Fullstack Dev",
-        "priority": "required",
-        "skill": {
-          "id": "cmujnaho30002mxr543kxwvyd",
-          "name": "TypeScript",
-          "category": "Frontend"
-        }
-      },
-      {
-        "id": "cmujnahoz002hmxr5cyycdipn",
-        "projectId": "cmujnahoy002emxr5mv1tt8g2",
-        "skillId": "cmujnaho8000amxr5vexefn91",
-        "role": "Database Architect",
-        "priority": "required",
-        "skill": {
-          "id": "cmujnaho8000amxr5vexefn91",
-          "name": "PostgreSQL",
-          "category": "Database"
-        }
-      },
-      {
-        "id": "cmujnahoz002imxr5f71gbmmh",
-        "projectId": "cmujnahoy002emxr5mv1tt8g2",
-        "skillId": "cmujnaho8000bmxr5temxd5tl",
-        "role": "DevOps Engineer",
-        "priority": "preferred",
-        "skill": {
-          "id": "cmujnaho8000bmxr5temxd5tl",
+          "id": "cmujo6die000brk9bt7lm1xw5",
           "name": "Docker",
           "category": "DevOps"
         }
@@ -1717,224 +2720,48 @@ export const FALLBACK_PROJECTS = [
     ],
     "members": [
       {
-        "id": "cmujnahp0002kmxr5tb5h6bga",
-        "projectId": "cmujnahoy002emxr5mv1tt8g2",
-        "userId": "cmujnahob000gmxr5sjwt0992",
-        "role": "Project Lead & Architect",
-        "joinedAt": "2026-09-27T09:57:38.196Z",
+        "id": "cmujo6djm0048rk9bfuilshou",
+        "projectId": "cmujo6djl0043rk9bfmx0di4i",
+        "userId": "cmujo6dil000mrk9bbw1daulp",
+        "role": "Systems Architect",
+        "joinedAt": "2026-09-27T10:22:25.811Z",
         "user": {
-          "id": "cmujnahob000gmxr5sjwt0992",
-          "name": "Alex Chen",
-          "email": "alex.chen@campus.edu",
-          "avatarUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&h=200&q=80",
-          "college": "MIT College of Engineering",
-          "course": "B.S. Computer Science",
-          "department": "EECS",
-          "year": 3,
-          "headline": "Full-stack builder passionate about autonomous agents & campus tech",
-          "bio": "Junior CS student building AI tools for student productivity. Organizer at HackMIT 2026. Looking for passionate teammates for hackathons!",
-          "interests": "AI, Web Development, Cloud Systems",
-          "availability": "15-20 hrs/week (Evenings & Weekends)",
-          "githubUrl": "https://github.com/alexchen",
-          "portfolioUrl": "https://alexchen.dev",
-          "linkedinUrl": "https://linkedin.com/in/alexchen-demo",
-          "createdAt": "2026-09-27T09:57:38.172Z"
+          "id": "cmujo6dil000mrk9bbw1daulp",
+          "name": "Marcus Johnson",
+          "email": "marcus.j@campus.edu",
+          "avatarUrl": "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=200&h=200&q=80",
+          "college": "UC Berkeley",
+          "course": "B.S. EECS",
+          "department": "Computer Science",
+          "year": 4,
+          "headline": "Distributed Systems & Backend Engineer • Go, Raft, High-Throughput APIs",
+          "bio": "Senior CS student researching consensus algorithms, distributed fault-tolerance, and high-scale database caching. Enjoys systems programming, profiling, and open-source contributions.",
+          "interests": "Distributed Systems, Backend APIs, Cloud Infrastructure",
+          "availability": "12 hrs/week",
+          "githubUrl": "https://github.com/marcusj",
+          "portfolioUrl": "https://marcus.io",
+          "linkedinUrl": "https://linkedin.com/in/marcusj-demo",
+          "createdAt": "2026-09-27T10:22:25.773Z"
         }
       }
     ],
     "tasks": []
   },
   {
-    "id": "cmujnahot001umxr5nixvrjwd",
-    "ownerId": "cmujnahob000gmxr5sjwt0992",
-    "title": "AI-Powered Campus Assistant",
-    "tagline": null,
-    "description": "An intelligent multi-modal campus assistant that parses university syllabi, schedules assignment deadlines, answers course FAQs using RAG, and recommends study groups for students.",
-    "domain": "AI & Machine Learning",
-    "imageUrl": null,
+    "id": "cmujo6djj003wrk9bp97zxe9u",
+    "ownerId": "cmujo6dik000lrk9b2530ugh1",
+    "title": "EcoCampus - Carbon Footprint Gamification",
+    "tagline": "Gamified sustainability tracker and inter-hostel green challenges",
+    "description": "Gamified mobile and web dashboard encouraging college students to adopt sustainable campus habits with peer challenges, meal emission counters, and dining discounts.",
+    "domain": "Web Development",
+    "imageUrl": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80",
     "demoUrl": null,
-    "deadline": "2026-10-15",
+    "deadline": "2026-11-01",
     "status": "recruiting",
-    "repoUrl": "https://github.com/gradleaf-demo/campus-ai-assistant",
-    "createdAt": "2026-09-27T09:57:38.189Z",
+    "repoUrl": null,
+    "createdAt": "2026-09-27T10:22:25.808Z",
     "owner": {
-      "id": "cmujnahob000gmxr5sjwt0992",
-      "name": "Alex Chen",
-      "email": "alex.chen@campus.edu",
-      "avatarUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&h=200&q=80",
-      "college": "MIT College of Engineering",
-      "course": "B.S. Computer Science",
-      "department": "EECS",
-      "year": 3,
-      "headline": "Full-stack builder passionate about autonomous agents & campus tech",
-      "bio": "Junior CS student building AI tools for student productivity. Organizer at HackMIT 2026. Looking for passionate teammates for hackathons!",
-      "interests": "AI, Web Development, Cloud Systems",
-      "availability": "15-20 hrs/week (Evenings & Weekends)",
-      "githubUrl": "https://github.com/alexchen",
-      "portfolioUrl": "https://alexchen.dev",
-      "linkedinUrl": "https://linkedin.com/in/alexchen-demo",
-      "createdAt": "2026-09-27T09:57:38.172Z"
-    },
-    "skills": [
-      {
-        "id": "cmujnahot001wmxr5zjawos8l",
-        "projectId": "cmujnahot001umxr5nixvrjwd",
-        "skillId": "cmujnaho10000mxr5iogb684h",
-        "role": "React Developer",
-        "priority": "required",
-        "skill": {
-          "id": "cmujnaho10000mxr5iogb684h",
-          "name": "React",
-          "category": "Frontend"
-        }
-      },
-      {
-        "id": "cmujnahou001ymxr51y1dxauh",
-        "projectId": "cmujnahot001umxr5nixvrjwd",
-        "skillId": "cmujnaho70008mxr5xxjzsekq",
-        "role": "Backend Developer",
-        "priority": "required",
-        "skill": {
-          "id": "cmujnaho70008mxr5xxjzsekq",
-          "name": "FastAPI",
-          "category": "Backend"
-        }
-      },
-      {
-        "id": "cmujnahou0020mxr50xggmkv9",
-        "projectId": "cmujnahot001umxr5nixvrjwd",
-        "skillId": "cmujnaho8000amxr5vexefn91",
-        "role": "Database Developer",
-        "priority": "required",
-        "skill": {
-          "id": "cmujnaho8000amxr5vexefn91",
-          "name": "PostgreSQL",
-          "category": "Database"
-        }
-      },
-      {
-        "id": "cmujnahov0022mxr5l4k1ob44",
-        "projectId": "cmujnahot001umxr5nixvrjwd",
-        "skillId": "cmujnaho60007mxr5wbax40zy",
-        "role": "AI Integration Member",
-        "priority": "required",
-        "skill": {
-          "id": "cmujnaho60007mxr5wbax40zy",
-          "name": "LangChain",
-          "category": "AI / ML"
-        }
-      }
-    ],
-    "members": [
-      {
-        "id": "cmujnahov0024mxr5zdvqebqd",
-        "projectId": "cmujnahot001umxr5nixvrjwd",
-        "userId": "cmujnahob000gmxr5sjwt0992",
-        "role": "Project Lead & Architect",
-        "joinedAt": "2026-09-27T09:57:38.192Z",
-        "user": {
-          "id": "cmujnahob000gmxr5sjwt0992",
-          "name": "Alex Chen",
-          "email": "alex.chen@campus.edu",
-          "avatarUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&h=200&q=80",
-          "college": "MIT College of Engineering",
-          "course": "B.S. Computer Science",
-          "department": "EECS",
-          "year": 3,
-          "headline": "Full-stack builder passionate about autonomous agents & campus tech",
-          "bio": "Junior CS student building AI tools for student productivity. Organizer at HackMIT 2026. Looking for passionate teammates for hackathons!",
-          "interests": "AI, Web Development, Cloud Systems",
-          "availability": "15-20 hrs/week (Evenings & Weekends)",
-          "githubUrl": "https://github.com/alexchen",
-          "portfolioUrl": "https://alexchen.dev",
-          "linkedinUrl": "https://linkedin.com/in/alexchen-demo",
-          "createdAt": "2026-09-27T09:57:38.172Z"
-        }
-      }
-    ],
-    "tasks": [
-      {
-        "id": "cmujnahow0026mxr5l38thfjt",
-        "projectId": "cmujnahot001umxr5nixvrjwd",
-        "title": "Design high-fidelity UI mockups for Chat & Syllabus Explorer",
-        "description": "Create responsive desktop and mobile screens in Figma focusing on clean student experience.",
-        "status": "in_progress",
-        "priority": "high",
-        "assigneeName": "Priya Sharma",
-        "createdAt": "2026-09-27T09:57:38.192Z"
-      },
-      {
-        "id": "cmujnahox0028mxr5he13hckn",
-        "projectId": "cmujnahot001umxr5nixvrjwd",
-        "title": "Setup PostgreSQL schema & vector embeddings table",
-        "description": "Configure Prisma schema with pgvector extension support for campus document storage.",
-        "status": "done",
-        "priority": "high",
-        "assigneeName": "Alex Chen",
-        "createdAt": "2026-09-27T09:57:38.193Z"
-      },
-      {
-        "id": "cmujnahox002amxr5lnzgbb8s",
-        "projectId": "cmujnahot001umxr5nixvrjwd",
-        "title": "Implement RAG pipeline with LangChain & hybrid search",
-        "description": "Connect syllabus chunking and retrieval pipeline to OpenAI/Gemini embedding model.",
-        "status": "todo",
-        "priority": "high",
-        "assigneeName": "Elena Rostova",
-        "createdAt": "2026-09-27T09:57:38.194Z"
-      },
-      {
-        "id": "cmujnahoy002cmxr50eq9ifwn",
-        "projectId": "cmujnahot001umxr5nixvrjwd",
-        "title": "Write REST endpoints for document ingestion & user profiles",
-        "description": "Build FastAPI routes with rate limiting and JWT verification.",
-        "status": "todo",
-        "priority": "medium",
-        "assigneeName": "Marcus Johnson",
-        "createdAt": "2026-09-27T09:57:38.194Z"
-      }
-    ]
-  }
-];
-
-export const FALLBACK_POSTS = [
-  {
-    "id": "cmujnahpb003omxr54o1kkcz9",
-    "userId": "cmujnahof000jmxr5r1huciu4",
-    "content": "Quick tip for students working with LangChain & Local LLMs: Always use semantic chunking over fixed-size character splits for academic papers. We saw retrieval precision jump from 64% to 89% on our benchmark dataset!",
-    "tag": "Tech Resource",
-    "mediaUrl": null,
-    "createdAt": "2026-09-27T09:57:38.208Z",
-    "user": {
-      "id": "cmujnahof000jmxr5r1huciu4",
-      "name": "Elena Rostova",
-      "email": "elena.r@campus.edu",
-      "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&h=200&q=80",
-      "college": "Stanford University",
-      "course": "M.S. Artificial Intelligence",
-      "department": "AI Lab",
-      "year": 1,
-      "headline": "AI/ML Researcher • LLM Tool Use, LangChain & PyTorch",
-      "bio": "Graduate researcher focusing on retrieval-augmented generation and reasoning models. Looking to build AI applications with solid engineering teams.",
-      "interests": "AI, Natural Language Processing, Machine Learning",
-      "availability": "20 hrs/week (Hackathon sprint ready)",
-      "githubUrl": "https://github.com/elenarostova",
-      "portfolioUrl": "https://elena-ai.org",
-      "linkedinUrl": "https://linkedin.com/in/elena-rostova",
-      "createdAt": "2026-09-27T09:57:38.175Z"
-    },
-    "comments": [],
-    "likes": []
-  },
-  {
-    "id": "cmujnahpb003mmxr5ujqiqa7x",
-    "userId": "cmujnahod000hmxr5n7iffmh2",
-    "content": "Just finished publishing the complete design system for student portfolios on GradLeaf. Focused on accessible contrast, micro-interactions, and fluid typography. Let me know your thoughts on the dark mode preview!",
-    "tag": "Project Milestone",
-    "mediaUrl": null,
-    "createdAt": "2026-09-27T09:57:38.207Z",
-    "user": {
-      "id": "cmujnahod000hmxr5n7iffmh2",
+      "id": "cmujo6dik000lrk9b2530ugh1",
       "name": "Priya Sharma",
       "email": "priya.sharma@campus.edu",
       "avatarUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200&q=80",
@@ -1942,59 +2769,62 @@ export const FALLBACK_POSTS = [
       "course": "B.Tech Information Technology",
       "department": "IT",
       "year": 3,
-      "headline": "Frontend Craftsman & UI/UX enthusiast • React, Tailwind, Next.js",
-      "bio": "Crafting pixel-perfect interactive web apps. 2x hackathon winner (Best Design). Available for upcoming summer hackathons!",
+      "headline": "Frontend Architect & UI/UX Craftsman • React, Tailwind, Micro-interactions",
+      "bio": "Passionate about human-centered interfaces, accessibility, and high-performance design systems. 2x hackathon winner (Best UI/UX). Open to collaborating on innovative student products!",
       "interests": "Frontend Architecture, UI/UX Design, Design Systems",
       "availability": "15 hrs/week (Flexible)",
       "githubUrl": "https://github.com/priyasharma",
       "portfolioUrl": "https://priyasharma.design",
       "linkedinUrl": "https://linkedin.com/in/priyasharma-demo",
-      "createdAt": "2026-09-27T09:57:38.174Z"
+      "createdAt": "2026-09-27T10:22:25.773Z"
     },
-    "comments": [],
-    "likes": [
+    "skills": [
       {
-        "id": "cmujnahpe003ymxr5aoklrae6",
-        "postId": "cmujnahpb003mmxr5ujqiqa7x",
-        "userId": "cmujnahob000gmxr5sjwt0992",
-        "createdAt": "2026-09-27T09:57:38.211Z"
+        "id": "cmujo6djk003xrk9bms2wgofw",
+        "projectId": "cmujo6djj003wrk9bp97zxe9u",
+        "skillId": "cmujo6di90003rk9bkqvcr67r",
+        "role": "UI/UX Designer",
+        "priority": "required",
+        "skill": {
+          "id": "cmujo6di90003rk9bkqvcr67r",
+          "name": "Tailwind CSS",
+          "category": "Frontend"
+        }
+      },
+      {
+        "id": "cmujo6djk003yrk9bicy014tn",
+        "projectId": "cmujo6djj003wrk9bp97zxe9u",
+        "skillId": "cmujo6did0009rk9b1i08judd",
+        "role": "Backend Engineer",
+        "priority": "required",
+        "skill": {
+          "id": "cmujo6did0009rk9b1i08judd",
+          "name": "Node.js",
+          "category": "Backend"
+        }
+      },
+      {
+        "id": "cmujo6djk003zrk9btdiz467n",
+        "projectId": "cmujo6djj003wrk9bp97zxe9u",
+        "skillId": "cmujo6di80000rk9be4ql2tgn",
+        "role": "Frontend Engineer",
+        "priority": "required",
+        "skill": {
+          "id": "cmujo6di80000rk9be4ql2tgn",
+          "name": "React",
+          "category": "Frontend"
+        }
       }
-    ]
-  },
-  {
-    "id": "cmujnahpa003kmxr5gzbgteq7",
-    "userId": "cmujnahob000gmxr5sjwt0992",
-    "content": "Excited to announce our project: \"AI-Powered Campus Assistant\"! We are building an agentic assistant for university students. Currently looking for a React frontend wizard and a Python/LangChain developer for the upcoming Hackathon. Check out our project page or drop a comment!",
-    "tag": "Teammate Search",
-    "mediaUrl": null,
-    "createdAt": "2026-09-27T09:57:38.206Z",
-    "user": {
-      "id": "cmujnahob000gmxr5sjwt0992",
-      "name": "Alex Chen",
-      "email": "alex.chen@campus.edu",
-      "avatarUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&h=200&q=80",
-      "college": "MIT College of Engineering",
-      "course": "B.S. Computer Science",
-      "department": "EECS",
-      "year": 3,
-      "headline": "Full-stack builder passionate about autonomous agents & campus tech",
-      "bio": "Junior CS student building AI tools for student productivity. Organizer at HackMIT 2026. Looking for passionate teammates for hackathons!",
-      "interests": "AI, Web Development, Cloud Systems",
-      "availability": "15-20 hrs/week (Evenings & Weekends)",
-      "githubUrl": "https://github.com/alexchen",
-      "portfolioUrl": "https://alexchen.dev",
-      "linkedinUrl": "https://linkedin.com/in/alexchen-demo",
-      "createdAt": "2026-09-27T09:57:38.172Z"
-    },
-    "comments": [
+    ],
+    "members": [
       {
-        "id": "cmujnahpc003qmxr5on44bgv8",
-        "postId": "cmujnahpa003kmxr5gzbgteq7",
-        "userId": "cmujnahod000hmxr5n7iffmh2",
-        "content": "This sounds amazing Alex! I have extensive experience with React & Tailwind and would love to collaborate on the frontend UI.",
-        "createdAt": "2026-09-27T09:57:38.208Z",
+        "id": "cmujo6djl0041rk9bav77x090",
+        "projectId": "cmujo6djj003wrk9bp97zxe9u",
+        "userId": "cmujo6dik000lrk9b2530ugh1",
+        "role": "Lead Organizer",
+        "joinedAt": "2026-09-27T10:22:25.809Z",
         "user": {
-          "id": "cmujnahod000hmxr5n7iffmh2",
+          "id": "cmujo6dik000lrk9b2530ugh1",
           "name": "Priya Sharma",
           "email": "priya.sharma@campus.edu",
           "avatarUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200&q=80",
@@ -2002,24 +2832,677 @@ export const FALLBACK_POSTS = [
           "course": "B.Tech Information Technology",
           "department": "IT",
           "year": 3,
-          "headline": "Frontend Craftsman & UI/UX enthusiast • React, Tailwind, Next.js",
-          "bio": "Crafting pixel-perfect interactive web apps. 2x hackathon winner (Best Design). Available for upcoming summer hackathons!",
+          "headline": "Frontend Architect & UI/UX Craftsman • React, Tailwind, Micro-interactions",
+          "bio": "Passionate about human-centered interfaces, accessibility, and high-performance design systems. 2x hackathon winner (Best UI/UX). Open to collaborating on innovative student products!",
           "interests": "Frontend Architecture, UI/UX Design, Design Systems",
           "availability": "15 hrs/week (Flexible)",
           "githubUrl": "https://github.com/priyasharma",
           "portfolioUrl": "https://priyasharma.design",
           "linkedinUrl": "https://linkedin.com/in/priyasharma-demo",
-          "createdAt": "2026-09-27T09:57:38.174Z"
+          "createdAt": "2026-09-27T10:22:25.773Z"
+        }
+      }
+    ],
+    "tasks": []
+  },
+  {
+    "id": "cmujo6djh003prk9buwye03dl",
+    "ownerId": "cmujo6dii000krk9bacss81nj",
+    "title": "NeuralNotes - Lecture AI Digest",
+    "tagline": "Speech-to-text lecture digest, concept graphs, and automated revision quizzes",
+    "description": "Automated speech-to-text lecture digest that parses college recorded classes into structured study notes, concept graphs, and interactive flashcards.",
+    "domain": "AI & Machine Learning",
+    "imageUrl": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
+    "demoUrl": null,
+    "deadline": "2026-12-05",
+    "status": "active",
+    "repoUrl": "https://github.com/gradleaf-demo/neural-notes-ai",
+    "createdAt": "2026-09-27T10:22:25.806Z",
+    "owner": {
+      "id": "cmujo6dii000krk9bacss81nj",
+      "name": "Alex Chen",
+      "email": "alex.chen@campus.edu",
+      "avatarUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&h=200&q=80",
+      "college": "MIT College of Engineering",
+      "course": "B.S. Computer Science",
+      "department": "EECS",
+      "year": 3,
+      "headline": "Full-Stack Lead & AI Systems Builder • Next.js, LangChain, PyTorch",
+      "bio": "Junior CS student building autonomous tools for university student productivity. HackMIT 2025 Winner. Passionate about LLM agents, distributed systems, and collaborative development.",
+      "interests": "AI & Machine Learning, Web Development, Cloud Infrastructure",
+      "availability": "18 hrs/week (Flexible Evenings & Weekends)",
+      "githubUrl": "https://github.com/alexchen",
+      "portfolioUrl": "https://alexchen.dev",
+      "linkedinUrl": "https://linkedin.com/in/alexchen-demo",
+      "createdAt": "2026-09-27T10:22:25.771Z"
+    },
+    "skills": [
+      {
+        "id": "cmujo6dji003qrk9bi3obpvd6",
+        "projectId": "cmujo6djh003prk9buwye03dl",
+        "skillId": "cmujo6dib0005rk9bgpl1ivl6",
+        "role": "AI / ML Engineer",
+        "priority": "required",
+        "skill": {
+          "id": "cmujo6dib0005rk9bgpl1ivl6",
+          "name": "Python",
+          "category": "AI / ML"
         }
       },
       {
-        "id": "cmujnahpd003smxr57ai7hr6v",
-        "postId": "cmujnahpa003kmxr5gzbgteq7",
-        "userId": "cmujnahof000jmxr5r1huciu4",
-        "content": "I worked on syllabus parsing algorithms last semester. Count me in for the LangChain pipeline!",
-        "createdAt": "2026-09-27T09:57:38.209Z",
+        "id": "cmujo6dji003rrk9b58d47srn",
+        "projectId": "cmujo6djh003prk9buwye03dl",
+        "skillId": "cmujo6dic0008rk9bh8f2tcau",
+        "role": "Backend Developer",
+        "priority": "required",
+        "skill": {
+          "id": "cmujo6dic0008rk9bh8f2tcau",
+          "name": "FastAPI",
+          "category": "Backend"
+        }
+      },
+      {
+        "id": "cmujo6dji003srk9b5zvtfnnm",
+        "projectId": "cmujo6djh003prk9buwye03dl",
+        "skillId": "cmujo6dih000hrk9bn9zx5h2h",
+        "role": "Queue Manager",
+        "priority": "required",
+        "skill": {
+          "id": "cmujo6dih000hrk9bn9zx5h2h",
+          "name": "Redis",
+          "category": "Database"
+        }
+      }
+    ],
+    "members": [
+      {
+        "id": "cmujo6dji003urk9bsps1jloi",
+        "projectId": "cmujo6djh003prk9buwye03dl",
+        "userId": "cmujo6dii000krk9bacss81nj",
+        "role": "Lead AI Engineer",
+        "joinedAt": "2026-09-27T10:22:25.807Z",
         "user": {
-          "id": "cmujnahof000jmxr5r1huciu4",
+          "id": "cmujo6dii000krk9bacss81nj",
+          "name": "Alex Chen",
+          "email": "alex.chen@campus.edu",
+          "avatarUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&h=200&q=80",
+          "college": "MIT College of Engineering",
+          "course": "B.S. Computer Science",
+          "department": "EECS",
+          "year": 3,
+          "headline": "Full-Stack Lead & AI Systems Builder • Next.js, LangChain, PyTorch",
+          "bio": "Junior CS student building autonomous tools for university student productivity. HackMIT 2025 Winner. Passionate about LLM agents, distributed systems, and collaborative development.",
+          "interests": "AI & Machine Learning, Web Development, Cloud Infrastructure",
+          "availability": "18 hrs/week (Flexible Evenings & Weekends)",
+          "githubUrl": "https://github.com/alexchen",
+          "portfolioUrl": "https://alexchen.dev",
+          "linkedinUrl": "https://linkedin.com/in/alexchen-demo",
+          "createdAt": "2026-09-27T10:22:25.771Z"
+        }
+      }
+    ],
+    "tasks": []
+  },
+  {
+    "id": "cmujo6djf003frk9bi39abedt",
+    "ownerId": "cmujo6dii000krk9bacss81nj",
+    "title": "DevPulse - Peer Review & Git Analytics",
+    "tagline": "Developer productivity analytics and automated peer code reviews",
+    "description": "Real-time developer productivity analytics and automated peer code review dashboard for collegiate engineering teams, hackathons, and capstone projects.",
+    "domain": "Web Development",
+    "imageUrl": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80",
+    "demoUrl": null,
+    "deadline": "2026-11-20",
+    "status": "active",
+    "repoUrl": "https://github.com/gradleaf-demo/devpulse-analytics",
+    "createdAt": "2026-09-27T10:22:25.803Z",
+    "owner": {
+      "id": "cmujo6dii000krk9bacss81nj",
+      "name": "Alex Chen",
+      "email": "alex.chen@campus.edu",
+      "avatarUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&h=200&q=80",
+      "college": "MIT College of Engineering",
+      "course": "B.S. Computer Science",
+      "department": "EECS",
+      "year": 3,
+      "headline": "Full-Stack Lead & AI Systems Builder • Next.js, LangChain, PyTorch",
+      "bio": "Junior CS student building autonomous tools for university student productivity. HackMIT 2025 Winner. Passionate about LLM agents, distributed systems, and collaborative development.",
+      "interests": "AI & Machine Learning, Web Development, Cloud Infrastructure",
+      "availability": "18 hrs/week (Flexible Evenings & Weekends)",
+      "githubUrl": "https://github.com/alexchen",
+      "portfolioUrl": "https://alexchen.dev",
+      "linkedinUrl": "https://linkedin.com/in/alexchen-demo",
+      "createdAt": "2026-09-27T10:22:25.771Z"
+    },
+    "skills": [
+      {
+        "id": "cmujo6djf003grk9bmdmku2mg",
+        "projectId": "cmujo6djf003frk9bi39abedt",
+        "skillId": "cmujo6di80001rk9b6w2pi8jc",
+        "role": "Frontend Lead",
+        "priority": "required",
+        "skill": {
+          "id": "cmujo6di80001rk9b6w2pi8jc",
+          "name": "Next.js",
+          "category": "Frontend"
+        }
+      },
+      {
+        "id": "cmujo6djf003hrk9bopdqkve8",
+        "projectId": "cmujo6djf003frk9bi39abedt",
+        "skillId": "cmujo6di90002rk9bhdmce7wt",
+        "role": "Fullstack Dev",
+        "priority": "required",
+        "skill": {
+          "id": "cmujo6di90002rk9bhdmce7wt",
+          "name": "TypeScript",
+          "category": "Frontend"
+        }
+      },
+      {
+        "id": "cmujo6djf003irk9br4qmhe3n",
+        "projectId": "cmujo6djf003frk9bi39abedt",
+        "skillId": "cmujo6did000ark9bhfptoj9b",
+        "role": "Database Architect",
+        "priority": "required",
+        "skill": {
+          "id": "cmujo6did000ark9bhfptoj9b",
+          "name": "PostgreSQL",
+          "category": "Database"
+        }
+      },
+      {
+        "id": "cmujo6djf003jrk9bxkoxrhxy",
+        "projectId": "cmujo6djf003frk9bi39abedt",
+        "skillId": "cmujo6die000brk9bt7lm1xw5",
+        "role": "DevOps Engineer",
+        "priority": "preferred",
+        "skill": {
+          "id": "cmujo6die000brk9bt7lm1xw5",
+          "name": "Docker",
+          "category": "DevOps"
+        }
+      }
+    ],
+    "members": [
+      {
+        "id": "cmujo6djg003lrk9by5btx82r",
+        "projectId": "cmujo6djf003frk9bi39abedt",
+        "userId": "cmujo6dii000krk9bacss81nj",
+        "role": "Lead Architect",
+        "joinedAt": "2026-09-27T10:22:25.804Z",
+        "user": {
+          "id": "cmujo6dii000krk9bacss81nj",
+          "name": "Alex Chen",
+          "email": "alex.chen@campus.edu",
+          "avatarUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&h=200&q=80",
+          "college": "MIT College of Engineering",
+          "course": "B.S. Computer Science",
+          "department": "EECS",
+          "year": 3,
+          "headline": "Full-Stack Lead & AI Systems Builder • Next.js, LangChain, PyTorch",
+          "bio": "Junior CS student building autonomous tools for university student productivity. HackMIT 2025 Winner. Passionate about LLM agents, distributed systems, and collaborative development.",
+          "interests": "AI & Machine Learning, Web Development, Cloud Infrastructure",
+          "availability": "18 hrs/week (Flexible Evenings & Weekends)",
+          "githubUrl": "https://github.com/alexchen",
+          "portfolioUrl": "https://alexchen.dev",
+          "linkedinUrl": "https://linkedin.com/in/alexchen-demo",
+          "createdAt": "2026-09-27T10:22:25.771Z"
+        }
+      }
+    ],
+    "tasks": [
+      {
+        "id": "cmujo6djh003mrk9bwmd8ukpx",
+        "projectId": "cmujo6djf003frk9bi39abedt",
+        "title": "GitHub Webhook Ingestion API",
+        "description": "Stream commit and PR events directly into database",
+        "status": "done",
+        "priority": "high",
+        "assigneeName": "Alex Chen",
+        "createdAt": "2026-09-27T10:22:25.805Z"
+      },
+      {
+        "id": "cmujo6djh003nrk9bnxennd94",
+        "projectId": "cmujo6djf003frk9bi39abedt",
+        "title": "Analytics Dashboard Charts",
+        "description": "Interactive velocity and code churn charts using Tremor",
+        "status": "in_progress",
+        "priority": "high",
+        "assigneeName": "Priya Sharma",
+        "createdAt": "2026-09-27T10:22:25.805Z"
+      }
+    ]
+  },
+  {
+    "id": "cmujo6djc0033rk9bsux8y8x4",
+    "ownerId": "cmujo6dii000krk9bacss81nj",
+    "title": "AI-Powered Campus Assistant",
+    "tagline": "Multi-modal academic assistant for syllabi, FAQs, and assignment management",
+    "description": "An intelligent multi-modal campus assistant that parses university syllabi, schedules assignment deadlines, answers course FAQs using RAG, and recommends study groups for students.",
+    "domain": "AI & Machine Learning",
+    "imageUrl": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80",
+    "demoUrl": "https://campus-ai-assistant.vercel.app",
+    "deadline": "2026-10-15",
+    "status": "recruiting",
+    "repoUrl": "https://github.com/gradleaf-demo/campus-ai-assistant",
+    "createdAt": "2026-09-27T10:22:25.800Z",
+    "owner": {
+      "id": "cmujo6dii000krk9bacss81nj",
+      "name": "Alex Chen",
+      "email": "alex.chen@campus.edu",
+      "avatarUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&h=200&q=80",
+      "college": "MIT College of Engineering",
+      "course": "B.S. Computer Science",
+      "department": "EECS",
+      "year": 3,
+      "headline": "Full-Stack Lead & AI Systems Builder • Next.js, LangChain, PyTorch",
+      "bio": "Junior CS student building autonomous tools for university student productivity. HackMIT 2025 Winner. Passionate about LLM agents, distributed systems, and collaborative development.",
+      "interests": "AI & Machine Learning, Web Development, Cloud Infrastructure",
+      "availability": "18 hrs/week (Flexible Evenings & Weekends)",
+      "githubUrl": "https://github.com/alexchen",
+      "portfolioUrl": "https://alexchen.dev",
+      "linkedinUrl": "https://linkedin.com/in/alexchen-demo",
+      "createdAt": "2026-09-27T10:22:25.771Z"
+    },
+    "skills": [
+      {
+        "id": "cmujo6djd0034rk9brg9w3tnp",
+        "projectId": "cmujo6djc0033rk9bsux8y8x4",
+        "skillId": "cmujo6di80000rk9be4ql2tgn",
+        "role": "Frontend Developer",
+        "priority": "required",
+        "skill": {
+          "id": "cmujo6di80000rk9be4ql2tgn",
+          "name": "React",
+          "category": "Frontend"
+        }
+      },
+      {
+        "id": "cmujo6djd0035rk9bch7bunl6",
+        "projectId": "cmujo6djc0033rk9bsux8y8x4",
+        "skillId": "cmujo6dic0008rk9bh8f2tcau",
+        "role": "Backend Developer",
+        "priority": "required",
+        "skill": {
+          "id": "cmujo6dic0008rk9bh8f2tcau",
+          "name": "FastAPI",
+          "category": "Backend"
+        }
+      },
+      {
+        "id": "cmujo6djd0036rk9bw1cgbrst",
+        "projectId": "cmujo6djc0033rk9bsux8y8x4",
+        "skillId": "cmujo6did000ark9bhfptoj9b",
+        "role": "Database Engineer",
+        "priority": "required",
+        "skill": {
+          "id": "cmujo6did000ark9bhfptoj9b",
+          "name": "PostgreSQL",
+          "category": "Database"
+        }
+      },
+      {
+        "id": "cmujo6djd0037rk9bntxdfc6h",
+        "projectId": "cmujo6djc0033rk9bsux8y8x4",
+        "skillId": "cmujo6dic0007rk9bwdgqt10k",
+        "role": "AI Integration Lead",
+        "priority": "required",
+        "skill": {
+          "id": "cmujo6dic0007rk9bwdgqt10k",
+          "name": "LangChain",
+          "category": "AI / ML"
+        }
+      }
+    ],
+    "members": [
+      {
+        "id": "cmujo6djd0038rk9b01sgjc4u",
+        "projectId": "cmujo6djc0033rk9bsux8y8x4",
+        "userId": "cmujo6dii000krk9bacss81nj",
+        "role": "Project Lead & Architect",
+        "joinedAt": "2026-09-27T10:22:25.802Z",
+        "user": {
+          "id": "cmujo6dii000krk9bacss81nj",
+          "name": "Alex Chen",
+          "email": "alex.chen@campus.edu",
+          "avatarUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&h=200&q=80",
+          "college": "MIT College of Engineering",
+          "course": "B.S. Computer Science",
+          "department": "EECS",
+          "year": 3,
+          "headline": "Full-Stack Lead & AI Systems Builder • Next.js, LangChain, PyTorch",
+          "bio": "Junior CS student building autonomous tools for university student productivity. HackMIT 2025 Winner. Passionate about LLM agents, distributed systems, and collaborative development.",
+          "interests": "AI & Machine Learning, Web Development, Cloud Infrastructure",
+          "availability": "18 hrs/week (Flexible Evenings & Weekends)",
+          "githubUrl": "https://github.com/alexchen",
+          "portfolioUrl": "https://alexchen.dev",
+          "linkedinUrl": "https://linkedin.com/in/alexchen-demo",
+          "createdAt": "2026-09-27T10:22:25.771Z"
+        }
+      },
+      {
+        "id": "cmujo6djd0039rk9bnd1ec7ip",
+        "projectId": "cmujo6djc0033rk9bsux8y8x4",
+        "userId": "cmujo6dik000lrk9b2530ugh1",
+        "role": "Frontend UI/UX Specialist",
+        "joinedAt": "2026-09-27T10:22:25.802Z",
+        "user": {
+          "id": "cmujo6dik000lrk9b2530ugh1",
+          "name": "Priya Sharma",
+          "email": "priya.sharma@campus.edu",
+          "avatarUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200&q=80",
+          "college": "National Institute of Tech",
+          "course": "B.Tech Information Technology",
+          "department": "IT",
+          "year": 3,
+          "headline": "Frontend Architect & UI/UX Craftsman • React, Tailwind, Micro-interactions",
+          "bio": "Passionate about human-centered interfaces, accessibility, and high-performance design systems. 2x hackathon winner (Best UI/UX). Open to collaborating on innovative student products!",
+          "interests": "Frontend Architecture, UI/UX Design, Design Systems",
+          "availability": "15 hrs/week (Flexible)",
+          "githubUrl": "https://github.com/priyasharma",
+          "portfolioUrl": "https://priyasharma.design",
+          "linkedinUrl": "https://linkedin.com/in/priyasharma-demo",
+          "createdAt": "2026-09-27T10:22:25.773Z"
+        }
+      }
+    ],
+    "tasks": [
+      {
+        "id": "cmujo6dje003ark9blfjlmnk7",
+        "projectId": "cmujo6djc0033rk9bsux8y8x4",
+        "title": "Design high-fidelity UI mockups for Chat & Syllabus Explorer",
+        "description": "Create responsive desktop and mobile screens focusing on clean student experience.",
+        "status": "done",
+        "priority": "high",
+        "assigneeName": "Priya Sharma",
+        "createdAt": "2026-09-27T10:22:25.803Z"
+      },
+      {
+        "id": "cmujo6dje003brk9b7vsmons1",
+        "projectId": "cmujo6djc0033rk9bsux8y8x4",
+        "title": "Setup PostgreSQL schema & vector embeddings table",
+        "description": "Configure Prisma schema with pgvector extension support for campus document storage.",
+        "status": "done",
+        "priority": "high",
+        "assigneeName": "Alex Chen",
+        "createdAt": "2026-09-27T10:22:25.803Z"
+      },
+      {
+        "id": "cmujo6dje003crk9bogn1xy3c",
+        "projectId": "cmujo6djc0033rk9bsux8y8x4",
+        "title": "Implement RAG pipeline with LangChain & hybrid search",
+        "description": "Connect syllabus chunking and retrieval pipeline to Gemini and local embedding models.",
+        "status": "in_progress",
+        "priority": "high",
+        "assigneeName": "Elena Rostova",
+        "createdAt": "2026-09-27T10:22:25.803Z"
+      },
+      {
+        "id": "cmujo6dje003drk9bhrmdmax4",
+        "projectId": "cmujo6djc0033rk9bsux8y8x4",
+        "title": "Write REST endpoints for document ingestion & user profiles",
+        "description": "Build FastAPI routes with rate limiting and JWT session verification.",
+        "status": "todo",
+        "priority": "medium",
+        "assigneeName": "Marcus Johnson",
+        "createdAt": "2026-09-27T10:22:25.803Z"
+      }
+    ]
+  }
+];
+
+export const FALLBACK_POSTS = [
+  {
+    "id": "cmujo6dk1005ork9bt218lwmt",
+    "userId": "cmujo6dip000trk9b1jn3nl3a",
+    "content": "🏆 Looking for 2 engineers (1 Fullstack + 1 ML) to join our squad for the upcoming National Collegiate Hackathon! We are building an autonomous campus skill exchange. DM me or apply on our project page!",
+    "tag": "Hackathon Alert",
+    "mediaUrl": null,
+    "createdAt": "2026-09-27T10:22:25.826Z",
+    "user": {
+      "id": "cmujo6dip000trk9b1jn3nl3a",
+      "name": "Ananya Iyer",
+      "email": "ananya.i@campus.edu",
+      "avatarUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&h=200&q=80",
+      "college": "Jaypee Institute of Information Tech (JIIT)",
+      "course": "B.Tech Computer Science & Engineering",
+      "department": "CSE",
+      "year": 3,
+      "headline": "Full-Stack Next.js Developer & Product Strategist • GraphQL, Prisma",
+      "bio": "Junior building social-first collegiate tools. Led winning team at Hack-In-Summer 2026. Skilled in Next.js 15, PostgreSQL, and scalable API architecture.",
+      "interests": "Web Development, Product Design, AI Applications",
+      "availability": "20 hrs/week (Hackathon ready)",
+      "githubUrl": "https://github.com/ananyaiyer",
+      "portfolioUrl": "https://ananya-dev.in",
+      "linkedinUrl": "https://linkedin.com/in/ananyaiyer-demo",
+      "createdAt": "2026-09-27T10:22:25.778Z"
+    },
+    "comments": [
+      {
+        "id": "cmujo6dk2005vrk9bq5wb9iqd",
+        "postId": "cmujo6dk1005ork9bt218lwmt",
+        "userId": "cmujo6dim000ork9bh2onrt3d",
+        "content": "I would love to handle the mobile Flutter interface for this Ananya!",
+        "createdAt": "2026-09-27T10:22:25.827Z",
+        "user": {
+          "id": "cmujo6dim000ork9bh2onrt3d",
+          "name": "Rahul Verma",
+          "email": "rahul.v@campus.edu",
+          "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200&q=80",
+          "college": "BITS Pilani",
+          "course": "B.E. Computer Science",
+          "department": "Computer Science",
+          "year": 2,
+          "headline": "Mobile & Full-Stack Prototyper • Flutter, Node.js, Cloud Run",
+          "bio": "Sophomore building fluid cross-platform mobile apps for college students. Enjoys rapid UI prototyping, WebSockets, and real-time community experiences.",
+          "interests": "Mobile Apps, Web Development, Cloud Systems",
+          "availability": "15 hrs/week",
+          "githubUrl": "https://github.com/rahulverma",
+          "portfolioUrl": "https://rahulv.me",
+          "linkedinUrl": "https://linkedin.com/in/rahulv-demo",
+          "createdAt": "2026-09-27T10:22:25.774Z"
+        }
+      }
+    ],
+    "likes": [
+      {
+        "id": "cmujo6dk30064rk9bdptgw092",
+        "postId": "cmujo6dk1005ork9bt218lwmt",
+        "userId": "cmujo6dik000lrk9b2530ugh1",
+        "createdAt": "2026-09-27T10:22:25.827Z"
+      },
+      {
+        "id": "cmujo6dk30063rk9boal5b0ob",
+        "postId": "cmujo6dk1005ork9bt218lwmt",
+        "userId": "cmujo6dim000ork9bh2onrt3d",
+        "createdAt": "2026-09-27T10:22:25.827Z"
+      }
+    ]
+  },
+  {
+    "id": "cmujo6dk2005qrk9bhw3qt3t6",
+    "userId": "cmujo6din000qrk9bdn400yyu",
+    "content": "🚁 First successful outdoor quad test of our autonomous obstacle avoidance model! The drone mapped 4 buildings on campus in real-time with zero collisions. Looking for computer vision collaborators!",
+    "tag": "Showcase",
+    "mediaUrl": null,
+    "createdAt": "2026-09-27T10:22:25.826Z",
+    "user": {
+      "id": "cmujo6din000qrk9bdn400yyu",
+      "name": "David Kim",
+      "email": "david.kim@campus.edu",
+      "avatarUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200&q=80",
+      "college": "Georgia Tech",
+      "course": "B.S. Robotics & Computer Science",
+      "department": "Interactive Computing",
+      "year": 4,
+      "headline": "Computer Vision & Robotics Engineer • PyTorch, OpenCV, ROS",
+      "bio": "Senior building autonomous navigation drones and edge AI vision models. Seeking collaborative peers to integrate cloud robotics dashboards.",
+      "interests": "Robotics, Computer Vision, Embedded Systems",
+      "availability": "12-15 hrs/week",
+      "githubUrl": "https://github.com/davidkim",
+      "portfolioUrl": "https://davidkim-robotics.com",
+      "linkedinUrl": "https://linkedin.com/in/davidkim-demo",
+      "createdAt": "2026-09-27T10:22:25.776Z"
+    },
+    "comments": [],
+    "likes": []
+  },
+  {
+    "id": "cmujo6dk0005krk9b6y4cwekn",
+    "userId": "cmujo6dil000nrk9bit72pzfa",
+    "content": "⚡ Quick tip for students working with LangChain & Local LLMs: Always use semantic chunking over fixed-size character splits for academic papers. We saw retrieval precision jump from 64% to 89% on our benchmark dataset!",
+    "tag": "Tech Resource",
+    "mediaUrl": null,
+    "createdAt": "2026-09-27T10:22:25.825Z",
+    "user": {
+      "id": "cmujo6dil000nrk9bit72pzfa",
+      "name": "Elena Rostova",
+      "email": "elena.r@campus.edu",
+      "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&h=200&q=80",
+      "college": "Stanford University",
+      "course": "M.S. Artificial Intelligence",
+      "department": "AI Lab",
+      "year": 1,
+      "headline": "AI/ML Researcher • Autonomous Agents, RAG Pipelines & PyTorch",
+      "bio": "Graduate researcher focusing on hybrid neural retrieval, tool use, and multi-agent coordination. Looking to build real-world AI applications with strong collaborative student teams.",
+      "interests": "AI, Natural Language Processing, Machine Learning",
+      "availability": "20 hrs/week (Hackathon sprint ready)",
+      "githubUrl": "https://github.com/elenarostova",
+      "portfolioUrl": "https://elena-ai.org",
+      "linkedinUrl": "https://linkedin.com/in/elena-rostova",
+      "createdAt": "2026-09-27T10:22:25.774Z"
+    },
+    "comments": [],
+    "likes": [
+      {
+        "id": "cmujo6dk30061rk9b1umubhih",
+        "postId": "cmujo6dk0005krk9b6y4cwekn",
+        "userId": "cmujo6dii000krk9bacss81nj",
+        "createdAt": "2026-09-27T10:22:25.827Z"
+      }
+    ]
+  },
+  {
+    "id": "cmujo6dk1005mrk9bg9wttta1",
+    "userId": "cmujo6dil000mrk9bbw1daulp",
+    "content": "📊 Benchmarked our Go Raft consensus store against 100,000 write ops/second under 3-node cluster partitioning. Zero split-brain states and automatic leader re-election completed in under 180ms! Open-sourced on GitHub.",
+    "tag": "Tech Resource",
+    "mediaUrl": null,
+    "createdAt": "2026-09-27T10:22:25.825Z",
+    "user": {
+      "id": "cmujo6dil000mrk9bbw1daulp",
+      "name": "Marcus Johnson",
+      "email": "marcus.j@campus.edu",
+      "avatarUrl": "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=200&h=200&q=80",
+      "college": "UC Berkeley",
+      "course": "B.S. EECS",
+      "department": "Computer Science",
+      "year": 4,
+      "headline": "Distributed Systems & Backend Engineer • Go, Raft, High-Throughput APIs",
+      "bio": "Senior CS student researching consensus algorithms, distributed fault-tolerance, and high-scale database caching. Enjoys systems programming, profiling, and open-source contributions.",
+      "interests": "Distributed Systems, Backend APIs, Cloud Infrastructure",
+      "availability": "12 hrs/week",
+      "githubUrl": "https://github.com/marcusj",
+      "portfolioUrl": "https://marcus.io",
+      "linkedinUrl": "https://linkedin.com/in/marcusj-demo",
+      "createdAt": "2026-09-27T10:22:25.773Z"
+    },
+    "comments": [
+      {
+        "id": "cmujo6dk2005urk9bejholl2v",
+        "postId": "cmujo6dk1005mrk9bg9wttta1",
+        "userId": "cmujo6din000prk9btlqnh0bj",
+        "content": "180ms leader election under partition is incredible Marcus! Are you using gRPC for heartbeats?",
+        "createdAt": "2026-09-27T10:22:25.827Z",
+        "user": {
+          "id": "cmujo6din000prk9btlqnh0bj",
+          "name": "Sarah Lin",
+          "email": "sarah.lin@campus.edu",
+          "avatarUrl": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&h=200&q=80",
+          "college": "Carnegie Mellon University",
+          "course": "B.S. Software Engineering",
+          "department": "Institute for Software Research",
+          "year": 3,
+          "headline": "Cloud Architect & DevOps Engineer • Kubernetes, Docker, CI/CD",
+          "bio": "Junior software engineering major building automated deployment pipelines and zero-downtime microservices. AWS Certified Solutions Architect Associate.",
+          "interests": "Cloud Infrastructure, DevOps, Distributed Systems",
+          "availability": "15 hrs/week",
+          "githubUrl": "https://github.com/sarahlin",
+          "portfolioUrl": "https://sarahlin.cloud",
+          "linkedinUrl": "https://linkedin.com/in/sarahlin-demo",
+          "createdAt": "2026-09-27T10:22:25.775Z"
+        }
+      }
+    ],
+    "likes": [
+      {
+        "id": "cmujo6dk30062rk9bzo1sx6dn",
+        "postId": "cmujo6dk1005mrk9bg9wttta1",
+        "userId": "cmujo6din000prk9btlqnh0bj",
+        "createdAt": "2026-09-27T10:22:25.827Z"
+      }
+    ]
+  },
+  {
+    "id": "cmujo6djz005grk9blt7x6s7s",
+    "userId": "cmujo6dii000krk9bacss81nj",
+    "content": "🚀 Excited to announce our project: \"AI-Powered Campus Assistant\"! We are building an agentic assistant for university students that parses syllabi, tracks deadlines, and provides RAG course tutoring. Currently looking for a React frontend wizard and a Python/LangChain developer for the upcoming Hackathon. Check out our project page or drop a comment!",
+    "tag": "Teammate Search",
+    "mediaUrl": null,
+    "createdAt": "2026-09-27T10:22:25.824Z",
+    "user": {
+      "id": "cmujo6dii000krk9bacss81nj",
+      "name": "Alex Chen",
+      "email": "alex.chen@campus.edu",
+      "avatarUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&h=200&q=80",
+      "college": "MIT College of Engineering",
+      "course": "B.S. Computer Science",
+      "department": "EECS",
+      "year": 3,
+      "headline": "Full-Stack Lead & AI Systems Builder • Next.js, LangChain, PyTorch",
+      "bio": "Junior CS student building autonomous tools for university student productivity. HackMIT 2025 Winner. Passionate about LLM agents, distributed systems, and collaborative development.",
+      "interests": "AI & Machine Learning, Web Development, Cloud Infrastructure",
+      "availability": "18 hrs/week (Flexible Evenings & Weekends)",
+      "githubUrl": "https://github.com/alexchen",
+      "portfolioUrl": "https://alexchen.dev",
+      "linkedinUrl": "https://linkedin.com/in/alexchen-demo",
+      "createdAt": "2026-09-27T10:22:25.771Z"
+    },
+    "comments": [
+      {
+        "id": "cmujo6dk2005rrk9bf6kv5rxk",
+        "postId": "cmujo6djz005grk9blt7x6s7s",
+        "userId": "cmujo6dik000lrk9b2530ugh1",
+        "content": "This sounds amazing Alex! I have extensive experience with React & Tailwind and would love to collaborate on the frontend UI.",
+        "createdAt": "2026-09-27T10:22:25.827Z",
+        "user": {
+          "id": "cmujo6dik000lrk9b2530ugh1",
+          "name": "Priya Sharma",
+          "email": "priya.sharma@campus.edu",
+          "avatarUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200&q=80",
+          "college": "National Institute of Tech",
+          "course": "B.Tech Information Technology",
+          "department": "IT",
+          "year": 3,
+          "headline": "Frontend Architect & UI/UX Craftsman • React, Tailwind, Micro-interactions",
+          "bio": "Passionate about human-centered interfaces, accessibility, and high-performance design systems. 2x hackathon winner (Best UI/UX). Open to collaborating on innovative student products!",
+          "interests": "Frontend Architecture, UI/UX Design, Design Systems",
+          "availability": "15 hrs/week (Flexible)",
+          "githubUrl": "https://github.com/priyasharma",
+          "portfolioUrl": "https://priyasharma.design",
+          "linkedinUrl": "https://linkedin.com/in/priyasharma-demo",
+          "createdAt": "2026-09-27T10:22:25.773Z"
+        }
+      },
+      {
+        "id": "cmujo6dk2005srk9bfgi3501h",
+        "postId": "cmujo6djz005grk9blt7x6s7s",
+        "userId": "cmujo6dil000nrk9bit72pzfa",
+        "content": "I worked on syllabus parsing algorithms last semester. Count me in for the LangChain pipeline!",
+        "createdAt": "2026-09-27T10:22:25.827Z",
+        "user": {
+          "id": "cmujo6dil000nrk9bit72pzfa",
           "name": "Elena Rostova",
           "email": "elena.r@campus.edu",
           "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&h=200&q=80",
@@ -2027,29 +3510,102 @@ export const FALLBACK_POSTS = [
           "course": "M.S. Artificial Intelligence",
           "department": "AI Lab",
           "year": 1,
-          "headline": "AI/ML Researcher • LLM Tool Use, LangChain & PyTorch",
-          "bio": "Graduate researcher focusing on retrieval-augmented generation and reasoning models. Looking to build AI applications with solid engineering teams.",
+          "headline": "AI/ML Researcher • Autonomous Agents, RAG Pipelines & PyTorch",
+          "bio": "Graduate researcher focusing on hybrid neural retrieval, tool use, and multi-agent coordination. Looking to build real-world AI applications with strong collaborative student teams.",
           "interests": "AI, Natural Language Processing, Machine Learning",
           "availability": "20 hrs/week (Hackathon sprint ready)",
           "githubUrl": "https://github.com/elenarostova",
           "portfolioUrl": "https://elena-ai.org",
           "linkedinUrl": "https://linkedin.com/in/elena-rostova",
-          "createdAt": "2026-09-27T09:57:38.175Z"
+          "createdAt": "2026-09-27T10:22:25.774Z"
         }
       }
     ],
     "likes": [
       {
-        "id": "cmujnahpd003umxr5zjznii4y",
-        "postId": "cmujnahpa003kmxr5gzbgteq7",
-        "userId": "cmujnahod000hmxr5n7iffmh2",
-        "createdAt": "2026-09-27T09:57:38.210Z"
+        "id": "cmujo6dk3005wrk9bx4ju6fa2",
+        "postId": "cmujo6djz005grk9blt7x6s7s",
+        "userId": "cmujo6dik000lrk9b2530ugh1",
+        "createdAt": "2026-09-27T10:22:25.827Z"
       },
       {
-        "id": "cmujnahpe003wmxr55y7w8d9q",
-        "postId": "cmujnahpa003kmxr5gzbgteq7",
-        "userId": "cmujnahoe000imxr5yzqkpinw",
-        "createdAt": "2026-09-27T09:57:38.210Z"
+        "id": "cmujo6dk3005xrk9brtzro9do",
+        "postId": "cmujo6djz005grk9blt7x6s7s",
+        "userId": "cmujo6dil000mrk9bbw1daulp",
+        "createdAt": "2026-09-27T10:22:25.827Z"
+      },
+      {
+        "id": "cmujo6dk3005yrk9bimy2nufa",
+        "postId": "cmujo6djz005grk9blt7x6s7s",
+        "userId": "cmujo6dil000nrk9bit72pzfa",
+        "createdAt": "2026-09-27T10:22:25.827Z"
+      }
+    ]
+  },
+  {
+    "id": "cmujo6dk0005irk9bcq69elxr",
+    "userId": "cmujo6dik000lrk9b2530ugh1",
+    "content": "🎨 Just finished publishing the complete design system for student portfolios on GradLeaf. Focused on accessible contrast, micro-interactions, and fluid typography. Let me know your thoughts on the dark mode preview in the comments!",
+    "tag": "Project Milestone",
+    "mediaUrl": null,
+    "createdAt": "2026-09-27T10:22:25.824Z",
+    "user": {
+      "id": "cmujo6dik000lrk9b2530ugh1",
+      "name": "Priya Sharma",
+      "email": "priya.sharma@campus.edu",
+      "avatarUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200&q=80",
+      "college": "National Institute of Tech",
+      "course": "B.Tech Information Technology",
+      "department": "IT",
+      "year": 3,
+      "headline": "Frontend Architect & UI/UX Craftsman • React, Tailwind, Micro-interactions",
+      "bio": "Passionate about human-centered interfaces, accessibility, and high-performance design systems. 2x hackathon winner (Best UI/UX). Open to collaborating on innovative student products!",
+      "interests": "Frontend Architecture, UI/UX Design, Design Systems",
+      "availability": "15 hrs/week (Flexible)",
+      "githubUrl": "https://github.com/priyasharma",
+      "portfolioUrl": "https://priyasharma.design",
+      "linkedinUrl": "https://linkedin.com/in/priyasharma-demo",
+      "createdAt": "2026-09-27T10:22:25.773Z"
+    },
+    "comments": [
+      {
+        "id": "cmujo6dk2005trk9bjj4z8h98",
+        "postId": "cmujo6dk0005irk9bcq69elxr",
+        "userId": "cmujo6dii000krk9bacss81nj",
+        "content": "The typography hierarchy and sage green palettes look so clean Priya! Great work.",
+        "createdAt": "2026-09-27T10:22:25.827Z",
+        "user": {
+          "id": "cmujo6dii000krk9bacss81nj",
+          "name": "Alex Chen",
+          "email": "alex.chen@campus.edu",
+          "avatarUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&h=200&q=80",
+          "college": "MIT College of Engineering",
+          "course": "B.S. Computer Science",
+          "department": "EECS",
+          "year": 3,
+          "headline": "Full-Stack Lead & AI Systems Builder • Next.js, LangChain, PyTorch",
+          "bio": "Junior CS student building autonomous tools for university student productivity. HackMIT 2025 Winner. Passionate about LLM agents, distributed systems, and collaborative development.",
+          "interests": "AI & Machine Learning, Web Development, Cloud Infrastructure",
+          "availability": "18 hrs/week (Flexible Evenings & Weekends)",
+          "githubUrl": "https://github.com/alexchen",
+          "portfolioUrl": "https://alexchen.dev",
+          "linkedinUrl": "https://linkedin.com/in/alexchen-demo",
+          "createdAt": "2026-09-27T10:22:25.771Z"
+        }
+      }
+    ],
+    "likes": [
+      {
+        "id": "cmujo6dk3005zrk9bun1yvnqn",
+        "postId": "cmujo6dk0005irk9bcq69elxr",
+        "userId": "cmujo6dii000krk9bacss81nj",
+        "createdAt": "2026-09-27T10:22:25.827Z"
+      },
+      {
+        "id": "cmujo6dk30060rk9b9xhhj5cs",
+        "postId": "cmujo6dk0005irk9bcq69elxr",
+        "userId": "cmujo6dip000trk9b1jn3nl3a",
+        "createdAt": "2026-09-27T10:22:25.827Z"
       }
     ]
   }
