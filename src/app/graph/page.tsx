@@ -7,7 +7,6 @@ import {
   Network,
   Users,
   Briefcase,
-  Sparkles,
   BookOpen,
   ArrowRight,
   ExternalLink,

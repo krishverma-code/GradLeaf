@@ -8,7 +8,7 @@ import {
   MessageSquare,
   Share2,
   Send,
-  Sparkles,
+  Orbit,
   TrendingUp,
   Tag,
   Briefcase,
@@ -198,7 +198,7 @@ export default function FeedPage() {
             href="/matching"
             className="flex items-center gap-2.5 p-2.5 rounded-xl text-xs font-bold text-slate-700 hover:bg-emerald-50 hover:text-emerald-900 transition-colors"
           >
-            <Sparkles className="w-4 h-4 text-emerald-600" />
+            <Orbit className="w-4 h-4 text-emerald-600" />
             AI Teammate Matcher
           </Link>
           <Link

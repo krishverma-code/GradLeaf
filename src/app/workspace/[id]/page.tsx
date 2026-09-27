@@ -12,7 +12,7 @@ import {
   Trash2,
   Users,
   Calendar,
-  Sparkles,
+  Orbit,
   ArrowLeft,
   ChevronRight,
   Shield,
@@ -355,7 +355,7 @@ export default function WorkspacePage() {
               href={`/matching`}
               className="btn-gradleaf-secondary flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-bold cursor-pointer"
             >
-              <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
+              <Orbit className="w-3.5 h-3.5 text-emerald-600" />
               Recruit with AI
             </Link>
             <button

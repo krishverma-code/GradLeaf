@@ -8,7 +8,7 @@ import {
   Briefcase,
   Plus,
   Search,
-  Sparkles,
+  Orbit,
   Users,
   Calendar,
   ArrowRight,
@@ -443,7 +443,7 @@ function ProjectsContent() {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 glass-card p-6 sm:p-7 rounded-3xl border border-slate-200/90 shadow-glass-card">
         <div>
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200/80 text-emerald-900 text-xs font-bold mb-2 shadow-2xs">
-            <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
+            <Orbit className="w-3.5 h-3.5 text-emerald-600" />
             GradLeaf Venture Hub
           </div>
           <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
@@ -468,7 +468,7 @@ function ProjectsContent() {
         <div className="bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-200/90 rounded-2xl p-4 flex items-center justify-between gap-3 shadow-2xs animate-in fade-in duration-200">
           <div className="flex items-center gap-3 min-w-0">
             <div className="w-9 h-9 rounded-xl bg-emerald-600 text-white flex items-center justify-center shadow-xs shrink-0">
-              <Sparkles className="w-4.5 h-4.5" />
+              <Orbit className="w-4.5 h-4.5" />
             </div>
             <div className="min-w-0">
               <div className="text-xs font-bold text-slate-900 truncate">
@@ -789,7 +789,7 @@ function ProjectsContent() {
                         onClick={() => handleOpenApplyModal(project)}
                         className="btn-gradleaf-primary flex items-center gap-1.5 text-xs font-bold px-3.5 py-1.5 rounded-xl shadow-tactile active:scale-95"
                       >
-                        <Sparkles className="w-3.5 h-3.5" />
+                        <Orbit className="w-3.5 h-3.5" />
                         Ask to Match
                       </button>
                     )}
@@ -945,7 +945,7 @@ function ProjectsContent() {
                   >
                     <div className="flex items-center gap-2.5">
                       <div className="w-8 h-8 rounded-xl bg-[#edf4ec] text-[#21442f] border border-[#274d36]/20 flex items-center justify-center font-bold text-xs shadow-2xs">
-                        <Sparkles className="w-4 h-4" />
+                        <Orbit className="w-4 h-4" />
                       </div>
                       <div>
                         <div className="font-bold text-xs text-slate-900">
@@ -1013,7 +1013,7 @@ function ProjectsContent() {
                       }}
                       className="btn-gradleaf-primary flex items-center gap-1.5 px-5 py-2 text-xs font-bold rounded-xl shadow-tactile transition-all active:scale-95"
                     >
-                      <Sparkles className="w-3.5 h-3.5" />
+                      <Orbit className="w-3.5 h-3.5" />
                       Ask to Match & Join Team
                     </button>
                   )}
@@ -1031,7 +1031,7 @@ function ProjectsContent() {
             <div className="flex items-center justify-between border-b border-slate-100 pb-3">
               <div>
                 <h3 className="font-bold text-slate-900 text-base flex items-center gap-2">
-                  <Sparkles className="w-4.5 h-4.5 text-emerald-600" />
+                  <Orbit className="w-4.5 h-4.5 text-emerald-600" />
                   Ask to Match & Join Team
                 </h3>
                 <p className="text-xs text-slate-500 mt-0.5">
@@ -1144,7 +1144,7 @@ function ProjectsContent() {
                       className="text-[10px] font-bold text-emerald-700 hover:text-emerald-900 flex items-center gap-1 hover:underline cursor-pointer"
                       title="Re-tailor pitch for current role"
                     >
-                      <Sparkles className="w-3 h-3 text-emerald-600" />
+                      <Orbit className="w-3 h-3 text-emerald-600" />
                       Auto-tailor Pitch
                     </button>
                   </div>
@@ -1297,7 +1297,7 @@ function ProjectsContent() {
                     disabled={isExtractingAI || !newDescription.trim()}
                     className="text-[11px] text-[#21442f] hover:text-[#173022] font-bold flex items-center gap-1 disabled:opacity-50"
                   >
-                    <Sparkles className="w-3 h-3" />
+                    <Orbit className="w-3 h-3" />
                     {isExtractingAI ? 'Analyzing...' : 'AI Auto-Detect Roles'}
                   </button>
                 </div>
