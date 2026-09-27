@@ -281,31 +281,33 @@ function MatchingPageContent() {
         </div>
       ) : (
         <>
-          {/* Project Requirements Overview Banner */}
+          {/* Project Requirements Overview Banner - Frosted Glass Aurora */}
           {projectData && (
-            <div className="bg-gradient-to-br from-[#061d18] via-[#092921] to-[#041613] text-white p-6 sm:p-7 rounded-3xl shadow-xl border border-emerald-500/20 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-              <div>
-                <span className="text-[11px] font-bold text-emerald-400 uppercase tracking-wider">
+            <div className="relative overflow-hidden rounded-3xl p-6 sm:p-7 border border-emerald-200/80 bg-gradient-to-br from-white/95 via-emerald-50/50 to-slate-50/90 shadow-[0_12px_36px_-15px_rgba(20,45,31,0.07),inset_0_1px_0_rgba(255,255,255,1)] backdrop-blur-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+              <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-br from-emerald-200/25 to-teal-100/20 rounded-full blur-3xl pointer-events-none" />
+              <div className="relative z-10 space-y-2">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100/80 border border-emerald-300/70 text-emerald-950 text-xs font-bold tracking-wide">
+                  <span className="w-2 h-2 rounded-full bg-emerald-600"></span>
                   Target Requirements • {projectData.domain}
-                </span>
-                <h2 className="text-xl font-extrabold mt-1 text-white">{projectData.title}</h2>
-                <div className="flex flex-wrap gap-2 mt-3">
+                </div>
+                <h2 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">{projectData.title}</h2>
+                <div className="flex flex-wrap gap-2 pt-1">
                   {projectData.requiredSkills.map((req: any, idx: number) => (
                     <span
                       key={idx}
-                      className="text-xs bg-white/10 border border-white/15 text-emerald-100 px-3 py-1 rounded-xl flex items-center gap-1.5 font-bold shadow-2xs"
+                      className="text-xs bg-white/90 border border-emerald-200/80 text-emerald-900 px-3 py-1 rounded-xl flex items-center gap-1.5 font-bold shadow-2xs"
                     >
-                      <span className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_6px_#34d399]"></span>
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
                       {req.role ? `${req.role}: ${req.name}` : req.name}
                     </span>
                   ))}
                 </div>
               </div>
 
-              <div className="text-right">
+              <div className="relative z-10 shrink-0">
                 <Link
                   href={`/workspace/${projectData.id}`}
-                  className="btn-gradleaf-dark inline-flex items-center gap-2 px-4 py-2 rounded-xl font-bold text-xs shadow-tactile-dark"
+                  className="btn-gradleaf-primary inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-xs shadow-tactile active:scale-95"
                 >
                   Open Project Workspace <ExternalLink className="w-3.5 h-3.5" />
                 </Link>
