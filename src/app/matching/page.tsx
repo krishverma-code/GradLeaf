@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { useUser } from '@/lib/userContext';
 import {
-  Sparkles,
+  Orbit,
   Users,
   CheckCircle,
   Clock,
@@ -214,7 +214,7 @@ function MatchingPageContent() {
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 glass-card p-6 sm:p-7 rounded-3xl border border-slate-200 shadow-glass-card">
         <div>
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-900 text-xs font-bold mb-2 shadow-2xs">
-            <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
+            <Orbit className="w-3.5 h-3.5 text-[#274d36]" />
             <span>GradLeaf Explainable AI Matcher</span>
           </div>
           <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
@@ -346,8 +346,8 @@ function MatchingPageContent() {
           {focusedCandidateId && (
             <div className="glass-card rounded-2xl p-4 border border-emerald-300/80 bg-emerald-50/80 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-tactile-subtle">
               <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-xl bg-emerald-600 text-white flex items-center justify-center font-bold text-xs shadow-2xs shrink-0">
-                  <Sparkles className="w-4 h-4" />
+                <div className="w-9 h-9 rounded-xl bg-[#274d36] text-white flex items-center justify-center font-bold text-xs shadow-2xs shrink-0">
+                  <Orbit className="w-4 h-4" />
                 </div>
                 <div>
                   <div className="text-xs font-bold text-emerald-950 flex flex-wrap items-center gap-2">
@@ -445,7 +445,7 @@ function MatchingPageContent() {
 
               {/* Explainable Rationale Box */}
               <div className="bg-emerald-50/70 border border-emerald-200/70 rounded-2xl p-4 text-xs text-emerald-950 flex items-start gap-3 shadow-inner">
-                <Sparkles className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                <Orbit className="w-4 h-4 text-[#274d36] shrink-0 mt-0.5" />
                 <div className="leading-relaxed">
                   <span className="font-bold text-emerald-900 mr-1.5">Why Recommended:</span>
                   <span>{candidate.explanation}</span>

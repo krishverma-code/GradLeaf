@@ -6,7 +6,7 @@ import { useUser } from '@/lib/userContext';
 import {
   Search,
   Users,
-  Sparkles,
+  Orbit,
   X,
   RotateCcw,
   GraduationCap,
@@ -430,7 +430,7 @@ export default function ExplorePage() {
                     onClick={() => handleOpenMatchModal(student)}
                     className="btn-gradleaf-primary px-3.5 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5 shadow-tactile cursor-pointer"
                   >
-                    <Sparkles className="w-3.5 h-3.5 text-emerald-200" /> Match
+                    <Orbit className="w-3.5 h-3.5 text-emerald-200" /> Match
                   </button>
                   <Link
                     href={`/profile/${student.id}`}
@@ -471,7 +471,7 @@ export default function ExplorePage() {
             <div className="flex items-center justify-between border-b border-slate-100/90 pb-3">
               <div>
                 <h3 className="font-black text-slate-900 text-base flex items-center gap-2 tracking-tight">
-                  <Sparkles className="w-4.5 h-4.5 text-emerald-600" />
+                  <Orbit className="w-4.5 h-4.5 text-[#274d36]" />
                   Propose Match with {matchModalStudent.name}
                 </h3>
                 <p className="text-xs text-slate-500 mt-0.5 font-medium">
@@ -562,7 +562,7 @@ export default function ExplorePage() {
                     href={`/matching${matchProjectId ? `?projectId=${matchProjectId}&candidateId=${matchModalStudent.id}` : `?candidateId=${matchModalStudent.id}`}`}
                     className="text-xs font-bold text-emerald-800 hover:text-emerald-950 flex items-center gap-1.5 transition-colors cursor-pointer"
                   >
-                    <Sparkles className="w-3.5 h-3.5 text-emerald-600" /> Open in Smart Matcher
+                    <Orbit className="w-3.5 h-3.5 text-[#274d36]" /> Open in Smart Matcher
                   </Link>
 
                   <div className="flex items-center gap-2">
