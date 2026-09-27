@@ -54,12 +54,28 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
-## 🛠️ Tech Stack
-- **Framework**: Next.js 14 (App Router, Server & Client Components)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS with custom collegiate forest/sage design system & glassmorphism
-- **ORM / Database**: Prisma with SQLite
-- **Icons**: Lucide React
+## 🛠️ Tech Stack & Architecture
+- **Framework**: Next.js 14 (App Router with Server & Client Component separation)
+- **Language**: TypeScript with strict compile-time checks
+- **Styling**: Tailwind CSS with custom collegiate forest/sage design tokens (`#274d36`, `#142d1f`, `#edf4ec`) & frosted glassmorphism
+- **ORM & Database**: Prisma ORM with lightweight SQLite (`prisma/dev.db`)
+- **Iconography**: Lucide React modern modular icon suite
+
+### 📁 Directory Layout
+```
+hackinSummer/
+├── src/
+│   ├── app/                 # Next.js App Router routes & API endpoints
+│   │   ├── explore/         # Student discovery & project marketplace
+│   │   ├── feed/            # Real-time campus initiatives & announcements
+│   │   ├── matching/        # Explainable AI teammate matching engine
+│   │   ├── profile/[id]/    # Verified student credentials & portfolio
+│   │   ├── projects/        # Project initiatives & role requirements
+│   │   └── workspace/[id]/  # Kanban task board & sprint execution
+│   ├── components/          # Reusable UI components (Navbar, GradLeafLogo)
+│   └── lib/                 # Core algorithms, Prisma client, and user context
+└── prisma/                  # SQLite schema definitions & test data seeds
+```
 
 ---
 
