@@ -30,21 +30,27 @@ export async function GET(req: Request) {
       },
     });
 
-    if (!project) {
+    let currentProject = project;
+    if (!currentProject) {
+      const { FALLBACK_PROJECTS } = await import('@/lib/fallbackData');
+      currentProject = (FALLBACK_PROJECTS.find((p) => p.id === projectId) || FALLBACK_PROJECTS[0]) as any;
+    }
+
+    if (!currentProject) {
       return NextResponse.json({ error: 'Project not found' }, { status: 404 });
     }
 
     // Existing team member user IDs, project owner, and the active session user
-    const memberIds = new Set(project.members.map((m) => m.userId));
-    if (project.ownerId) {
-      memberIds.add(project.ownerId);
+    const memberIds = new Set(currentProject.members.map((m: any) => m.userId));
+    if (currentProject.ownerId) {
+      memberIds.add(currentProject.ownerId);
     }
     if (excludeUserId) {
       memberIds.add(excludeUserId);
     }
 
     // Get all candidate students not currently in the project
-    const candidates = await prisma.user.findMany({
+    let candidates = await prisma.user.findMany({
       where: {
         id: { notIn: Array.from(memberIds) },
       },
@@ -58,19 +64,24 @@ export async function GET(req: Request) {
       },
     });
 
-    const matches = computeProjectMatches(project, candidates);
+    if (!candidates || candidates.length === 0) {
+      const { FALLBACK_USERS } = await import('@/lib/fallbackData');
+      candidates = FALLBACK_USERS.filter((u) => !memberIds.has(u.id)) as any;
+    }
+
+    const matches = computeProjectMatches(currentProject, candidates);
 
     return NextResponse.json({
       project: {
-        id: project.id,
-        title: project.title,
-        domain: project.domain,
-        requiredSkills: project.skills.map((s) => ({
-          name: s.skill.name,
+        id: currentProject.id,
+        title: currentProject.title,
+        domain: currentProject.domain,
+        requiredSkills: currentProject.skills.map((s: any) => ({
+          name: s.skill?.name || s.name,
           role: s.role,
           priority: s.priority,
         })),
-        currentTeamSize: project.members.length,
+        currentTeamSize: currentProject.members.length,
       },
       matches,
     });

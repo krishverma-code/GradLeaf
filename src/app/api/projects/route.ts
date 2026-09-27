@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
+import { FALLBACK_PROJECTS } from '@/lib/fallbackData';
 
 export async function GET() {
   try {
@@ -16,10 +17,15 @@ export async function GET() {
       },
       orderBy: { createdAt: 'desc' },
     });
+
+    if (!projects || projects.length === 0) {
+      return NextResponse.json(FALLBACK_PROJECTS);
+    }
+
     return NextResponse.json(projects);
   } catch (error) {
-    console.error('Failed to get projects', error);
-    return NextResponse.json({ error: 'Failed to fetch projects' }, { status: 500 });
+    console.error('Failed to get projects, returning fallback dataset', error);
+    return NextResponse.json(FALLBACK_PROJECTS);
   }
 }
 

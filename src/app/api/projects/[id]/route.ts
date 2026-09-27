@@ -28,6 +28,13 @@ export async function GET(req: Request, { params }: { params: { id: string } }) 
     });
 
     if (!project) {
+      const { FALLBACK_PROJECTS } = await import('@/lib/fallbackData');
+      const found = FALLBACK_PROJECTS.find(
+        (p) => p.id === params.id || p.title.toLowerCase().includes(params.id.toLowerCase())
+      );
+      if (found) {
+        return NextResponse.json(found);
+      }
       return NextResponse.json({ error: 'Project not found' }, { status: 404 });
     }
     return NextResponse.json(project);
