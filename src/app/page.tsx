@@ -61,7 +61,7 @@ export default function LandingPage() {
             href="/matching"
             className="group flex items-center gap-2.5 px-6 py-3.5 rounded-2xl btn-gradleaf-secondary font-bold text-sm tracking-tight cursor-pointer"
           >
-            <Orbit className="w-4 h-4 text-emerald-600 transition-transform duration-500 group-hover:rotate-180" />
+            <Orbit className="w-4 h-4 text-[#274d36] transition-transform duration-500 group-hover:rotate-180" />
             <span>Try Smart Teammate Matching</span>
           </Link>
         </div>
