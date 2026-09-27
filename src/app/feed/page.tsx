@@ -418,15 +418,15 @@ export default function FeedPage() {
       {/* Right Sidebar - Trending & Hackathons */}
       <aside className="lg:col-span-3 space-y-4">
         
-        {/* GradLeaf Campus Badge */}
-        <div className="btn-gradleaf-dark text-white rounded-3xl p-5 shadow-tactile-dark space-y-2 border border-emerald-500/30">
+        {/* GradLeaf Campus Badge - Frosted Aurora Glass */}
+        <div className="rounded-3xl p-5 border border-emerald-200/80 bg-gradient-to-br from-white/95 via-emerald-50/50 to-slate-50/90 shadow-[0_8px_24px_rgba(20,45,31,0.05),inset_0_1px_0_rgba(255,255,255,1)] space-y-2.5 backdrop-blur-xl">
           <div className="flex items-center gap-3">
-            <GradLeafLogo size={36} className="rounded-xl shadow-xs" />
+            <GradLeafLogo size={38} className="rounded-xl shadow-2xs" />
             <div>
-              <div className="text-xs font-extrabold text-white flex items-center gap-1 tracking-tight">
-                Grad<span className="text-emerald-400">Leaf</span> Network
+              <div className="text-xs font-black text-slate-900 flex items-center gap-1 tracking-tight">
+                Grad<span className="text-emerald-700">Leaf</span> Network
               </div>
-              <p className="text-[10px] text-emerald-200/80 font-medium">Education today, growth tomorrow</p>
+              <p className="text-[11px] text-emerald-800 font-semibold">Education today, growth tomorrow</p>
             </div>
           </div>
         </div>
