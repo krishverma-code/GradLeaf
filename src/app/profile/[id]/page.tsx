@@ -6,7 +6,7 @@ import { useParams } from 'next/navigation';
 import { useUser } from '@/lib/userContext';
 import {
   GraduationCap,
-  Sparkles,
+  Orbit,
   Github,
   Globe,
   Linkedin,
@@ -388,7 +388,7 @@ export default function ProfilePage() {
                 onClick={handleOpenMatchModal}
                 className="btn-gradleaf-primary text-xs font-bold px-4 py-2.5 rounded-xl shadow-tactile flex items-center gap-1.5 cursor-pointer"
               >
-                <Sparkles className="w-3.5 h-3.5 text-emerald-200" /> Match with {profile.name.split(' ')[0]}
+                <Orbit className="w-3.5 h-3.5 text-emerald-200" /> Match with {profile.name.split(' ')[0]}
               </button>
             )}
           </div>
@@ -486,8 +486,8 @@ export default function ProfilePage() {
               <strong className="text-slate-900 font-bold">{profile.availability || 'Flexible for hackathons'}</strong>
             </span>
             <span className="flex items-center gap-2">
-              <span className="p-1 rounded-lg bg-teal-50 text-teal-700 border border-teal-200/80 shadow-2xs">
-                <Sparkles className="w-3.5 h-3.5" />
+              <span className="p-1 rounded-lg bg-[#edf4ec] text-[#274d36] border border-[#274d36]/20 shadow-2xs">
+                <Orbit className="w-3.5 h-3.5" />
               </span>
               <span className="font-medium">Interests: </span>
               <strong className="text-slate-900 font-bold">{profile.interests || 'AI, Web Development'}</strong>
@@ -552,7 +552,7 @@ export default function ProfilePage() {
           <div className="mt-6 pt-5 border-t border-slate-100/90">
             <div className="flex items-center justify-between mb-3">
               <h4 className="text-xs font-black text-slate-900 uppercase tracking-wider flex items-center gap-1.5">
-                <Sparkles className="w-4 h-4 text-emerald-600" />
+                <Orbit className="w-4 h-4 text-[#274d36]" />
                 AI Skill Gap Insights
               </h4>
               <button
@@ -739,7 +739,7 @@ export default function ProfilePage() {
                 </span>
               </div>
               <h3 className="font-bold text-slate-900 text-lg flex items-center gap-2 mt-2">
-                <Sparkles className="w-5 h-5 text-[#274d36]" />
+                <Orbit className="w-5 h-5 text-[#274d36]" />
                 Match with {profile.name.split(' ')[0]}
               </h3>
               <p className="text-xs text-slate-600 mt-1 leading-relaxed">
@@ -1204,7 +1204,7 @@ export default function ProfilePage() {
                     disabled={isGeneratingAI}
                     className="text-[11px] font-semibold text-[#274d36] hover:text-[#173022] flex items-center gap-1"
                   >
-                    <Sparkles className="w-3 h-3" />
+                    <Orbit className="w-3 h-3" />
                     {isGeneratingAI ? 'Generating...' : 'Enhance with AI Assistant'}
                   </button>
                 </div>
@@ -1258,7 +1258,7 @@ export default function ProfilePage() {
             <div className="flex items-center justify-between border-b border-slate-100 pb-3">
               <div>
                 <h3 className="font-bold text-slate-900 text-base flex items-center gap-2">
-                  <Sparkles className="w-4 h-4 text-[#274d36]" />
+                  <Orbit className="w-4 h-4 text-[#274d36]" />
                   Match with {profile.name}
                 </h3>
                 <p className="text-xs text-slate-500">Send an official teammate collaboration proposal</p>
@@ -1347,7 +1347,7 @@ export default function ProfilePage() {
                     href={`/matching${matchProjectId ? `?projectId=${matchProjectId}&candidateId=${profile.id}` : `?candidateId=${profile.id}`}`}
                     className="text-xs font-bold text-emerald-800 hover:text-emerald-950 flex items-center gap-1.5 transition-colors cursor-pointer"
                   >
-                    <Sparkles className="w-3.5 h-3.5 text-emerald-600" /> Open in Smart Matcher
+                    <Orbit className="w-3.5 h-3.5 text-[#274d36]" /> Open in Smart Matcher
                   </Link>
 
                   <div className="flex items-center gap-2">
