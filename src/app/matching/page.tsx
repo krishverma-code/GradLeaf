@@ -49,13 +49,15 @@ interface ProjectOption {
   members?: { userId: string; role?: string }[];
 }
 
+import { FALLBACK_PROJECTS } from '@/lib/fallbackData';
+
 function MatchingPageContent() {
   const searchParams = useSearchParams();
   const paramProjectId = searchParams.get('projectId');
   const paramCandidateId = searchParams.get('candidateId');
 
   const { currentUser, allUsers } = useUser();
-  const [projects, setProjects] = useState<ProjectOption[]>([]);
+  const [projects, setProjects] = useState<ProjectOption[]>(FALLBACK_PROJECTS as any);
   const [selectedProjectId, setSelectedProjectId] = useState<string>('');
   const [focusedCandidateId, setFocusedCandidateId] = useState<string | null>(null);
   const [matches, setMatches] = useState<MatchItem[]>([]);

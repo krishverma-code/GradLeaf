@@ -156,12 +156,14 @@ function buildElevatorPitch(project: ProjectType, role: string, user?: any): str
   return `Hi ${leadFirstName}! I'd love to join "${project.title}" as ${role}. ${expertiseDetail} I'm excited to collaborate and start building together!`;
 }
 
+import { FALLBACK_PROJECTS } from '@/lib/fallbackData';
+
 function ProjectsContent() {
   const searchParams = useSearchParams();
   const targetProjectId = searchParams.get('id') || searchParams.get('project');
   const { currentUser, refreshUsers } = useUser();
-  const [projects, setProjects] = useState<ProjectType[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [projects, setProjects] = useState<ProjectType[]>(FALLBACK_PROJECTS as any);
+  const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState('');
   const [domainFilter, setDomainFilter] = useState('All');
 
@@ -202,10 +204,12 @@ function ProjectsContent() {
       const res = await fetch('/api/projects');
       if (res.ok) {
         const data = await res.json();
-        setProjects(data);
+        if (Array.isArray(data) && data.length > 0) {
+          setProjects(data);
+        }
       }
     } catch (e) {
-      console.error(e);
+      console.error('Failed to load projects, keeping fallback dataset', e);
     } finally {
       setLoading(false);
     }

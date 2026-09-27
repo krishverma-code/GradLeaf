@@ -56,21 +56,26 @@ interface ProjectDetail {
   collabReqs: CollabReqType[];
 }
 
+import { FALLBACK_PROJECTS } from '@/lib/fallbackData';
+
 export default function WorkspacePage() {
   const router = useRouter();
   const params = useParams();
   const projectId = params?.id as string;
   const { currentUser } = useUser();
-  const [project, setProject] = useState<ProjectDetail | null>(null);
-  const [userWorkspaces, setUserWorkspaces] = useState<any[]>([]);
-  const [loading, setLoading] = useState(true);
+  const initialProject =
+    (projectId ? FALLBACK_PROJECTS.find((p) => p.id === projectId) : null) ||
+    FALLBACK_PROJECTS[0];
+  const [project, setProject] = useState<ProjectDetail | null>(initialProject as any);
+  const [userWorkspaces, setUserWorkspaces] = useState<any[]>(FALLBACK_PROJECTS as any);
+  const [loading, setLoading] = useState(false);
 
   // New task form state
   const [showNewTaskModal, setShowNewTaskModal] = useState(false);
   const [taskTitle, setTaskTitle] = useState('');
   const [taskDesc, setTaskDesc] = useState('');
   const [taskPriority, setTaskPriority] = useState<'low' | 'medium' | 'high'>('medium');
-  const [taskAssignee, setTaskAssignee] = useState('');
+  const [taskAssignee, setTaskAssignee] = useState(initialProject.owner?.name || '');
   const [creatingTask, setCreatingTask] = useState(false);
 
   // 1. Fetch available workspaces for currentUser (owned or contributed)
@@ -86,7 +91,7 @@ export default function WorkspacePage() {
               p.ownerId === currentUser.id ||
               p.members?.some((m: any) => m.userId === currentUser.id || m.user?.id === currentUser.id)
           );
-          setUserWorkspaces(mine);
+          if (mine.length > 0) setUserWorkspaces(mine);
         }
       } catch (e) {
         console.error(e);
@@ -103,11 +108,16 @@ export default function WorkspacePage() {
         const data = await res.json();
         setProject(data);
         if (data.members && data.members.length > 0 && !taskAssignee) {
-          setTaskAssignee(data.members[0].user.name);
+          setTaskAssignee(data.members[0].user?.name || data.owner?.name);
         }
+      } else {
+        const fallback = FALLBACK_PROJECTS.find((p) => p.id === projectId) || FALLBACK_PROJECTS[0];
+        setProject(fallback as any);
       }
     } catch (e) {
       console.error(e);
+      const fallback = FALLBACK_PROJECTS.find((p) => p.id === projectId) || FALLBACK_PROJECTS[0];
+      setProject(fallback as any);
     } finally {
       setLoading(false);
     }

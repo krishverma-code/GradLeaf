@@ -30,12 +30,17 @@ interface SkillNode {
   }[];
 }
 
+import { FALLBACK_SKILLS } from '@/lib/fallbackData';
+
 function SkillGraphContent() {
   const searchParams = useSearchParams();
   const initialHighlight = searchParams.get('highlight') || 'React';
-  const [skills, setSkills] = useState<SkillNode[]>([]);
-  const [selectedSkill, setSelectedSkill] = useState<SkillNode | null>(null);
-  const [loading, setLoading] = useState(true);
+  const initialSkill =
+    FALLBACK_SKILLS.find((s) => s.name.toLowerCase() === initialHighlight.toLowerCase()) ||
+    FALLBACK_SKILLS[0];
+  const [skills, setSkills] = useState<SkillNode[]>(FALLBACK_SKILLS as any);
+  const [selectedSkill, setSelectedSkill] = useState<SkillNode | null>(initialSkill as any);
+  const [loading, setLoading] = useState(false);
   const [filterCategory, setFilterCategory] = useState<string>('All');
 
   useEffect(() => {

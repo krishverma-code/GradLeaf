@@ -58,10 +58,12 @@ interface UserContextType {
   unreadCount: number;
 }
 
+import { FALLBACK_USERS } from '@/lib/fallbackData';
+
 const UserContext = createContext<UserContextType>({
-  currentUser: null,
-  allUsers: [],
-  loading: true,
+  currentUser: FALLBACK_USERS[0] as any,
+  allUsers: FALLBACK_USERS as any,
+  loading: false,
   switchUser: () => {},
   refreshUsers: async () => {},
   markAllNotificationsRead: async () => {},
@@ -70,24 +72,24 @@ const UserContext = createContext<UserContextType>({
 });
 
 export const UserProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [currentUser, setCurrentUser] = useState<StudentUser | null>(null);
-  const [allUsers, setAllUsers] = useState<StudentUser[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [currentUser, setCurrentUser] = useState<StudentUser | null>(FALLBACK_USERS[0] as any);
+  const [allUsers, setAllUsers] = useState<StudentUser[]>(FALLBACK_USERS as any);
+  const [loading, setLoading] = useState(false);
 
   const fetchUsers = async () => {
     try {
       const res = await fetch('/api/users');
       if (res.ok) {
         const users = await res.json();
-        setAllUsers(users);
-        if (users.length > 0) {
+        if (Array.isArray(users) && users.length > 0) {
+          setAllUsers(users);
           const savedId = typeof window !== 'undefined' ? (localStorage.getItem('gradleaf_active_user') || localStorage.getItem('skillsync_active_user')) : null;
           const found = users.find((u: StudentUser) => u.id === savedId) || users[0];
           setCurrentUser(found);
         }
       }
     } catch (e) {
-      console.error('Failed to load users', e);
+      console.error('Failed to load users, keeping fallback dataset', e);
     } finally {
       setLoading(false);
     }

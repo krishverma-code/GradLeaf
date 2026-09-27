@@ -6,6 +6,8 @@ import Link from 'next/link';
 import { useUser } from '@/lib/userContext';
 import { Briefcase, ArrowRight, Plus, Loader2 } from 'lucide-react';
 
+import { FALLBACK_PROJECTS } from '@/lib/fallbackData';
+
 export default function WorkspaceIndexPage() {
   const router = useRouter();
   const { currentUser } = useUser();
@@ -18,24 +20,35 @@ export default function WorkspaceIndexPage() {
     const findUserWorkspace = async () => {
       try {
         const res = await fetch('/api/projects');
+        let projects: any[] = [];
         if (res.ok) {
-          const projects = await res.json();
-          // Find first project owned by currentUser or where currentUser is a member
-          const userProject = projects.find(
+          projects = await res.json();
+        }
+        if (!Array.isArray(projects) || projects.length === 0) {
+          projects = FALLBACK_PROJECTS;
+        }
+        // Find first project owned by currentUser or where currentUser is a member, or fallback to first project
+        const userProject =
+          projects.find(
             (p: any) =>
               p.ownerId === currentUser.id ||
               p.members?.some((m: any) => m.userId === currentUser.id)
-          );
+          ) || projects[0];
 
-          if (userProject) {
-            router.replace(`/workspace/${userProject.id}`);
-            return;
-          }
+        if (userProject) {
+          router.replace(`/workspace/${userProject.id}`);
+          return;
         }
         setHasNoProjects(true);
       } catch (e) {
         console.error('Failed to resolve workspace', e);
-        setHasNoProjects(true);
+        const fallbackProject =
+          FALLBACK_PROJECTS.find(
+            (p: any) =>
+              p.ownerId === currentUser.id ||
+              p.members?.some((m: any) => m.userId === currentUser.id)
+          ) || FALLBACK_PROJECTS[0];
+        router.replace(`/workspace/${fallbackProject.id}`);
       } finally {
         setLoading(false);
       }

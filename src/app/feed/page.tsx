@@ -40,10 +40,12 @@ interface PostType {
   }[];
 }
 
+import { FALLBACK_POSTS } from '@/lib/fallbackData';
+
 export default function FeedPage() {
   const { currentUser } = useUser();
-  const [posts, setPosts] = useState<PostType[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [posts, setPosts] = useState<PostType[]>(FALLBACK_POSTS as any);
+  const [loading, setLoading] = useState(false);
   const [newContent, setNewContent] = useState('');
   const [selectedTag, setSelectedTag] = useState('Teammate Search');
   const [posting, setPosting] = useState(false);
@@ -55,10 +57,12 @@ export default function FeedPage() {
       const res = await fetch('/api/posts');
       if (res.ok) {
         const data = await res.json();
-        setPosts(data);
+        if (Array.isArray(data) && data.length > 0) {
+          setPosts(data);
+        }
       }
     } catch (e) {
-      console.error(e);
+      console.error('Failed to load posts, keeping fallback dataset', e);
     } finally {
       setLoading(false);
     }

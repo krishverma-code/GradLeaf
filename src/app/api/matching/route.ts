@@ -3,6 +3,7 @@ import { prisma } from '@/lib/prisma';
 import { computeProjectMatches } from '@/lib/matchingAlgorithm';
 
 export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 export async function GET(req: Request) {
   try {
@@ -87,6 +88,33 @@ export async function GET(req: Request) {
     });
   } catch (error) {
     console.error('Matching engine error:', error);
-    return NextResponse.json({ error: 'Matching failed' }, { status: 500 });
+    try {
+      const { FALLBACK_PROJECTS, FALLBACK_USERS } = await import('@/lib/fallbackData');
+      const { searchParams } = new URL(req.url);
+      const projectId = searchParams.get('projectId');
+      const excludeUserId = searchParams.get('excludeUserId');
+      const proj = FALLBACK_PROJECTS.find((p) => p.id === projectId) || FALLBACK_PROJECTS[0];
+      const memberIds = new Set(proj.members.map((m: any) => m.userId));
+      if (proj.ownerId) memberIds.add(proj.ownerId);
+      if (excludeUserId) memberIds.add(excludeUserId);
+      const candidates = FALLBACK_USERS.filter((u) => !memberIds.has(u.id)) as any;
+      const matches = computeProjectMatches(proj as any, candidates);
+      return NextResponse.json({
+        project: {
+          id: proj.id,
+          title: proj.title,
+          domain: proj.domain,
+          requiredSkills: proj.skills.map((s: any) => ({
+            name: s.skill?.name || s.name,
+            role: s.role,
+            priority: s.priority,
+          })),
+          currentTeamSize: proj.members.length,
+        },
+        matches,
+      });
+    } catch {
+      return NextResponse.json({ error: 'Matching failed' }, { status: 500 });
+    }
   }
 }

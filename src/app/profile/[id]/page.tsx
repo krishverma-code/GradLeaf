@@ -89,24 +89,29 @@ interface UserProfileData {
   sentCollab?: MatchRequest[];
 }
 
+import { FALLBACK_USERS } from '@/lib/fallbackData';
+
 export default function ProfilePage() {
   const params = useParams();
   const userId = params?.id as string;
   const { currentUser, refreshUsers } = useUser();
-  const [profile, setProfile] = useState<UserProfileData | null>(null);
-  const [loading, setLoading] = useState(true);
+  const initialStudent =
+    (userId ? FALLBACK_USERS.find((u) => u.id === userId || u.name.toLowerCase().includes(userId.toLowerCase())) : null) ||
+    FALLBACK_USERS[0];
+  const [profile, setProfile] = useState<UserProfileData | null>(initialStudent as any);
+  const [loading, setLoading] = useState(false);
 
   // Edit Modal State
   const [showEditModal, setShowEditModal] = useState(false);
-  const [name, setName] = useState('');
-  const [college, setCollege] = useState('');
-  const [course, setCourse] = useState('');
-  const [year, setYear] = useState<number>(3);
-  const [interests, setInterests] = useState('');
-  const [headline, setHeadline] = useState('');
-  const [bio, setBio] = useState('');
-  const [availability, setAvailability] = useState('');
-  const [avatarUrl, setAvatarUrl] = useState('');
+  const [name, setName] = useState(initialStudent.name || '');
+  const [college, setCollege] = useState(initialStudent.college || '');
+  const [course, setCourse] = useState(initialStudent.course || '');
+  const [year, setYear] = useState<number>(initialStudent.year || 3);
+  const [interests, setInterests] = useState(initialStudent.interests || '');
+  const [headline, setHeadline] = useState(initialStudent.headline || '');
+  const [bio, setBio] = useState(initialStudent.bio || '');
+  const [availability, setAvailability] = useState(initialStudent.availability || '');
+  const [avatarUrl, setAvatarUrl] = useState(initialStudent.avatarUrl || '');
   const [uploadError, setUploadError] = useState('');
   const [isGeneratingAI, setIsGeneratingAI] = useState(false);
   const [saving, setSaving] = useState(false);
@@ -119,7 +124,6 @@ export default function ProfilePage() {
   const [loadingGaps, setLoadingGaps] = useState(false);
 
   const fetchProfile = async () => {
-    setLoading(true);
     try {
       const res = await fetch(`/api/users/${userId}`);
       if (res.ok) {
