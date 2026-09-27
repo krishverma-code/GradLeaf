@@ -372,45 +372,41 @@ export default function ProfilePage() {
       
       {/* Profile Header Banner */}
       <div className="glass-card rounded-3xl border border-slate-200/80 shadow-glass-card overflow-hidden">
-        {/* Banner with Luminous Frosted Aurora Canvas & Ambient Glows */}
-        <div className="h-44 sm:h-52 bg-gradient-to-r from-emerald-100/80 via-teal-50/70 to-emerald-50/90 relative border-b border-emerald-200/70 overflow-hidden">
+        {/* Banner with Rich 3D Fluid Emerald Canvas & Frosted Glass Highlights */}
+        <div className="h-44 sm:h-52 relative overflow-hidden bg-gradient-to-r from-[#0b3b2c] via-[#165a44] to-[#0e4334] border-b border-emerald-500/20">
+          {/* High-res fluid 3D abstract wave canvas */}
+          <img
+            src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1600&q=80"
+            alt="Profile cover"
+            className="w-full h-full object-cover object-center opacity-85 mix-blend-luminosity filter brightness-110 contrast-125"
+          />
+
+          {/* Luminous Emerald & Jade gradient glow overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0e3b2e]/90 via-transparent to-[#0a2e24]/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-900/60 via-transparent to-teal-900/50" />
+
           {/* Ambient Glowing Orbs */}
-          <div className="absolute -top-16 -left-16 w-80 h-80 bg-gradient-to-br from-emerald-300/35 to-teal-200/30 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute -bottom-12 right-1/3 w-72 h-72 bg-gradient-to-tr from-teal-200/30 to-emerald-200/25 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute top-0 -right-10 w-64 h-64 bg-gradient-to-bl from-emerald-200/30 to-transparent rounded-full blur-2xl pointer-events-none" />
+          <div className="absolute -top-12 -left-12 w-72 h-72 bg-emerald-400/25 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute -bottom-10 right-1/4 w-80 h-80 bg-teal-400/20 rounded-full blur-3xl pointer-events-none" />
 
           {/* Micro-dot grid texture */}
-          <div className="absolute inset-0 bg-[radial-gradient(#142d1f_1px,transparent_1px)] [background-size:20px_20px] opacity-[0.04] pointer-events-none" />
-
-          {/* Elegant Topological Wave Lines */}
-          <svg className="absolute inset-0 w-full h-full opacity-35 pointer-events-none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="profile-wave-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#059669" stopOpacity="0.2" />
-                <stop offset="50%" stopColor="#0d9488" stopOpacity="0.12" />
-                <stop offset="100%" stopColor="#10b981" stopOpacity="0.05" />
-              </linearGradient>
-            </defs>
-            <path d="M-100,45 Q220,150 540,35 T1200,75" fill="none" stroke="url(#profile-wave-grad)" strokeWidth="1.5" />
-            <path d="M-50,85 Q270,15 630,115 T1300,55" fill="none" stroke="url(#profile-wave-grad)" strokeWidth="1.5" />
-            <path d="M0,125 Q320,175 730,65 T1400,105" fill="none" stroke="url(#profile-wave-grad)" strokeWidth="1.5" />
-          </svg>
+          <div className="absolute inset-0 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:20px_20px] opacity-[0.08] pointer-events-none" />
 
           {/* Top Left: Verified Academic Status Pill */}
-          <div className="absolute top-5 left-5 hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/85 backdrop-blur-md border border-emerald-200/80 text-emerald-950 text-xs font-bold shadow-2xs">
+          <div className="absolute top-5 left-5 hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900/50 backdrop-blur-md border border-white/25 text-white text-xs font-bold shadow-lg">
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-600"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
             </span>
             Verified Academic Profile
           </div>
 
           {/* Top Right: Actions */}
-          <div className="absolute top-5 right-5 flex items-center gap-2.5">
+          <div className="absolute top-5 right-5 flex items-center gap-2.5 z-10">
             {isOwner ? (
               <button
                 onClick={() => setShowEditModal(true)}
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/90 hover:bg-white text-slate-800 font-bold text-xs border border-slate-200/90 shadow-2xs hover:shadow-xs active:scale-95 transition-all backdrop-blur-md cursor-pointer"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/95 hover:bg-white text-slate-800 font-bold text-xs border border-white/40 shadow-tactile-subtle hover:shadow-md active:scale-95 transition-all backdrop-blur-md cursor-pointer"
               >
                 <Edit3 className="w-3.5 h-3.5 text-emerald-700" /> Edit Profile
               </button>
