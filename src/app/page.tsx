@@ -11,83 +11,108 @@ import {
   GraduationCap,
   Zap,
   ShieldCheck,
-  Sparkles,
-  Users,
   CheckCircle2,
+  ChevronLeft,
+  ChevronRight,
+  Sparkles,
   Layers,
   ArrowUpRight,
-  BarChart3,
-  BookOpen,
 } from 'lucide-react';
 import GradLeafLogo from '@/components/GradLeafLogo';
 
-/* ─── High-Impact Collegiate Campus Parallax Background ─── */
-function CollegiateParallaxBackground({ scrollY }: { scrollY: number }) {
+/* ─── 4 Curated Collegiate Portals for the Morphing Portal Gateway ─── */
+const PORTALS = [
+  {
+    id: 1,
+    tag: 'PORTAL 01 • PROVEN TALENT',
+    title: 'Showcase Verified Identity',
+    subtitle: 'From Coursework to Real Competency',
+    desc: 'Ditch unverified resumes. Showcase verified university coursework, GitHub repositories, and competencies structured by active mastery stage.',
+    cta: 'Explore Student Directory',
+    href: '/explore',
+    image: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1800&q=80', // Collegiate Campus Quad
+    badge: '18+ Partner Universities',
+    metric: '94% Verified Profiles',
+  },
+  {
+    id: 2,
+    tag: 'PORTAL 02 • EXPLAINABLE AI',
+    title: 'Discover Ideal Teammates',
+    subtitle: 'Transparent 5-Factor Algorithmic Matching',
+    desc: 'No black-box guesswork. Match across complementary skills (40%), domain interest (20%), availability (20%), experience (10%), and team balance (10%).',
+    cta: 'Launch AI Matchmaker',
+    href: '/matching',
+    image: 'https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=1800&q=80', // High-Tech AI Neural Lab
+    badge: 'Autonomous Teammate Match',
+    metric: '98.4% Match Accuracy',
+  },
+  {
+    id: 3,
+    tag: 'PORTAL 03 • TEAM EXECUTION',
+    title: 'Ship in Sprint Workspaces',
+    subtitle: 'Private Collaborative Kanban Command Centers',
+    desc: 'Organize team members, assign sprint tasks, track real-time progress across Kanban columns, and coordinate milestones with zero friction.',
+    cta: 'Open Project Workspaces',
+    href: '/projects',
+    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1800&q=80', // Student Tech Team Working Together
+    badge: 'Sprint Kanban Active',
+    metric: '12 / 14 Tasks Shipped',
+  },
+  {
+    id: 4,
+    tag: 'PORTAL 04 • STANDOUT PORTFOLIO',
+    title: 'Launch Recruiter-Ready Work',
+    subtitle: 'Turn Projects Into Career Breakthroughs',
+    desc: 'Transform academic hackathons and campus initiatives into shipped public repositories, peer endorsements, and proof-of-work that gets you hired.',
+    cta: 'Explore Campus Feed',
+    href: '/feed',
+    image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1800&q=80', // Students Pitching & Shipping Projects
+    badge: 'Verified Portfolio Engine',
+    metric: '450+ Projects Shipped',
+  },
+];
+
+/* ─── Ambient Collegiate Atmospheric Background ─── */
+function CollegiateBackground({ scrollY }: { scrollY: number }) {
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden" style={{ zIndex: 0 }}>
-      {/* 1. The Core Collegiate Campus Heritage Image with Parallax & Subtle Zoom */}
+      {/* 1. Subtle Campus Landscape Parallax Canvas */}
       <div
-        className="absolute inset-0 will-change-transform bg-cover bg-center transition-transform duration-75 ease-out"
+        className="absolute inset-0 will-change-transform bg-cover bg-center transition-transform duration-100 ease-out"
         style={{
           backgroundImage: `url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=2400&q=80')`,
-          transform: `translateY(${scrollY * 0.18}px) scale(${1 + Math.min(scrollY * 0.0003, 0.08)})`,
-          opacity: 0.38,
-          filter: 'saturate(1.15) contrast(1.08)',
+          transform: `translateY(${scrollY * 0.14}px) scale(${1 + Math.min(scrollY * 0.0002, 0.06)})`,
+          opacity: 0.28,
+          filter: 'saturate(1.1) contrast(1.05)',
         }}
       />
 
-      {/* 2. Frosted Ambient Lighting Vignette & Forest Tone Infusion */}
+      {/* 2. Frosted Gradient Overlay for Pristine Typography Contrast */}
       <div
         className="absolute inset-0"
         style={{
           background:
-            'radial-gradient(ellipse 90% 70% at 50% 25%, rgba(247,250,248,0.65) 0%, rgba(247,250,248,0.88) 55%, #f7faf8 100%)',
+            'radial-gradient(ellipse 95% 75% at 50% 20%, rgba(247,250,248,0.72) 0%, rgba(247,250,248,0.92) 55%, #f7faf8 100%)',
         }}
       />
 
-      {/* 3. Collegiate Green Light Rays & Subtle Aura */}
+      {/* 3. Ambient Sage/Forest Luminous Aura */}
       <div
-        className="absolute -top-32 left-1/2 -translate-x-1/2 w-[900px] h-[500px] rounded-full pointer-events-none will-change-transform"
+        className="absolute -top-36 left-1/2 -translate-x-1/2 w-[850px] h-[520px] rounded-full pointer-events-none will-change-transform"
         style={{
-          background: 'radial-gradient(circle, rgba(138,171,152,0.30) 0%, rgba(39,77,54,0.12) 45%, transparent 75%)',
-          filter: 'blur(70px)',
-          transform: `translateY(${scrollY * 0.1}px)`,
+          background: 'radial-gradient(circle, rgba(138,171,152,0.35) 0%, rgba(39,77,54,0.12) 50%, transparent 75%)',
+          filter: 'blur(75px)',
+          transform: `translateY(${scrollY * 0.08}px)`,
         }}
       />
 
-      {/* 4. Secondary Floating Sage Orbs for Multi-Layer Depth */}
+      {/* 4. Technical Blueprint Grid Pattern */}
       <div
-        className="absolute rounded-full will-change-transform"
+        className="absolute inset-0 will-change-transform opacity-30"
         style={{
-          width: 440,
-          height: 440,
-          top: '25vh',
-          left: '-5vw',
-          background: 'radial-gradient(circle at 45% 45%, rgba(138,171,152,0.25) 0%, transparent 70%)',
-          filter: 'blur(55px)',
-          transform: `translateY(${scrollY * 0.28}px) translateX(${scrollY * 0.04}px)`,
-        }}
-      />
-      <div
-        className="absolute rounded-full will-change-transform"
-        style={{
-          width: 400,
-          height: 400,
-          top: '55vh',
-          right: '-5vw',
-          background: 'radial-gradient(circle at 55% 55%, rgba(39,77,54,0.18) 0%, transparent 70%)',
-          filter: 'blur(50px)',
-          transform: `translateY(${-scrollY * 0.12}px) translateX(${-scrollY * 0.05}px)`,
-        }}
-      />
-
-      {/* 5. Collegiate Technical Blueprint Dot-Grid */}
-      <div
-        className="absolute inset-0 will-change-transform opacity-35"
-        style={{
-          backgroundImage: 'radial-gradient(rgba(39,77,54,0.20) 1.5px, transparent 1.5px)',
-          backgroundSize: '36px 36px',
-          transform: `translateY(${scrollY * 0.06}px)`,
+          backgroundImage: 'radial-gradient(rgba(39,77,54,0.22) 1.5px, transparent 1.5px)',
+          backgroundSize: '34px 34px',
+          transform: `translateY(${scrollY * 0.05}px)`,
         }}
       />
     </div>
@@ -97,8 +122,8 @@ function CollegiateParallaxBackground({ scrollY }: { scrollY: number }) {
 export default function LandingPage() {
   const { allUsers } = useUser();
   const [scrollY, setScrollY] = useState(0);
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  const showcaseRef = useRef<HTMLDivElement>(null);
+  const [activePortal, setActivePortal] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrollY(window.scrollY);
@@ -106,34 +131,33 @@ export default function LandingPage() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!showcaseRef.current) return;
-    const rect = showcaseRef.current.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width - 0.5;
-    const y = (e.clientY - rect.top) / rect.height - 0.5;
-    setMousePos({ x, y });
-  };
+  // Auto-advance portals unless hovered
+  useEffect(() => {
+    if (isPaused) return;
+    const timer = setInterval(() => {
+      setActivePortal((prev) => (prev + 1) % PORTALS.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, [isPaused]);
 
-  const handleMouseLeave = () => {
-    setMousePos({ x: 0, y: 0 });
-  };
+  const current = PORTALS[activePortal];
 
   return (
     <>
-      {/* ─── Parallax Collegiate Background ─── */}
-      <CollegiateParallaxBackground scrollY={scrollY} />
+      {/* ─── Fixed Parallax Collegiate Backdrop ─── */}
+      <CollegiateBackground scrollY={scrollY} />
 
       <div className="relative space-y-20 py-6 sm:py-10" style={{ zIndex: 1 }}>
         {/* ─── 1. HERO SECTION ─── */}
-        <section className="relative text-center max-w-4xl mx-auto space-y-7 pt-2">
-          {/* Top Collegiate Badge */}
+        <section className="relative text-center max-w-4xl mx-auto space-y-6 pt-2">
+          {/* Top Collegiate Pill Badge */}
           <div className="flex flex-col items-center justify-center gap-3">
             <div className="relative group">
               <div className="absolute -inset-1.5 rounded-3xl bg-[#8aab98] opacity-25 blur-xl group-hover:opacity-45 transition-opacity duration-300"></div>
               <GradLeafLogo size={88} className="relative rounded-3xl shadow-xl hover:scale-105 transition-transform duration-300" />
             </div>
 
-            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/90 backdrop-blur-md border border-[#c2d8cc] text-[#142d1f] text-xs font-semibold shadow-xs">
+            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-[#c2d8cc] text-[#142d1f] text-xs font-semibold shadow-xs">
               <span className="w-2 h-2 rounded-full bg-[#8aab98] shadow-[0_0_8px_rgba(138,171,152,0.8)] animate-pulse"></span>
               <span>GradLeaf • Education today, growth tomorrow</span>
               <span className="text-[10px] text-[#274d36] font-bold bg-[#edf4ec] px-2 py-0.5 rounded-full">v2.4</span>
@@ -153,7 +177,7 @@ export default function LandingPage() {
             The collegiate network designed to showcase verified student competencies, discover real campus initiatives, match with ideal peers through explainable AI, and ship portfolio projects in shared workspaces.
           </p>
 
-          {/* Action Buttons (in the loved muted sage aesthetic) */}
+          {/* Action Buttons */}
           <div className="flex flex-wrap items-center justify-center gap-3.5 pt-2">
             <Link
               href="/feed"
@@ -171,7 +195,7 @@ export default function LandingPage() {
             </Link>
           </div>
 
-          {/* Live Active Trust Tags */}
+          {/* Live Trust Tags */}
           <div className="pt-2 flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs text-slate-600 font-semibold">
             <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/85 backdrop-blur-md border border-[#c2d8cc] shadow-2xs">
               <ShieldCheck className="w-3.5 h-3.5 text-[#8aab98]" />
@@ -188,128 +212,166 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* ─── 2. INTERACTIVE PARALLAX SHOWCASE STAGE (Inspired by User Reference) ─── */}
+        {/* ─── 2. THE MORPHING PORTAL GATEWAY (Inspired by Slider Revolution Reference) ─── */}
         <section
-          ref={showcaseRef}
-          onMouseMove={handleMouseMove}
-          onMouseLeave={handleMouseLeave}
-          className="relative max-w-5xl mx-auto rounded-3xl p-3 sm:p-5 border border-[#c2d8cc]/80 bg-white/60 backdrop-blur-xl shadow-[0_25px_60px_-15px_rgba(20,45,31,0.08),inset_0_1px_0_rgba(255,255,255,1)] transition-all duration-300"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+          className="relative max-w-5xl mx-auto rounded-3xl p-6 sm:p-10 border border-[#c2d8cc] bg-gradient-to-br from-white/90 via-[#f4f8f5]/80 to-slate-50/90 backdrop-blur-2xl shadow-[0_30px_70px_-20px_rgba(20,45,31,0.12),inset_0_1px_0_rgba(255,255,255,1)]"
         >
-          {/* Framed Visual Container with Perspective Depth */}
-          <div className="relative overflow-hidden rounded-2xl h-[380px] sm:h-[460px] border border-white/60 shadow-inner group">
-            {/* The Main Student Collaboration Focal Image */}
-            <div
-              className="absolute inset-0 bg-cover bg-center transition-transform duration-300 ease-out will-change-transform"
-              style={{
-                backgroundImage: `url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80')`,
-                transform: `scale(1.06) translate(${mousePos.x * -16}px, ${mousePos.y * -16 + scrollY * 0.05}px)`,
-                filter: 'brightness(0.92) contrast(1.05)',
-              }}
-            />
-
-            {/* Gradient Scrim for Legibility & Cinematic Mood */}
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-900/35 to-transparent pointer-events-none" />
-
-            {/* Framing Accent Lines (Parallax Perspective Overlay) */}
-            <div className="absolute inset-4 sm:inset-6 border border-white/30 rounded-xl pointer-events-none transition-transform duration-200"
-              style={{ transform: `translate(${mousePos.x * 10}px, ${mousePos.y * 10}px)` }}
-            />
-
-            {/* Floating Parallax Card 1 (Top-Left): 98% AI Match Found */}
-            <div
-              className="absolute top-6 left-6 sm:top-8 sm:left-8 bg-white/90 backdrop-blur-md rounded-2xl p-3 sm:p-3.5 border border-white/80 shadow-lg flex items-center gap-3 transition-transform duration-200 will-change-transform"
-              style={{
-                transform: `translate(${mousePos.x * 24}px, ${mousePos.y * 24 - scrollY * 0.08}px)`,
-              }}
-            >
-              <div className="w-8 h-8 rounded-xl bg-[#edf4ec] border border-[#c2d8cc] flex items-center justify-center text-[#274d36] shadow-2xs">
-                <Orbit className="w-4 h-4 animate-spin-slow" />
+          {/* Top Stage Header */}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-[#c2d8cc]/60">
+            <div>
+              <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#274d36]">
+                <Sparkles className="w-3.5 h-3.5 text-[#8aab98]" />
+                Interactive Gateway • Teleport Through Campus Innovation
               </div>
-              <div>
-                <div className="text-[11px] font-bold text-slate-900 flex items-center gap-1.5">
-                  <span>98% AI Match</span>
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                </div>
-                <div className="text-[10px] text-slate-500 font-medium">PyTorch • Next.js • React</div>
-              </div>
+              <h2 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight mt-0.5">
+                The Collegiate Portals
+              </h2>
             </div>
 
-            {/* Floating Parallax Card 2 (Top-Right): Verified Campus Network */}
-            <div
-              className="absolute top-6 right-6 sm:top-8 sm:right-8 bg-white/90 backdrop-blur-md rounded-2xl p-3 sm:p-3.5 border border-white/80 shadow-lg hidden sm:flex items-center gap-3 transition-transform duration-200 will-change-transform"
-              style={{
-                transform: `translate(${mousePos.x * -20}px, ${mousePos.y * -20 - scrollY * 0.06}px)`,
-              }}
-            >
-              <div className="w-8 h-8 rounded-xl bg-[#8aab98]/15 border border-[#8aab98]/40 flex items-center justify-center text-[#274d36]">
-                <GraduationCap className="w-4 h-4" />
-              </div>
-              <div>
-                <div className="text-[11px] font-bold text-slate-900">Verified Academics</div>
-                <div className="text-[10px] text-slate-500 font-medium">18+ Partner Universities</div>
-              </div>
+            {/* Portal Tab Navigation Controls */}
+            <div className="flex items-center gap-2">
+              {PORTALS.map((portal, idx) => (
+                <button
+                  key={portal.id}
+                  onClick={() => setActivePortal(idx)}
+                  className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
+                    activePortal === idx
+                      ? 'bg-[#274d36] text-white shadow-xs'
+                      : 'bg-white/80 hover:bg-white text-slate-600 border border-[#c2d8cc]/80'
+                  }`}
+                >
+                  0{portal.id}
+                </button>
+              ))}
+              <div className="h-4 w-px bg-slate-200 mx-1 hidden sm:block"></div>
+              <button
+                onClick={() => setActivePortal((prev) => (prev === 0 ? PORTALS.length - 1 : prev - 1))}
+                className="w-8 h-8 rounded-xl bg-white border border-[#c2d8cc] flex items-center justify-center text-slate-600 hover:text-slate-900 hover:bg-slate-50 shadow-2xs transition-all cursor-pointer"
+                title="Previous Portal"
+              >
+                <ChevronLeft className="w-4 h-4" />
+              </button>
+              <button
+                onClick={() => setActivePortal((prev) => (prev + 1) % PORTALS.length)}
+                className="w-8 h-8 rounded-xl bg-white border border-[#c2d8cc] flex items-center justify-center text-slate-600 hover:text-slate-900 hover:bg-slate-50 shadow-2xs transition-all cursor-pointer"
+                title="Next Portal"
+              >
+                <ChevronRight className="w-4 h-4" />
+              </button>
             </div>
+          </div>
 
-            {/* Floating Parallax Card 3 (Bottom-Left): Active Sprint Kanban */}
-            <div
-              className="absolute bottom-6 left-6 sm:bottom-8 sm:left-8 bg-white/95 backdrop-blur-md rounded-2xl p-3.5 sm:p-4 border border-white/80 shadow-xl max-w-[260px] sm:max-w-xs transition-transform duration-200 will-change-transform"
-              style={{
-                transform: `translate(${mousePos.x * 20}px, ${mousePos.y * 20 + scrollY * 0.05}px)`,
-              }}
-            >
-              <div className="flex items-center justify-between gap-2 pb-2 mb-2 border-b border-slate-100">
-                <span className="text-[11px] font-bold text-slate-900 flex items-center gap-1.5">
-                  <FolderGit2 className="w-3.5 h-3.5 text-[#274d36]" />
-                  Sprint Kanban Active
+          {/* Core Portal Stage: Left Info • Center Morphing Archway • Right Action */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-8">
+            {/* Left Column: Index & Primary Teleport Title */}
+            <div className="lg:col-span-4 space-y-4 text-center lg:text-left">
+              <div className="inline-block text-xs font-mono font-black text-[#274d36] bg-[#edf4ec] border border-[#c2d8cc] px-3 py-1 rounded-full">
+                0{current.id} / 0{PORTALS.length}
+              </div>
+
+              <div className="text-[11px] font-bold uppercase tracking-wider text-[#8aab98]">
+                {current.tag}
+              </div>
+
+              <h3 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight leading-snug">
+                {current.title}
+              </h3>
+
+              <div className="text-xs font-semibold text-[#274d36]">
+                {current.subtitle}
+              </div>
+
+              <div className="pt-2 hidden lg:block">
+                <span className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-700 bg-white/80 border border-[#c2d8cc] px-3 py-1.5 rounded-xl shadow-2xs">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#8aab98]" />
+                  {current.badge}
                 </span>
-                <span className="text-[9px] font-bold bg-[#edf4ec] text-[#274d36] px-2 py-0.5 rounded-full">
-                  Sprint #4
-                </span>
-              </div>
-              <div className="space-y-1.5">
-                <div className="flex items-center justify-between text-[10px] text-slate-500 font-medium">
-                  <span>Ship Auth & Match Engine</span>
-                  <span className="font-bold text-slate-800">12 / 14 Tasks</span>
-                </div>
-                <div className="w-full bg-slate-100 rounded-full h-1.5 overflow-hidden">
-                  <div className="bg-[#8aab98] h-1.5 rounded-full w-[85%]"></div>
-                </div>
               </div>
             </div>
 
-            {/* Floating Parallax Card 4 (Bottom-Right): Teammate Avatars Ready */}
-            <div
-              className="absolute bottom-6 right-6 sm:bottom-8 sm:right-8 bg-white/95 backdrop-blur-md rounded-2xl p-3 sm:p-3.5 border border-white/80 shadow-xl transition-transform duration-200 will-change-transform"
-              style={{
-                transform: `translate(${mousePos.x * -18}px, ${mousePos.y * -18 + scrollY * 0.07}px)`,
-              }}
-            >
-              <div className="flex items-center gap-3">
-                <div className="flex items-center -space-x-2">
-                  <img className="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover shadow-2xs" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&h=80&fit=crop" alt="Priya" />
-                  <img className="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover shadow-2xs" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop" alt="Rahul" />
-                  <img className="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover shadow-2xs" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=80&h=80&fit=crop" alt="Ananya" />
-                </div>
-                <div>
-                  <div className="text-[11px] font-bold text-slate-900">Squad Ready</div>
-                  <div className="text-[10px] text-emerald-700 font-semibold flex items-center gap-1">
-                    <CheckCircle2 className="w-3 h-3" /> All Roles Filled
+            {/* Center Column: The Iconic Morphing Stone Archway Portal */}
+            <div className="lg:col-span-4 flex items-center justify-center">
+              <div className="relative group cursor-pointer" onClick={() => setActivePortal((prev) => (prev + 1) % PORTALS.length)}>
+                {/* Outer Glow Halo Ring */}
+                <div className="absolute -inset-4 rounded-[120px] bg-gradient-to-b from-[#8aab98]/40 to-[#274d36]/20 blur-2xl group-hover:scale-105 transition-transform duration-500"></div>
+
+                {/* The Morphing Archway Mask Container */}
+                <div className="portal-arch relative w-[240px] sm:w-[270px] h-[340px] sm:h-[380px] overflow-hidden border-4 border-white/90 shadow-2xl bg-slate-900">
+                  {/* Active Portal Image with Smooth Scale Zoom */}
+                  <div
+                    key={current.id}
+                    className="absolute inset-0 bg-cover bg-center transition-all duration-700 ease-out transform group-hover:scale-110"
+                    style={{
+                      backgroundImage: `url('${current.image}')`,
+                    }}
+                  />
+
+                  {/* Portal Vignette Scrim */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-black/20 pointer-events-none" />
+
+                  {/* Morphing Portal Arch Decorative Frame Lines */}
+                  <div className="absolute inset-3 border border-white/40 rounded-[inherit] pointer-events-none" />
+
+                  {/* Portal Bottom HUD Tag */}
+                  <div className="absolute bottom-5 inset-x-3 text-center pointer-events-none">
+                    <span className="text-[10px] font-bold text-white uppercase tracking-wider bg-black/50 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">
+                      Click to Teleport ↗
+                    </span>
                   </div>
                 </div>
+
+                {/* Floating Orbit Beacon */}
+                <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-white px-3 py-1 rounded-full border border-[#c2d8cc] shadow-md flex items-center gap-1.5 text-[10px] font-bold text-[#274d36]">
+                  <Orbit className="w-3 h-3 text-[#8aab98] animate-spin-slow" />
+                  <span>{current.metric}</span>
+                </div>
               </div>
             </div>
 
-            {/* Central Stage Caption (Overlayed like the reference image) */}
-            <div className="absolute inset-x-0 bottom-24 sm:bottom-28 text-center pointer-events-none px-4">
-              <div className="inline-block bg-slate-950/60 backdrop-blur-md border border-white/20 px-5 py-2 rounded-2xl text-white">
-                <div className="text-xs uppercase tracking-widest font-bold text-[#8aab98]">
-                  Collegiate Innovation Commons
-                </div>
-                <div className="text-sm sm:text-base font-semibold text-slate-100">
-                  Connect. Team Up. Ship Real Projects.
+            {/* Right Column: Portal Description & Direct Action CTA */}
+            <div className="lg:col-span-4 space-y-5 text-center lg:text-left">
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                {current.desc}
+              </p>
+
+              <div className="pt-2 flex flex-col sm:flex-row lg:flex-col items-center lg:items-start gap-3">
+                <Link
+                  href={current.href}
+                  className="btn-gradleaf-primary inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl font-bold text-xs shadow-sm hover:shadow-md active:scale-95 transition-all w-full sm:w-auto"
+                >
+                  <span>{current.cta}</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+
+                <div className="text-[11px] text-slate-500 font-medium">
+                  Auto-teleporting every 6s • Hover to pause
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* Bottom Portal Indicator Progress Bar */}
+          <div className="pt-8 grid grid-cols-4 gap-2">
+            {PORTALS.map((portal, idx) => (
+              <button
+                key={portal.id}
+                onClick={() => setActivePortal(idx)}
+                className="group text-left space-y-1.5 focus:outline-none cursor-pointer"
+              >
+                <div className="h-1.5 w-full rounded-full bg-slate-200/80 overflow-hidden">
+                  <div
+                    className={`h-full transition-all duration-500 ${
+                      activePortal === idx ? 'bg-[#274d36] w-full' : 'bg-transparent group-hover:bg-slate-300 w-full'
+                    }`}
+                  />
+                </div>
+                <div className="text-[10px] font-bold text-slate-600 truncate hidden sm:block">
+                  0{portal.id}. {portal.title.split(' ')[0]}
+                </div>
+              </button>
+            ))}
           </div>
         </section>
 
