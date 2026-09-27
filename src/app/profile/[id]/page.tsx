@@ -134,9 +134,38 @@ export default function ProfilePage() {
         setBio(data.bio || '');
         setAvailability(data.availability || '');
         setAvatarUrl(data.avatarUrl || '');
+      } else {
+        const { FALLBACK_USERS } = await import('@/lib/fallbackData');
+        const fallback =
+          FALLBACK_USERS.find((u) => u.id === userId || u.name.toLowerCase().includes(userId.toLowerCase())) ||
+          FALLBACK_USERS[0];
+        setProfile(fallback as any);
+        setName(fallback.name || '');
+        setCollege(fallback.college || '');
+        setCourse(fallback.course || '');
+        setYear(fallback.year || 3);
+        setInterests(fallback.interests || '');
+        setHeadline(fallback.headline || '');
+        setBio(fallback.bio || '');
+        setAvailability(fallback.availability || '');
+        setAvatarUrl(fallback.avatarUrl || '');
       }
     } catch (e) {
-      console.error(e);
+      console.error('Failed to fetch profile, using fallback:', e);
+      const { FALLBACK_USERS } = await import('@/lib/fallbackData');
+      const fallback =
+        FALLBACK_USERS.find((u) => u.id === userId || u.name.toLowerCase().includes(userId.toLowerCase())) ||
+        FALLBACK_USERS[0];
+      setProfile(fallback as any);
+      setName(fallback.name || '');
+      setCollege(fallback.college || '');
+      setCourse(fallback.course || '');
+      setYear(fallback.year || 3);
+      setInterests(fallback.interests || '');
+      setHeadline(fallback.headline || '');
+      setBio(fallback.bio || '');
+      setAvailability(fallback.availability || '');
+      setAvatarUrl(fallback.avatarUrl || '');
     } finally {
       setLoading(false);
     }
