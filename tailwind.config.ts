@@ -45,7 +45,7 @@ const config: Config = {
       boxShadow: {
         'glass': '0 8px 32px 0 rgba(20, 45, 31, 0.05), 0 2px 8px 0 rgba(0, 0, 0, 0.04), inset 0 1px 1px 0 rgba(255, 255, 255, 0.8)',
         'glass-card': '0 10px 30px -10px rgba(20, 45, 31, 0.07), 0 4px 12px -2px rgba(0, 0, 0, 0.03), inset 0 1px 0 0 rgba(255, 255, 255, 0.85)',
-        'tactile': '0 4px 18px -2px rgba(16, 185, 129, 0.38), 0 2px 6px -1px rgba(5, 150, 105, 0.22), inset 0 1px 0 0 rgba(255, 255, 255, 0.35)',
+        'tactile': '0 4px 16px -2px rgba(39, 77, 54, 0.35), 0 2px 6px -1px rgba(20, 45, 31, 0.2), inset 0 1px 0 0 rgba(255, 255, 255, 0.25)',
         'tactile-dark': '0 4px 18px -2px rgba(15, 23, 42, 0.35), inset 0 1px 0 0 rgba(255, 255, 255, 0.2)',
         'tactile-subtle': '0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.03), inset 0 1px 0 0 rgba(255, 255, 255, 0.95)',
         'neu-flat': '6px 6px 16px rgba(0, 0, 0, 0.03), -6px -6px 16px rgba(255, 255, 255, 0.9)',
