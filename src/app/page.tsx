@@ -3,9 +3,9 @@
 import Link from 'next/link';
 import { useUser } from '@/lib/userContext';
 import {
-  Sparkles,
+  Orbit,
   Users,
-  Briefcase,
+  FolderGit2,
   Compass,
   ArrowRight,
   GraduationCap,
@@ -61,7 +61,7 @@ export default function LandingPage() {
             href="/matching"
             className="flex items-center gap-2 px-6 py-3.5 rounded-2xl btn-gradleaf-secondary font-bold text-sm"
           >
-            <Sparkles className="w-4 h-4 text-[#274d36]" />
+            <Orbit className="w-4 h-4 text-[#274d36]" />
             Try Smart Teammate Matching
           </Link>
         </div>
@@ -73,11 +73,11 @@ export default function LandingPage() {
             Verified Student Profiles
           </span>
           <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/70 border border-slate-200/80 shadow-2xs">
-            <Sparkles className="w-3.5 h-3.5 text-[#274d36]" />
+            <Orbit className="w-3.5 h-3.5 text-[#274d36]" />
             Explainable AI Matching
           </span>
           <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/70 border border-slate-200/80 shadow-2xs">
-            <Briefcase className="w-3.5 h-3.5 text-[#274d36]" />
+            <FolderGit2 className="w-3.5 h-3.5 text-[#274d36]" />
             Sprint Kanban Workspaces
           </span>
         </div>
@@ -113,7 +113,7 @@ export default function LandingPage() {
           <div className="space-y-3">
             <div className="flex items-center gap-3.5">
               <div className="w-10 h-10 rounded-xl bg-[#edf4ec] border border-[#274d36]/20 text-[#274d36] flex items-center justify-center shrink-0 shadow-2xs group-hover:bg-[#274d36] group-hover:text-white transition-all duration-200">
-                <Sparkles className="w-5 h-5" />
+                <Orbit className="w-5 h-5" />
               </div>
               <h3 className="text-base sm:text-lg font-bold text-slate-900 tracking-tight">
                 Explainable AI Matching
@@ -137,7 +137,7 @@ export default function LandingPage() {
           <div className="space-y-3">
             <div className="flex items-center gap-3.5">
               <div className="w-10 h-10 rounded-xl bg-[#edf4ec] border border-[#274d36]/20 text-[#274d36] flex items-center justify-center shrink-0 shadow-2xs group-hover:bg-[#274d36] group-hover:text-white transition-all duration-200">
-                <Briefcase className="w-5 h-5" />
+                <FolderGit2 className="w-5 h-5" />
               </div>
               <h3 className="text-base sm:text-lg font-bold text-slate-900 tracking-tight">
                 Interactive Workspaces
@@ -163,7 +163,7 @@ export default function LandingPage() {
         <div className="absolute top-0 right-0 -mr-16 -mt-16 w-80 h-80 bg-[#274d36]/20 rounded-full blur-3xl pointer-events-none"></div>
         <div className="max-w-2xl space-y-4 relative z-10">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#274d36]/40 border border-[#43825d]/40 text-[#cde0d2] text-xs font-bold tracking-wider uppercase">
-            <Sparkles className="w-3.5 h-3.5 text-[#86c09b]" />
+            <Orbit className="w-3.5 h-3.5 text-[#86c09b]" />
             GradLeaf Collegiate Hub
           </div>
           <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
