@@ -372,21 +372,52 @@ export default function ProfilePage() {
       
       {/* Profile Header Banner */}
       <div className="glass-card rounded-3xl border border-slate-200/80 shadow-glass-card overflow-hidden">
-        {/* Banner with GradLeaf obsidian/forest gradient */}
-        <div className="h-44 sm:h-48 bg-gradient-to-r from-gradleaf-950 via-[#064e3b] to-[#061d18] relative border-b border-emerald-500/20">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-emerald-400/20 via-transparent to-transparent opacity-60"></div>
+        {/* Banner with Luminous Frosted Aurora Canvas & Ambient Glows */}
+        <div className="h-44 sm:h-52 bg-gradient-to-r from-emerald-100/80 via-teal-50/70 to-emerald-50/90 relative border-b border-emerald-200/70 overflow-hidden">
+          {/* Ambient Glowing Orbs */}
+          <div className="absolute -top-16 -left-16 w-80 h-80 bg-gradient-to-br from-emerald-300/35 to-teal-200/30 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute -bottom-12 right-1/3 w-72 h-72 bg-gradient-to-tr from-teal-200/30 to-emerald-200/25 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute top-0 -right-10 w-64 h-64 bg-gradient-to-bl from-emerald-200/30 to-transparent rounded-full blur-2xl pointer-events-none" />
+
+          {/* Micro-dot grid texture */}
+          <div className="absolute inset-0 bg-[radial-gradient(#142d1f_1px,transparent_1px)] [background-size:20px_20px] opacity-[0.04] pointer-events-none" />
+
+          {/* Elegant Topological Wave Lines */}
+          <svg className="absolute inset-0 w-full h-full opacity-35 pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="profile-wave-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#059669" stopOpacity="0.2" />
+                <stop offset="50%" stopColor="#0d9488" stopOpacity="0.12" />
+                <stop offset="100%" stopColor="#10b981" stopOpacity="0.05" />
+              </linearGradient>
+            </defs>
+            <path d="M-100,45 Q220,150 540,35 T1200,75" fill="none" stroke="url(#profile-wave-grad)" strokeWidth="1.5" />
+            <path d="M-50,85 Q270,15 630,115 T1300,55" fill="none" stroke="url(#profile-wave-grad)" strokeWidth="1.5" />
+            <path d="M0,125 Q320,175 730,65 T1400,105" fill="none" stroke="url(#profile-wave-grad)" strokeWidth="1.5" />
+          </svg>
+
+          {/* Top Left: Verified Academic Status Pill */}
+          <div className="absolute top-5 left-5 hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/85 backdrop-blur-md border border-emerald-200/80 text-emerald-950 text-xs font-bold shadow-2xs">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-600"></span>
+            </span>
+            Verified Academic Profile
+          </div>
+
+          {/* Top Right: Actions */}
           <div className="absolute top-5 right-5 flex items-center gap-2.5">
             {isOwner ? (
               <button
                 onClick={() => setShowEditModal(true)}
-                className="btn-gradleaf-secondary text-xs font-bold px-4 py-2.5 rounded-xl shadow-tactile-subtle flex items-center gap-1.5 cursor-pointer"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/90 hover:bg-white text-slate-800 font-bold text-xs border border-slate-200/90 shadow-2xs hover:shadow-xs active:scale-95 transition-all backdrop-blur-md cursor-pointer"
               >
                 <Edit3 className="w-3.5 h-3.5 text-emerald-700" /> Edit Profile
               </button>
             ) : (
               <button
                 onClick={handleOpenMatchModal}
-                className="btn-gradleaf-primary text-xs font-bold px-4 py-2.5 rounded-xl shadow-tactile flex items-center gap-1.5 cursor-pointer"
+                className="btn-gradleaf-primary text-xs font-bold px-4.5 py-2.5 rounded-xl shadow-tactile flex items-center gap-2 cursor-pointer active:scale-95 transition-all"
               >
                 <Orbit className="w-3.5 h-3.5 text-emerald-200" /> Match with {profile.name.split(' ')[0]}
               </button>
