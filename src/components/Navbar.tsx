@@ -5,18 +5,16 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { useUser } from '@/lib/userContext';
 import {
+  LayoutGrid,
+  Activity,
   Compass,
-  Briefcase,
-  Users,
-  Sparkles,
-  Network,
+  FolderGit2,
+  Orbit,
+  Workflow,
   Bell,
   CheckCircle,
   ExternalLink,
   ChevronDown,
-  Layers,
-  GraduationCap,
-  Home,
 } from 'lucide-react';
 import GradLeafLogo from '@/components/GradLeafLogo';
 
@@ -63,17 +61,17 @@ export default function Navbar() {
   }, []);
 
   const navItems = [
-    { label: 'Home', href: '/', icon: Home, exact: true },
-    { label: 'Feed', href: '/feed', icon: Compass },
-    { label: 'Explore', href: '/explore', icon: Users },
-    { label: 'Projects', href: '/projects', icon: Briefcase },
+    { label: 'Home', href: '/', icon: LayoutGrid, exact: true },
+    { label: 'Feed', href: '/feed', icon: Activity },
+    { label: 'Explore', href: '/explore', icon: Compass },
+    { label: 'Projects', href: '/projects', icon: FolderGit2 },
     {
       label: 'Smart Match',
       href: '/matching',
-      icon: Sparkles,
+      icon: Orbit,
       highlight: true,
     },
-    { label: 'Skill Graph', href: '/graph', icon: Network },
+    { label: 'Skill Graph', href: '/graph', icon: Workflow },
   ];
 
   return (
@@ -112,7 +110,7 @@ export default function Navbar() {
                         : 'text-[#1e3c2b] bg-white/80 hover:bg-white border border-[#274d36]/20 shadow-2xs hover:shadow-xs'
                     }`}
                   >
-                    <Sparkles className={`w-3.5 h-3.5 ${isActive ? 'text-[#86c09b]' : 'text-[#274d36]'}`} />
+                    <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-[#86c09b]' : 'text-[#274d36]'}`} />
                     <span>{item.label}</span>
                     <span
                       className={`text-[9px] uppercase font-black px-1.5 py-0.5 rounded-full tracking-wider transition-colors ${
