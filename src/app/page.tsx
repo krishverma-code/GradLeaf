@@ -20,23 +20,23 @@ import GradLeafLogo from '@/components/GradLeafLogo';
 function CollegiateBackground({ scrollY }: { scrollY: number }) {
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden" style={{ zIndex: 0 }}>
-      {/* 1. Subtle Campus Quad Atmosphere Canvas */}
+      {/* 1. Real Campus Quad Atmosphere Canvas — Vivid & Prominently Visible */}
       <div
         className="absolute inset-0 will-change-transform bg-cover bg-center transition-transform duration-100 ease-out"
         style={{
           backgroundImage: `url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=2400&q=80')`,
-          transform: `translateY(${scrollY * 0.12}px) scale(${1 + Math.min(scrollY * 0.0002, 0.05)})`,
-          opacity: 0.22,
-          filter: 'saturate(1.05) contrast(1.02)',
+          transform: `translateY(${scrollY * 0.15}px) scale(${1 + Math.min(scrollY * 0.0003, 0.06)})`,
+          opacity: 0.65,
+          filter: 'saturate(1.15) contrast(1.05)',
         }}
       />
 
-      {/* 2. Frosted Gradient Overlay for Pristine Legibility */}
+      {/* 2. Soft Gradient Overlay — preserves campus visibility while ensuring perfect contrast */}
       <div
         className="absolute inset-0"
         style={{
           background:
-            'radial-gradient(ellipse 95% 75% at 50% 20%, rgba(247,250,248,0.75) 0%, rgba(247,250,248,0.94) 55%, #f7faf8 100%)',
+            'linear-gradient(180deg, rgba(247,250,248,0.22) 0%, rgba(247,250,248,0.48) 45%, rgba(247,250,248,0.88) 75%, #f7faf8 100%)',
         }}
       />
 
@@ -44,7 +44,7 @@ function CollegiateBackground({ scrollY }: { scrollY: number }) {
       <div
         className="absolute -top-36 left-1/2 -translate-x-1/2 w-[850px] h-[500px] rounded-full pointer-events-none will-change-transform"
         style={{
-          background: 'radial-gradient(circle, rgba(138,171,152,0.30) 0%, rgba(39,77,54,0.10) 50%, transparent 75%)',
+          background: 'radial-gradient(circle, rgba(138,171,152,0.25) 0%, rgba(39,77,54,0.08) 50%, transparent 75%)',
           filter: 'blur(75px)',
           transform: `translateY(${scrollY * 0.08}px)`,
         }}
@@ -52,9 +52,9 @@ function CollegiateBackground({ scrollY }: { scrollY: number }) {
 
       {/* 4. Technical Blueprint Dot Pattern */}
       <div
-        className="absolute inset-0 will-change-transform opacity-25"
+        className="absolute inset-0 will-change-transform opacity-20"
         style={{
-          backgroundImage: 'radial-gradient(rgba(39,77,54,0.22) 1.5px, transparent 1.5px)',
+          backgroundImage: 'radial-gradient(rgba(39,77,54,0.25) 1.5px, transparent 1.5px)',
           backgroundSize: '34px 34px',
           transform: `translateY(${scrollY * 0.04}px)`,
         }}
@@ -79,8 +79,8 @@ export default function LandingPage() {
       <CollegiateBackground scrollY={scrollY} />
 
       <div className="relative space-y-16 py-4 sm:py-8" style={{ zIndex: 1 }}>
-        {/* ─── 1. HERO SECTION ─── */}
-        <section className="relative text-center max-w-4xl mx-auto space-y-6 pt-2">
+        {/* ─── 1. HERO SECTION (Frosted Glass Island for contrast against vivid campus) ─── */}
+        <section className="relative text-center max-w-4xl mx-auto space-y-6 p-7 sm:p-12 rounded-3xl bg-white/75 backdrop-blur-xl border border-white/80 shadow-[0_20px_50px_-15px_rgba(20,45,31,0.08),inset_0_1px_0_rgba(255,255,255,1)]">
           {/* Top Collegiate Pill Badge */}
           <div className="flex flex-col items-center justify-center gap-3">
             <div className="relative group">
