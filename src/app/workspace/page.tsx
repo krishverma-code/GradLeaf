@@ -47,7 +47,7 @@ export default function WorkspaceIndexPage() {
   if (loading) {
     return (
       <div className="py-24 text-center space-y-3">
-        <Loader2 className="w-8 h-8 text-indigo-600 animate-spin mx-auto" />
+        <Loader2 className="w-8 h-8 text-emerald-700 animate-spin mx-auto" />
         <p className="text-sm font-medium text-slate-500">
           Loading {currentUser?.name ? `${currentUser.name}'s workspace...` : 'workspace...'}
         </p>
@@ -58,7 +58,7 @@ export default function WorkspaceIndexPage() {
   if (hasNoProjects) {
     return (
       <div className="max-w-xl mx-auto my-16 bg-white border border-slate-200 rounded-3xl p-10 text-center shadow-xs space-y-5">
-        <div className="w-16 h-16 bg-indigo-50 border border-indigo-100 rounded-2xl flex items-center justify-center mx-auto text-indigo-600">
+        <div className="w-16 h-16 bg-emerald-50 border border-emerald-200/80 rounded-2xl flex items-center justify-center mx-auto text-emerald-800">
           <Briefcase className="w-8 h-8" />
         </div>
         <div>
@@ -72,7 +72,7 @@ export default function WorkspaceIndexPage() {
         <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
           <Link
             href="/projects"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-bold rounded-xl transition-all shadow-sm shadow-indigo-200"
+            className="btn-gradleaf-primary w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl text-sm font-bold shadow-tactile active:scale-95 transition-all"
           >
             <Plus className="w-4 h-4" />
             Create Project in Marketplace
