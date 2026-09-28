@@ -14,6 +14,7 @@ import {
   User,
   Send,
   Check,
+  UserPlus,
 } from 'lucide-react';
 
 type SearchScope = 'all' | 'name' | 'skill' | 'college';
@@ -134,7 +135,7 @@ function matchesStudentSearch(
 }
 
 export default function ExplorePage() {
-  const { allUsers, currentUser, refreshUsers } = useUser();
+  const { allUsers, currentUser, refreshUsers, setShowCreateProfileModal } = useUser();
   const [search, setSearch] = useState('');
   const [searchMode, setSearchMode] = useState<SearchScope>('all');
   const [selectedSkill, setSelectedSkill] = useState<string>('All');
@@ -255,17 +256,27 @@ export default function ExplorePage() {
     <div className="space-y-6 py-2">
       {/* Header & Search Controls */}
       <div className="glass-card p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-glass-card space-y-5">
-        <div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200/80 text-emerald-900 text-xs font-bold mb-2 shadow-2xs">
-            <Users className="w-3.5 h-3.5 text-emerald-600" />
-            <span>GradLeaf Verified Student Directory</span>
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200/80 text-emerald-900 text-xs font-bold mb-2 shadow-2xs">
+              <Users className="w-3.5 h-3.5 text-emerald-600" />
+              <span>GradLeaf Verified Student Directory</span>
+            </div>
+            <h1 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+              Explore Campus Talent & Collaborators
+            </h1>
+            <p className="text-xs sm:text-sm text-slate-500 mt-1 font-medium max-w-2xl leading-relaxed">
+              Discover peer engineers, designers, and researchers across colleges filtered by skills, academic domain, and live project availability.
+            </p>
           </div>
-          <h1 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
-            Explore Campus Talent & Collaborators
-          </h1>
-          <p className="text-xs sm:text-sm text-slate-500 mt-1 font-medium max-w-2xl leading-relaxed">
-            Discover peer engineers, designers, and researchers across colleges filtered by skills, academic domain, and live project availability.
-          </p>
+          <button
+            type="button"
+            onClick={() => setShowCreateProfileModal(true)}
+            className="btn-gradleaf-primary shrink-0 inline-flex items-center justify-center gap-2 px-4.5 py-2.5 rounded-xl text-xs font-bold shadow-tactile active:scale-95 transition-all cursor-pointer self-start sm:self-auto"
+          >
+            <UserPlus className="w-4 h-4" />
+            <span>+ Create Student Profile</span>
+          </button>
         </div>
 
         {/* Search Mode Scope Pills + Search Box */}

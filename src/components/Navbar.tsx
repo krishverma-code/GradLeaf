@@ -15,6 +15,8 @@ import {
   CheckCircle,
   ExternalLink,
   ChevronDown,
+  UserPlus,
+  Trash2,
 } from 'lucide-react';
 import GradLeafLogo from '@/components/GradLeafLogo';
 
@@ -28,6 +30,8 @@ export default function Navbar() {
     unreadCount,
     markAllNotificationsRead,
     markNotificationRead,
+    setShowCreateProfileModal,
+    removeProfile,
   } = useUser();
   const [showNotifications, setShowNotifications] = useState(false);
   const [showUserMenu, setShowUserMenu] = useState(false);
@@ -175,33 +179,67 @@ export default function Navbar() {
                 </div>
                 <div className="max-h-60 overflow-y-auto">
                   {allUsers.map((u) => (
-                    <button
+                    <div
                       key={u.id}
-                      onClick={() => {
-                        switchUser(u.id);
-                        setShowUserMenu(false);
-                        if (pathname.startsWith('/profile')) {
-                          router.push(`/profile/${u.id}`);
-                        }
-                      }}
-                      className={`w-full text-left px-3 py-2 text-xs flex items-center justify-between hover:bg-[#edf4ec]/70 transition-colors ${
-                        u.id === currentUser?.id ? 'bg-[#edf4ec] font-bold text-[#142d1f]' : 'text-slate-700'
+                      className={`w-full px-3 py-2 text-xs flex items-center justify-between group transition-colors ${
+                        u.id === currentUser?.id ? 'bg-[#edf4ec] font-bold text-[#142d1f]' : 'hover:bg-slate-50 text-slate-700'
                       }`}
                     >
-                      <div className="flex items-center gap-2.5">
+                      <button
+                        onClick={() => {
+                          switchUser(u.id);
+                          setShowUserMenu(false);
+                          if (pathname.startsWith('/profile')) {
+                            router.push(`/profile/${u.id}`);
+                          }
+                        }}
+                        className="flex items-center gap-2.5 flex-1 min-w-0 text-left cursor-pointer"
+                      >
                         <img
                           src={u.avatarUrl || 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=60&h=60&fit=crop'}
                           alt={u.name}
-                          className="w-7 h-7 rounded-full object-cover border border-slate-200"
+                          className="w-7 h-7 rounded-full object-cover border border-slate-200 shrink-0"
                         />
-                        <div>
-                          <div className="text-slate-900 leading-tight">{u.name}</div>
-                          <div className="text-[10px] text-slate-500 truncate max-w-[130px]">{u.course}</div>
+                        <div className="truncate">
+                          <div className="text-slate-900 leading-tight truncate">{u.name}</div>
+                          <div className="text-[10px] text-slate-500 truncate max-w-[120px]">{u.course}</div>
                         </div>
+                      </button>
+
+                      <div className="flex items-center gap-1.5 shrink-0 ml-1">
+                        {u.id === currentUser?.id && <CheckCircle className="w-4 h-4 text-[#274d36]" />}
+                        {allUsers.length > 1 && (
+                          <button
+                            type="button"
+                            title={`Remove ${u.name}'s profile`}
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              if (window.confirm(`Are you sure you want to remove ${u.name}'s profile from GradLeaf?`)) {
+                                removeProfile(u.id);
+                              }
+                            }}
+                            className="opacity-0 group-hover:opacity-100 p-1 text-slate-400 hover:text-red-600 hover:bg-red-50 rounded-md transition-all cursor-pointer"
+                          >
+                            <Trash2 className="w-3.5 h-3.5" />
+                          </button>
+                        )}
                       </div>
-                      {u.id === currentUser?.id && <CheckCircle className="w-4 h-4 text-[#274d36]" />}
-                    </button>
+                    </div>
                   ))}
+                </div>
+
+                {/* Bottom Action: Create Profile */}
+                <div className="p-2 border-t border-slate-100 bg-slate-50/80 rounded-b-2xl">
+                  <button
+                    onClick={() => {
+                      setShowUserMenu(false);
+                      setShowCreateProfileModal(true);
+                    }}
+                    className="w-full text-center px-3 py-2 text-xs flex items-center justify-center gap-1.5 text-emerald-800 font-bold bg-white hover:bg-emerald-50 border border-emerald-200/80 rounded-xl transition-all shadow-2xs hover:shadow-xs cursor-pointer active:scale-95"
+                  >
+                    <UserPlus className="w-3.5 h-3.5 text-emerald-700" />
+                    <span>+ Create Student Profile</span>
+                  </button>
                 </div>
               </div>
             )}

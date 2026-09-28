@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { UserProvider } from '@/lib/userContext';
 import Navbar from '@/components/Navbar';
+import CreateProfileModal from '@/components/CreateProfileModal';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
 
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body className="antialiased bg-slate-50 min-h-screen text-slate-900 flex flex-col">
         <UserProvider>
           <Navbar />
+          <CreateProfileModal />
           <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
             {children}
           </main>
