@@ -77,27 +77,41 @@ export async function GET(req: Request, { params }: { params: { id: string } }) 
       return NextResponse.json(found);
     }
 
-    // Attach calculated matchScore to each collaboration request
-    const enrichedReceivedCollab = user.receivedCollab.map((rc) => {
-      const score = calculatePairMatchScore(user, {
-        domain: rc.project.domain,
-        skills: rc.project.skills,
-        interests: rc.sender.interests,
-        availability: rc.sender.availability,
-      });
+    // Attach calculated matchScore to each collaboration request with defensive null checks
+    const enrichedReceivedCollab = (user.receivedCollab || []).map((rc: any) => {
+      let score = 85;
+      try {
+        if (rc?.project && rc?.sender) {
+          score = calculatePairMatchScore(user, {
+            domain: rc.project.domain || '',
+            skills: rc.project.skills || [],
+            interests: rc.sender.interests || '',
+            availability: rc.sender.availability || '',
+          });
+        }
+      } catch (err) {
+        console.warn('Error calculating received collab match score:', err);
+      }
       return {
         ...rc,
         matchScore: score,
       };
     });
 
-    const enrichedSentCollab = user.sentCollab.map((sc) => {
-      const score = calculatePairMatchScore(sc.receiver, {
-        domain: sc.project.domain,
-        skills: sc.project.skills,
-        interests: user.interests,
-        availability: user.availability,
-      });
+    const enrichedSentCollab = (user.sentCollab || []).map((sc: any) => {
+      let score = 85;
+      try {
+        if (sc?.project && sc?.receiver) {
+          score = calculatePairMatchScore(sc.receiver, {
+            domain: sc.project.domain || '',
+            skills: sc.project.skills || [],
+            interests: user.interests || '',
+            availability: user.availability || '',
+          });
+        }
+      } catch (err) {
+        console.warn('Error calculating sent collab match score:', err);
+      }
       return {
         ...sc,
         matchScore: score,
