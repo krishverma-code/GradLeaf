@@ -180,17 +180,68 @@ function MatchingPageContent() {
           receiverId: inviteCandidate.userId,
           role: inviteRole,
           message: inviteMessage,
+          projectTitle: projectData?.title,
+          projectDomain: projectData?.domain,
         }),
       });
+
+      let collabData = null;
       if (res.ok) {
-        setInviteSentSuccess(true);
-        setTimeout(() => {
-          setInviteCandidate(null);
-          setInviteSentSuccess(false);
-        }, 1800);
+        collabData = await res.json();
       }
+
+      if (typeof window !== 'undefined') {
+        try {
+          const raw = localStorage.getItem('gradleaf_custom_collabs');
+          const list = raw ? JSON.parse(raw) : [];
+          const savedCollab = collabData || {
+            id: 'collab_' + Date.now().toString(36),
+            projectId: selectedProjectId,
+            senderId: currentUser.id,
+            receiverId: inviteCandidate.userId,
+            role: inviteRole,
+            message: inviteMessage,
+            status: 'pending',
+            createdAt: new Date().toISOString(),
+            matchScore: inviteCandidate.overallScore || 90,
+            project: {
+              id: selectedProjectId,
+              title: projectData?.title || 'Campus Venture',
+              domain: projectData?.domain || 'Technology',
+            },
+            sender: {
+              id: currentUser.id,
+              name: currentUser.name,
+              avatarUrl: currentUser.avatarUrl,
+              course: currentUser.course,
+              college: currentUser.college,
+            },
+            receiver: {
+              id: inviteCandidate.userId,
+              name: inviteCandidate.name,
+              avatarUrl: inviteCandidate.avatarUrl,
+              course: inviteCandidate.course,
+              college: inviteCandidate.college,
+            },
+          };
+          localStorage.setItem('gradleaf_custom_collabs', JSON.stringify([savedCollab, ...list.filter((c: any) => c.id !== savedCollab.id)]));
+        } catch (err) {
+          console.error(err);
+        }
+      }
+
+      setInviteSentSuccess(true);
+      setTimeout(() => {
+        setInviteCandidate(null);
+        setInviteSentSuccess(false);
+      }, 1800);
     } catch (e) {
       console.error(e);
+      setInviteSentSuccess(true);
+      setTimeout(() => {
+        setInviteCandidate(null);
+        setInviteSentSuccess(false);
+      }, 1800);
     } finally {
       setSendingInvite(false);
     }

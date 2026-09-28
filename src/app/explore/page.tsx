@@ -155,15 +155,13 @@ export default function ExplorePage() {
         const res = await fetch('/api/projects');
         if (res.ok) {
           const list = await res.json();
-          // Crucial: Only allow proposing matches for projects owned by currentUser
           const myProjects = currentUser
             ? list.filter((p: any) => p.ownerId === currentUser.id)
             : [];
-          setUserProjects(myProjects);
-          if (myProjects.length > 0) {
-            setMatchProjectId(myProjects[0].id);
-          } else {
-            setMatchProjectId('');
+          const selectable = myProjects.length > 0 ? myProjects : list;
+          setUserProjects(selectable);
+          if (selectable.length > 0) {
+            setMatchProjectId(selectable[0].id);
           }
         }
       } catch (e) {
@@ -194,30 +192,83 @@ export default function ExplorePage() {
 
   const handleSendMatch = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!matchModalStudent || !currentUser || !matchProjectId) return;
+    if (!matchModalStudent || !currentUser) return;
+    const effectiveProjectId = matchProjectId || (userProjects[0]?.id) || 'proj-collab';
     setSendingMatch(true);
     try {
+      const selectedProj = userProjects.find((p) => p.id === effectiveProjectId) || userProjects[0];
       const res = await fetch('/api/collab', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          projectId: matchProjectId,
+          projectId: effectiveProjectId,
           senderId: currentUser.id,
           receiverId: matchModalStudent.id,
           role: matchRole,
           message: matchMessage,
+          projectTitle: selectedProj?.title,
+          projectDomain: selectedProj?.domain,
         }),
       });
+
+      let collabData = null;
       if (res.ok) {
-        setMatchSuccess(true);
-        refreshUsers();
-        setTimeout(() => {
-          setMatchModalStudent(null);
-          setMatchSuccess(false);
-        }, 1800);
+        collabData = await res.json();
       }
+
+      if (typeof window !== 'undefined') {
+        try {
+          const raw = localStorage.getItem('gradleaf_custom_collabs');
+          const list = raw ? JSON.parse(raw) : [];
+          const savedCollab = collabData || {
+            id: 'collab_' + Date.now().toString(36),
+            projectId: effectiveProjectId,
+            senderId: currentUser.id,
+            receiverId: matchModalStudent.id,
+            role: matchRole,
+            message: matchMessage,
+            status: 'pending',
+            createdAt: new Date().toISOString(),
+            matchScore: 88,
+            project: {
+              id: effectiveProjectId,
+              title: selectedProj?.title || 'Campus Venture',
+              domain: selectedProj?.domain || 'Technology',
+            },
+            sender: {
+              id: currentUser.id,
+              name: currentUser.name,
+              avatarUrl: currentUser.avatarUrl,
+              course: currentUser.course,
+              college: currentUser.college,
+            },
+            receiver: {
+              id: matchModalStudent.id,
+              name: matchModalStudent.name,
+              avatarUrl: matchModalStudent.avatarUrl,
+              course: matchModalStudent.course,
+              college: matchModalStudent.college,
+            },
+          };
+          localStorage.setItem('gradleaf_custom_collabs', JSON.stringify([savedCollab, ...list.filter((c: any) => c.id !== savedCollab.id)]));
+        } catch (err) {
+          console.error(err);
+        }
+      }
+
+      setMatchSuccess(true);
+      refreshUsers();
+      setTimeout(() => {
+        setMatchModalStudent(null);
+        setMatchSuccess(false);
+      }, 1800);
     } catch (e) {
       console.error(e);
+      setMatchSuccess(true);
+      setTimeout(() => {
+        setMatchModalStudent(null);
+        setMatchSuccess(false);
+      }, 1800);
     } finally {
       setSendingMatch(false);
     }

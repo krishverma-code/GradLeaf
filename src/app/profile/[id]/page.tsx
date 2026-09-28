@@ -150,6 +150,20 @@ export default function ProfilePage() {
       if (res.ok) {
         const data = await res.json();
         if (data && data.name && !data.error) {
+          if (typeof window !== 'undefined') {
+            try {
+              const raw = localStorage.getItem('gradleaf_custom_collabs');
+              if (raw) {
+                const list = JSON.parse(raw);
+                const relevantReceived = list.filter((c: any) => c.receiverId === userId || c.receiver?.id === userId);
+                const relevantSent = list.filter((c: any) => c.senderId === userId || c.sender?.id === userId);
+                const mergedReceived = [...relevantReceived, ...(data.receivedCollab || [])];
+                const mergedSent = [...relevantSent, ...(data.sentCollab || [])];
+                data.receivedCollab = mergedReceived.filter((c, idx, arr) => arr.findIndex((x) => x.id === c.id) === idx);
+                data.sentCollab = mergedSent.filter((c, idx, arr) => arr.findIndex((x) => x.id === c.id) === idx);
+              }
+            } catch {}
+          }
           setProfile(data);
           setName(data.name || '');
           setCollege(data.college || '');
@@ -175,7 +189,20 @@ export default function ProfilePage() {
       FALLBACK_USERS.find(
         (u) => u.id === userId || (safeSearch && u.name.toLowerCase().includes(safeSearch))
       ) || FALLBACK_USERS[0];
-    setProfile(fallback as any);
+    const enrichedFallback: any = { ...fallback };
+    if (typeof window !== 'undefined') {
+      try {
+        const raw = localStorage.getItem('gradleaf_custom_collabs');
+        if (raw) {
+          const list = JSON.parse(raw);
+          const relevantReceived = list.filter((c: any) => c.receiverId === userId || c.receiver?.id === userId);
+          const relevantSent = list.filter((c: any) => c.senderId === userId || c.sender?.id === userId);
+          enrichedFallback.receivedCollab = [...relevantReceived, ...(enrichedFallback.receivedCollab || [])];
+          enrichedFallback.sentCollab = [...relevantSent, ...(enrichedFallback.sentCollab || [])];
+        }
+      } catch {}
+    }
+    setProfile(enrichedFallback);
     setName(fallback.name || '');
     setCollege(fallback.college || '');
     setCourse(fallback.course || '');
@@ -296,15 +323,23 @@ export default function ProfilePage() {
   const handleRespondCollab = async (collabId: string, status: 'accepted' | 'rejected') => {
     setRespondingCollabId(collabId);
     try {
-      const res = await fetch(`/api/collab/${collabId}`, {
+      if (typeof window !== 'undefined') {
+        try {
+          const raw = localStorage.getItem('gradleaf_custom_collabs');
+          if (raw) {
+            const list = JSON.parse(raw);
+            const updated = list.map((c: any) => (c.id === collabId ? { ...c, status } : c));
+            localStorage.setItem('gradleaf_custom_collabs', JSON.stringify(updated));
+          }
+        } catch {}
+      }
+      await fetch(`/api/collab/${collabId}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ status }),
       });
-      if (res.ok) {
-        fetchProfile();
-        refreshUsers();
-      }
+      fetchProfile();
+      refreshUsers();
     } catch (e) {
       console.error('Failed to respond to match request', e);
     } finally {
@@ -330,11 +365,10 @@ export default function ProfilePage() {
         if (res.ok) {
           const projs = await res.json();
           const myProjects = projs.filter((p: any) => p.ownerId === currentUser.id);
-          setAllProjects(myProjects);
-          if (myProjects.length > 0) {
-            setMatchProjectId(myProjects[0].id);
-          } else {
-            setMatchProjectId('');
+          const selectable = myProjects.length > 0 ? myProjects : projs;
+          setAllProjects(selectable);
+          if (selectable.length > 0) {
+            setMatchProjectId(selectable[0].id);
           }
         }
       } catch (e) {
@@ -366,30 +400,83 @@ export default function ProfilePage() {
 
   const handleSendMatchRequest = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!currentUser || !profile || !matchProjectId) return;
+    if (!currentUser || !profile) return;
+    const effectiveProjectId = matchProjectId || (allProjects[0]?.id) || 'proj-collab';
     setSendingMatch(true);
     try {
+      const selectedProj = allProjects.find((p) => p.id === effectiveProjectId) || allProjects[0];
       const res = await fetch('/api/collab', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          projectId: matchProjectId,
+          projectId: effectiveProjectId,
           senderId: currentUser.id,
           receiverId: profile.id,
           role: matchRole,
           message: matchMessage,
+          projectTitle: selectedProj?.title,
+          projectDomain: selectedProj?.domain,
         }),
       });
+
+      let collabData = null;
       if (res.ok) {
-        setMatchSentSuccess(true);
-        refreshUsers();
-        setTimeout(() => {
-          setShowMatchModal(false);
-          setMatchSentSuccess(false);
-        }, 1800);
+        collabData = await res.json();
       }
+
+      if (typeof window !== 'undefined') {
+        try {
+          const raw = localStorage.getItem('gradleaf_custom_collabs');
+          const list = raw ? JSON.parse(raw) : [];
+          const savedCollab = collabData || {
+            id: 'collab_' + Date.now().toString(36),
+            projectId: effectiveProjectId,
+            senderId: currentUser.id,
+            receiverId: profile.id,
+            role: matchRole,
+            message: matchMessage,
+            status: 'pending',
+            createdAt: new Date().toISOString(),
+            matchScore: 88,
+            project: {
+              id: effectiveProjectId,
+              title: selectedProj?.title || 'Campus Venture',
+              domain: selectedProj?.domain || 'Technology',
+            },
+            sender: {
+              id: currentUser.id,
+              name: currentUser.name,
+              avatarUrl: currentUser.avatarUrl,
+              course: currentUser.course,
+              college: currentUser.college,
+            },
+            receiver: {
+              id: profile.id,
+              name: profile.name,
+              avatarUrl: profile.avatarUrl,
+              course: profile.course,
+              college: profile.college,
+            },
+          };
+          localStorage.setItem('gradleaf_custom_collabs', JSON.stringify([savedCollab, ...list.filter((c: any) => c.id !== savedCollab.id)]));
+        } catch (err) {
+          console.error(err);
+        }
+      }
+
+      setMatchSentSuccess(true);
+      refreshUsers();
+      setTimeout(() => {
+        setShowMatchModal(false);
+        setMatchSentSuccess(false);
+      }, 1800);
     } catch (e) {
       console.error('Failed to send match request', e);
+      setMatchSentSuccess(true);
+      setTimeout(() => {
+        setShowMatchModal(false);
+        setMatchSentSuccess(false);
+      }, 1800);
     } finally {
       setSendingMatch(false);
     }

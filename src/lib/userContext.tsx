@@ -130,13 +130,29 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({ children
         console.warn('Could not fetch server users, using fallback dataset', err);
       }
 
+      let customCollabs: any[] = [];
+      if (typeof window !== 'undefined') {
+        try {
+          const raw = localStorage.getItem('gradleaf_custom_collabs');
+          if (raw) customCollabs = JSON.parse(raw);
+        } catch {}
+      }
+
       const baseList = serverUsers.length > 0 ? serverUsers : FALLBACK_USERS;
       const activeServerUsers = baseList.filter((u: any) => !deletedIds.includes(u.id));
       const validCustomUsers = customUsers.filter(
         (cu: any) => !activeServerUsers.some((su: any) => su.id === cu.id) && !deletedIds.includes(cu.id)
       );
 
-      const mergedUsers = [...validCustomUsers, ...activeServerUsers];
+      const mergedUsers = [...validCustomUsers, ...activeServerUsers].map((u: any) => {
+        const myCollabs = customCollabs.filter((c: any) => c.receiverId === u.id || c.receiver?.id === u.id);
+        const existing = u.receivedCollab || [];
+        const combined = [...myCollabs, ...existing];
+        return {
+          ...u,
+          receivedCollab: combined.filter((c, idx, arr) => arr.findIndex((x) => x.id === c.id) === idx),
+        };
+      });
       const finalUsers = mergedUsers.length > 0 ? mergedUsers : [FALLBACK_USERS[0]];
       setAllUsers(finalUsers as any);
 

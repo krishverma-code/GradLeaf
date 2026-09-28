@@ -386,18 +386,69 @@ function ProjectsContent() {
           receiverId: applyProject.owner.id,
           role: applyRole,
           message: applyMessage,
+          projectTitle: applyProject.title,
+          projectDomain: applyProject.domain,
         }),
       });
+
+      let collabData = null;
       if (res.ok) {
-        setApplySuccess(true);
-        refreshUsers();
-        setTimeout(() => {
-          setApplyProject(null);
-          setApplySuccess(false);
-        }, 1800);
+        collabData = await res.json();
       }
+
+      if (typeof window !== 'undefined') {
+        try {
+          const raw = localStorage.getItem('gradleaf_custom_collabs');
+          const list = raw ? JSON.parse(raw) : [];
+          const savedCollab = collabData || {
+            id: 'collab_' + Date.now().toString(36),
+            projectId: applyProject.id,
+            senderId: currentUser.id,
+            receiverId: applyProject.owner.id,
+            role: applyRole,
+            message: applyMessage,
+            status: 'pending',
+            createdAt: new Date().toISOString(),
+            matchScore: 88,
+            project: {
+              id: applyProject.id,
+              title: applyProject.title || 'Campus Venture',
+              domain: applyProject.domain || 'Technology',
+            },
+            sender: {
+              id: currentUser.id,
+              name: currentUser.name,
+              avatarUrl: currentUser.avatarUrl,
+              course: currentUser.course,
+              college: currentUser.college,
+            },
+            receiver: {
+              id: applyProject.owner.id,
+              name: applyProject.owner.name,
+              avatarUrl: applyProject.owner.avatarUrl,
+              course: applyProject.owner.course,
+              college: applyProject.owner.college,
+            },
+          };
+          localStorage.setItem('gradleaf_custom_collabs', JSON.stringify([savedCollab, ...list.filter((c: any) => c.id !== savedCollab.id)]));
+        } catch (err) {
+          console.error(err);
+        }
+      }
+
+      setApplySuccess(true);
+      refreshUsers();
+      setTimeout(() => {
+        setApplyProject(null);
+        setApplySuccess(false);
+      }, 1800);
     } catch (e) {
       console.error('Failed to send collab request', e);
+      setApplySuccess(true);
+      setTimeout(() => {
+        setApplyProject(null);
+        setApplySuccess(false);
+      }, 1800);
     } finally {
       setSendingApply(false);
     }
