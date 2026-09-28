@@ -490,7 +490,7 @@ export const FALLBACK_USERS = [
       {
         "id": "cmujo6djz005grk9blt7x6s7s",
         "userId": "cmujo6dii000krk9bacss81nj",
-        "content": "🚀 Excited to announce our project: \"AI-Powered Campus Assistant\"! We are building an agentic assistant for university students that parses syllabi, tracks deadlines, and provides RAG course tutoring. Currently looking for a React frontend wizard and a Python/LangChain developer for the upcoming Hackathon. Check out our project page or drop a comment!",
+        "content": "Excited to announce our project: \"AI-Powered Campus Assistant\"! We are building an agentic assistant for university students that parses syllabi, tracks deadlines, and provides RAG course tutoring. Currently looking for a React frontend wizard and a Python/LangChain developer for the upcoming Hackathon. Check out our project page or drop a comment!",
         "tag": "Teammate Search",
         "mediaUrl": null,
         "createdAt": "2026-09-27T10:22:25.824Z",
@@ -779,7 +779,7 @@ export const FALLBACK_USERS = [
       {
         "id": "cmujo6dk0005irk9bcq69elxr",
         "userId": "cmujo6dik000lrk9b2530ugh1",
-        "content": "🎨 Just finished publishing the complete design system for student portfolios on GradLeaf. Focused on accessible contrast, micro-interactions, and fluid typography. Let me know your thoughts on the dark mode preview in the comments!",
+        "content": "Just finished publishing the complete design system for student portfolios on GradLeaf. Focused on accessible contrast, micro-interactions, and fluid typography. Let me know your thoughts on the dark mode preview in the comments!",
         "tag": "Project Milestone",
         "mediaUrl": null,
         "createdAt": "2026-09-27T10:22:25.824Z",
@@ -980,7 +980,7 @@ export const FALLBACK_USERS = [
       {
         "id": "cmujo6dk1005mrk9bg9wttta1",
         "userId": "cmujo6dil000mrk9bbw1daulp",
-        "content": "📊 Benchmarked our Go Raft consensus store against 100,000 write ops/second under 3-node cluster partitioning. Zero split-brain states and automatic leader re-election completed in under 180ms! Open-sourced on GitHub.",
+        "content": "Benchmarked our Go Raft consensus store against 100,000 write ops/second under 3-node cluster partitioning. Zero split-brain states and automatic leader re-election completed in under 180ms! Open-sourced on GitHub.",
         "tag": "Tech Resource",
         "mediaUrl": null,
         "createdAt": "2026-09-27T10:22:25.825Z",
@@ -1151,7 +1151,7 @@ export const FALLBACK_USERS = [
       {
         "id": "cmujo6dk0005krk9b6y4cwekn",
         "userId": "cmujo6dil000nrk9bit72pzfa",
-        "content": "⚡ Quick tip for students working with LangChain & Local LLMs: Always use semantic chunking over fixed-size character splits for academic papers. We saw retrieval precision jump from 64% to 89% on our benchmark dataset!",
+        "content": "Quick tip for students working with LangChain & Local LLMs: Always use semantic chunking over fixed-size character splits for academic papers. We saw retrieval precision jump from 64% to 89% on our benchmark dataset!",
         "tag": "Tech Resource",
         "mediaUrl": null,
         "createdAt": "2026-09-27T10:22:25.825Z",
@@ -1592,7 +1592,7 @@ export const FALLBACK_USERS = [
       {
         "id": "cmujo6dk2005qrk9bhw3qt3t6",
         "userId": "cmujo6din000qrk9bdn400yyu",
-        "content": "🚁 First successful outdoor quad test of our autonomous obstacle avoidance model! The drone mapped 4 buildings on campus in real-time with zero collisions. Looking for computer vision collaborators!",
+        "content": "First successful outdoor quad test of our autonomous obstacle avoidance model! The drone mapped 4 buildings on campus in real-time with zero collisions. Looking for computer vision collaborators!",
         "tag": "Showcase",
         "mediaUrl": null,
         "createdAt": "2026-09-27T10:22:25.826Z",
@@ -2014,7 +2014,7 @@ export const FALLBACK_USERS = [
       {
         "id": "cmujo6dk1005ork9bt218lwmt",
         "userId": "cmujo6dip000trk9b1jn3nl3a",
-        "content": "🏆 Looking for 2 engineers (1 Fullstack + 1 ML) to join our squad for the upcoming National Collegiate Hackathon! We are building an autonomous campus skill exchange. DM me or apply on our project page!",
+        "content": "Looking for 2 engineers (1 Fullstack + 1 ML) to join our squad for the upcoming National Collegiate Hackathon! We are building an autonomous campus skill exchange. DM me or apply on our project page!",
         "tag": "Hackathon Alert",
         "mediaUrl": null,
         "createdAt": "2026-09-27T10:22:25.826Z",
@@ -3256,7 +3256,7 @@ export const FALLBACK_POSTS = [
   {
     "id": "cmujo6dk1005ork9bt218lwmt",
     "userId": "cmujo6dip000trk9b1jn3nl3a",
-    "content": "🏆 Looking for 2 engineers (1 Fullstack + 1 ML) to join our squad for the upcoming National Collegiate Hackathon! We are building an autonomous campus skill exchange. DM me or apply on our project page!",
+    "content": "Looking for 2 engineers (1 Fullstack + 1 ML) to join our squad for the upcoming National Collegiate Hackathon! We are building an autonomous campus skill exchange. DM me or apply on our project page!",
     "tag": "Hackathon Alert",
     "mediaUrl": null,
     "createdAt": "2026-09-27T10:22:25.826Z",
@@ -3323,7 +3323,7 @@ export const FALLBACK_POSTS = [
   {
     "id": "cmujo6dk2005qrk9bhw3qt3t6",
     "userId": "cmujo6din000qrk9bdn400yyu",
-    "content": "🚁 First successful outdoor quad test of our autonomous obstacle avoidance model! The drone mapped 4 buildings on campus in real-time with zero collisions. Looking for computer vision collaborators!",
+    "content": "First successful outdoor quad test of our autonomous obstacle avoidance model! The drone mapped 4 buildings on campus in real-time with zero collisions. Looking for computer vision collaborators!",
     "tag": "Showcase",
     "mediaUrl": null,
     "createdAt": "2026-09-27T10:22:25.826Z",
@@ -3351,7 +3351,7 @@ export const FALLBACK_POSTS = [
   {
     "id": "cmujo6dk0005krk9b6y4cwekn",
     "userId": "cmujo6dil000nrk9bit72pzfa",
-    "content": "⚡ Quick tip for students working with LangChain & Local LLMs: Always use semantic chunking over fixed-size character splits for academic papers. We saw retrieval precision jump from 64% to 89% on our benchmark dataset!",
+    "content": "Quick tip for students working with LangChain & Local LLMs: Always use semantic chunking over fixed-size character splits for academic papers. We saw retrieval precision jump from 64% to 89% on our benchmark dataset!",
     "tag": "Tech Resource",
     "mediaUrl": null,
     "createdAt": "2026-09-27T10:22:25.825Z",
@@ -3386,7 +3386,7 @@ export const FALLBACK_POSTS = [
   {
     "id": "cmujo6dk1005mrk9bg9wttta1",
     "userId": "cmujo6dil000mrk9bbw1daulp",
-    "content": "📊 Benchmarked our Go Raft consensus store against 100,000 write ops/second under 3-node cluster partitioning. Zero split-brain states and automatic leader re-election completed in under 180ms! Open-sourced on GitHub.",
+    "content": "Benchmarked our Go Raft consensus store against 100,000 write ops/second under 3-node cluster partitioning. Zero split-brain states and automatic leader re-election completed in under 180ms! Open-sourced on GitHub.",
     "tag": "Tech Resource",
     "mediaUrl": null,
     "createdAt": "2026-09-27T10:22:25.825Z",
@@ -3447,7 +3447,7 @@ export const FALLBACK_POSTS = [
   {
     "id": "cmujo6djz005grk9blt7x6s7s",
     "userId": "cmujo6dii000krk9bacss81nj",
-    "content": "🚀 Excited to announce our project: \"AI-Powered Campus Assistant\"! We are building an agentic assistant for university students that parses syllabi, tracks deadlines, and provides RAG course tutoring. Currently looking for a React frontend wizard and a Python/LangChain developer for the upcoming Hackathon. Check out our project page or drop a comment!",
+    "content": "Excited to announce our project: \"AI-Powered Campus Assistant\"! We are building an agentic assistant for university students that parses syllabi, tracks deadlines, and provides RAG course tutoring. Currently looking for a React frontend wizard and a Python/LangChain developer for the upcoming Hackathon. Check out our project page or drop a comment!",
     "tag": "Teammate Search",
     "mediaUrl": null,
     "createdAt": "2026-09-27T10:22:25.824Z",
@@ -3545,7 +3545,7 @@ export const FALLBACK_POSTS = [
   {
     "id": "cmujo6dk0005irk9bcq69elxr",
     "userId": "cmujo6dik000lrk9b2530ugh1",
-    "content": "🎨 Just finished publishing the complete design system for student portfolios on GradLeaf. Focused on accessible contrast, micro-interactions, and fluid typography. Let me know your thoughts on the dark mode preview in the comments!",
+    "content": "Just finished publishing the complete design system for student portfolios on GradLeaf. Focused on accessible contrast, micro-interactions, and fluid typography. Let me know your thoughts on the dark mode preview in the comments!",
     "tag": "Project Milestone",
     "mediaUrl": null,
     "createdAt": "2026-09-27T10:22:25.824Z",

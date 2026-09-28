@@ -619,7 +619,7 @@ async function main() {
     data: {
       userId: alex.id,
       tag: 'Teammate Search',
-      content: '🚀 Excited to announce our project: "AI-Powered Campus Assistant"! We are building an agentic assistant for university students that parses syllabi, tracks deadlines, and provides RAG course tutoring. Currently looking for a React frontend wizard and a Python/LangChain developer for the upcoming Hackathon. Check out our project page or drop a comment!',
+      content: 'Excited to announce our project: "AI-Powered Campus Assistant"! We are building an agentic assistant for university students that parses syllabi, tracks deadlines, and provides RAG course tutoring. Currently looking for a React frontend wizard and a Python/LangChain developer for the upcoming Hackathon. Check out our project page or drop a comment!',
     },
   });
 
@@ -627,7 +627,7 @@ async function main() {
     data: {
       userId: priya.id,
       tag: 'Project Milestone',
-      content: '🎨 Just finished publishing the complete design system for student portfolios on GradLeaf. Focused on accessible contrast, micro-interactions, and fluid typography. Let me know your thoughts on the dark mode preview in the comments!',
+      content: 'Just finished publishing the complete design system for student portfolios on GradLeaf. Focused on accessible contrast, micro-interactions, and fluid typography. Let me know your thoughts on the dark mode preview in the comments!',
     },
   });
 
@@ -635,7 +635,7 @@ async function main() {
     data: {
       userId: elena.id,
       tag: 'Tech Resource',
-      content: '⚡ Quick tip for students working with LangChain & Local LLMs: Always use semantic chunking over fixed-size character splits for academic papers. We saw retrieval precision jump from 64% to 89% on our benchmark dataset!',
+      content: 'Quick tip for students working with LangChain & Local LLMs: Always use semantic chunking over fixed-size character splits for academic papers. We saw retrieval precision jump from 64% to 89% on our benchmark dataset!',
     },
   });
 
@@ -643,7 +643,7 @@ async function main() {
     data: {
       userId: marcus.id,
       tag: 'Tech Resource',
-      content: '📊 Benchmarked our Go Raft consensus store against 100,000 write ops/second under 3-node cluster partitioning. Zero split-brain states and automatic leader re-election completed in under 180ms! Open-sourced on GitHub.',
+      content: 'Benchmarked our Go Raft consensus store against 100,000 write ops/second under 3-node cluster partitioning. Zero split-brain states and automatic leader re-election completed in under 180ms! Open-sourced on GitHub.',
     },
   });
 
@@ -651,7 +651,7 @@ async function main() {
     data: {
       userId: ananya.id,
       tag: 'Hackathon Alert',
-      content: '🏆 Looking for 2 engineers (1 Fullstack + 1 ML) to join our squad for the upcoming National Collegiate Hackathon! We are building an autonomous campus skill exchange. DM me or apply on our project page!',
+      content: 'Looking for 2 engineers (1 Fullstack + 1 ML) to join our squad for the upcoming National Collegiate Hackathon! We are building an autonomous campus skill exchange. DM me or apply on our project page!',
     },
   });
 
@@ -659,7 +659,7 @@ async function main() {
     data: {
       userId: david.id,
       tag: 'Showcase',
-      content: '🚁 First successful outdoor quad test of our autonomous obstacle avoidance model! The drone mapped 4 buildings on campus in real-time with zero collisions. Looking for computer vision collaborators!',
+      content: 'First successful outdoor quad test of our autonomous obstacle avoidance model! The drone mapped 4 buildings on campus in real-time with zero collisions. Looking for computer vision collaborators!',
     },
   });
 

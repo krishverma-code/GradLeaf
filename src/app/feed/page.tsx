@@ -42,6 +42,15 @@ interface PostType {
 
 import { FALLBACK_POSTS } from '@/lib/fallbackData';
 
+const cleanPostText = (text: string): string => {
+  if (!text) return '';
+  try {
+    return text.replace(new RegExp('\\p{Extended_Pictographic}', 'gu'), '').replace(/^\s+/, '').trim();
+  } catch {
+    return text.trim();
+  }
+};
+
 export default function FeedPage() {
   const { currentUser } = useUser();
   const [posts, setPosts] = useState<PostType[]>(FALLBACK_POSTS as any);
@@ -337,7 +346,7 @@ export default function FeedPage() {
 
                   {/* Content */}
                   <div className="mt-3.5 text-xs text-slate-800 leading-relaxed whitespace-pre-line font-medium">
-                    {post.content}
+                    {cleanPostText(post.content)}
                   </div>
 
                   {/* Post Actions */}
@@ -386,7 +395,7 @@ export default function FeedPage() {
                           />
                           <div className="flex-1">
                             <span className="font-bold text-slate-900">{c.user.name}</span>
-                            <p className="text-slate-700 mt-0.5 leading-relaxed">{c.content}</p>
+                            <p className="text-slate-700 mt-0.5 leading-relaxed">{cleanPostText(c.content)}</p>
                           </div>
                         </div>
                       ))}
