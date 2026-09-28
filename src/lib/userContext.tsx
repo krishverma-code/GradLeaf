@@ -45,6 +45,8 @@ export interface StudentUser {
     project: { id: string; title: string; domain: string };
     sender: { id: string; name: string; avatarUrl: string | null; course: string; college: string };
   }[];
+  projectMembers?: { id?: string; role?: string; project: any }[];
+  ownedProjects?: any[];
 }
 
 export interface CreateProfileInput {

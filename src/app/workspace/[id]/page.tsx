@@ -83,16 +83,48 @@ export default function WorkspacePage() {
     if (!currentUser) return;
     const fetchUserWorkspaces = async () => {
       try {
-        const res = await fetch('/api/projects');
-        if (res.ok) {
-          const allProjects = await res.json();
-          const mine = allProjects.filter(
-            (p: any) =>
-              p.ownerId === currentUser.id ||
-              p.members?.some((m: any) => m.userId === currentUser.id || m.user?.id === currentUser.id)
-          );
-          if (mine.length > 0) setUserWorkspaces(mine);
+        let customProjects: any[] = [];
+        let customCollabs: any[] = [];
+        if (typeof window !== 'undefined') {
+          try {
+            const rawP = localStorage.getItem('gradleaf_custom_projects');
+            if (rawP) customProjects = JSON.parse(rawP);
+            const rawC = localStorage.getItem('gradleaf_custom_collabs');
+            if (rawC) customCollabs = JSON.parse(rawC);
+          } catch {}
         }
+
+        const res = await fetch('/api/projects');
+        let serverProjects: any[] = [];
+        if (res.ok) {
+          const projs = await res.json();
+          if (Array.isArray(projs)) serverProjects = projs;
+        }
+
+        const allProjects = [
+          ...customProjects,
+          ...serverProjects.filter((sp) => !customProjects.some((cp) => cp.id === sp.id)),
+        ];
+
+        const acceptedProjIds = customCollabs
+          .filter(
+            (c: any) =>
+              c.status === 'accepted' &&
+              (c.receiverId === currentUser.id || c.senderId === currentUser.id)
+          )
+          .map((c: any) => c.projectId || c.project?.id);
+
+        const mine = allProjects.filter(
+          (p: any) =>
+            p.ownerId === currentUser.id ||
+            p.members?.some(
+              (m: any) => m.userId === currentUser.id || m.user?.id === currentUser.id
+            ) ||
+            acceptedProjIds.includes(p.id)
+        );
+
+        const finalWorkspaces = mine.length > 0 ? mine : allProjects;
+        if (finalWorkspaces.length > 0) setUserWorkspaces(finalWorkspaces);
       } catch (e) {
         console.error(e);
       }
@@ -103,16 +135,34 @@ export default function WorkspacePage() {
   // 2. Fetch project details
   const fetchProject = async () => {
     try {
+      let customTasks: any[] = [];
+      if (typeof window !== 'undefined') {
+        try {
+          const raw = localStorage.getItem('gradleaf_custom_tasks');
+          if (raw) customTasks = JSON.parse(raw);
+        } catch {}
+      }
+
       const res = await fetch(`/api/projects/${projectId}`);
+      let projectData: any = null;
       if (res.ok) {
-        const data = await res.json();
-        setProject(data);
-        if (data.members && data.members.length > 0 && !taskAssignee) {
-          setTaskAssignee(data.members[0].user?.name || data.owner?.name);
-        }
+        projectData = await res.json();
       } else {
-        const fallback = FALLBACK_PROJECTS.find((p) => p.id === projectId) || FALLBACK_PROJECTS[0];
-        setProject(fallback as any);
+        projectData = FALLBACK_PROJECTS.find((p) => p.id === projectId) || FALLBACK_PROJECTS[0];
+      }
+
+      if (projectData) {
+        const matchingCustomTasks = customTasks.filter((t: any) => t.projectId === projectId);
+        const existingTasks = projectData.tasks || [];
+        const taskMap = new Map();
+        existingTasks.forEach((t: any) => taskMap.set(t.id, t));
+        matchingCustomTasks.forEach((t: any) => taskMap.set(t.id, { ...taskMap.get(t.id), ...t }));
+        projectData.tasks = Array.from(taskMap.values());
+
+        setProject(projectData);
+        if (projectData.members && projectData.members.length > 0 && !taskAssignee) {
+          setTaskAssignee(projectData.members[0].user?.name || projectData.owner?.name);
+        }
       }
     } catch (e) {
       console.error(e);
@@ -129,11 +179,24 @@ export default function WorkspacePage() {
 
   const handleUpdateTaskStatus = async (taskId: string, newStatus: 'todo' | 'in_progress' | 'done') => {
     if (!project) return;
-    // Optimistic update
     setProject({
       ...project,
       tasks: project.tasks.map((t) => (t.id === taskId ? { ...t, status: newStatus } : t)),
     });
+
+    if (typeof window !== 'undefined') {
+      try {
+        const raw = localStorage.getItem('gradleaf_custom_tasks');
+        const list = raw ? JSON.parse(raw) : [];
+        const existingIndex = list.findIndex((t: any) => t.id === taskId);
+        if (existingIndex >= 0) {
+          list[existingIndex].status = newStatus;
+        } else {
+          list.push({ id: taskId, projectId, status: newStatus });
+        }
+        localStorage.setItem('gradleaf_custom_tasks', JSON.stringify(list));
+      } catch {}
+    }
 
     try {
       await fetch(`/api/tasks/${taskId}`, {
@@ -143,17 +206,25 @@ export default function WorkspacePage() {
       });
     } catch (e) {
       console.error(e);
-      fetchProject();
     }
   };
 
   const handleDeleteTask = async (taskId: string) => {
     if (!project) return;
-    // Optimistic deletion
     setProject({
       ...project,
       tasks: project.tasks.filter((t) => t.id !== taskId),
     });
+
+    if (typeof window !== 'undefined') {
+      try {
+        const raw = localStorage.getItem('gradleaf_custom_tasks');
+        if (raw) {
+          const list = JSON.parse(raw);
+          localStorage.setItem('gradleaf_custom_tasks', JSON.stringify(list.filter((t: any) => t.id !== taskId)));
+        }
+      } catch {}
+    }
 
     try {
       await fetch(`/api/tasks/${taskId}`, {
@@ -161,7 +232,6 @@ export default function WorkspacePage() {
       });
     } catch (e) {
       console.error('Failed to delete task', e);
-      fetchProject();
     }
   };
 
@@ -169,11 +239,20 @@ export default function WorkspacePage() {
     if (!project || doneTasks.length === 0) return;
     const taskIdsToDelete = doneTasks.map((t) => t.id);
 
-    // Optimistic deletion
     setProject({
       ...project,
       tasks: project.tasks.filter((t) => t.status !== 'done'),
     });
+
+    if (typeof window !== 'undefined') {
+      try {
+        const raw = localStorage.getItem('gradleaf_custom_tasks');
+        if (raw) {
+          const list = JSON.parse(raw);
+          localStorage.setItem('gradleaf_custom_tasks', JSON.stringify(list.filter((t: any) => !taskIdsToDelete.includes(t.id))));
+        }
+      } catch {}
+    }
 
     try {
       await Promise.all(
@@ -185,37 +264,59 @@ export default function WorkspacePage() {
       );
     } catch (e) {
       console.error('Failed to clear done tasks', e);
-      fetchProject();
     }
   };
 
   const handleCreateTask = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!taskTitle.trim() || !projectId) return;
+    if (!taskTitle.trim() || !projectId || !project) return;
     setCreatingTask(true);
+
+    const newTaskObj: TaskType = {
+      id: 'tsk_' + Date.now().toString(36),
+      title: taskTitle.trim(),
+      description: taskDesc.trim() || null,
+      priority: taskPriority,
+      assigneeName: taskAssignee || currentUser?.name || 'Teammate',
+      status: 'todo',
+    };
+
+    setProject({
+      ...project,
+      tasks: [...project.tasks, newTaskObj],
+    });
+
+    if (typeof window !== 'undefined') {
+      try {
+        const raw = localStorage.getItem('gradleaf_custom_tasks');
+        const list = raw ? JSON.parse(raw) : [];
+        localStorage.setItem(
+          'gradleaf_custom_tasks',
+          JSON.stringify([...list, { ...newTaskObj, projectId }])
+        );
+      } catch {}
+    }
+
+    setTaskTitle('');
+    setTaskDesc('');
+    setShowNewTaskModal(false);
+    setCreatingTask(false);
+
     try {
-      const res = await fetch('/api/tasks', {
+      await fetch('/api/tasks', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           projectId,
-          title: taskTitle,
-          description: taskDesc,
-          priority: taskPriority,
-          assigneeName: taskAssignee || currentUser?.name,
+          title: newTaskObj.title,
+          description: newTaskObj.description,
+          priority: newTaskObj.priority,
+          assigneeName: newTaskObj.assigneeName,
           status: 'todo',
         }),
       });
-      if (res.ok) {
-        setTaskTitle('');
-        setTaskDesc('');
-        setShowNewTaskModal(false);
-        fetchProject();
-      }
     } catch (e) {
       console.error(e);
-    } finally {
-      setCreatingTask(false);
     }
   };
 

@@ -63,13 +63,41 @@ export default function FeedPage() {
 
   const fetchPosts = async () => {
     try {
+      let customPosts: PostType[] = [];
+      let customComments: { postId: string; comment: any }[] = [];
+      if (typeof window !== 'undefined') {
+        try {
+          const storedP = localStorage.getItem('gradleaf_custom_posts');
+          if (storedP) customPosts = JSON.parse(storedP);
+          const storedC = localStorage.getItem('gradleaf_custom_comments');
+          if (storedC) customComments = JSON.parse(storedC);
+        } catch {}
+      }
+
+      let serverPosts: PostType[] = [];
       const res = await fetch('/api/posts');
       if (res.ok) {
         const data = await res.json();
         if (Array.isArray(data) && data.length > 0) {
-          setPosts(data);
+          serverPosts = data;
         }
       }
+
+      const base = serverPosts.length > 0 ? serverPosts : (FALLBACK_POSTS as any);
+      const merged = [...customPosts, ...base.filter((bp: any) => !customPosts.some((cp) => cp.id === bp.id))];
+
+      const finalPosts = merged.map((p: any) => {
+        const matchingComments = customComments.filter((c) => c.postId === p.id).map((c) => c.comment);
+        const existing = p.comments || [];
+        const combined = [...existing, ...matchingComments];
+        const uniqueComments = combined.filter((c, idx, arr) => arr.findIndex((x) => x.id === c.id) === idx);
+        return {
+          ...p,
+          comments: uniqueComments,
+        };
+      });
+
+      setPosts(finalPosts);
     } catch (e) {
       console.error('Failed to load posts, keeping fallback dataset', e);
     } finally {
@@ -84,21 +112,48 @@ export default function FeedPage() {
   const handleCreatePost = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!newContent.trim() || !currentUser) return;
+    const postBody = newContent.trim();
+    setNewContent('');
     setPosting(true);
+
+    const newPostObj: PostType = {
+      id: 'post_' + Date.now().toString(36),
+      content: postBody,
+      tag: selectedTag,
+      createdAt: new Date().toISOString(),
+      user: {
+        id: currentUser.id,
+        name: currentUser.name,
+        college: currentUser.college,
+        course: currentUser.course,
+        avatarUrl: currentUser.avatarUrl,
+      },
+      likes: [],
+      comments: [],
+    };
+
+    setPosts((prev) => [newPostObj, ...prev]);
+
+    if (typeof window !== 'undefined') {
+      try {
+        const stored = localStorage.getItem('gradleaf_custom_posts');
+        const list = stored ? JSON.parse(stored) : [];
+        localStorage.setItem('gradleaf_custom_posts', JSON.stringify([newPostObj, ...list]));
+      } catch (err) {
+        console.error(err);
+      }
+    }
+
     try {
-      const res = await fetch('/api/posts', {
+      await fetch('/api/posts', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           userId: currentUser.id,
-          content: newContent,
+          content: postBody,
           tag: selectedTag,
         }),
       });
-      if (res.ok) {
-        setNewContent('');
-        fetchPosts();
-      }
     } catch (e) {
       console.error(e);
     } finally {
@@ -138,19 +193,51 @@ export default function FeedPage() {
 
   const handleAddComment = async (postId: string) => {
     if (!commentText.trim() || !currentUser) return;
+    const currentComment = commentText.trim();
+    setCommentText('');
+
+    const newCommentObj = {
+      id: 'comm_' + Date.now().toString(36),
+      content: currentComment,
+      createdAt: new Date().toISOString(),
+      user: {
+        id: currentUser.id,
+        name: currentUser.name,
+        avatarUrl: currentUser.avatarUrl,
+      },
+    };
+
+    setPosts((prev) =>
+      prev.map((p) =>
+        p.id === postId
+          ? {
+              ...p,
+              comments: [...p.comments, newCommentObj],
+            }
+          : p
+      )
+    );
+
+    if (typeof window !== 'undefined') {
+      try {
+        const stored = localStorage.getItem('gradleaf_custom_comments');
+        const list = stored ? JSON.parse(stored) : [];
+        localStorage.setItem(
+          'gradleaf_custom_comments',
+          JSON.stringify([...list, { postId, comment: newCommentObj }])
+        );
+      } catch (e) {}
+    }
+
     try {
-      const res = await fetch(`/api/posts/${postId}/comments`, {
+      await fetch(`/api/posts/${postId}/comments`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           userId: currentUser.id,
-          content: commentText,
+          content: currentComment,
         }),
       });
-      if (res.ok) {
-        setCommentText('');
-        fetchPosts();
-      }
     } catch (e) {
       console.error(e);
     }

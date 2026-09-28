@@ -201,13 +201,26 @@ function ProjectsContent() {
 
   const fetchProjects = async () => {
     try {
+      let customProjects: ProjectType[] = [];
+      if (typeof window !== 'undefined') {
+        try {
+          const raw = localStorage.getItem('gradleaf_custom_projects');
+          if (raw) customProjects = JSON.parse(raw);
+        } catch {}
+      }
+
+      let serverProjects: ProjectType[] = [];
       const res = await fetch('/api/projects');
       if (res.ok) {
         const data = await res.json();
         if (Array.isArray(data) && data.length > 0) {
-          setProjects(data);
+          serverProjects = data;
         }
       }
+
+      const base = serverProjects.length > 0 ? serverProjects : (FALLBACK_PROJECTS as any);
+      const merged = [...customProjects, ...base.filter((bp: any) => !customProjects.some((cp) => cp.id === bp.id))];
+      setProjects(merged);
     } catch (e) {
       console.error('Failed to load projects, keeping fallback dataset', e);
     } finally {
@@ -324,16 +337,76 @@ function ProjectsContent() {
         }),
       });
 
+      let createdProject: any = null;
       if (res.ok) {
-        setShowCreateModal(false);
-        setNewTitle('');
-        setNewTagline('');
-        setNewDescription('');
-        setNewImageUrl('');
-        setNewDemoUrl('');
-        setNewRepoUrl('');
-        fetchProjects();
+        createdProject = await res.json();
       }
+
+      if (!createdProject || !createdProject.id) {
+        const synthId = 'proj_' + Date.now().toString(36);
+        createdProject = {
+          id: synthId,
+          title: newTitle.trim(),
+          tagline: newTagline.trim(),
+          description: newDescription.trim(),
+          domain: newDomain,
+          imageUrl:
+            newImageUrl.trim() ||
+            'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80',
+          demoUrl: newDemoUrl.trim() || null,
+          repoUrl: newRepoUrl.trim() || null,
+          status: newStatus,
+          deadline: newDeadline || null,
+          ownerId: currentUser.id,
+          createdAt: new Date().toISOString(),
+          owner: {
+            id: currentUser.id,
+            name: currentUser.name,
+            avatarUrl: currentUser.avatarUrl,
+            college: currentUser.college,
+          },
+          skills: roles.map((r, idx) => ({
+            id: 'psk_' + idx + '_' + synthId,
+            role: r.roleTitle,
+            priority: (r as any).priority || 'required',
+            skill: { id: 'sk_' + idx, name: r.skillName, category: r.category || 'General' },
+          })),
+          members: [
+            {
+              id: 'pm_' + synthId,
+              role: 'Project Lead',
+              user: {
+                id: currentUser.id,
+                name: currentUser.name,
+                avatarUrl: currentUser.avatarUrl,
+                course: currentUser.course,
+              },
+            },
+          ],
+          tasks: [],
+        };
+      }
+
+      if (typeof window !== 'undefined') {
+        try {
+          const raw = localStorage.getItem('gradleaf_custom_projects');
+          const list = raw ? JSON.parse(raw) : [];
+          localStorage.setItem(
+            'gradleaf_custom_projects',
+            JSON.stringify([createdProject, ...list.filter((p: any) => p.id !== createdProject.id)])
+          );
+        } catch {}
+      }
+
+      setProjects((prev) => [createdProject, ...prev.filter((p) => p.id !== createdProject.id)]);
+      setShowCreateModal(false);
+      setNewTitle('');
+      setNewTagline('');
+      setNewDescription('');
+      setNewImageUrl('');
+      setNewDemoUrl('');
+      setNewRepoUrl('');
+      setRoles([]);
     } catch (e) {
       console.error(e);
     } finally {

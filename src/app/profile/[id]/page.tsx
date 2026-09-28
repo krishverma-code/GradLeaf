@@ -322,6 +322,33 @@ export default function ProfilePage() {
 
   const handleRespondCollab = async (collabId: string, status: 'accepted' | 'rejected') => {
     setRespondingCollabId(collabId);
+
+    // Immediate optimistic update so Contributing Projects updates instantly
+    setProfile((prev: any) => {
+      if (!prev) return prev;
+      const targetReq = (prev.receivedCollab || []).find((c: any) => c.id === collabId);
+      const updatedReceived = (prev.receivedCollab || []).map((c: any) =>
+        c.id === collabId ? { ...c, status } : c
+      );
+
+      let newMembers = [...(prev.projectMembers || [])];
+      if (status === 'accepted' && targetReq?.project) {
+        if (!newMembers.some((m: any) => m.project?.id === targetReq.project.id)) {
+          newMembers.push({
+            id: 'member_' + collabId,
+            role: targetReq.role || 'Contributor',
+            project: targetReq.project,
+          });
+        }
+      }
+
+      return {
+        ...prev,
+        receivedCollab: updatedReceived,
+        projectMembers: newMembers,
+      };
+    });
+
     try {
       if (typeof window !== 'undefined') {
         try {
@@ -970,8 +997,48 @@ export default function ProfilePage() {
 
         {(() => {
           const ownedProjects = profile.ownedProjects || [];
-          const contributingProjects = (profile.projectMembers || []).filter(
+          const directMembers = (profile.projectMembers || []).filter(
             (pm: any) => pm.project && !ownedProjects.some((op: any) => op.id === pm.project.id)
+          );
+
+          // Also include any accepted collaboration requests (received or sent)
+          const acceptedCollabs = [
+            ...(profile.receivedCollab || []).filter((c: any) => c.status === 'accepted' && c.project),
+            ...(profile.sentCollab || []).filter((c: any) => c.status === 'accepted' && c.project),
+          ]
+            .filter((c: any) => !ownedProjects.some((op: any) => op.id === c.project.id))
+            .map((c: any) => ({
+              id: 'collab_member_' + c.id,
+              role: c.role || 'Contributor',
+              project: c.project,
+            }));
+
+          let customAccepted: any[] = [];
+          if (typeof window !== 'undefined') {
+            try {
+              const raw = localStorage.getItem('gradleaf_custom_collabs');
+              if (raw) {
+                const list = JSON.parse(raw);
+                customAccepted = list
+                  .filter(
+                    (c: any) =>
+                      c.status === 'accepted' &&
+                      c.project &&
+                      (c.receiverId === profile.id || c.senderId === profile.id) &&
+                      !ownedProjects.some((op: any) => op.id === c.project.id)
+                  )
+                  .map((c: any) => ({
+                    id: 'custom_member_' + c.id,
+                    role: c.role || 'Contributor',
+                    project: c.project,
+                  }));
+              }
+            } catch {}
+          }
+
+          const rawContributing = [...directMembers, ...acceptedCollabs, ...customAccepted];
+          const contributingProjects = rawContributing.filter(
+            (pm, idx, arr) => arr.findIndex((x) => x.project?.id === pm.project?.id) === idx
           );
 
           return (
