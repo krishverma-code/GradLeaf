@@ -56,7 +56,7 @@ function MatchingPageContent() {
   const paramProjectId = searchParams.get('projectId');
   const paramCandidateId = searchParams.get('candidateId');
 
-  const { currentUser, allUsers } = useUser();
+  const { currentUser, allUsers, refreshUsers, addNotification } = useUser();
   const [projects, setProjects] = useState<ProjectOption[]>(FALLBACK_PROJECTS as any);
   const [selectedProjectId, setSelectedProjectId] = useState<string>('');
   const [focusedCandidateId, setFocusedCandidateId] = useState<string | null>(null);
@@ -230,13 +230,29 @@ function MatchingPageContent() {
         }
       }
 
+      addNotification({
+        userId: inviteCandidate.userId,
+        title: 'New Team Invitation',
+        message: `${currentUser.name} invited you to join "${projectData?.title || 'a project'}" as ${inviteRole}.`,
+        link: `/profile/${inviteCandidate.userId}`,
+        type: 'invitation',
+      });
+
       setInviteSentSuccess(true);
+      refreshUsers();
       setTimeout(() => {
         setInviteCandidate(null);
         setInviteSentSuccess(false);
       }, 1800);
     } catch (e) {
       console.error(e);
+      addNotification({
+        userId: inviteCandidate.userId,
+        title: 'New Team Invitation',
+        message: `${currentUser.name} invited you to join as ${inviteRole}.`,
+        link: `/profile/${inviteCandidate.userId}`,
+        type: 'invitation',
+      });
       setInviteSentSuccess(true);
       setTimeout(() => {
         setInviteCandidate(null);

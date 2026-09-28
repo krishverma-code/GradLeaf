@@ -62,7 +62,7 @@ export default function WorkspacePage() {
   const router = useRouter();
   const params = useParams();
   const projectId = params?.id as string;
-  const { currentUser } = useUser();
+  const { currentUser, addNotification } = useUser();
   const initialProject =
     (projectId ? FALLBACK_PROJECTS.find((p) => p.id === projectId) : null) ||
     FALLBACK_PROJECTS[0];
@@ -158,6 +158,29 @@ export default function WorkspacePage() {
         existingTasks.forEach((t: any) => taskMap.set(t.id, t));
         matchingCustomTasks.forEach((t: any) => taskMap.set(t.id, { ...taskMap.get(t.id), ...t }));
         projectData.tasks = Array.from(taskMap.values());
+
+        // Merge custom team members
+        let customMembers: any[] = [];
+        if (typeof window !== 'undefined') {
+          try {
+            const rawMems = localStorage.getItem('gradleaf_custom_memberships');
+            if (rawMems) {
+              const list = JSON.parse(rawMems);
+              customMembers = list
+                .filter((m: any) => m.projectId === projectId || m.project?.id === projectId)
+                .map((m: any) => ({
+                  id: m.id || 'mem_' + m.userId,
+                  role: m.role || 'Contributor',
+                  user: m.user || { id: m.userId, name: 'Contributor', avatarUrl: null, course: 'Student' },
+                }));
+            }
+          } catch {}
+        }
+        const existingMembers = projectData.members || [];
+        const rawMergedMembers = [...existingMembers, ...customMembers];
+        projectData.members = rawMergedMembers.filter(
+          (m, idx, arr) => arr.findIndex((x) => (x.user?.id || x.userId) === (m.user?.id || m.userId)) === idx
+        );
 
         setProject(projectData);
         if (projectData.members && projectData.members.length > 0 && !taskAssignee) {
@@ -302,6 +325,16 @@ export default function WorkspacePage() {
     setShowNewTaskModal(false);
     setCreatingTask(false);
 
+    if (addNotification && project && project.ownerId !== currentUser?.id) {
+      addNotification({
+        userId: project.ownerId,
+        title: 'New Workspace Task Created',
+        message: `${currentUser?.name || 'A teammate'} created "${newTaskObj.title}" in ${project.title}.`,
+        link: `/workspace/${projectId}`,
+        type: 'task',
+      });
+    }
+
     try {
       await fetch('/api/tasks', {
         method: 'POST',
@@ -348,7 +381,37 @@ export default function WorkspacePage() {
       (project.ownerId === currentUser.id ||
         project.members?.some(
           (m: any) => m.userId === currentUser.id || m.user?.id === currentUser.id
-        ))
+        ) ||
+        currentUser.projectMembers?.some(
+          (pm: any) => pm.project?.id === project.id || pm.projectId === project.id
+        ) ||
+        (typeof window !== 'undefined' &&
+          (() => {
+            try {
+              const mems = JSON.parse(localStorage.getItem('gradleaf_custom_memberships') || '[]');
+              if (
+                mems.some(
+                  (m: any) =>
+                    m.userId === currentUser.id &&
+                    (m.projectId === project.id || m.project?.id === project.id)
+                )
+              ) {
+                return true;
+              }
+              const collabs = JSON.parse(localStorage.getItem('gradleaf_custom_collabs') || '[]');
+              if (
+                collabs.some(
+                  (c: any) =>
+                    (c.receiverId === currentUser.id || c.senderId === currentUser.id) &&
+                    (c.projectId === project.id || c.project?.id === project.id) &&
+                    c.status === 'accepted'
+                )
+              ) {
+                return true;
+              }
+            } catch {}
+            return false;
+          })()))
   );
 
   if (currentUser && !isMemberOrOwner) {

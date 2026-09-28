@@ -96,7 +96,7 @@ export default function ProfilePage() {
   const router = useRouter();
   const params = useParams();
   const userId = params?.id as string;
-  const { currentUser, refreshUsers, removeProfile } = useUser();
+  const { currentUser, refreshUsers, removeProfile, addNotification } = useUser();
   const searchId = (userId || '').toLowerCase();
   const initialStudent =
     (searchId ? FALLBACK_USERS.find((u) => u.id === userId || u.name.toLowerCase().includes(searchId)) : null) ||
@@ -146,24 +146,67 @@ export default function ProfilePage() {
 
   const fetchProfile = async () => {
     try {
+      let customCollabs: any[] = [];
+      let collabStatuses: Record<string, string> = {};
+      let customMemberships: any[] = [];
+      let customProjects: any[] = [];
+      let customUsers: any[] = [];
+
+      if (typeof window !== 'undefined') {
+        try {
+          const rawCollabs = localStorage.getItem('gradleaf_custom_collabs');
+          if (rawCollabs) customCollabs = JSON.parse(rawCollabs);
+          const rawStatuses = localStorage.getItem('gradleaf_collab_statuses');
+          if (rawStatuses) collabStatuses = JSON.parse(rawStatuses);
+          const rawMems = localStorage.getItem('gradleaf_custom_memberships');
+          if (rawMems) customMemberships = JSON.parse(rawMems);
+          const rawProjs = localStorage.getItem('gradleaf_custom_projects');
+          if (rawProjs) customProjects = JSON.parse(rawProjs);
+          const rawUsers = localStorage.getItem('gradleaf_custom_users');
+          if (rawUsers) customUsers = JSON.parse(rawUsers);
+        } catch {}
+      }
+
       const res = await fetch(`/api/users/${userId}`);
       if (res.ok) {
         const data = await res.json();
         if (data && data.name && !data.error) {
-          if (typeof window !== 'undefined') {
-            try {
-              const raw = localStorage.getItem('gradleaf_custom_collabs');
-              if (raw) {
-                const list = JSON.parse(raw);
-                const relevantReceived = list.filter((c: any) => c.receiverId === userId || c.receiver?.id === userId);
-                const relevantSent = list.filter((c: any) => c.senderId === userId || c.sender?.id === userId);
-                const mergedReceived = [...relevantReceived, ...(data.receivedCollab || [])];
-                const mergedSent = [...relevantSent, ...(data.sentCollab || [])];
-                data.receivedCollab = mergedReceived.filter((c, idx, arr) => arr.findIndex((x) => x.id === c.id) === idx);
-                data.sentCollab = mergedSent.filter((c, idx, arr) => arr.findIndex((x) => x.id === c.id) === idx);
-              }
-            } catch {}
-          }
+          // Merge custom collabs & apply saved statuses
+          const relevantReceived = customCollabs.filter((c: any) => c.receiverId === userId || c.receiver?.id === userId);
+          const relevantSent = customCollabs.filter((c: any) => c.senderId === userId || c.sender?.id === userId);
+          const mergedReceived = [...relevantReceived, ...(data.receivedCollab || [])].map((c: any) => ({
+            ...c,
+            status: collabStatuses[c.id] || c.status || 'pending',
+          }));
+          const mergedSent = [...relevantSent, ...(data.sentCollab || [])].map((c: any) => ({
+            ...c,
+            status: collabStatuses[c.id] || c.status || 'pending',
+          }));
+
+          data.receivedCollab = mergedReceived.filter((c, idx, arr) => arr.findIndex((x) => x.id === c.id) === idx);
+          data.sentCollab = mergedSent.filter((c, idx, arr) => arr.findIndex((x) => x.id === c.id) === idx);
+
+          // Merge memberships & accepted collabs into projectMembers
+          const userCustomMems = customMemberships.filter((m: any) => m.userId === userId);
+          const acceptedCollabMems = [...data.receivedCollab, ...data.sentCollab]
+            .filter((c: any) => c.status === 'accepted' && c.project)
+            .map((c: any) => ({
+              id: 'mem_collab_' + c.id,
+              role: c.role || 'Contributor',
+              project: c.project,
+            }));
+          const rawMembers = [...(data.projectMembers || []), ...userCustomMems, ...acceptedCollabMems];
+          data.projectMembers = rawMembers.filter(
+            (m, idx, arr) => arr.findIndex((x) => x.project?.id === m.project?.id) === idx
+          );
+
+          // Merge owned custom projects
+          const userCustomProjs = customProjects.filter((p: any) => p.ownerId === userId);
+          const rawOwned = [...(data.ownedProjects || []), ...userCustomProjs];
+          data.ownedProjects = rawOwned.filter(
+            (p, idx, arr) => arr.findIndex((x) => x.id === p.id) === idx
+          );
+
           setProfile(data);
           setName(data.name || '');
           setCollege(data.college || '');
@@ -183,25 +226,71 @@ export default function ProfilePage() {
       setLoading(false);
     }
 
-    // Always fall back to valid student if API returns non-profile or errors
-    const safeSearch = (userId || '').toLowerCase();
-    const fallback =
-      FALLBACK_USERS.find(
-        (u) => u.id === userId || (safeSearch && u.name.toLowerCase().includes(safeSearch))
-      ) || FALLBACK_USERS[0];
-    const enrichedFallback: any = { ...fallback };
+    // Always fall back cleanly if API returns non-profile or errors
+    let customCollabsFallback: any[] = [];
+    let collabStatusesFallback: Record<string, string> = {};
+    let customMembershipsFallback: any[] = [];
+    let customProjectsFallback: any[] = [];
+    let customUsersFallback: any[] = [];
+
     if (typeof window !== 'undefined') {
       try {
-        const raw = localStorage.getItem('gradleaf_custom_collabs');
-        if (raw) {
-          const list = JSON.parse(raw);
-          const relevantReceived = list.filter((c: any) => c.receiverId === userId || c.receiver?.id === userId);
-          const relevantSent = list.filter((c: any) => c.senderId === userId || c.sender?.id === userId);
-          enrichedFallback.receivedCollab = [...relevantReceived, ...(enrichedFallback.receivedCollab || [])];
-          enrichedFallback.sentCollab = [...relevantSent, ...(enrichedFallback.sentCollab || [])];
-        }
+        const rawCollabs = localStorage.getItem('gradleaf_custom_collabs');
+        if (rawCollabs) customCollabsFallback = JSON.parse(rawCollabs);
+        const rawStatuses = localStorage.getItem('gradleaf_collab_statuses');
+        if (rawStatuses) collabStatusesFallback = JSON.parse(rawStatuses);
+        const rawMems = localStorage.getItem('gradleaf_custom_memberships');
+        if (rawMems) customMembershipsFallback = JSON.parse(rawMems);
+        const rawProjs = localStorage.getItem('gradleaf_custom_projects');
+        if (rawProjs) customProjectsFallback = JSON.parse(rawProjs);
+        const rawUsers = localStorage.getItem('gradleaf_custom_users');
+        if (rawUsers) customUsersFallback = JSON.parse(rawUsers);
       } catch {}
     }
+
+    const safeSearch = (userId || '').toLowerCase();
+    const fallback =
+      customUsersFallback.find((u: any) => u.id === userId) ||
+      FALLBACK_USERS.find(
+        (u) => u.id === userId || (safeSearch && u.name.toLowerCase().includes(safeSearch))
+      ) ||
+      FALLBACK_USERS[0];
+
+    const enrichedFallback: any = { ...fallback };
+    const relevantReceived = customCollabsFallback.filter((c: any) => c.receiverId === userId || c.receiver?.id === userId);
+    const relevantSent = customCollabsFallback.filter((c: any) => c.senderId === userId || c.sender?.id === userId);
+
+    const mergedReceived = [...relevantReceived, ...(enrichedFallback.receivedCollab || [])].map((c: any) => ({
+      ...c,
+      status: collabStatusesFallback[c.id] || c.status || 'pending',
+    }));
+    const mergedSent = [...relevantSent, ...(enrichedFallback.sentCollab || [])].map((c: any) => ({
+      ...c,
+      status: collabStatusesFallback[c.id] || c.status || 'pending',
+    }));
+
+    enrichedFallback.receivedCollab = mergedReceived.filter((c, idx, arr) => arr.findIndex((x) => x.id === c.id) === idx);
+    enrichedFallback.sentCollab = mergedSent.filter((c, idx, arr) => arr.findIndex((x) => x.id === c.id) === idx);
+
+    const userCustomMems = customMembershipsFallback.filter((m: any) => m.userId === userId);
+    const acceptedCollabMems = [...enrichedFallback.receivedCollab, ...enrichedFallback.sentCollab]
+      .filter((c: any) => c.status === 'accepted' && c.project)
+      .map((c: any) => ({
+        id: 'mem_collab_' + c.id,
+        role: c.role || 'Contributor',
+        project: c.project,
+      }));
+    const rawMembers = [...(enrichedFallback.projectMembers || []), ...userCustomMems, ...acceptedCollabMems];
+    enrichedFallback.projectMembers = rawMembers.filter(
+      (m, idx, arr) => arr.findIndex((x) => x.project?.id === m.project?.id) === idx
+    );
+
+    const userCustomProjs = customProjectsFallback.filter((p: any) => p.ownerId === userId);
+    const rawOwned = [...(enrichedFallback.ownedProjects || []), ...userCustomProjs];
+    enrichedFallback.ownedProjects = rawOwned.filter(
+      (p, idx, arr) => arr.findIndex((x) => x.id === p.id) === idx
+    );
+
     setProfile(enrichedFallback);
     setName(fallback.name || '');
     setCollege(fallback.college || '');
@@ -323,11 +412,62 @@ export default function ProfilePage() {
   const handleRespondCollab = async (collabId: string, status: 'accepted' | 'rejected') => {
     setRespondingCollabId(collabId);
 
-    // Immediate optimistic update so Contributing Projects updates instantly
+    const targetReq =
+      (profile.receivedCollab || []).find((c: any) => c.id === collabId) ||
+      (profile.sentCollab || []).find((c: any) => c.id === collabId);
+
+    if (typeof window !== 'undefined') {
+      try {
+        const rawStatuses = localStorage.getItem('gradleaf_collab_statuses');
+        const statuses = rawStatuses ? JSON.parse(rawStatuses) : {};
+        statuses[collabId] = status;
+        localStorage.setItem('gradleaf_collab_statuses', JSON.stringify(statuses));
+
+        const rawCollabs = localStorage.getItem('gradleaf_custom_collabs');
+        const collabsList = rawCollabs ? JSON.parse(rawCollabs) : [];
+        if (targetReq) {
+          const updatedTarget = { ...targetReq, status };
+          const updatedList = [
+            updatedTarget,
+            ...collabsList.filter((c: any) => c.id !== collabId),
+          ];
+          localStorage.setItem('gradleaf_custom_collabs', JSON.stringify(updatedList));
+
+          if (status === 'accepted' && targetReq.project) {
+            const rawMems = localStorage.getItem('gradleaf_custom_memberships');
+            const memsList = rawMems ? JSON.parse(rawMems) : [];
+            if (!memsList.some((m: any) => m.projectId === targetReq.project.id && m.userId === profile.id)) {
+              memsList.push({
+                id: 'membership_' + collabId,
+                userId: profile.id,
+                projectId: targetReq.project.id,
+                role: targetReq.role || 'Contributor',
+                project: targetReq.project,
+              });
+              localStorage.setItem('gradleaf_custom_memberships', JSON.stringify(memsList));
+            }
+
+            addNotification({
+              userId: targetReq.senderId,
+              title: 'Match Proposal Accepted! 🎉',
+              message: `${profile.name} accepted your match proposal for "${targetReq.project.title}". You can now collaborate in the workspace!`,
+              link: `/workspace/${targetReq.project.id}`,
+              type: 'invitation_accepted',
+            });
+          }
+        }
+      } catch (err) {
+        console.error('Error saving local collab response', err);
+      }
+    }
+
+    // Immediate optimistic update
     setProfile((prev: any) => {
       if (!prev) return prev;
-      const targetReq = (prev.receivedCollab || []).find((c: any) => c.id === collabId);
       const updatedReceived = (prev.receivedCollab || []).map((c: any) =>
+        c.id === collabId ? { ...c, status } : c
+      );
+      const updatedSent = (prev.sentCollab || []).map((c: any) =>
         c.id === collabId ? { ...c, status } : c
       );
 
@@ -345,32 +485,23 @@ export default function ProfilePage() {
       return {
         ...prev,
         receivedCollab: updatedReceived,
+        sentCollab: updatedSent,
         projectMembers: newMembers,
       };
     });
 
     try {
-      if (typeof window !== 'undefined') {
-        try {
-          const raw = localStorage.getItem('gradleaf_custom_collabs');
-          if (raw) {
-            const list = JSON.parse(raw);
-            const updated = list.map((c: any) => (c.id === collabId ? { ...c, status } : c));
-            localStorage.setItem('gradleaf_custom_collabs', JSON.stringify(updated));
-          }
-        } catch {}
-      }
       await fetch(`/api/collab/${collabId}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ status }),
       });
-      fetchProfile();
-      refreshUsers();
     } catch (e) {
       console.error('Failed to respond to match request', e);
     } finally {
       setRespondingCollabId(null);
+      fetchProfile();
+      refreshUsers();
     }
   };
 
@@ -491,6 +622,15 @@ export default function ProfilePage() {
         }
       }
 
+      // Live notification for receiver
+      addNotification({
+        userId: profile.id,
+        title: 'New Match Request!',
+        message: `${currentUser.name} sent you a match request to join "${selectedProj?.title || 'a project'}" as ${matchRole}.`,
+        link: `/profile/${profile.id}`,
+        type: 'invitation',
+      });
+
       setMatchSentSuccess(true);
       refreshUsers();
       setTimeout(() => {
@@ -499,6 +639,13 @@ export default function ProfilePage() {
       }, 1800);
     } catch (e) {
       console.error('Failed to send match request', e);
+      addNotification({
+        userId: profile.id,
+        title: 'New Match Request!',
+        message: `${currentUser.name} sent you a match request to join as ${matchRole}.`,
+        link: `/profile/${profile.id}`,
+        type: 'invitation',
+      });
       setMatchSentSuccess(true);
       setTimeout(() => {
         setShowMatchModal(false);
@@ -1032,9 +1179,27 @@ export default function ProfilePage() {
                     role: c.role || 'Contributor',
                     project: c.project,
                   }));
-              }
-            } catch {}
-          }
+                }
+
+                const rawMems = localStorage.getItem('gradleaf_custom_memberships');
+                if (rawMems) {
+                  const memList = JSON.parse(rawMems);
+                  const matchingMems = memList
+                    .filter(
+                      (m: any) =>
+                        m.userId === profile.id &&
+                        m.project &&
+                        !ownedProjects.some((op: any) => op.id === m.project.id)
+                    )
+                    .map((m: any) => ({
+                      id: m.id || 'custom_member_' + (m.project?.id || m.projectId),
+                      role: m.role || 'Contributor',
+                      project: m.project,
+                    }));
+                  customAccepted = [...customAccepted, ...matchingMems];
+                }
+              } catch {}
+            }
 
           const rawContributing = [...directMembers, ...acceptedCollabs, ...customAccepted];
           const contributingProjects = rawContributing.filter(

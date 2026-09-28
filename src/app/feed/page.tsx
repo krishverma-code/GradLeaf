@@ -52,7 +52,7 @@ const cleanPostText = (text: string): string => {
 };
 
 export default function FeedPage() {
-  const { currentUser } = useUser();
+  const { currentUser, addNotification } = useUser();
   const [posts, setPosts] = useState<PostType[]>(FALLBACK_POSTS as any);
   const [loading, setLoading] = useState(false);
   const [newContent, setNewContent] = useState('');
@@ -164,11 +164,13 @@ export default function FeedPage() {
   const handleToggleLike = async (postId: string) => {
     if (!currentUser) return;
     try {
+      const targetPost = posts.find((p) => p.id === postId);
+      const hasLiked = targetPost?.likes.some((l) => l.userId === currentUser.id);
+
       // Optimistic update
       setPosts((prev) =>
         prev.map((p) => {
           if (p.id === postId) {
-            const hasLiked = p.likes.some((l) => l.userId === currentUser.id);
             return {
               ...p,
               likes: hasLiked
@@ -179,6 +181,16 @@ export default function FeedPage() {
           return p;
         })
       );
+
+      if (!hasLiked && targetPost && targetPost.user.id !== currentUser.id) {
+        addNotification({
+          userId: targetPost.user.id,
+          title: 'New Like on your post',
+          message: `${currentUser.name} liked your update: "${targetPost.content.slice(0, 40)}..."`,
+          link: '/feed',
+          type: 'like',
+        });
+      }
 
       await fetch(`/api/posts/${postId}/like`, {
         method: 'POST',
@@ -195,6 +207,8 @@ export default function FeedPage() {
     if (!commentText.trim() || !currentUser) return;
     const currentComment = commentText.trim();
     setCommentText('');
+
+    const targetPost = posts.find((p) => p.id === postId);
 
     const newCommentObj = {
       id: 'comm_' + Date.now().toString(36),
@@ -217,6 +231,16 @@ export default function FeedPage() {
           : p
       )
     );
+
+    if (targetPost && targetPost.user.id !== currentUser.id) {
+      addNotification({
+        userId: targetPost.user.id,
+        title: 'New Comment on your post',
+        message: `${currentUser.name} commented: "${currentComment.slice(0, 40)}..."`,
+        link: '/feed',
+        type: 'like',
+      });
+    }
 
     if (typeof window !== 'undefined') {
       try {

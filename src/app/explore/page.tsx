@@ -135,7 +135,7 @@ function matchesStudentSearch(
 }
 
 export default function ExplorePage() {
-  const { allUsers, currentUser, refreshUsers, setShowCreateProfileModal } = useUser();
+  const { allUsers, currentUser, refreshUsers, setShowCreateProfileModal, addNotification } = useUser();
   const [search, setSearch] = useState('');
   const [searchMode, setSearchMode] = useState<SearchScope>('all');
   const [selectedSkill, setSelectedSkill] = useState<string>('All');
@@ -256,6 +256,14 @@ export default function ExplorePage() {
         }
       }
 
+      addNotification({
+        userId: matchModalStudent.id,
+        title: 'New Match Request!',
+        message: `${currentUser.name} sent you a match request to join "${selectedProj?.title || 'a project'}" as ${matchRole}.`,
+        link: `/profile/${matchModalStudent.id}`,
+        type: 'invitation',
+      });
+
       setMatchSuccess(true);
       refreshUsers();
       setTimeout(() => {
@@ -264,6 +272,13 @@ export default function ExplorePage() {
       }, 1800);
     } catch (e) {
       console.error(e);
+      addNotification({
+        userId: matchModalStudent.id,
+        title: 'New Match Request!',
+        message: `${currentUser.name} sent you a match request to join as ${matchRole}.`,
+        link: `/profile/${matchModalStudent.id}`,
+        type: 'invitation',
+      });
       setMatchSuccess(true);
       setTimeout(() => {
         setMatchModalStudent(null);

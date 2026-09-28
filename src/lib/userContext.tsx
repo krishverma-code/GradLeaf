@@ -74,6 +74,13 @@ interface UserContextType {
   refreshUsers: () => Promise<void>;
   markAllNotificationsRead: () => Promise<void>;
   markNotificationRead: (notificationId: string) => Promise<void>;
+  addNotification: (notif: {
+    userId: string;
+    title: string;
+    message: string;
+    link?: string | null;
+    type?: string;
+  }) => void;
   unreadCount: number;
   createProfile: (data: CreateProfileInput) => Promise<StudentUser>;
   removeProfile: (userId: string) => Promise<boolean>;
@@ -91,6 +98,7 @@ const UserContext = createContext<UserContextType>({
   refreshUsers: async () => {},
   markAllNotificationsRead: async () => {},
   markNotificationRead: async () => {},
+  addNotification: () => {},
   unreadCount: 0,
   createProfile: async () => FALLBACK_USERS[0] as any,
   removeProfile: async () => true,
@@ -108,12 +116,28 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({ children
     try {
       let customUsers: StudentUser[] = [];
       let deletedIds: string[] = [];
+      let customNotifications: any[] = [];
+      let readNotificationIds: string[] = [];
+      let collabStatuses: Record<string, string> = {};
+      let customMemberships: any[] = [];
+      let customProjects: any[] = [];
+
       if (typeof window !== 'undefined') {
         try {
           const storedCustom = localStorage.getItem('gradleaf_custom_users');
           if (storedCustom) customUsers = JSON.parse(storedCustom);
           const storedDeleted = localStorage.getItem('gradleaf_deleted_user_ids');
           if (storedDeleted) deletedIds = JSON.parse(storedDeleted);
+          const rawNotifs = localStorage.getItem('gradleaf_custom_notifications');
+          if (rawNotifs) customNotifications = JSON.parse(rawNotifs);
+          const rawRead = localStorage.getItem('gradleaf_read_notifications');
+          if (rawRead) readNotificationIds = JSON.parse(rawRead);
+          const rawStatuses = localStorage.getItem('gradleaf_collab_statuses');
+          if (rawStatuses) collabStatuses = JSON.parse(rawStatuses);
+          const rawMems = localStorage.getItem('gradleaf_custom_memberships');
+          if (rawMems) customMemberships = JSON.parse(rawMems);
+          const rawProj = localStorage.getItem('gradleaf_custom_projects');
+          if (rawProj) customProjects = JSON.parse(rawProj);
         } catch {
           // ignore localStorage JSON error
         }
@@ -147,14 +171,70 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({ children
       );
 
       const mergedUsers = [...validCustomUsers, ...activeServerUsers].map((u: any) => {
+        // Collabs
         const myCollabs = customCollabs.filter((c: any) => c.receiverId === u.id || c.receiver?.id === u.id);
-        const existing = u.receivedCollab || [];
-        const combined = [...myCollabs, ...existing];
+        const existingCollabs = u.receivedCollab || [];
+        const combinedCollabs = [...myCollabs, ...existingCollabs].map((c: any) => ({
+          ...c,
+          status: collabStatuses[c.id] || c.status || 'pending',
+        }));
+        const uniqueCollabs = combinedCollabs.filter((c, idx, arr) => arr.findIndex((x) => x.id === c.id) === idx);
+
+        // Contributing Memberships
+        const existingMembers = u.projectMembers || [];
+        const relevantCustomMems = customMemberships.filter((m: any) => m.userId === u.id);
+        const acceptedCollabMembers = uniqueCollabs
+          .filter((c: any) => c.status === 'accepted' && c.project)
+          .map((c: any) => ({
+            id: 'mem_collab_' + c.id,
+            role: c.role || 'Contributor',
+            project: c.project,
+          }));
+        const rawMembers = [...existingMembers, ...relevantCustomMems, ...acceptedCollabMembers];
+        const uniqueMembers = rawMembers.filter(
+          (m, idx, arr) => arr.findIndex((x) => x.project?.id === m.project?.id) === idx
+        );
+
+        // Owned Projects
+        const existingOwned = u.ownedProjects || [];
+        const userCustomProjects = customProjects.filter((p: any) => p.ownerId === u.id);
+        const uniqueOwned = [...existingOwned, ...userCustomProjects].filter(
+          (p, idx, arr) => arr.findIndex((x) => x.id === p.id) === idx
+        );
+
+        // Notifications
+        const userCustomNotifs = customNotifications.filter((n: any) => n.userId === u.id);
+        const serverNotifs = u.notifications || [];
+        const pendingCollabNotifs = uniqueCollabs
+          .filter((c: any) => c.status === 'pending')
+          .map((c: any) => ({
+            id: 'notif_collab_' + c.id,
+            userId: u.id,
+            title: 'New Match Request!',
+            message: `${c.sender?.name || 'A teammate'} sent you a match request to join "${c.project?.title || 'a project'}" as ${c.role || 'Teammate'}.`,
+            link: `/profile/${u.id}`,
+            type: 'invitation',
+            read: readNotificationIds.includes('notif_collab_' + c.id),
+            createdAt: c.createdAt || new Date().toISOString(),
+          }));
+
+        const allUserNotifs = [...userCustomNotifs, ...pendingCollabNotifs, ...serverNotifs]
+          .map((n: any) => ({
+            ...n,
+            read: n.read || readNotificationIds.includes(n.id),
+          }))
+          .filter((n, idx, arr) => arr.findIndex((x) => x.id === n.id) === idx)
+          .sort((a: any, b: any) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+
         return {
           ...u,
-          receivedCollab: combined.filter((c, idx, arr) => arr.findIndex((x) => x.id === c.id) === idx),
+          receivedCollab: uniqueCollabs,
+          projectMembers: uniqueMembers,
+          ownedProjects: uniqueOwned,
+          notifications: allUserNotifs,
         };
       });
+
       const finalUsers = mergedUsers.length > 0 ? mergedUsers : [FALLBACK_USERS[0]];
       setAllUsers(finalUsers as any);
 
@@ -316,8 +396,76 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({ children
     return true;
   };
 
+  const addNotification = (notif: {
+    userId: string;
+    title: string;
+    message: string;
+    link?: string | null;
+    type?: string;
+  }) => {
+    const fullNotif = {
+      id: 'notif_' + Date.now().toString(36) + Math.random().toString(36).substring(2, 6),
+      userId: notif.userId,
+      title: notif.title,
+      message: notif.message,
+      link: notif.link || null,
+      type: notif.type || 'invitation',
+      read: false,
+      createdAt: new Date().toISOString(),
+    };
+
+    if (typeof window !== 'undefined') {
+      try {
+        const raw = localStorage.getItem('gradleaf_custom_notifications');
+        const list = raw ? JSON.parse(raw) : [];
+        localStorage.setItem('gradleaf_custom_notifications', JSON.stringify([fullNotif, ...list]));
+      } catch (err) {
+        console.error('Failed saving custom notification', err);
+      }
+    }
+
+    // Live state update
+    setCurrentUser((prev) => {
+      if (!prev || prev.id !== notif.userId) return prev;
+      return {
+        ...prev,
+        notifications: [fullNotif, ...(prev.notifications || [])],
+      };
+    });
+
+    setAllUsers((prevList) =>
+      prevList.map((u) => {
+        if (u.id !== notif.userId) return u;
+        return {
+          ...u,
+          notifications: [fullNotif, ...(u.notifications || [])],
+        };
+      })
+    );
+  };
+
   const markAllNotificationsRead = async () => {
     if (!currentUser) return;
+    const currentNotifIds = (currentUser.notifications || []).map((n) => n.id);
+
+    if (typeof window !== 'undefined') {
+      try {
+        const rawRead = localStorage.getItem('gradleaf_read_notifications');
+        const readIds: string[] = rawRead ? JSON.parse(rawRead) : [];
+        const combinedRead = Array.from(new Set([...readIds, ...currentNotifIds]));
+        localStorage.setItem('gradleaf_read_notifications', JSON.stringify(combinedRead));
+
+        const rawCustom = localStorage.getItem('gradleaf_custom_notifications');
+        if (rawCustom) {
+          const list = JSON.parse(rawCustom);
+          const updated = list.map((n: any) =>
+            n.userId === currentUser.id ? { ...n, read: true } : n
+          );
+          localStorage.setItem('gradleaf_custom_notifications', JSON.stringify(updated));
+        }
+      } catch {}
+    }
+
     // Optimistic UI update
     setCurrentUser((prev) => {
       if (!prev) return null;
@@ -326,6 +474,16 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({ children
         notifications: prev.notifications?.map((n) => ({ ...n, read: true })) || [],
       };
     });
+
+    setAllUsers((prevList) =>
+      prevList.map((u) => {
+        if (u.id !== currentUser.id) return u;
+        return {
+          ...u,
+          notifications: u.notifications?.map((n) => ({ ...n, read: true })) || [],
+        };
+      })
+    );
 
     try {
       await fetch('/api/notifications', {
@@ -340,6 +498,27 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const markNotificationRead = async (notificationId: string) => {
     if (!currentUser) return;
+
+    if (typeof window !== 'undefined') {
+      try {
+        const rawRead = localStorage.getItem('gradleaf_read_notifications');
+        const readIds: string[] = rawRead ? JSON.parse(rawRead) : [];
+        if (!readIds.includes(notificationId)) {
+          readIds.push(notificationId);
+          localStorage.setItem('gradleaf_read_notifications', JSON.stringify(readIds));
+        }
+
+        const rawCustom = localStorage.getItem('gradleaf_custom_notifications');
+        if (rawCustom) {
+          const list = JSON.parse(rawCustom);
+          const updated = list.map((n: any) =>
+            n.id === notificationId ? { ...n, read: true } : n
+          );
+          localStorage.setItem('gradleaf_custom_notifications', JSON.stringify(updated));
+        }
+      } catch {}
+    }
+
     // Optimistic UI update
     setCurrentUser((prev) => {
       if (!prev) return null;
@@ -350,6 +529,18 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({ children
         ) || [],
       };
     });
+
+    setAllUsers((prevList) =>
+      prevList.map((u) => {
+        if (u.id !== currentUser.id) return u;
+        return {
+          ...u,
+          notifications: u.notifications?.map((n) =>
+            n.id === notificationId ? { ...n, read: true } : n
+          ) || [],
+        };
+      })
+    );
 
     try {
       await fetch('/api/notifications', {
@@ -374,6 +565,7 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({ children
         refreshUsers: fetchUsers,
         markAllNotificationsRead,
         markNotificationRead,
+        addNotification,
         unreadCount,
         createProfile,
         removeProfile,

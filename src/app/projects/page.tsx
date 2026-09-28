@@ -161,7 +161,7 @@ import { FALLBACK_PROJECTS } from '@/lib/fallbackData';
 function ProjectsContent() {
   const searchParams = useSearchParams();
   const targetProjectId = searchParams.get('id') || searchParams.get('project');
-  const { currentUser, refreshUsers } = useUser();
+  const { currentUser, refreshUsers, addNotification } = useUser();
   const [projects, setProjects] = useState<ProjectType[]>(FALLBACK_PROJECTS as any);
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState('');
@@ -509,6 +509,14 @@ function ProjectsContent() {
         }
       }
 
+      addNotification({
+        userId: applyProject.owner.id,
+        title: 'New Collaboration Request!',
+        message: `${currentUser.name} applied to join "${applyProject.title}" as ${applyRole}.`,
+        link: `/profile/${applyProject.owner.id}`,
+        type: 'invitation',
+      });
+
       setApplySuccess(true);
       refreshUsers();
       setTimeout(() => {
@@ -517,6 +525,13 @@ function ProjectsContent() {
       }, 1800);
     } catch (e) {
       console.error('Failed to send collab request', e);
+      addNotification({
+        userId: applyProject.owner.id,
+        title: 'New Collaboration Request!',
+        message: `${currentUser.name} applied to join "${applyProject.title}" as ${applyRole}.`,
+        link: `/profile/${applyProject.owner.id}`,
+        type: 'invitation',
+      });
       setApplySuccess(true);
       setTimeout(() => {
         setApplyProject(null);
